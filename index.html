@@ -52,6 +52,57 @@
             margin-bottom: 40px;
             border: 1px solid rgba(255, 255, 255, 0.2);
         }
+        
+        .filter-box {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .filter-label {
+            display: block;
+            color: rgba(255, 215, 0, 0.8);
+            font-weight: bold;
+            margin-bottom: 15px;
+            font-size: 1rem;
+        }
+        
+        .type-radio {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .type-radio-btn {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+            padding: 10px 20px;
+            border: 2px solid rgba(255, 215, 0, 0.3);
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+            user-select: none;
+        }
+        
+        .type-radio-btn:hover {
+            border-color: rgba(255, 215, 0, 0.6);
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-2px);
+        }
+        
+        .type-radio-btn input[type="radio"] {
+            width: 18px;
+            height: 18px;
+            accent-color: #ffd700;
+        }
+        
+        .type-radio-btn span {
+            color: #fff;
+            font-size: 1rem;
+            font-weight: 500;
+        }
 
         .search-box {
             display: flex;
@@ -398,6 +449,27 @@
             <div class="search-box">
                 <input type="text" class="search-input" id="searchInput" placeholder="Search cards..." autocomplete="off">
             </div>
+            <div class="filter-box">
+                <span class="filter-label">Card Type:</span>
+                <div class="type-radio">
+                    <label class="type-radio-btn">
+                        <input type="radio" name="typeFilter" value="all" checked>
+                        <span>All Types</span>
+                    </label>
+                    <label class="type-radio-btn">
+                        <input type="radio" name="typeFilter" value="treasures">
+                        <span>Treasures</span>
+                    </label>
+                    <label class="type-radio-btn">
+                        <input type="radio" name="typeFilter" value="characters">
+                        <span>Characters</span>
+                    </label>
+                    <label class="type-radio-btn">
+                        <input type="radio" name="typeFilter" value="spells">
+                        <span>Spells</span>
+                    </label>
+                </div>
+            </div>
             
 
         </div>
@@ -614,18 +686,23 @@
         
         // Search functionality
         function searchCards(searchTerm) {
-            if (!searchTerm.trim()) {
-                // If search is empty, show all cards
-                displayCards(allCards);
-                updateResultsCount(allCards.length);
-                return;
+            // Get selected type from radio buttons
+            const selectedType = document.querySelector('input[name="typeFilter"]:checked').value;
+            
+            // Filter cards by selected type first
+            let filteredCards = allCards;
+            if (selectedType !== 'all') {
+                filteredCards = allCards.filter(card => card.type === selectedType);
             }
             
-            const searchLower = searchTerm.toLowerCase();
-            const filteredCards = allCards.filter(card => 
-                card.name.toLowerCase().includes(searchLower) ||
-                card.description.toLowerCase().includes(searchLower)
-            );
+            // Then filter by search term if provided
+            if (searchTerm.trim()) {
+                const searchLower = searchTerm.toLowerCase();
+                filteredCards = filteredCards.filter(card => 
+                    card.name.toLowerCase().includes(searchLower) ||
+                    card.description.toLowerCase().includes(searchLower)
+                );
+            }
             
             displayCards(filteredCards);
             updateResultsCount(filteredCards.length);
@@ -643,6 +720,15 @@
             searchTimeout = setTimeout(() => {
                 searchCards(searchTerm);
             }, 300); // 300ms delay for better user experience
+        });
+        
+        // Type filter radio button handlers
+        document.querySelectorAll('input[name="typeFilter"]').forEach(radio => {
+            radio.addEventListener('change', function() {
+                // Trigger search with current search term
+                const searchTerm = document.getElementById('searchInput').value;
+                searchCards(searchTerm);
+            });
         });
         
         // Load cards when page loads
