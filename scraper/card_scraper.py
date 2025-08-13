@@ -149,12 +149,19 @@ class WorkingGalaxyScraper:
         # Extract abilities as a list
         card_abilities = self.extract_card_abilities(soup)
         
+        # Extract description only for non-character cards (treasures, spells)
+        card_description = None
+        if card_type_name.lower() != "characters":
+            card_description = self.extract_card_description(soup)
+        
         card_data = {
             "name": card_name,
             "type": card_type_name  # Use the category name as the card type
         }
         
         # Add optional fields if found
+        if card_description:
+            card_data["description"] = card_description
         if card_rarity:
             card_data["rarity"] = card_rarity
         if card_cost:
@@ -203,7 +210,8 @@ class WorkingGalaxyScraper:
             # Try different possible description row names
             description_selectors = [
                 'druid-row-ability_2_description',  # Zeus style
-                'druid-row-ability_description'     # Barrel of Monkeys style
+                'druid-row-ability_description',    # Barrel of Monkeys style
+                'druid-row-ability'                 # Treasure style
             ]
             
             for selector in description_selectors:
@@ -549,9 +557,9 @@ class WorkingGalaxyScraper:
         print("Starting Working Once upon a Galaxy wiki scraper for all categories...")
         
         # Define available categories (only the ones that actually exist on the wiki)
-        available_categories = ["Characters", "Treasures", "Spells"]
+        self.available_categories = ["Characters", "Treasures", "Spells"]
         
-        for category in available_categories:
+        for category in self.available_categories:
             try:
                 print(f"\n{'='*50}")
                 print(f"Processing category: {category}")
@@ -594,6 +602,7 @@ class WorkingGalaxyScraper:
         # Find URLs for the specific cards
         card_urls = {}
         links = main_content.find_all('a', href=True)
+        
         for link in links:
             href = link.get('href')
             text = link.get_text().strip()
