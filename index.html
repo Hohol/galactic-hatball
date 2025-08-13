@@ -168,6 +168,13 @@
             text-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
         }
 
+        .card-rarity {
+            font-size: 0.9rem;
+            color: #ffd700;
+            margin-top: 5px;
+            text-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+        }
+
         .card-body {
             color: #ffffff;
         }
@@ -176,6 +183,13 @@
             line-height: 1.6;
             margin: 0;
             color: #e0e0e0;
+        }
+
+        .card-type {
+            font-size: 0.9rem;
+            color: #4ecdc4;
+            margin-top: 5px;
+            text-shadow: 0 0 10px rgba(78, 220, 196, 0.3);
         }
 
         .card-placeholder {
@@ -256,14 +270,16 @@
         // Load all cards from JSON files
         async function loadCards() {
             try {
-                const cardFiles = [
-                    'cards/galactic-explorer.json',
-                    'cards/warp-drive.json',
-                    'cards/space-battle.json'
-                ];
-                
-                const cardPromises = cardFiles.map(file => fetch(file).then(response => response.json()));
-                allCards = await Promise.all(cardPromises);
+                // First try to load the combined file
+                const combinedResponse = await fetch('cards/all_treasures.json');
+                if (combinedResponse.ok) {
+                    allCards = await combinedResponse.json();
+                    console.log(`Loaded ${allCards.length} cards from combined file`);
+                } else {
+                    // Fallback to individual files if combined file doesn't exist
+                    console.log('Combined file not found, loading individual files...');
+                    await loadIndividualCards();
+                }
                 
                 // Display all cards initially
                 displayCards(allCards);
@@ -274,8 +290,40 @@
                     <div class="no-results">
                         <h3>Error Loading Cards</h3>
                         <p>Failed to load card data. Please check the console for details.</p>
+                        <p>Make sure you have run the scraper to generate card data.</p>
                     </div>
                 `;
+            }
+        }
+        
+        // Load individual card files (fallback method)
+        async function loadIndividualCards() {
+            try {
+                // Get list of JSON files in cards directory
+                const response = await fetch('cards/');
+                if (!response.ok) {
+                    throw new Error('Could not access cards directory');
+                }
+                
+                // This is a simplified approach - in a real scenario you'd need to parse the directory listing
+                // For now, we'll use a known list of card files
+                const cardFiles = [
+                    'cards/1000-sword.json',
+                    'cards/achilles-high-tops.json',
+                    'cards/alchemistry-set.json',
+                    'cards/aphrodites-tear.json',
+                    'cards/beanie-baby-treasure.json',
+                    'cards/big-brass-cannonballs.json',
+                    'cards/blackbeards-comb.json',
+                    'cards/bo-peeps-crook.json'
+                ];
+                
+                const cardPromises = cardFiles.map(file => fetch(file).then(response => response.json()));
+                allCards = await Promise.all(cardPromises);
+                console.log(`Loaded ${allCards.length} cards from individual files`);
+            } catch (error) {
+                console.error('Error loading individual cards:', error);
+                throw error;
             }
         }
         
@@ -297,9 +345,11 @@
                 <div class="card">
                     <div class="card-header">
                         <h3 class="card-name">${card.name}</h3>
+                        ${card.rarity ? `<div class="card-rarity">${card.rarity}</div>` : ''}
                     </div>
                     <div class="card-body">
                         <p class="card-description">${card.description}</p>
+                        ${card.type ? `<div class="card-type">Type: ${card.type}</div>` : ''}
                     </div>
                 </div>
             `).join('');
