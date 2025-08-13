@@ -1,7 +1,7 @@
 {
   "name": "Blackbeard's Comb",
   "description": "Pirates in your shop have +10 Attack.",
-  "type": "treasure",
+  "type": "treasures",
   "rarity": "uncommon",
   "images": [
     {

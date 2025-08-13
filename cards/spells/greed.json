@@ -1,0 +1,12 @@
+{
+  "name": "Greed",
+  "description": "Give a character Treasure Hoard.",
+  "type": "spells",
+  "rarity": "rare",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/5/5b/Spell_Greed_Card.png?e029ca&format=original"
+    }
+  ]
+}

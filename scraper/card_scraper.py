@@ -215,10 +215,6 @@ class WorkingGalaxyScraper:
                 type_data = type_row.find('div', class_='druid-data-type')
                 if type_data:
                     return type_data.get_text().strip()
-            
-            # Check if it's a treasure (from the page structure)
-            if infobox.find('div', class_='druid-section-attributes'):
-                return 'treasure'
         
         return None
     

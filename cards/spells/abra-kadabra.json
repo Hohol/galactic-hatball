@@ -1,0 +1,12 @@
+{
+  "name": "Abra Kadabra",
+  "description": "Get a bonus shop of all spells.",
+  "type": "spells",
+  "rarity": "epic",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/b/b8/Spell_Abra_Kadabra_Card.png?675f0d&format=original"
+    }
+  ]
+}

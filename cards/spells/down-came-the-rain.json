@@ -1,0 +1,12 @@
+{
+  "name": "Down Came the Rain",
+  "description": "Give all three front row slots +1/+1.",
+  "type": "spells",
+  "rarity": "rare",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/3/3d/Spell_Down_Came_the_Rain_Card.png?42151f&format=original"
+    }
+  ]
+}

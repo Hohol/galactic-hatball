@@ -1,7 +1,7 @@
 {
   "name": "Bottled Starlight",
   "description": "All your slots have +30/+30. If you get 1st place, get a bonus reward.",
-  "type": "treasure",
+  "type": "treasures",
   "rarity": "secret rare",
   "images": [
     {

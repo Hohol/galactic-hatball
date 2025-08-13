@@ -1,0 +1,12 @@
+{
+  "name": "All for One",
+  "description": "Give your characters +1/+1. If you win this fight, give them an additional +1/+1.",
+  "type": "spells",
+  "rarity": "rare",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/a/af/Spell_All_for_One_Card.png?22661b&format=original"
+    }
+  ]
+}

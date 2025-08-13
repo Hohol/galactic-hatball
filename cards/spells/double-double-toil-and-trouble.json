@@ -1,0 +1,12 @@
+{
+  "name": "Double, Double, Toil and Trouble",
+  "description": "Give a slot +1/+1, the double its buff.",
+  "type": "spells",
+  "rarity": "legendary",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/b/bc/Spell_Double%2C_Double%2C_Toil_and_Trouble_Card.png?9b3917&format=original"
+    }
+  ]
+}

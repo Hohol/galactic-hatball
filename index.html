@@ -412,23 +412,13 @@
                 allCards = [];
                 
                 // Load treasures
-                try {
-                    const treasuresResponse = await fetch('cards/treasures/all_treasures.json');
-                    if (treasuresResponse.ok) {
-                        const treasures = await treasuresResponse.json();
-                        allCards = allCards.concat(treasures);
-                        console.log(`Loaded ${treasures.length} treasure cards from combined file`);
-                    } else {
-                        console.log('Combined treasures file not found, loading individual files...');
-                        await loadCardsFromDirectory('treasures');
-                    }
-                } catch (error) {
-                    console.log('Error loading treasures, trying individual files...');
-                    await loadCardsFromDirectory('treasures');
-                }
+                await loadCardsFromDirectory('treasures');
                 
                 // Load characters
                 await loadCardsFromDirectory('characters');
+                
+                // Load spells
+                await loadCardsFromDirectory('spells');
                 
                 // Display all cards initially
                 displayCards(allCards);
@@ -448,6 +438,8 @@
         // Load cards from a specific directory
         async function loadCardsFromDirectory(directory) {
             try {
+                console.log(`Starting to load cards from ${directory} directory...`);
+                
                 // Get list of JSON files in the specified directory
                 const response = await fetch(`cards/${directory}/`);
                 if (!response.ok) {
@@ -474,7 +466,10 @@
                 
                 const cardPromises = cardFiles.map(file => fetch(file).then(response => response.json()));
                 const directoryCards = await Promise.all(cardPromises);
+                
+                console.log(`Before adding ${directory} cards, total cards: ${allCards.length}`);
                 allCards = allCards.concat(directoryCards);
+                console.log(`After adding ${directory} cards, total cards: ${allCards.length}`);
                 console.log(`Loaded ${directoryCards.length} cards from ${directory} directory`);
             } catch (error) {
                 console.error(`Error loading cards from ${directory} directory:`, error);
@@ -505,6 +500,9 @@
                 }
                 cardsByType[type].push(card);
             });
+            
+            console.log('Cards grouped by type:', cardsByType);
+            console.log('Types found:', Object.keys(cardsByType));
             
             // Generate HTML for each type section
             let html = '';
