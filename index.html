@@ -73,6 +73,13 @@
             flex-wrap: wrap;
         }
         
+        .trait-checkboxes, .rarity-checkboxes {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
         .type-radio-btn {
             display: flex;
             align-items: center;
@@ -92,13 +99,14 @@
             transform: translateY(-2px);
         }
         
-        .type-radio-btn input[type="radio"] {
-            width: 18px;
-            height: 18px;
-            accent-color: #ffd700;
+        .type-radio-btn.selected {
+            background: rgba(255, 215, 0, 0.3);
+            border-color: rgba(255, 215, 0, 0.8);
+            color: #ffd700;
+            font-weight: 600;
         }
         
-        .type-radio-btn span {
+        .type-radio-btn {
             color: #fff;
             font-size: 1rem;
             font-weight: 500;
@@ -565,15 +573,11 @@
             </div>
             <div class="filter-box">
                 <label>Type:</label>
-                <div class="type-radio">
-                    <input type="radio" id="type-all" name="type-filter" value="all" checked>
-                    <label for="type-all" class="type-radio-btn">All</label>
-                    <input type="radio" id="type-characters" name="type-filter" value="characters">
-                    <label for="type-characters" class="type-radio-btn">Characters</label>
-                    <input type="radio" id="type-treasures" name="type-filter" value="treasures">
-                    <label for="type-treasures" class="type-radio-btn">Treasures</label>
-                    <input type="radio" id="type-spells" name="type-filter" value="spells">
-                    <label for="type-spells" class="type-radio-btn">Spells</label>
+                <div class="type-radio" id="type-filter">
+                    <div class="type-radio-btn selected" data-type="all">All</div>
+                    <div class="type-radio-btn" data-type="characters">Characters</div>
+                    <div class="type-radio-btn" data-type="treasures">Treasures</div>
+                    <div class="type-radio-btn" data-type="spells">Spells</div>
                 </div>
             </div>
             
@@ -1040,9 +1044,14 @@
         });
         
         // Add event listeners for type filters
-        document.querySelectorAll('input[name="type-filter"]').forEach(radio => {
-            radio.addEventListener('change', function() {
-                selectedType = this.value;
+        document.querySelectorAll('.type-radio-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                // Remove selection from all other type buttons
+                document.querySelectorAll('.type-radio-btn').forEach(b => b.classList.remove('selected'));
+                
+                // Select this button
+                this.classList.add('selected');
+                selectedType = this.dataset.type;
                 searchCards();
             });
         });
