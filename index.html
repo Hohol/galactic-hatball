@@ -523,7 +523,7 @@
                                 <div class="card">
                                     <div class="card-header">
                                         <h3 class="card-name">${card.name}</h3>
-                                        ${card.rarity ? `<div class="card-rarity">${card.rarity}</div>` : ''}
+                                        ${card.rarity ? `<div class="card-rarity">${card.rarity.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')}</div>` : ''}
                                     </div>
                                     ${card.images && card.images.length > 0 ? `
                                         <div class="card-images">
