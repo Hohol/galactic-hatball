@@ -457,6 +457,44 @@
             color: #4ecdc4;
             text-shadow: 0 0 5px rgba(78, 220, 196, 0.3);
         }
+
+        .trait-checkboxes {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 8px;
+        }
+        
+        .trait-checkbox {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 12px;
+            background: rgba(78, 220, 196, 0.1);
+            border: 1px solid rgba(78, 220, 196, 0.3);
+            border-radius: 20px;
+            color: #4ecdc4;
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            user-select: none;
+        }
+        
+        .trait-checkbox:hover {
+            background: rgba(78, 220, 196, 0.2);
+            border-color: rgba(78, 220, 196, 0.5);
+            transform: translateY(-1px);
+        }
+        
+        .trait-checkbox input[type="checkbox"] {
+            margin: 0;
+            accent-color: #4ecdc4;
+        }
+        
+        .trait-checkbox input[type="checkbox"]:checked + span {
+            color: #4ecdc4;
+            font-weight: 600;
+        }
     </style>
 </head>
 <body>
@@ -470,28 +508,25 @@
                 <input type="text" class="search-input" id="searchInput" placeholder="Search cards..." autocomplete="off">
             </div>
             <div class="filter-box">
-                <span class="filter-label">Card Type:</span>
+                <label>Type:</label>
                 <div class="type-radio">
-                    <label class="type-radio-btn">
-                        <input type="radio" name="typeFilter" value="all" checked>
-                        <span>All Types</span>
-                    </label>
-                    <label class="type-radio-btn">
-                        <input type="radio" name="typeFilter" value="treasures">
-                        <span>Treasures</span>
-                    </label>
-                    <label class="type-radio-btn">
-                        <input type="radio" name="typeFilter" value="characters">
-                        <span>Characters</span>
-                    </label>
-                    <label class="type-radio-btn">
-                        <input type="radio" name="typeFilter" value="spells">
-                        <span>Spells</span>
-                    </label>
+                    <input type="radio" id="type-all" name="type-filter" value="all" checked>
+                    <label for="type-all" class="type-radio-btn">All</label>
+                    <input type="radio" id="type-characters" name="type-filter" value="characters">
+                    <label for="type-characters" class="type-radio-btn">Characters</label>
+                    <input type="radio" id="type-treasures" name="type-filter" value="treasures">
+                    <label for="type-treasures" class="type-radio-btn">Treasures</label>
+                    <input type="radio" id="type-spells" name="type-filter" value="spells">
+                    <label for="type-spells" class="type-radio-btn">Spells</label>
                 </div>
             </div>
             
-
+            <div class="filter-box" id="trait-filter" style="display: none;">
+                <label>Traits:</label>
+                <div class="trait-checkboxes" id="trait-checkboxes">
+                    <!-- Traits will be populated dynamically -->
+                </div>
+            </div>
         </div>
 
         <div class="results-section">
@@ -511,6 +546,66 @@
     <script>
         // Card data storage
         let allCards = [];
+        let selectedType = 'all';
+        let selectedTraits = new Set();
+        
+        // Extract all unique traits from cards
+        function extractAllTraits(cards) {
+            const traits = new Set();
+            cards.forEach(card => {
+                if (card.traits && Array.isArray(card.traits)) {
+                    card.traits.forEach(trait => traits.add(trait));
+                }
+            });
+            return Array.from(traits).sort();
+        }
+        
+        // Populate trait filter checkboxes
+        function populateTraitFilter(traits) {
+            const traitFilter = document.getElementById('trait-filter');
+            const traitCheckboxes = document.getElementById('trait-checkboxes');
+            
+            if (traits.length === 0) {
+                traitFilter.style.display = 'none';
+                return;
+            }
+            
+            traitFilter.style.display = 'block';
+            traitCheckboxes.innerHTML = '';
+            
+            traits.forEach(trait => {
+                const checkboxDiv = document.createElement('div');
+                checkboxDiv.className = 'trait-checkbox';
+                
+                const checkbox = document.createElement('input');
+                checkbox.type = 'checkbox';
+                checkbox.id = `trait-${trait.replace(/\s+/g, '-').toLowerCase()}`;
+                checkbox.value = trait;
+                
+                const span = document.createElement('span');
+                span.textContent = trait;
+                
+                checkboxDiv.appendChild(checkbox);
+                checkboxDiv.appendChild(span);
+                
+                // Make entire trait element clickable
+                checkboxDiv.addEventListener('click', function(e) {
+                    // Don't trigger twice if clicking directly on checkbox
+                    if (e.target !== checkbox) {
+                        checkbox.checked = !checkbox.checked;
+                    }
+                    
+                    if (checkbox.checked) {
+                        selectedTraits.add(checkbox.value);
+                    } else {
+                        selectedTraits.delete(checkbox.value);
+                    }
+                    searchCards();
+                });
+                
+                traitCheckboxes.appendChild(checkboxDiv);
+            });
+        }
         
         // Load all cards from JSON files
         async function loadCards() {
@@ -530,6 +625,11 @@
                 // Display all cards initially
                 displayCards(allCards);
                 updateResultsCount(allCards.length);
+
+                // Extract and populate traits
+                const allTraits = extractAllTraits(allCards);
+                populateTraitFilter(allTraits);
+
             } catch (error) {
                 console.error('Error loading cards:', error);
                 document.getElementById('cardsGrid').innerHTML = `
@@ -724,15 +824,14 @@
             document.getElementById('resultsCount').textContent = `${count} card${count !== 1 ? 's' : ''} found`;
         }
         
-        // Search functionality
-        function searchCards(searchTerm) {
-            // Get selected type from radio buttons
-            const selectedType = document.querySelector('input[name="typeFilter"]:checked').value;
-            
-            // Filter cards by selected type first
+        // Search and filter cards
+        function searchCards() {
+            const searchTerm = document.getElementById('searchInput').value;
             let filteredCards = allCards;
+            
+            // Apply type filter
             if (selectedType !== 'all') {
-                filteredCards = allCards.filter(card => card.type === selectedType);
+                filteredCards = filteredCards.filter(card => card.type === selectedType);
             }
             
             // Then filter by search term if provided
@@ -756,6 +855,21 @@
                 });
             }
             
+            // Apply trait filter if any traits are selected
+            if (selectedTraits.size > 0) {
+                filteredCards = filteredCards.filter(card => {
+                    const cardTraits = card.traits || [];
+                    
+                    // Characters with "ALL" trait match any trait filter
+                    if (card.type === 'characters' && cardTraits.includes('ALL')) {
+                        return true;
+                    }
+                    
+                    // For other cards, check if they have ALL selected traits
+                    return Array.from(selectedTraits).every(trait => cardTraits.includes(trait));
+                });
+            }
+
             displayCards(filteredCards);
             updateResultsCount(filteredCards.length);
         }
@@ -770,16 +884,15 @@
             
             // Add a small delay to avoid searching on every single keystroke
             searchTimeout = setTimeout(() => {
-                searchCards(searchTerm);
+                searchCards();
             }, 300); // 300ms delay for better user experience
         });
         
-        // Type filter radio button handlers
-        document.querySelectorAll('input[name="typeFilter"]').forEach(radio => {
+        // Add event listeners for type filters
+        document.querySelectorAll('input[name="type-filter"]').forEach(radio => {
             radio.addEventListener('change', function() {
-                // Trigger search with current search term
-                const searchTerm = document.getElementById('searchInput').value;
-                searchCards(searchTerm);
+                selectedType = this.value;
+                searchCards();
             });
         });
         
