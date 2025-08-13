@@ -491,7 +491,9 @@
             accent-color: #4ecdc4;
         }
         
-        .trait-checkbox input[type="checkbox"]:checked + span {
+        .trait-checkbox.selected {
+            background: rgba(78, 220, 196, 0.3);
+            border-color: rgba(78, 220, 196, 0.7);
             color: #4ecdc4;
             font-weight: 600;
         }
@@ -529,10 +531,12 @@
             accent-color: #8a2be2;
         }
     
-            .rarity-checkbox input[type="checkbox"]:checked + span {
-        color: #8a2be2;
-        font-weight: 600;
-    }
+                    .rarity-checkbox.selected {
+            background: rgba(138, 43, 226, 0.3);
+            border-color: rgba(138, 43, 226, 0.7);
+            color: #8a2be2;
+            font-weight: 600;
+        }
     
             .rarity-checkbox .rarity-icon {
             width: 14px;
@@ -693,36 +697,28 @@
             traitCheckboxes.innerHTML = '';
             
             traits.forEach(trait => {
-                const checkboxDiv = document.createElement('div');
-                checkboxDiv.className = 'trait-checkbox';
-                
-                const checkbox = document.createElement('input');
-                checkbox.type = 'checkbox';
-                checkbox.id = `trait-${trait.replace(/\s+/g, '-').toLowerCase()}`;
-                checkbox.value = trait;
+                const traitDiv = document.createElement('div');
+                traitDiv.className = 'trait-checkbox';
+                traitDiv.dataset.trait = trait;
                 
                 const span = document.createElement('span');
                 span.textContent = trait;
                 
-                checkboxDiv.appendChild(checkbox);
-                checkboxDiv.appendChild(span);
+                traitDiv.appendChild(span);
                 
                 // Make entire trait element clickable
-                checkboxDiv.addEventListener('click', function(e) {
-                    // Don't trigger twice if clicking directly on checkbox
-                    if (e.target !== checkbox) {
-                        checkbox.checked = !checkbox.checked;
-                    }
-                    
-                    if (checkbox.checked) {
-                        selectedTraits.add(checkbox.value);
+                traitDiv.addEventListener('click', function() {
+                    if (selectedTraits.has(trait)) {
+                        selectedTraits.delete(trait);
+                        this.classList.remove('selected');
                     } else {
-                        selectedTraits.delete(checkbox.value);
+                        selectedTraits.add(trait);
+                        this.classList.add('selected');
                     }
                     searchCards();
                 });
                 
-                traitCheckboxes.appendChild(checkboxDiv);
+                traitCheckboxes.appendChild(traitDiv);
             });
         }
         
@@ -740,36 +736,28 @@
             rarityCheckboxes.innerHTML = '';
             
             rarities.forEach(rarity => {
-                const checkboxDiv = document.createElement('div');
-                checkboxDiv.className = 'rarity-checkbox';
-                
-                const checkbox = document.createElement('input');
-                checkbox.type = 'checkbox';
-                checkbox.id = `rarity-${rarity.replace(/\s+/g, '-').toLowerCase()}`;
-                checkbox.value = rarity;
+                const rarityDiv = document.createElement('div');
+                rarityDiv.className = 'rarity-checkbox';
+                rarityDiv.dataset.rarity = rarity;
                 
                 const span = document.createElement('span');
                 span.innerHTML = `<img src="${rarityIcons[rarity.toLowerCase()]}" alt="${rarity}" class="rarity-icon">${rarity}`;
                 
-                checkboxDiv.appendChild(checkbox);
-                checkboxDiv.appendChild(span);
+                rarityDiv.appendChild(span);
                 
                 // Make entire rarity element clickable
-                checkboxDiv.addEventListener('click', function(e) {
-                    // Don't trigger twice if clicking directly on checkbox
-                    if (e.target !== checkbox) {
-                        checkbox.checked = !checkbox.checked;
-                    }
-                    
-                    if (checkbox.checked) {
-                        selectedRarities.add(checkbox.value);
+                rarityDiv.addEventListener('click', function() {
+                    if (selectedRarities.has(rarity)) {
+                        selectedRarities.delete(rarity);
+                        this.classList.remove('selected');
                     } else {
-                        selectedRarities.delete(checkbox.value);
+                        selectedRarities.add(rarity);
+                        this.classList.add('selected');
                     }
                     searchCards();
                 });
                 
-                rarityCheckboxes.appendChild(checkboxDiv);
+                rarityCheckboxes.appendChild(rarityDiv);
             });
         }
         
