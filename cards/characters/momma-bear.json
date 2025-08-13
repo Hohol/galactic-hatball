@@ -1,6 +1,5 @@
 {
   "name": "Momma Bear",
-  "description": "Each fight, give your Animals' slots +2/+2.",
   "type": "characters",
   "rarity": "rare",
   "images": [
@@ -24,8 +23,14 @@
   "traits": [
     "Animal"
   ],
+  "abilities": [
+    {
+      "type": null,
+      "description": "Each fight, give your Animals' slots +2/+2.",
+      "gold_description": "Each fight, give your Animals' slots +4/+4."
+    }
+  ],
   "attack": 5,
   "health": 5,
-  "deck_type": "Shared",
-  "gold_description": "Each fight, give your Animals' slots +4/+4."
+  "deck_type": "Shared"
 }

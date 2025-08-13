@@ -1,6 +1,5 @@
 {
   "name": "Medusa",
-  "description": "When I attack a character, transform it into a 3/3 cursed Statue.",
   "type": "characters",
   "rarity": "epic",
   "images": [
@@ -21,7 +20,18 @@
     "Mage",
     "Villain"
   ],
-  "ability_type": "Cursed",
+  "abilities": [
+    {
+      "type": "Cursed",
+      "description": "(I cannot be buffed.)",
+      "gold_description": null
+    },
+    {
+      "type": null,
+      "description": "When I attack a character, transform it into a 3/3 cursed Statue.",
+      "gold_description": null
+    }
+  ],
   "attack": 3,
   "health": 3,
   "deck_type": "Shared"

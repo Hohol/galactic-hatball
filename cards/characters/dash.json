@@ -1,6 +1,5 @@
 {
   "name": "Dash",
-  "description": "Give your shop +4 Health.",
   "type": "characters",
   "rarity": "rare",
   "images": [
@@ -20,9 +19,14 @@
   "traits": [
     "Fae"
   ],
-  "ability_type": "Farewell",
+  "abilities": [
+    {
+      "type": "Farewell",
+      "description": "Give your shop +4 Health.",
+      "gold_description": "Give your shop +8 Health."
+    }
+  ],
   "attack": 3,
   "health": 5,
-  "deck_type": "Shared",
-  "gold_description": "Give your shop +8 Health."
+  "deck_type": "Shared"
 }

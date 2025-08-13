@@ -1,6 +1,5 @@
 {
   "name": "Pirate Prince",
-  "description": "Each fight, give your Pirates everywhere Treasure Hoard 1.",
   "type": "characters",
   "rarity": "legendary",
   "images": [
@@ -25,9 +24,19 @@
     "Pirate",
     "Hero"
   ],
-  "ability_type": "Recruit",
+  "abilities": [
+    {
+      "type": "Recruit",
+      "description": "Get two random Common treasures.",
+      "gold_description": "Get four random Common treasures."
+    },
+    {
+      "type": null,
+      "description": "Each fight, give your Pirates everywhere Treasure Hoard 1.",
+      "gold_description": "Get four random Common treasures."
+    }
+  ],
   "attack": 20,
   "health": 20,
-  "deck_type": "Collectible",
-  "gold_description": "Get four random Common treasures."
+  "deck_type": "Collectible"
 }

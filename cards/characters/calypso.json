@@ -1,6 +1,5 @@
 {
   "name": "Calypso",
-  "description": "When you cast a spell give your Mages +2/+1, then give your Pirates +2/+1.",
   "type": "characters",
   "rarity": "rare",
   "images": [
@@ -26,8 +25,14 @@
     "Pirate",
     "Villain"
   ],
+  "abilities": [
+    {
+      "type": null,
+      "description": "When you cast a spell give your Mages +2/+1, then give your Pirates +2/+1.",
+      "gold_description": "When you cast a spell give your Mages +4/+2, then give your Pirates +4/+2."
+    }
+  ],
   "attack": 6,
   "health": 6,
-  "deck_type": "Collectible",
-  "gold_description": "When you cast a spell give your Mages +4/+2, then give your Pirates +4/+2."
+  "deck_type": "Collectible"
 }

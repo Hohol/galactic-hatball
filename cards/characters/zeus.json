@@ -1,6 +1,5 @@
 {
   "name": "Zeus",
-  "description": "Double the first spell you cast each turn. I have +5 Attack for each spell you've cast this game.",
   "type": "characters",
   "rarity": "secret rare",
   "images": [
@@ -21,9 +20,19 @@
     "Mage",
     "Celestial"
   ],
-  "ability_type": "Ranged",
+  "abilities": [
+    {
+      "type": "Ranged",
+      "description": null,
+      "gold_description": null
+    },
+    {
+      "type": null,
+      "description": "Double the first spell you cast each turn. I have +5 Attack for each spell you've cast this game.",
+      "gold_description": "Triple the first spell you cast each turn. I have +10 Attack for each spell you've cast this game."
+    }
+  ],
   "attack": 30,
   "health": 30,
-  "deck_type": "Shared",
-  "gold_description": "Triple the first spell you cast each turn. I have +10 Attack for each spell you've cast this game."
+  "deck_type": "Shared"
 }

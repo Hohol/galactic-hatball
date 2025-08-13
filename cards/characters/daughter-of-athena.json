@@ -1,6 +1,5 @@
 {
   "name": "Daughter of Athena",
-  "description": "Recruit 3 Heroes.",
   "type": "characters",
   "rarity": "common",
   "images": [
@@ -24,7 +23,13 @@
   "traits": [
     "Hero"
   ],
-  "ability_type": "Quest",
+  "abilities": [
+    {
+      "type": "Quest",
+      "description": "Recruit 3 Heroes.",
+      "gold_description": null
+    }
+  ],
   "attack": 1,
   "health": 3,
   "deck_type": "Shared"

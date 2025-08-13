@@ -1,6 +1,5 @@
 {
   "name": "Raggedy Ann",
-  "description": "Summon a 3/3 Andy and give it +3/+3 for each heart you're missing.",
   "type": "characters",
   "rarity": "rare",
   "images": [
@@ -24,9 +23,14 @@
   "traits": [
     "Toy"
   ],
-  "ability_type": "Farewell",
+  "abilities": [
+    {
+      "type": "Farewell",
+      "description": "Summon a 3/3 Andy and give it +3/+3 for each heart you're missing.",
+      "gold_description": "Summon a 3/3 Andy and give it +6/+6 for each heart you're missing."
+    }
+  ],
   "attack": 3,
   "health": 3,
-  "deck_type": "Collectible",
-  "gold_description": "Summon a 3/3 Andy and give it +6/+6 for each heart you're missing."
+  "deck_type": "Collectible"
 }

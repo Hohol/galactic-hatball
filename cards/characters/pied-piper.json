@@ -1,6 +1,5 @@
 {
   "name": "Pied Piper",
-  "description": "Your next shop is all Animals.",
   "type": "characters",
   "rarity": "common",
   "images": [
@@ -24,9 +23,14 @@
   "traits": [
     "Animal"
   ],
-  "ability_type": "Recruit",
+  "abilities": [
+    {
+      "type": "Recruit",
+      "description": "Your next shop is all Animals.",
+      "gold_description": "Get a bonus shop of all Animals."
+    }
+  ],
   "attack": 2,
   "health": 3,
-  "deck_type": "Collectible",
-  "gold_description": "Get a bonus shop of all Animals."
+  "deck_type": "Collectible"
 }

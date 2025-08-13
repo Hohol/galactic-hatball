@@ -1,6 +1,5 @@
 {
   "name": "Aladdin",
-  "description": "When you Silver me, discover a treasure in addition to the bonus shop.",
   "type": "characters",
   "rarity": "common",
   "images": [
@@ -24,6 +23,13 @@
   "traits": [
     "Pirate",
     "Hero"
+  ],
+  "abilities": [
+    {
+      "type": null,
+      "description": "When you Silver me, discover a treasure in addition to the bonus shop.",
+      "gold_description": null
+    }
   ],
   "attack": 2,
   "health": 1,

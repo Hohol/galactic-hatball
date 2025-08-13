@@ -1,6 +1,5 @@
 {
   "name": "G-Man, Champion of Eternity",
-  "description": "When I'm attacked, I gain attack equal to the attacker's current health.",
   "type": "characters",
   "rarity": "epic",
   "images": [
@@ -25,8 +24,14 @@
     "Toy",
     "Hero"
   ],
+  "abilities": [
+    {
+      "type": null,
+      "description": "When I'm attacked, I gain attack equal to the attacker's current health.",
+      "gold_description": "When I'm attacked, I gain attack equal to double the attacker's current health."
+    }
+  ],
   "attack": 1,
   "health": 20,
-  "deck_type": "Shared",
-  "gold_description": "When I'm attacked, I gain attack equal to double the attacker's current health."
+  "deck_type": "Shared"
 }

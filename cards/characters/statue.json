@@ -1,6 +1,5 @@
 {
   "name": "Statue",
-  "description": "Summoned by Medusa",
   "type": "characters",
   "rarity": "common",
   "images": [
@@ -17,7 +16,18 @@
     "Rock",
     "Token"
   ],
-  "ability_type": "Cursed",
+  "abilities": [
+    {
+      "type": "Cursed",
+      "description": "(Cannot be buffed)",
+      "gold_description": null
+    },
+    {
+      "type": null,
+      "description": "Summoned by Medusa",
+      "gold_description": null
+    }
+  ],
   "attack": 3,
   "health": 3,
   "deck_type": "Shared"

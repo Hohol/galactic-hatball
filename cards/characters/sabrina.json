@@ -1,6 +1,5 @@
 {
   "name": "Sabrina",
-  "description": "Your next shop is all Mages.",
   "type": "characters",
   "rarity": "rare",
   "images": [
@@ -20,9 +19,14 @@
   "traits": [
     "Mage"
   ],
-  "ability_type": "Recruit",
+  "abilities": [
+    {
+      "type": "Recruit",
+      "description": "Your next shop is all Mages.",
+      "gold_description": "Get a bonus shop of all Mages."
+    }
+  ],
   "attack": 7,
   "health": 6,
-  "deck_type": "Collectible",
-  "gold_description": "Get a bonus shop of all Mages."
+  "deck_type": "Collectible"
 }

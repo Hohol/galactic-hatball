@@ -1,6 +1,5 @@
 {
   "name": "Slash",
-  "description": "Give your shop +4 Attack.",
   "type": "characters",
   "rarity": "rare",
   "images": [
@@ -20,9 +19,14 @@
   "traits": [
     "Fae"
   ],
-  "ability_type": "Farewell",
+  "abilities": [
+    {
+      "type": "Farewell",
+      "description": "Give your shop +4 Attack.",
+      "gold_description": "Give your shop +8 Attack."
+    }
+  ],
   "attack": 5,
   "health": 3,
-  "deck_type": "Shared",
-  "gold_description": "Give your shop +8 Attack."
+  "deck_type": "Shared"
 }

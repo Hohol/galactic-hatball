@@ -1,6 +1,5 @@
 {
   "name": "Party Pinata",
-  "description": "Give all your Toys everywhere +1/+1.",
   "type": "characters",
   "rarity": "rare",
   "images": [
@@ -24,9 +23,14 @@
   "traits": [
     "Toy"
   ],
-  "ability_type": "Farewell",
+  "abilities": [
+    {
+      "type": "Farewell",
+      "description": "Give all your Toys everywhere +1/+1.",
+      "gold_description": "Give all your Toys everywhere +2/+2."
+    }
+  ],
   "attack": 8,
   "health": 6,
-  "deck_type": "Collectible",
-  "gold_description": "Give all your Toys everywhere +2/+2."
+  "deck_type": "Collectible"
 }

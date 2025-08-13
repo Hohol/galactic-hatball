@@ -1,6 +1,5 @@
 {
   "name": "Gingerbread House",
-  "description": "Give my neighbors +2 Attack.",
   "type": "characters",
   "rarity": "common",
   "images": [
@@ -24,9 +23,14 @@
   "traits": [
     "Toy"
   ],
-  "ability_type": "Farewell",
+  "abilities": [
+    {
+      "type": "Farewell",
+      "description": "Give my neighbors +2 Attack.",
+      "gold_description": "Give my neighbors +4 Attack."
+    }
+  ],
   "attack": 2,
   "health": 1,
-  "deck_type": "Shared",
-  "gold_description": "Give my neighbors +4 Attack."
+  "deck_type": "Shared"
 }

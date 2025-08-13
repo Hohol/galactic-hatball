@@ -1,6 +1,5 @@
 {
   "name": "Fae Familiar",
-  "description": "When you cast a spell, give me +1/+1.",
   "type": "characters",
   "rarity": "uncommon",
   "images": [
@@ -26,8 +25,14 @@
     "Animal",
     "Mage"
   ],
+  "abilities": [
+    {
+      "type": null,
+      "description": "When you cast a spell, give me +1/+1.",
+      "gold_description": "When you cast a spell, give me +2/+2."
+    }
+  ],
   "attack": 4,
   "health": 4,
-  "deck_type": "Collectible",
-  "gold_description": "When you cast a spell, give me +2/+2."
+  "deck_type": "Collectible"
 }

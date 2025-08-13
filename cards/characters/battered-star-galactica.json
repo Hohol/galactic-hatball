@@ -1,6 +1,5 @@
 {
   "name": "Battered Star Galactica",
-  "description": "I take 200 damage.",
   "type": "characters",
   "rarity": "secret rare",
   "images": [
@@ -24,7 +23,13 @@
   "traits": [
     "Toy"
   ],
-  "ability_type": "Quest",
+  "abilities": [
+    {
+      "type": "Quest",
+      "description": "I take 200 damage.",
+      "gold_description": null
+    }
+  ],
   "attack": 50,
   "health": 50,
   "deck_type": "Shared"

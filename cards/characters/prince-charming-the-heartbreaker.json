@@ -1,6 +1,5 @@
 {
   "name": "Prince Charming, the Heartbreaker",
-  "description": "Break a Heart. (Cracks one of your hearts.)",
   "type": "characters",
   "rarity": "uncommon",
   "images": [
@@ -24,7 +23,13 @@
   "traits": [
     "Villain"
   ],
-  "ability_type": "Recruit",
+  "abilities": [
+    {
+      "type": "Recruit",
+      "description": "Break a Heart. (Cracks one of your hearts.)",
+      "gold_description": null
+    }
+  ],
   "attack": 8,
   "health": 8,
   "deck_type": "Shared"

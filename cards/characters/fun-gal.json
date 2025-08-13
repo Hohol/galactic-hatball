@@ -1,6 +1,5 @@
 {
   "name": "Fun Gal",
-  "description": "Your next shop is all Fae.",
   "type": "characters",
   "rarity": "rare",
   "images": [
@@ -24,9 +23,14 @@
   "traits": [
     "Fae"
   ],
-  "ability_type": "Recruit",
+  "abilities": [
+    {
+      "type": "Recruit",
+      "description": "Your next shop is all Fae.",
+      "gold_description": "Get a bonus shop of all Fae."
+    }
+  ],
   "attack": 5,
   "health": 7,
-  "deck_type": "Collectible",
-  "gold_description": "Get a bonus shop of all Fae."
+  "deck_type": "Collectible"
 }

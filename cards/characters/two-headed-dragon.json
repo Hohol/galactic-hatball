@@ -1,6 +1,5 @@
 {
   "name": "Two-Headed Dragon",
-  "description": "When you Golden me, keep an extra treasure.",
   "type": "characters",
   "rarity": "epic",
   "images": [
@@ -26,7 +25,18 @@
     "Villain",
     "Hero"
   ],
-  "ability_type": "Treasure Hoard 2",
+  "abilities": [
+    {
+      "type": "Treasure Hoard 2",
+      "description": null,
+      "gold_description": null
+    },
+    {
+      "type": null,
+      "description": "When you Golden me, keep an extra treasure.",
+      "gold_description": null
+    }
+  ],
   "attack": 8,
   "health": 8,
   "deck_type": "Shared"

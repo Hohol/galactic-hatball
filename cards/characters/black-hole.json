@@ -1,6 +1,5 @@
 {
   "name": "Black Hole",
-  "description": "KO the character that KO'd me.",
   "type": "characters",
   "rarity": "epic",
   "images": [
@@ -24,7 +23,13 @@
   "traits": [
     "Celestial"
   ],
-  "ability_type": "Farewell",
+  "abilities": [
+    {
+      "type": "Farewell",
+      "description": "KO the character that KO'd me.",
+      "gold_description": null
+    }
+  ],
   "health": 1,
   "deck_type": "Collectible"
 }

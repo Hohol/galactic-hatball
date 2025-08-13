@@ -1,6 +1,5 @@
 {
   "name": "Don Quixote",
-  "description": "Your next shop has a (X) character. (One rarity higher than your shop.)",
   "type": "characters",
   "rarity": "rare",
   "images": [
@@ -24,9 +23,14 @@
   "traits": [
     "Hero"
   ],
-  "ability_type": "Hunt",
+  "abilities": [
+    {
+      "type": "Hunt",
+      "description": "Your next shop has a (X) character. (One rarity higher than your shop.)",
+      "gold_description": "Your next shop has a (X) character. (Two rarities higher than your shop.)"
+    }
+  ],
   "attack": 3,
   "health": 2,
-  "deck_type": "Collectible",
-  "gold_description": "Your next shop has a (X) character. (Two rarities higher than your shop.)"
+  "deck_type": "Collectible"
 }

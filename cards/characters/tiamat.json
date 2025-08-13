@@ -1,6 +1,5 @@
 {
   "name": "Tiamat",
-  "description": "All your Dragons have \"Farewell -- Get a random treasure.\"",
   "type": "characters",
   "rarity": "secret rare",
   "images": [
@@ -25,9 +24,19 @@
     "Dragon",
     "Celestial"
   ],
-  "ability_type": "Treasure Hoard 5",
+  "abilities": [
+    {
+      "type": "Treasure Hoard 5",
+      "description": null,
+      "gold_description": null
+    },
+    {
+      "type": null,
+      "description": "All your Dragons have \"Farewell -- Get a random treasure.\"",
+      "gold_description": "All your Dragons have \"Farewell -- Get 2 random treasures.\""
+    }
+  ],
   "attack": 5,
   "health": 5,
-  "deck_type": "Shared",
-  "gold_description": "All your Dragons have \"Farewell -- Get 2 random treasures.\""
+  "deck_type": "Shared"
 }

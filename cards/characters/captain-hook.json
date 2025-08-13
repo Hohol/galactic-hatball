@@ -1,6 +1,5 @@
 {
   "name": "Captain Hook",
-  "description": "+20 Attack and summon the KO'd character.",
   "type": "characters",
   "rarity": "legendary",
   "images": [
@@ -25,9 +24,14 @@
     "Pirate",
     "Villain"
   ],
-  "ability_type": "Hunt",
+  "abilities": [
+    {
+      "type": "Hunt",
+      "description": "+20 Attack and summon the KO'd character.",
+      "gold_description": "+40 Attack and summon the KO'd character."
+    }
+  ],
   "attack": 20,
   "health": 15,
-  "deck_type": "Shared",
-  "gold_description": "+40 Attack and summon the KO'd character."
+  "deck_type": "Shared"
 }

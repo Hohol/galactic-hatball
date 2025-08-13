@@ -1,6 +1,5 @@
 {
   "name": "Space Ranger Woody",
-  "description": "Your next shop is all Toys.",
   "type": "characters",
   "rarity": "uncommon",
   "images": [
@@ -24,9 +23,14 @@
   "traits": [
     "Toy"
   ],
-  "ability_type": "Recruit",
+  "abilities": [
+    {
+      "type": "Recruit",
+      "description": "Your next shop is all Toys.",
+      "gold_description": "Get a bonus shop of all Toys."
+    }
+  ],
   "attack": 3,
   "health": 5,
-  "deck_type": "Collectible",
-  "gold_description": "Get a bonus shop of all Toys."
+  "deck_type": "Collectible"
 }

@@ -1,6 +1,5 @@
 {
   "name": "Achilles",
-  "description": "Give enemy characters +2/+1.",
   "type": "characters",
   "rarity": "rare",
   "images": [
@@ -24,9 +23,19 @@
   "traits": [
     "Hero"
   ],
-  "ability_type": "Hunt",
+  "abilities": [
+    {
+      "type": "Hunt",
+      "description": "Give me and your other characters +4/+2.",
+      "gold_description": "Give me and your other characters +8/+4."
+    },
+    {
+      "type": "Farewell",
+      "description": "Give enemy characters +2/+1.",
+      "gold_description": "Give enemy characters +4/+2."
+    }
+  ],
   "attack": 7,
   "health": 5,
-  "deck_type": "Shared",
-  "gold_description": "Give enemy characters +4/+2."
+  "deck_type": "Shared"
 }

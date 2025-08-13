@@ -1,6 +1,5 @@
 {
   "name": "Santa Claus",
-  "description": "When I survive damage, summon a random Toy.",
   "type": "characters",
   "rarity": "uncommon",
   "images": [
@@ -25,7 +24,13 @@
     "Mage",
     "Hero"
   ],
+  "abilities": [
+    {
+      "type": null,
+      "description": "When I survive damage, summon a random Toy.",
+      "gold_description": "When I survive damage, summon 2 random Toys."
+    }
+  ],
   "health": 6,
-  "deck_type": "Shared",
-  "gold_description": "When I survive damage, summon 2 random Toys."
+  "deck_type": "Shared"
 }

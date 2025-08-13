@@ -1,6 +1,5 @@
 {
   "name": "Underdog",
-  "description": "If you have fewer characters than the enemy when I attack, first give my slot +2/+2.",
   "type": "characters",
   "rarity": "common",
   "images": [
@@ -25,8 +24,14 @@
     "Animal",
     "Hero"
   ],
+  "abilities": [
+    {
+      "type": null,
+      "description": "If you have fewer characters than the enemy when I attack, first give my slot +2/+2.",
+      "gold_description": "If you have fewer characters than the enemy when I attack, first give my slot +4/+4."
+    }
+  ],
   "attack": 1,
   "health": 3,
-  "deck_type": "Collectible",
-  "gold_description": "If you have fewer characters than the enemy when I attack, first give my slot +4/+4."
+  "deck_type": "Collectible"
 }

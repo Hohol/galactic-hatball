@@ -1,6 +1,5 @@
 {
   "name": "Hercules",
-  "description": "+10/+10, then double this buff.",
   "type": "characters",
   "rarity": "legendary",
   "images": [
@@ -24,9 +23,14 @@
   "traits": [
     "Hero"
   ],
-  "ability_type": "Hunt",
+  "abilities": [
+    {
+      "type": "Hunt",
+      "description": "+10/+10, then double this buff.",
+      "gold_description": "+20/+20, then triple this buff."
+    }
+  ],
   "attack": 10,
   "health": 10,
-  "deck_type": "Collectible",
-  "gold_description": "+20/+20, then triple this buff."
+  "deck_type": "Collectible"
 }

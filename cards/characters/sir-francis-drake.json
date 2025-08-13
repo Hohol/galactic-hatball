@@ -1,6 +1,5 @@
 {
   "name": "Sir Francis Drake",
-  "description": "Get a random Common treasure, then improve this ability.",
   "type": "characters",
   "rarity": "epic",
   "images": [
@@ -21,9 +20,19 @@
     "Dragon",
     "Pirate"
   ],
-  "ability_type": "Treasure Hoard 2",
+  "abilities": [
+    {
+      "type": "Treasure Hoard 2",
+      "description": null,
+      "gold_description": null
+    },
+    {
+      "type": "Hunt",
+      "description": "Get a random Common treasure, then improve this ability.",
+      "gold_description": "Get 2 random Common treasures, then improve this ability."
+    }
+  ],
   "attack": 10,
   "health": 8,
-  "deck_type": "Collectible",
-  "gold_description": "Get 2 random Common treasures, then improve this ability."
+  "deck_type": "Collectible"
 }

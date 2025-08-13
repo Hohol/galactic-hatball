@@ -1,6 +1,5 @@
 {
   "name": "Sinbad",
-  "description": "I discover a Legendary treasure instead of Rare.",
   "type": "characters",
   "rarity": "rare",
   "images": [
@@ -19,6 +18,13 @@
   ],
   "traits": [
     "Pirate"
+  ],
+  "abilities": [
+    {
+      "type": null,
+      "description": "I discover a Legendary treasure instead of Rare.",
+      "gold_description": null
+    }
   ],
   "attack": 8,
   "health": 7,

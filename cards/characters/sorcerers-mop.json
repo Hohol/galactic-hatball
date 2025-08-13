@@ -1,6 +1,5 @@
 {
   "name": "Sorcerer's Mop",
-  "description": "When you summon another character, give it my attack and health.",
   "type": "characters",
   "rarity": "legendary",
   "images": [
@@ -25,8 +24,14 @@
     "Mage",
     "Toy"
   ],
+  "abilities": [
+    {
+      "type": null,
+      "description": "When you summon another character, give it my attack and health.",
+      "gold_description": "When you summon another character, give it double my attack and health."
+    }
+  ],
   "attack": 8,
   "health": 8,
-  "deck_type": "Shared",
-  "gold_description": "When you summon another character, give it double my attack and health."
+  "deck_type": "Shared"
 }

@@ -1,6 +1,5 @@
 {
   "name": "Cheshire Cat",
-  "description": "Give your Animals +6/+6.",
   "type": "characters",
   "rarity": "epic",
   "images": [
@@ -24,9 +23,14 @@
   "traits": [
     "Animal"
   ],
-  "ability_type": "Farewell",
+  "abilities": [
+    {
+      "type": "Farewell",
+      "description": "Give your Animals +6/+6.",
+      "gold_description": "Give your Animals +12/+12."
+    }
+  ],
   "attack": 6,
   "health": 6,
-  "deck_type": "Shared",
-  "gold_description": "Give your Animals +12/+12."
+  "deck_type": "Shared"
 }

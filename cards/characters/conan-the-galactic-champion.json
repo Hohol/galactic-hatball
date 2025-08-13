@@ -1,6 +1,5 @@
 {
   "name": "Conan the Galactic Champion",
-  "description": "Deal 200 damage.",
   "type": "characters",
   "rarity": "legendary",
   "images": [
@@ -25,7 +24,13 @@
     "Celestial",
     "Hero"
   ],
-  "ability_type": "Quest",
+  "abilities": [
+    {
+      "type": "Quest",
+      "description": "Deal 200 damage.",
+      "gold_description": null
+    }
+  ],
   "attack": 25,
   "health": 25,
   "deck_type": "Shared"

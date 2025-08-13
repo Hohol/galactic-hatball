@@ -1,6 +1,5 @@
 {
   "name": "Pisces",
-  "description": "Buffs from Fae give an additional +2/+2 for the rest of the game.",
   "type": "characters",
   "rarity": "epic",
   "images": [
@@ -22,9 +21,14 @@
     "Villain",
     "Hero"
   ],
-  "ability_type": "Recruit",
+  "abilities": [
+    {
+      "type": "Recruit",
+      "description": "Buffs from Fae give an additional +2/+2 for the rest of the game.",
+      "gold_description": "Buffs from Fae give an additional +4/+4 for the rest of the game."
+    }
+  ],
   "attack": 8,
   "health": 8,
-  "deck_type": "Collectible",
-  "gold_description": "Buffs from Fae give an additional +4/+4 for the rest of the game."
+  "deck_type": "Collectible"
 }

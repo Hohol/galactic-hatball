@@ -1,6 +1,5 @@
 {
   "name": "Rose",
-  "description": "Characters in your shop get +1 Health.",
   "type": "characters",
   "rarity": "common",
   "images": [
@@ -20,9 +19,14 @@
   "traits": [
     "Fae"
   ],
-  "ability_type": "Recruit",
+  "abilities": [
+    {
+      "type": "Recruit",
+      "description": "Characters in your shop get +1 Health.",
+      "gold_description": "Characters in your shop get +2 Health."
+    }
+  ],
   "attack": 1,
   "health": 1,
-  "deck_type": "Shared",
-  "gold_description": "Characters in your shop get +2 Health."
+  "deck_type": "Shared"
 }

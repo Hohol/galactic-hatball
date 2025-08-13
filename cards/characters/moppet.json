@@ -1,6 +1,5 @@
 {
   "name": "Moppet",
-  "description": "When I survive a fight, get a random spell.",
   "type": "characters",
   "rarity": "rare",
   "images": [
@@ -25,8 +24,14 @@
     "Mage",
     "Toy"
   ],
+  "abilities": [
+    {
+      "type": null,
+      "description": "When I survive a fight, get a random spell.",
+      "gold_description": "When I survive a fight, get two random spells."
+    }
+  ],
   "attack": 4,
   "health": 9,
-  "deck_type": "Collectible",
-  "gold_description": "When I survive a fight, get two random spells."
+  "deck_type": "Collectible"
 }

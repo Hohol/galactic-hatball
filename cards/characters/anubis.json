@@ -1,6 +1,5 @@
 {
   "name": "Anubis",
-  "description": "Summon all your KO'd characters that have less Attack than me.",
   "type": "characters",
   "rarity": "legendary",
   "images": [
@@ -24,7 +23,13 @@
   "traits": [
     "Celestial"
   ],
-  "ability_type": "Farewell",
+  "abilities": [
+    {
+      "type": "Farewell",
+      "description": "Summon all your KO'd characters that have less Attack than me.",
+      "gold_description": null
+    }
+  ],
   "attack": 10,
   "health": 10,
   "deck_type": "Collectible"

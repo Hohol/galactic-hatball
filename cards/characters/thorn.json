@@ -1,6 +1,5 @@
 {
   "name": "Thorn",
-  "description": "Characters in your shop get +1 Attack.",
   "type": "characters",
   "rarity": "common",
   "images": [
@@ -20,9 +19,14 @@
   "traits": [
     "Fae"
   ],
-  "ability_type": "Recruit",
+  "abilities": [
+    {
+      "type": "Recruit",
+      "description": "Characters in your shop get +1 Attack.",
+      "gold_description": "Characters in your shop get +2 Attack."
+    }
+  ],
   "attack": 1,
   "health": 1,
-  "deck_type": "Shared",
-  "gold_description": "Characters in your shop get +2 Attack."
+  "deck_type": "Shared"
 }

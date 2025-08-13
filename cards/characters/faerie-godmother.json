@@ -1,6 +1,5 @@
 {
   "name": "Faerie Godmother",
-  "description": "Each fight, give your other characters +1/+1.",
   "type": "characters",
   "rarity": "rare",
   "images": [
@@ -25,8 +24,14 @@
     "Mage",
     "Fae"
   ],
+  "abilities": [
+    {
+      "type": null,
+      "description": "Each fight, give your other characters +1/+1.",
+      "gold_description": "Each fight, give your other characters +2/+2."
+    }
+  ],
   "attack": 2,
   "health": 5,
-  "deck_type": "Shared",
-  "gold_description": "Each fight, give your other characters +1/+1."
+  "deck_type": "Shared"
 }

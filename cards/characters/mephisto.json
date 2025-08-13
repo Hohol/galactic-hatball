@@ -1,6 +1,5 @@
 {
   "name": "Mephisto",
-  "description": "When a character in front of me is KO'd, it is gone for good and I steal its Attack and Health.",
   "type": "characters",
   "rarity": "legendary",
   "images": [
@@ -21,9 +20,19 @@
     "Celestial",
     "Villain"
   ],
-  "ability_type": "Support",
+  "abilities": [
+    {
+      "type": "Support",
+      "description": "+6/+6.",
+      "gold_description": "+12/+12."
+    },
+    {
+      "type": null,
+      "description": "When a character in front of me is KO'd, it is gone for good and I steal its Attack and Health.",
+      "gold_description": "When a character in front of me is KO'd, it is gone for good and I double steal its Attack and Health."
+    }
+  ],
   "attack": 6,
   "health": 6,
-  "deck_type": "Collectible",
-  "gold_description": "When a character in front of me is KO'd, it is gone for good and I double steal its Attack and Health."
+  "deck_type": "Collectible"
 }

@@ -1,6 +1,5 @@
 {
   "name": "Jack Frost",
-  "description": "+5 Health",
   "type": "characters",
   "rarity": "uncommon",
   "images": [
@@ -24,9 +23,14 @@
   "traits": [
     "Fae"
   ],
-  "ability_type": "Support",
+  "abilities": [
+    {
+      "type": "Support",
+      "description": "+5 Health",
+      "gold_description": "+10 Health"
+    }
+  ],
   "attack": 2,
   "health": 3,
-  "deck_type": "Shared",
-  "gold_description": "+10 Health"
+  "deck_type": "Shared"
 }

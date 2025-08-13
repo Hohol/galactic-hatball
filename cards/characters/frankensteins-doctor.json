@@ -1,6 +1,5 @@
 {
   "name": "Frankenstein's Doctor",
-  "description": "Your characters have \"Farewell -- Give my slot +4/+4.\"",
   "type": "characters",
   "rarity": "legendary",
   "images": [
@@ -24,8 +23,14 @@
   "traits": [
     "Villain"
   ],
+  "abilities": [
+    {
+      "type": null,
+      "description": "Your characters have \"Farewell -- Give my slot +4/+4.\"",
+      "gold_description": "Your characters have \"Farewell -- Give my slot +8/+8.\""
+    }
+  ],
   "attack": 14,
   "health": 14,
-  "deck_type": "Shared",
-  "gold_description": "Your characters have \"Farewell -- Give my slot +8/+8.\""
+  "deck_type": "Shared"
 }

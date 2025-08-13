@@ -1,6 +1,5 @@
 {
   "name": "Ghost Armor",
-  "description": "Give another character my Attack and Health.",
   "type": "characters",
   "rarity": "secret rare",
   "images": [
@@ -20,9 +19,14 @@
   "traits": [
     "Villain"
   ],
-  "ability_type": "Farewell",
+  "abilities": [
+    {
+      "type": "Farewell",
+      "description": "Give another character my Attack and Health.",
+      "gold_description": "Give another character double my Attack and Health."
+    }
+  ],
   "attack": 1,
   "health": 1,
-  "deck_type": "Shared",
-  "gold_description": "Give another character double my Attack and Health."
+  "deck_type": "Shared"
 }

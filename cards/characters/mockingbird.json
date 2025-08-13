@@ -1,6 +1,5 @@
 {
   "name": "Mockingbird",
-  "description": "Summon a random Animal and give it +6/+6 for each of your other Animals that were KO'd this fight.",
   "type": "characters",
   "rarity": "epic",
   "images": [
@@ -25,9 +24,14 @@
     "Animal",
     "Toy"
   ],
-  "ability_type": "Farewell",
+  "abilities": [
+    {
+      "type": "Farewell",
+      "description": "Summon a random Animal and give it +6/+6 for each of your other Animals that were KO'd this fight.",
+      "gold_description": "Summon 2 random Animals and give them +6/+6 for each of your other Animals that were KO'd this fight."
+    }
+  ],
   "attack": 6,
   "health": 6,
-  "deck_type": "Shared",
-  "gold_description": "Summon 2 random Animals and give them +6/+6 for each of your other Animals that were KO'd this fight."
+  "deck_type": "Shared"
 }

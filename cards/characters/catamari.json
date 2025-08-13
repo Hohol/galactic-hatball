@@ -1,6 +1,5 @@
 {
   "name": "Catamari",
-  "description": "When I attack, I get +1/+1.",
   "type": "characters",
   "rarity": "uncommon",
   "images": [
@@ -24,8 +23,14 @@
   "traits": [
     "ALL"
   ],
+  "abilities": [
+    {
+      "type": null,
+      "description": "When I attack, I get +1/+1.",
+      "gold_description": "When I attack, I get +2/+2."
+    }
+  ],
   "attack": 3,
   "health": 3,
-  "deck_type": "Shared",
-  "gold_description": "When I attack, I get +2/+2."
+  "deck_type": "Shared"
 }

@@ -1,6 +1,5 @@
 {
   "name": "Wicked Witch",
-  "description": "After I attack, reduce that enemy and the ones next to it to 1 Health.",
   "type": "characters",
   "rarity": "epic",
   "images": [
@@ -25,7 +24,18 @@
     "Mage",
     "Villain"
   ],
-  "ability_type": "Ranged",
+  "abilities": [
+    {
+      "type": "Ranged",
+      "description": null,
+      "gold_description": null
+    },
+    {
+      "type": null,
+      "description": "After I attack, reduce that enemy and the ones next to it to 1 Health.",
+      "gold_description": null
+    }
+  ],
   "attack": 1,
   "health": 13,
   "deck_type": "Collectible"

@@ -1,6 +1,5 @@
 {
   "name": "The Rat King",
-  "description": "Give my slot +25/+25.",
   "type": "characters",
   "rarity": "legendary",
   "images": [
@@ -25,9 +24,19 @@
     "Animal",
     "Pirate"
   ],
-  "ability_type": "Sneak",
+  "abilities": [
+    {
+      "type": "Sneak",
+      "description": null,
+      "gold_description": null
+    },
+    {
+      "type": "Hunt",
+      "description": "Give my slot +25/+25.",
+      "gold_description": "Give my slot +50/+50."
+    }
+  ],
   "attack": 20,
   "health": 15,
-  "deck_type": "Collectible",
-  "gold_description": "Give my slot +50/+50."
+  "deck_type": "Collectible"
 }

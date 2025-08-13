@@ -1,6 +1,5 @@
 {
   "name": "Pan's Shadow",
-  "description": "Buffs from Fae give an additional +1 Attack for the rest of the game.",
   "type": "characters",
   "rarity": "uncommon",
   "images": [
@@ -24,9 +23,14 @@
   "traits": [
     "Villain"
   ],
-  "ability_type": "Recruit",
+  "abilities": [
+    {
+      "type": "Recruit",
+      "description": "Buffs from Fae give an additional +1 Attack for the rest of the game.",
+      "gold_description": "Buffs from Fae give an additional +2 Attack for the rest of the game."
+    }
+  ],
   "attack": 4,
   "health": 2,
-  "deck_type": "Shared",
-  "gold_description": "Buffs from Fae give an additional +2 Attack for the rest of the game."
+  "deck_type": "Shared"
 }

@@ -1,6 +1,5 @@
 {
   "name": "Mech-a-Man",
-  "description": "Summon a random Toy.",
   "type": "characters",
   "rarity": "uncommon",
   "images": [
@@ -26,9 +25,19 @@
     "Pirate",
     "Hero"
   ],
-  "ability_type": "Hunt",
+  "abilities": [
+    {
+      "type": "Hunt",
+      "description": "Give my slot +1 Attack.",
+      "gold_description": "Give my slot +2 Attack."
+    },
+    {
+      "type": "Farewell",
+      "description": "Summon a random Toy.",
+      "gold_description": "Summon two random Toys."
+    }
+  ],
   "attack": 2,
   "health": 1,
-  "deck_type": "Collectible",
-  "gold_description": "Summon two random Toys."
+  "deck_type": "Collectible"
 }

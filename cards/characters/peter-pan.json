@@ -1,6 +1,5 @@
 {
   "name": "Peter Pan",
-  "description": "Buffs from Fae give an additional +1 Health for the rest of the game.",
   "type": "characters",
   "rarity": "uncommon",
   "images": [
@@ -24,9 +23,14 @@
   "traits": [
     "Hero"
   ],
-  "ability_type": "Recruit",
+  "abilities": [
+    {
+      "type": "Recruit",
+      "description": "Buffs from Fae give an additional +1 Health for the rest of the game.",
+      "gold_description": "Buffs from Fae give an additional +2 Health for the rest of the game."
+    }
+  ],
   "attack": 2,
   "health": 4,
-  "deck_type": "Shared",
-  "gold_description": "Buffs from Fae give an additional +2 Health for the rest of the game."
+  "deck_type": "Shared"
 }

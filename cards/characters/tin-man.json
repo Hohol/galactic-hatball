@@ -1,6 +1,5 @@
 {
   "name": "Tin Man",
-  "description": "Have a Heart (exactly one full heart).",
   "type": "characters",
   "rarity": "rare",
   "images": [
@@ -24,7 +23,13 @@
   "traits": [
     "Toy"
   ],
-  "ability_type": "Quest",
+  "abilities": [
+    {
+      "type": "Quest",
+      "description": "Have a Heart (exactly one full heart).",
+      "gold_description": null
+    }
+  ],
   "attack": 5,
   "health": 8,
   "deck_type": "Shared"

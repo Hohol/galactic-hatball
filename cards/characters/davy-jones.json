@@ -1,6 +1,5 @@
 {
   "name": "Davy Jones",
-  "description": "My slot gains +2/+2.",
   "type": "characters",
   "rarity": "rare",
   "images": [
@@ -25,9 +24,19 @@
     "Pirate",
     "Villain"
   ],
-  "ability_type": "Hunt",
+  "abilities": [
+    {
+      "type": "Hunt",
+      "description": "My slot gains +2/+2.",
+      "gold_description": "My slot gains +4/+4."
+    },
+    {
+      "type": "Farewell",
+      "description": "My slot gains +2/+2.",
+      "gold_description": "My slot gains +4/+4."
+    }
+  ],
   "attack": 7,
   "health": 1,
-  "deck_type": "Shared",
-  "gold_description": "My slot gains +4/+4."
+  "deck_type": "Shared"
 }

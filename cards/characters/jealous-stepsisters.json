@@ -1,6 +1,5 @@
 {
   "name": "Jealous Stepsisters",
-  "description": "I deal 6 damage in a single fight.",
   "type": "characters",
   "rarity": "common",
   "images": [
@@ -24,7 +23,13 @@
   "traits": [
     "Villain"
   ],
-  "ability_type": "Quest",
+  "abilities": [
+    {
+      "type": "Quest",
+      "description": "I deal 6 damage in a single fight.",
+      "gold_description": null
+    }
+  ],
   "attack": 1,
   "health": 3,
   "deck_type": "Shared"

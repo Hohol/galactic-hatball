@@ -1,6 +1,5 @@
 {
   "name": "Fire-Breathing Dragon",
-  "description": "(I have +1/+1 for each treasure you've found.)",
   "type": "characters",
   "rarity": "rare",
   "images": [
@@ -24,9 +23,19 @@
   "traits": [
     "Dragon"
   ],
-  "ability_type": "Ranged",
+  "abilities": [
+    {
+      "type": "Ranged",
+      "description": null,
+      "gold_description": null
+    },
+    {
+      "type": "Treasure Hoard 1",
+      "description": "(I have +1/+1 for each treasure you've found.)",
+      "gold_description": "(I have +2/+2 for each treasure you've found.)"
+    }
+  ],
   "attack": 4,
   "health": 1,
-  "deck_type": "Shared",
-  "gold_description": "(I have +2/+2 for each treasure you've found.)"
+  "deck_type": "Shared"
 }

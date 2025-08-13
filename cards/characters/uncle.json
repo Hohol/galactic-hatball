@@ -1,6 +1,5 @@
 {
   "name": "Uncle",
-  "description": "Summoned by Barrel of Monkeys",
   "type": "characters",
   "rarity": "common",
   "images": [
@@ -15,6 +14,13 @@
   ],
   "traits": [
     "Token"
+  ],
+  "abilities": [
+    {
+      "type": null,
+      "description": "Summoned by Barrel of Monkeys",
+      "gold_description": null
+    }
   ],
   "attack": 1,
   "health": 1,

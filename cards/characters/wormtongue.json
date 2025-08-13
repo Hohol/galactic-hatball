@@ -1,6 +1,5 @@
 {
   "name": "Wormtongue",
-  "description": "Your next shop is all Villains.",
   "type": "characters",
   "rarity": "common",
   "images": [
@@ -24,9 +23,14 @@
   "traits": [
     "Villain"
   ],
-  "ability_type": "Recruit",
+  "abilities": [
+    {
+      "type": "Recruit",
+      "description": "Your next shop is all Villains.",
+      "gold_description": "Get a bonus shop of all Villains."
+    }
+  ],
   "attack": 3,
   "health": 2,
-  "deck_type": "Collectible",
-  "gold_description": "Get a bonus shop of all Villains."
+  "deck_type": "Collectible"
 }

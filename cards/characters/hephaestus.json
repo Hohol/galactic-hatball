@@ -1,6 +1,5 @@
 {
   "name": "Hephaestus",
-  "description": "When I appear in the shop, Golden me if you have a Common, Uncommon, and Rare treasure.",
   "type": "characters",
   "rarity": "legendary",
   "images": [
@@ -25,7 +24,18 @@
     "Dragon",
     "Celestial"
   ],
-  "ability_type": "Treasure Hoard 3",
+  "abilities": [
+    {
+      "type": "Treasure Hoard 3",
+      "description": null,
+      "gold_description": null
+    },
+    {
+      "type": null,
+      "description": "When I appear in the shop, Golden me if you have a Common, Uncommon, and Rare treasure.",
+      "gold_description": null
+    }
+  ],
   "attack": 30,
   "health": 30,
   "deck_type": "Collectible"

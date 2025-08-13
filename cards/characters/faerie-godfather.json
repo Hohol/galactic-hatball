@@ -1,6 +1,5 @@
 {
   "name": "Faerie Godfather",
-  "description": "Each fight, give your lowest rarity characters +15/+15.",
   "type": "characters",
   "rarity": "legendary",
   "images": [
@@ -20,8 +19,14 @@
   "traits": [
     "Fae"
   ],
+  "abilities": [
+    {
+      "type": null,
+      "description": "Each fight, give your lowest rarity characters +15/+15.",
+      "gold_description": "Each fight, give your lowest rarity characters +30/+30."
+    }
+  ],
   "attack": 20,
   "health": 20,
-  "deck_type": "Collectible",
-  "gold_description": "Each fight, give your lowest rarity characters +30/+30."
+  "deck_type": "Collectible"
 }

@@ -1,6 +1,5 @@
 {
   "name": "Wink",
-  "description": "Buffs from Fae give an additional +1/+1 for the rest of the game.",
   "type": "characters",
   "rarity": "uncommon",
   "images": [
@@ -24,9 +23,14 @@
   "traits": [
     "Hero"
   ],
-  "ability_type": "Hunt",
+  "abilities": [
+    {
+      "type": "Hunt",
+      "description": "Buffs from Fae give an additional +1/+1 for the rest of the game.",
+      "gold_description": "Buffs from Fae give an additional +2/+2 for the rest of the game."
+    }
+  ],
   "attack": 2,
   "health": 1,
-  "deck_type": "Collectible",
-  "gold_description": "Buffs from Fae give an additional +2/+2 for the rest of the game."
+  "deck_type": "Collectible"
 }

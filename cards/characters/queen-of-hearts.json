@@ -1,6 +1,5 @@
 {
   "name": "Queen of Hearts",
-  "description": "I have +8/+8 for each heart you're missing.",
   "type": "characters",
   "rarity": "epic",
   "images": [
@@ -24,8 +23,14 @@
   "traits": [
     "Villain"
   ],
+  "abilities": [
+    {
+      "type": null,
+      "description": "I have +8/+8 for each heart you're missing.",
+      "gold_description": "I have +16/+16 for each heart you're missing."
+    }
+  ],
   "attack": 8,
   "health": 8,
-  "deck_type": "Shared",
-  "gold_description": "I have +16/+16 for each heart you're missing."
+  "deck_type": "Shared"
 }

@@ -1,6 +1,5 @@
 {
   "name": "Blackbeard",
-  "description": "Trigger your other character's Hunt abilities.",
   "type": "characters",
   "rarity": "legendary",
   "images": [
@@ -25,8 +24,19 @@
     "Pirate",
     "Villain"
   ],
+  "abilities": [
+    {
+      "type": null,
+      "description": "I have +4/+4 for each time your characters have successfully Hunted.",
+      "gold_description": "I have +8/+8 for each time your characters have successfully Hunted."
+    },
+    {
+      "type": "Hunt",
+      "description": "Trigger your other character's Hunt abilities.",
+      "gold_description": "Trigger your other character's Hunt abilities twice."
+    }
+  ],
   "attack": 4,
   "health": 4,
-  "deck_type": "Collectible",
-  "gold_description": "Trigger your other character's Hunt abilities twice."
+  "deck_type": "Collectible"
 }

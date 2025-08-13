@@ -1,6 +1,5 @@
 {
   "name": "Ninja-in-Training",
-  "description": "Toy\nAnimal\nHero",
   "type": "characters",
   "rarity": "epic",
   "images": [
@@ -26,7 +25,18 @@
     "Animal",
     "Hero"
   ],
-  "ability_type": "Sneak",
+  "abilities": [
+    {
+      "type": "Sneak",
+      "description": null,
+      "gold_description": null
+    },
+    {
+      "type": "Ranged",
+      "description": null,
+      "gold_description": null
+    }
+  ],
   "attack": 7,
   "health": 4,
   "deck_type": "Shared"

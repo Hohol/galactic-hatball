@@ -1,6 +1,5 @@
 {
   "name": "Pix",
-  "description": "+3 Health. (To the characters in front of me.)",
   "type": "characters",
   "rarity": "common",
   "images": [
@@ -25,9 +24,14 @@
     "Fae",
     "Hero"
   ],
-  "ability_type": "Support",
+  "abilities": [
+    {
+      "type": "Support",
+      "description": "+3 Health. (To the characters in front of me.)",
+      "gold_description": "+6 Health. (To the characters in front of me.)"
+    }
+  ],
   "attack": 1,
   "health": 1,
-  "deck_type": "Shared",
-  "gold_description": "+6 Health. (To the characters in front of me.)"
+  "deck_type": "Shared"
 }

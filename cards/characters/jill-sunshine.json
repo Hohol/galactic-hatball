@@ -1,6 +1,5 @@
 {
   "name": "Jill Sunshine",
-  "description": "+5 Attack",
   "type": "characters",
   "rarity": "uncommon",
   "images": [
@@ -24,9 +23,14 @@
   "traits": [
     "Fae"
   ],
-  "ability_type": "Support",
+  "abilities": [
+    {
+      "type": "Support",
+      "description": "+5 Attack",
+      "gold_description": "+10 Attack"
+    }
+  ],
   "attack": 3,
   "health": 2,
-  "deck_type": "Shared",
-  "gold_description": "+10 Attack"
+  "deck_type": "Shared"
 }

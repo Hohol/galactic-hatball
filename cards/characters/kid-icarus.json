@@ -1,6 +1,5 @@
 {
   "name": "Kid Icarus",
-  "description": "If I'm Golden, discover an Epic treasure, but then I never return.",
   "type": "characters",
   "rarity": "uncommon",
   "images": [
@@ -24,7 +23,13 @@
   "traits": [
     "Hero"
   ],
-  "ability_type": "Farewell",
+  "abilities": [
+    {
+      "type": "Farewell",
+      "description": "If I'm Golden, discover an Epic treasure, but then I never return.",
+      "gold_description": null
+    }
+  ],
   "attack": 6,
   "health": 4,
   "deck_type": "Collectible"

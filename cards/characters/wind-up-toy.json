@@ -1,6 +1,5 @@
 {
   "name": "Wind Up Toy",
-  "description": "When I'm attacked, give me +1 Attack.",
   "type": "characters",
   "rarity": "common",
   "images": [
@@ -24,7 +23,13 @@
   "traits": [
     "Toy"
   ],
+  "abilities": [
+    {
+      "type": null,
+      "description": "When I'm attacked, give me +1 Attack.",
+      "gold_description": "When I'm attacked, give me +2 Attack."
+    }
+  ],
   "health": 3,
-  "deck_type": "Shared",
-  "gold_description": "When I'm attacked, give me +2 Attack."
+  "deck_type": "Shared"
 }

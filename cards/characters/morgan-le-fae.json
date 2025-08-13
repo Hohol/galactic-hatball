@@ -1,6 +1,5 @@
 {
   "name": "Morgan Le Fae",
-  "description": "When you cast a spell, give a random character +1 Attack.",
   "type": "characters",
   "rarity": "uncommon",
   "images": [
@@ -26,9 +25,19 @@
     "Mage",
     "Villain"
   ],
-  "ability_type": "Ranged",
+  "abilities": [
+    {
+      "type": "Ranged",
+      "description": null,
+      "gold_description": null
+    },
+    {
+      "type": null,
+      "description": "When you cast a spell, give a random character +1 Attack.",
+      "gold_description": "When you cast a spell, give a random character +2 Attack."
+    }
+  ],
   "attack": 2,
   "health": 2,
-  "deck_type": "Collectible",
-  "gold_description": "When you cast a spell, give a random character +2 Attack."
+  "deck_type": "Collectible"
 }

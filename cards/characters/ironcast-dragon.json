@@ -1,6 +1,5 @@
 {
   "name": "Ironcast Dragon",
-  "description": "When you cast a spell directly on me, get a random Common treasure.",
   "type": "characters",
   "rarity": "epic",
   "images": [
@@ -25,9 +24,19 @@
     "Mage",
     "Dragon"
   ],
-  "ability_type": "Treasure Hoard 1",
+  "abilities": [
+    {
+      "type": "Treasure Hoard 1",
+      "description": null,
+      "gold_description": null
+    },
+    {
+      "type": null,
+      "description": "When you cast a spell directly on me, get a random Common treasure.",
+      "gold_description": "When you cast a spell directly on me, get a random Uncommon treasure."
+    }
+  ],
   "attack": 12,
   "health": 12,
-  "deck_type": "Shared",
-  "gold_description": "When you cast a spell directly on me, get a random Uncommon treasure."
+  "deck_type": "Shared"
 }

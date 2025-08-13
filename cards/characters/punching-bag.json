@@ -1,6 +1,5 @@
 {
   "name": "Punching Bag",
-  "description": "I get +2/+2 whenever I survive damage.",
   "type": "characters",
   "rarity": "rare",
   "images": [
@@ -24,8 +23,14 @@
   "traits": [
     "Toy"
   ],
+  "abilities": [
+    {
+      "type": null,
+      "description": "I get +2/+2 whenever I survive damage.",
+      "gold_description": "I get +4/+4 whenever I survive damage."
+    }
+  ],
   "attack": 3,
   "health": 12,
-  "deck_type": "Shared",
-  "gold_description": "I get +4/+4 whenever I survive damage."
+  "deck_type": "Shared"
 }

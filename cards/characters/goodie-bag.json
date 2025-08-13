@@ -1,6 +1,5 @@
 {
   "name": "Goodie Bag",
-  "description": "Summon a random Common character then give it my stats.",
   "type": "characters",
   "rarity": "rare",
   "images": [
@@ -24,9 +23,14 @@
   "traits": [
     "Toy"
   ],
-  "ability_type": "Farewell",
+  "abilities": [
+    {
+      "type": "Farewell",
+      "description": "Summon a random Common character then give it my stats.",
+      "gold_description": "Summon a random Common character then give it double my stats."
+    }
+  ],
   "attack": 1,
   "health": 1,
-  "deck_type": "Shared",
-  "gold_description": "Summon a random Common character then give it double my stats."
+  "deck_type": "Shared"
 }

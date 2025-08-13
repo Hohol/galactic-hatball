@@ -1,6 +1,5 @@
 {
   "name": "Two-Headed Wizard",
-  "description": "When you cast a spell, I get +2/+2.",
   "type": "characters",
   "rarity": "rare",
   "images": [
@@ -24,9 +23,19 @@
   "traits": [
     "Mage"
   ],
-  "ability_type": "Recruit",
+  "abilities": [
+    {
+      "type": "Recruit",
+      "description": "The next time you cast a spell, cast it again.",
+      "gold_description": "The next two times you cast a spell, cast it again."
+    },
+    {
+      "type": null,
+      "description": "When you cast a spell, I get +2/+2.",
+      "gold_description": "When you cast a spell, I get +4/+4."
+    }
+  ],
   "attack": 3,
   "health": 3,
-  "deck_type": "Shared",
-  "gold_description": "When you cast a spell, I get +4/+4."
+  "deck_type": "Shared"
 }

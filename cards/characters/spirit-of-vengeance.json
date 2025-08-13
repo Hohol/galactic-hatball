@@ -1,6 +1,5 @@
 {
   "name": "Spirit of Vengeance",
-  "description": "I gain Attack and Health equal to the damage I was dealt.",
   "type": "characters",
   "rarity": "secret rare",
   "images": [
@@ -24,9 +23,14 @@
   "traits": [
     "Celestial"
   ],
-  "ability_type": "Farewell",
+  "abilities": [
+    {
+      "type": "Farewell",
+      "description": "I gain Attack and Health equal to the damage I was dealt.",
+      "gold_description": "I gain Attack and Health equal to double the damage I was dealt."
+    }
+  ],
   "attack": 1,
   "health": 1,
-  "deck_type": "Shared",
-  "gold_description": "I gain Attack and Health equal to double the damage I was dealt."
+  "deck_type": "Shared"
 }

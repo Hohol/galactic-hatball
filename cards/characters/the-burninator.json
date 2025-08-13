@@ -1,6 +1,5 @@
 {
   "name": "The Burninator",
-  "description": "When you find a treasure, you get to keep all 3 of them.",
   "type": "characters",
   "rarity": "legendary",
   "images": [
@@ -24,7 +23,18 @@
   "traits": [
     "Dragon"
   ],
-  "ability_type": "Treasure Hoard 3",
+  "abilities": [
+    {
+      "type": "Treasure Hoard 3",
+      "description": null,
+      "gold_description": null
+    },
+    {
+      "type": null,
+      "description": "When you find a treasure, you get to keep all 3 of them.",
+      "gold_description": null
+    }
+  ],
   "attack": 12,
   "health": 12,
   "deck_type": "Collectible"

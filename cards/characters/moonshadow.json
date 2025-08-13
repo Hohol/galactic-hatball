@@ -1,6 +1,5 @@
 {
   "name": "Moonshadow",
-  "description": "+10/+10. Your support characters have ranged.",
   "type": "characters",
   "rarity": "legendary",
   "images": [
@@ -24,9 +23,19 @@
   "traits": [
     "Fae"
   ],
-  "ability_type": "Ranged",
+  "abilities": [
+    {
+      "type": "Ranged",
+      "description": null,
+      "gold_description": null
+    },
+    {
+      "type": "Support",
+      "description": "+10/+10. Your support characters have ranged.",
+      "gold_description": "+20/+20. Your support characters have ranged."
+    }
+  ],
   "attack": 15,
   "health": 15,
-  "deck_type": "Collectible",
-  "gold_description": "+20/+20. Your support characters have ranged."
+  "deck_type": "Collectible"
 }

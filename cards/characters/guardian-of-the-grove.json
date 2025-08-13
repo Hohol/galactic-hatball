@@ -1,6 +1,5 @@
 {
   "name": "Guardian of the Grove",
-  "description": "When one of your Animals attacks, give all of your Animals +5/+5.",
   "type": "characters",
   "rarity": "legendary",
   "images": [
@@ -24,8 +23,14 @@
   "traits": [
     "Animal"
   ],
+  "abilities": [
+    {
+      "type": null,
+      "description": "When one of your Animals attacks, give all of your Animals +5/+5.",
+      "gold_description": "When one of your Animals attacks, give all of your Animals +10/+10."
+    }
+  ],
   "attack": 15,
   "health": 15,
-  "deck_type": "Shared",
-  "gold_description": "When one of your Animals attacks, give all of your Animals +10/+10."
+  "deck_type": "Shared"
 }

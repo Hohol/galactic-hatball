@@ -1,6 +1,5 @@
 {
   "name": "Flying Monkey",
-  "description": "(I attack back row characters first.)",
   "type": "characters",
   "rarity": "common",
   "images": [
@@ -25,7 +24,13 @@
     "Animal",
     "Villain"
   ],
-  "ability_type": "Sneak",
+  "abilities": [
+    {
+      "type": "Sneak",
+      "description": "(I attack back row characters first.)",
+      "gold_description": null
+    }
+  ],
   "attack": 3,
   "health": 2,
   "deck_type": "Shared"

@@ -1,6 +1,5 @@
 {
   "name": "Paul Bunyan",
-  "description": "Each fight, I become bigger than the largest enemy character.",
   "type": "characters",
   "rarity": "secret rare",
   "images": [
@@ -24,6 +23,12 @@
   "traits": [
     "Hero"
   ],
-  "deck_type": "Shared",
-  "gold_description": "Each fight, I become twice the size of the largest enemy character."
+  "abilities": [
+    {
+      "type": null,
+      "description": "Each fight, I become bigger than the largest enemy character.",
+      "gold_description": "Each fight, I become twice the size of the largest enemy character."
+    }
+  ],
+  "deck_type": "Shared"
 }

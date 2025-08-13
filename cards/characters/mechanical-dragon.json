@@ -1,6 +1,5 @@
 {
   "name": "Mechanical Dragon",
-  "description": "Get a Dragon Claw. (Your characters have +1 Attack.)",
   "type": "characters",
   "rarity": "rare",
   "images": [
@@ -25,9 +24,19 @@
     "Dragon",
     "Toy"
   ],
-  "ability_type": "Treasure Hoard 1",
+  "abilities": [
+    {
+      "type": "Treasure Hoard 1",
+      "description": null,
+      "gold_description": null
+    },
+    {
+      "type": "Farewell",
+      "description": "Get a Dragon Claw. (Your characters have +1 Attack.)",
+      "gold_description": "Get 2 Dragon Claws. (Your characters have +1 Attack.)"
+    }
+  ],
   "attack": 2,
   "health": 2,
-  "deck_type": "Collectible",
-  "gold_description": "Get 2 Dragon Claws. (Your characters have +1 Attack.)"
+  "deck_type": "Collectible"
 }

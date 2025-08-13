@@ -1,6 +1,5 @@
 {
   "name": "Sunflaerie",
-  "description": "+7/+7.",
   "type": "characters",
   "rarity": "epic",
   "images": [
@@ -24,9 +23,14 @@
   "traits": [
     "Fae"
   ],
-  "ability_type": "Support",
+  "abilities": [
+    {
+      "type": "Support",
+      "description": "+7/+7.",
+      "gold_description": "+14/+14."
+    }
+  ],
   "attack": 7,
   "health": 7,
-  "deck_type": "Shared",
-  "gold_description": "+14/+14."
+  "deck_type": "Shared"
 }

@@ -1,6 +1,5 @@
 {
   "name": "Toto",
-  "description": "Your next shop has a Quest character.",
   "type": "characters",
   "rarity": "common",
   "images": [
@@ -25,9 +24,14 @@
     "Animal",
     "Hero"
   ],
-  "ability_type": "Recruit",
+  "abilities": [
+    {
+      "type": "Recruit",
+      "description": "Your next shop has a Quest character.",
+      "gold_description": "Get a bonus shop with a Quest character."
+    }
+  ],
   "attack": 3,
   "health": 2,
-  "deck_type": "Collectible",
-  "gold_description": "Get a bonus shop with a Quest character."
+  "deck_type": "Collectible"
 }

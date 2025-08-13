@@ -1,6 +1,5 @@
 {
   "name": "Titania",
-  "description": "Each fight, give characters in front of me +20 Health.",
   "type": "characters",
   "rarity": "legendary",
   "images": [
@@ -24,9 +23,14 @@
   "traits": [
     "Fae"
   ],
-  "ability_type": "Support",
+  "abilities": [
+    {
+      "type": "Support",
+      "description": "Each fight, give characters in front of me +20 Health.",
+      "gold_description": "Each fight, give characters in front of me +40 Health."
+    }
+  ],
   "attack": 10,
   "health": 20,
-  "deck_type": "Shared",
-  "gold_description": "Each fight, give characters in front of me +40 Health."
+  "deck_type": "Shared"
 }

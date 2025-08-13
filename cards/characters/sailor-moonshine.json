@@ -1,6 +1,5 @@
 {
   "name": "Sailor Moonshine",
-  "description": "Your next shop is all Pirates.",
   "type": "characters",
   "rarity": "uncommon",
   "images": [
@@ -24,9 +23,14 @@
   "traits": [
     "Pirate"
   ],
-  "ability_type": "Recruit",
+  "abilities": [
+    {
+      "type": "Recruit",
+      "description": "Your next shop is all Pirates.",
+      "gold_description": "Get a bonus shop of all Pirates."
+    }
+  ],
   "attack": 4,
   "health": 3,
-  "deck_type": "Collectible",
-  "gold_description": "Get a bonus shop of all Pirates."
+  "deck_type": "Collectible"
 }

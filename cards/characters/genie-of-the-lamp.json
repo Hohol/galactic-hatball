@@ -1,6 +1,5 @@
 {
   "name": "Genie of the Lamp",
-  "description": "Every third spell you cast directly on me, double my stats.",
   "type": "characters",
   "rarity": "epic",
   "images": [
@@ -24,8 +23,14 @@
   "traits": [
     "Mage"
   ],
+  "abilities": [
+    {
+      "type": null,
+      "description": "Every third spell you cast directly on me, double my stats.",
+      "gold_description": "Every third spell you cast directly on me, triple my stats."
+    }
+  ],
   "attack": 1,
   "health": 1,
-  "deck_type": "Collectible",
-  "gold_description": "Every third spell you cast directly on me, triple my stats."
+  "deck_type": "Collectible"
 }

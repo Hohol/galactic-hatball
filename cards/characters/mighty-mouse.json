@@ -1,6 +1,5 @@
 {
   "name": "Mighty Mouse",
-  "description": "Animals and Heroes in your shop have +4/+4. After you recruit one, improve this ability by +2/+2.",
   "type": "characters",
   "rarity": "epic",
   "images": [
@@ -25,8 +24,14 @@
     "Animal",
     "Hero"
   ],
+  "abilities": [
+    {
+      "type": null,
+      "description": "Animals and Heroes in your shop have +4/+4. After you recruit one, improve this ability by +2/+2.",
+      "gold_description": "Animals and Heroes in your shop have +8/+8. After you recruit one, improve this ability by +4/+4."
+    }
+  ],
   "attack": 10,
   "health": 10,
-  "deck_type": "Shared",
-  "gold_description": "Animals and Heroes in your shop have +8/+8. After you recruit one, improve this ability by +4/+4."
+  "deck_type": "Shared"
 }

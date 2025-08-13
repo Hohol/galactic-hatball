@@ -1,6 +1,5 @@
 {
   "name": "Mortakon",
-  "description": "Summon characters with 30 total stats (Attack and Health combined).",
   "type": "characters",
   "rarity": "rare",
   "images": [
@@ -24,8 +23,19 @@
   "traits": [
     "Toy"
   ],
+  "abilities": [
+    {
+      "type": null,
+      "description": "When you summon a character, give it and me +2/+2.",
+      "gold_description": "When you summon a character, give it and me +4/+4."
+    },
+    {
+      "type": "Quest",
+      "description": "Summon characters with 30 total stats (Attack and Health combined).",
+      "gold_description": "When you summon a character, give it and me +4/+4."
+    }
+  ],
   "attack": 6,
   "health": 6,
-  "deck_type": "Collectible",
-  "gold_description": "When you summon a character, give it and me +4/+4."
+  "deck_type": "Collectible"
 }

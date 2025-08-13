@@ -1,6 +1,5 @@
 {
   "name": "Stinky",
-  "description": "After I'm attacked, deal that much damage to a random enemy.",
   "type": "characters",
   "rarity": "epic",
   "images": [
@@ -20,7 +19,13 @@
   "traits": [
     "Animal"
   ],
+  "abilities": [
+    {
+      "type": null,
+      "description": "After I'm attacked, deal that much damage to a random enemy.",
+      "gold_description": "After I'm attacked, deal double that much damage to a random enemy."
+    }
+  ],
   "health": 25,
-  "deck_type": "Shared",
-  "gold_description": "After I'm attacked, deal double that much damage to a random enemy."
+  "deck_type": "Shared"
 }

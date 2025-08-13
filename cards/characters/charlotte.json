@@ -1,6 +1,5 @@
 {
   "name": "Charlotte",
-  "description": "Give me +8/+8 for each character supporting me. Then give those characters this buff as well.",
   "type": "characters",
   "rarity": "epic",
   "images": [
@@ -25,9 +24,14 @@
     "Fae",
     "Animal"
   ],
-  "ability_type": "Farewell",
+  "abilities": [
+    {
+      "type": "Farewell",
+      "description": "Give me +8/+8 for each character supporting me. Then give those characters this buff as well.",
+      "gold_description": "Give me +16/+16 for each character supporting me. Then give those characters this buff as well."
+    }
+  ],
   "attack": 8,
   "health": 8,
-  "deck_type": "Collectible",
-  "gold_description": "Give me +16/+16 for each character supporting me. Then give those characters this buff as well."
+  "deck_type": "Collectible"
 }

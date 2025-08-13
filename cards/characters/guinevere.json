@@ -1,6 +1,5 @@
 {
   "name": "Guinevere",
-  "description": "I have 100 Attack or Health during a fight.",
   "type": "characters",
   "rarity": "legendary",
   "images": [
@@ -24,8 +23,19 @@
   "traits": [
     "Hero"
   ],
+  "abilities": [
+    {
+      "type": null,
+      "description": "I have +20/+20 for each Quest you've completed.",
+      "gold_description": "I have +40/+40 for each Quest you've completed."
+    },
+    {
+      "type": "Quest",
+      "description": "I have 100 Attack or Health during a fight.",
+      "gold_description": "I have +40/+40 for each Quest you've completed."
+    }
+  ],
   "attack": 20,
   "health": 20,
-  "deck_type": "Collectible",
-  "gold_description": "I have +40/+40 for each Quest you've completed."
+  "deck_type": "Collectible"
 }

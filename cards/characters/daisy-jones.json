@@ -1,6 +1,5 @@
 {
   "name": "Daisy Jones",
-  "description": "+2/+2 and trigger the Farewell abilities of the characters behind me.",
   "type": "characters",
   "rarity": "epic",
   "images": [
@@ -24,9 +23,14 @@
   "traits": [
     "Pirate"
   ],
-  "ability_type": "Hunt",
+  "abilities": [
+    {
+      "type": "Hunt",
+      "description": "+2/+2 and trigger the Farewell abilities of the characters behind me.",
+      "gold_description": "+4/+4 and trigger the Farewell abilities of the characters behind me."
+    }
+  ],
   "attack": 12,
   "health": 8,
-  "deck_type": "Shared",
-  "gold_description": "+4/+4 and trigger the Farewell abilities of the characters behind me."
+  "deck_type": "Shared"
 }

@@ -1,6 +1,5 @@
 {
   "name": "Mirror Mage",
-  "description": "Cast 3 spells on me.",
   "type": "characters",
   "rarity": "epic",
   "images": [
@@ -24,8 +23,19 @@
   "traits": [
     "Mage"
   ],
+  "abilities": [
+    {
+      "type": null,
+      "description": "When a spell is cast on me, cast it again on another random character.",
+      "gold_description": "When a spell is cast on me, cast it again on two other random characters."
+    },
+    {
+      "type": "Quest",
+      "description": "Cast 3 spells on me.",
+      "gold_description": "When a spell is cast on me, cast it again on two other random characters."
+    }
+  ],
   "attack": 6,
   "health": 6,
-  "deck_type": "Collectible",
-  "gold_description": "When a spell is cast on me, cast it again on two other random characters."
+  "deck_type": "Collectible"
 }

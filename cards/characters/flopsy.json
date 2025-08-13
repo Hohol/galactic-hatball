@@ -1,6 +1,5 @@
 {
   "name": "Flopsy",
-  "description": "The leftmost character in your shop gets my stats.",
   "type": "characters",
   "rarity": "legendary",
   "images": [
@@ -21,9 +20,19 @@
     "Fae",
     "Dragon"
   ],
-  "ability_type": "Treasure Hoard 4",
+  "abilities": [
+    {
+      "type": "Treasure Hoard 4",
+      "description": null,
+      "gold_description": null
+    },
+    {
+      "type": null,
+      "description": "The leftmost character in your shop gets my stats.",
+      "gold_description": "The leftmost character in your shop gets double my stats."
+    }
+  ],
   "attack": 8,
   "health": 8,
-  "deck_type": "Collectible",
-  "gold_description": "The leftmost character in your shop gets double my stats."
+  "deck_type": "Collectible"
 }

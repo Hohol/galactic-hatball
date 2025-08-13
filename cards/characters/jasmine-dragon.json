@@ -1,6 +1,5 @@
 {
   "name": "Jasmine Dragon",
-  "description": "When you collect your first Treasure each turn, you get a bonus shop.",
   "type": "characters",
   "rarity": "epic",
   "images": [
@@ -24,9 +23,19 @@
   "traits": [
     "Dragon"
   ],
-  "ability_type": "Treasure Hoard 2",
+  "abilities": [
+    {
+      "type": "Treasure Hoard 2",
+      "description": null,
+      "gold_description": null
+    },
+    {
+      "type": null,
+      "description": "When you collect your first Treasure each turn, you get a bonus shop.",
+      "gold_description": "When you collect your first Treasure each turn, you get two bonus shops."
+    }
+  ],
   "attack": 7,
   "health": 7,
-  "deck_type": "Shared",
-  "gold_description": "When you collect your first Treasure each turn, you get two bonus shops."
+  "deck_type": "Shared"
 }

@@ -1,6 +1,5 @@
 {
   "name": "Navii",
-  "description": "When you Golden me, gain an additional heart.",
   "type": "characters",
   "rarity": "rare",
   "images": [
@@ -25,7 +24,18 @@
     "Fae",
     "Hero"
   ],
-  "ability_type": "Recruit",
+  "abilities": [
+    {
+      "type": "Recruit",
+      "description": "Repair a cracked heart.",
+      "gold_description": null
+    },
+    {
+      "type": null,
+      "description": "When you Golden me, gain an additional heart.",
+      "gold_description": null
+    }
+  ],
   "attack": 8,
   "health": 8,
   "deck_type": "Shared"

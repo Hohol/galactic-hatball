@@ -1,6 +1,5 @@
 {
   "name": "Bahamut",
-  "description": "Treasure Hoard 5",
   "type": "characters",
   "rarity": "legendary",
   "images": [
@@ -24,7 +23,13 @@
   "traits": [
     "Dragon"
   ],
-  "ability_type": "Treasure Hoard 5",
+  "abilities": [
+    {
+      "type": "Treasure Hoard 5",
+      "description": null,
+      "gold_description": null
+    }
+  ],
   "attack": 25,
   "health": 25,
   "deck_type": "Shared"

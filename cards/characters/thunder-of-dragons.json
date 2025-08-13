@@ -1,6 +1,5 @@
 {
   "name": "Thunder of Dragons",
-  "description": "Your next shop is all Dragons.",
   "type": "characters",
   "rarity": "epic",
   "images": [
@@ -24,9 +23,19 @@
   "traits": [
     "Dragon"
   ],
-  "ability_type": "Treasure Hoard 2",
+  "abilities": [
+    {
+      "type": "Treasure Hoard 2",
+      "description": null,
+      "gold_description": null
+    },
+    {
+      "type": "Recruit",
+      "description": "Your next shop is all Dragons.",
+      "gold_description": "Get a bonus shop of all Dragons."
+    }
+  ],
   "attack": 7,
   "health": 7,
-  "deck_type": "Collectible",
-  "gold_description": "Get a bonus shop of all Dragons."
+  "deck_type": "Collectible"
 }

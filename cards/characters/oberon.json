@@ -1,6 +1,5 @@
 {
   "name": "Oberon",
-  "description": "Each fight, give characters in front of me +20 Attack.",
   "type": "characters",
   "rarity": "legendary",
   "images": [
@@ -24,9 +23,14 @@
   "traits": [
     "Fae"
   ],
-  "ability_type": "Support",
+  "abilities": [
+    {
+      "type": "Support",
+      "description": "Each fight, give characters in front of me +20 Attack.",
+      "gold_description": "Each fight, give characters in front of me +40 Attack."
+    }
+  ],
   "attack": 20,
   "health": 10,
-  "deck_type": "Shared",
-  "gold_description": "Each fight, give characters in front of me +40 Attack."
+  "deck_type": "Shared"
 }

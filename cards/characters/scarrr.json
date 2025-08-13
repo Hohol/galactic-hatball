@@ -1,6 +1,5 @@
 {
   "name": "Scarrr",
-  "description": "When any of your characters hunt, give Villains in your shop +4/+4.",
   "type": "characters",
   "rarity": "epic",
   "images": [
@@ -22,9 +21,19 @@
     "Pirate",
     "Villain"
   ],
-  "ability_type": "Hunt",
+  "abilities": [
+    {
+      "type": "Hunt",
+      "description": "+4/+4.",
+      "gold_description": "+8/+8."
+    },
+    {
+      "type": null,
+      "description": "When any of your characters hunt, give Villains in your shop +4/+4.",
+      "gold_description": "When any of your characters hunt, give Villains in your shop +8/+8."
+    }
+  ],
   "attack": 10,
   "health": 6,
-  "deck_type": "Shared",
-  "gold_description": "When any of your characters hunt, give Villains in your shop +8/+8."
+  "deck_type": "Shared"
 }

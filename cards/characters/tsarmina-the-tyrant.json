@@ -1,6 +1,5 @@
 {
   "name": "Tsarmina, the Tyrant",
-  "description": "I see you successfully Hunt 6 times.",
   "type": "characters",
   "rarity": "rare",
   "images": [
@@ -25,9 +24,19 @@
     "Animal",
     "Villain"
   ],
-  "ability_type": "Support",
+  "abilities": [
+    {
+      "type": "Support",
+      "description": "The characters in front of me have \"Hunt -- +3/+3.\"",
+      "gold_description": "The characters in front of me have \"Hunt -- +6/+6.\""
+    },
+    {
+      "type": "Quest",
+      "description": "I see you successfully Hunt 6 times.",
+      "gold_description": "The characters in front of me have \"Hunt -- +6/+6.\""
+    }
+  ],
   "attack": 3,
   "health": 3,
-  "deck_type": "Collectible",
-  "gold_description": "The characters in front of me have \"Hunt -- +6/+6.\""
+  "deck_type": "Collectible"
 }

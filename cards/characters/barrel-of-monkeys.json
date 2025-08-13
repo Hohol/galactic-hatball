@@ -1,6 +1,5 @@
 {
   "name": "Barrel of Monkeys",
-  "description": "Fill your board with 1/1 Monkeys",
   "type": "characters",
   "rarity": "legendary",
   "images": [
@@ -26,9 +25,14 @@
     "Animal",
     "Pirate"
   ],
-  "ability_type": "Farewell",
+  "abilities": [
+    {
+      "type": "Farewell",
+      "description": "Fill your board with 1/1 Monkeys",
+      "gold_description": "Fill your board with 2/2 Monkeys"
+    }
+  ],
   "attack": 6,
   "health": 6,
-  "deck_type": "Collectible",
-  "gold_description": "Fill your board with 2/2 Monkeys"
+  "deck_type": "Collectible"
 }

@@ -1,6 +1,5 @@
 {
   "name": "Fowl Lich",
-  "description": "I gain +1/+1 when one of your other Animals is KO'd.",
   "type": "characters",
   "rarity": "uncommon",
   "images": [
@@ -26,8 +25,14 @@
     "Mage",
     "Villain"
   ],
+  "abilities": [
+    {
+      "type": null,
+      "description": "I gain +1/+1 when one of your other Animals is KO'd.",
+      "gold_description": "I gain +2/+2 when one of your other Animals is KO'd."
+    }
+  ],
   "attack": 5,
   "health": 5,
-  "deck_type": "Shared",
-  "gold_description": "I gain +2/+2 when one of your other Animals is KO'd."
+  "deck_type": "Shared"
 }

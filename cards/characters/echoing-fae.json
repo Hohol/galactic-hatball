@@ -1,6 +1,5 @@
 {
   "name": "Echoing Fae",
-  "description": "When one of your other characters gets a buff, I get it as well.",
   "type": "characters",
   "rarity": "secret rare",
   "images": [
@@ -24,8 +23,14 @@
   "traits": [
     "Fae"
   ],
+  "abilities": [
+    {
+      "type": null,
+      "description": "When one of your other characters gets a buff, I get it as well.",
+      "gold_description": "When one of your other characters gets a buff, I get double it as well."
+    }
+  ],
   "attack": 5,
   "health": 5,
-  "deck_type": "Shared",
-  "gold_description": "When one of your other characters gets a buff, I get double it as well."
+  "deck_type": "Shared"
 }

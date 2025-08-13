@@ -1,6 +1,5 @@
 {
   "name": "Weird Beard",
-  "description": "Get (X) random treasures (one for each Pirate you've Silvered this game).",
   "type": "characters",
   "rarity": "legendary",
   "images": [
@@ -24,9 +23,14 @@
   "traits": [
     "Pirate"
   ],
-  "ability_type": "Recruit",
+  "abilities": [
+    {
+      "type": "Recruit",
+      "description": "Get (X) random treasures (one for each Pirate you've Silvered this game).",
+      "gold_description": "Get (X) random treasures (two for each Pirate you've Silvered this game)."
+    }
+  ],
   "attack": 20,
   "health": 20,
-  "deck_type": "Collectible",
-  "gold_description": "Get (X) random treasures (two for each Pirate you've Silvered this game)."
+  "deck_type": "Collectible"
 }

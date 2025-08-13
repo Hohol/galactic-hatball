@@ -1,6 +1,5 @@
 {
   "name": "Innkeeper",
-  "description": "When a character I'm supporting Hunts, improve my support by +5/+5.",
   "type": "characters",
   "rarity": "epic",
   "images": [
@@ -20,9 +19,19 @@
   "traits": [
     "Pirate"
   ],
-  "ability_type": "Support",
+  "abilities": [
+    {
+      "type": "Support",
+      "description": "+5/+5.",
+      "gold_description": "+10/+10."
+    },
+    {
+      "type": null,
+      "description": "When a character I'm supporting Hunts, improve my support by +5/+5.",
+      "gold_description": "When a character I'm supporting Hunts, improve my support by +10/+10."
+    }
+  ],
   "attack": 10,
   "health": 10,
-  "deck_type": "Collectible",
-  "gold_description": "When a character I'm supporting Hunts, improve my support by +10/+10."
+  "deck_type": "Collectible"
 }

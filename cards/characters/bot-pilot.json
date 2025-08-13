@@ -1,6 +1,5 @@
 {
   "name": "Bot Pilot",
-  "description": "Summoned by Busted Bot",
   "type": "characters",
   "rarity": "common",
   "images": [
@@ -16,6 +15,13 @@
   "traits": [
     "Toy",
     "Token"
+  ],
+  "abilities": [
+    {
+      "type": null,
+      "description": "Summoned by Busted Bot",
+      "gold_description": null
+    }
   ],
   "attack": 2,
   "health": 2,

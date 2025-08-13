@@ -1,6 +1,5 @@
 {
   "name": "Evil Stepmother",
-  "description": "Recruit 3 Villains.",
   "type": "characters",
   "rarity": "common",
   "images": [
@@ -24,7 +23,13 @@
   "traits": [
     "Villain"
   ],
-  "ability_type": "Quest",
+  "abilities": [
+    {
+      "type": "Quest",
+      "description": "Recruit 3 Villains.",
+      "gold_description": null
+    }
+  ],
   "attack": 3,
   "health": 1,
   "deck_type": "Shared"

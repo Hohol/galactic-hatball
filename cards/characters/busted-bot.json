@@ -1,6 +1,5 @@
 {
   "name": "Busted Bot",
-  "description": "Summon a 2/2 Bot Pilot.",
   "type": "characters",
   "rarity": "common",
   "images": [
@@ -24,8 +23,13 @@
   "traits": [
     "Toy"
   ],
-  "ability_type": "Farewell",
+  "abilities": [
+    {
+      "type": "Farewell",
+      "description": "Summon a 2/2 Bot Pilot.",
+      "gold_description": "Summon a 4/4 Bot Pilot."
+    }
+  ],
   "health": 2,
-  "deck_type": "Collectible",
-  "gold_description": "Summon a 4/4 Bot Pilot."
+  "deck_type": "Collectible"
 }

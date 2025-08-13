@@ -1,6 +1,5 @@
 {
   "name": "White Whale",
-  "description": "Your opponent finds a Common treasure.",
   "type": "characters",
   "rarity": "epic",
   "images": [
@@ -24,9 +23,14 @@
   "traits": [
     "Animal"
   ],
-  "ability_type": "Farewell",
+  "abilities": [
+    {
+      "type": "Farewell",
+      "description": "Your opponent finds a Common treasure.",
+      "gold_description": "You and your opponent both find a Common treasure."
+    }
+  ],
   "attack": 18,
   "health": 18,
-  "deck_type": "Shared",
-  "gold_description": "You and your opponent both find a Common treasure."
+  "deck_type": "Shared"
 }

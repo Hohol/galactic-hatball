@@ -1,6 +1,5 @@
 {
   "name": "Andy",
-  "description": "Summoned by Raggedy Ann",
   "type": "characters",
   "rarity": "common",
   "images": [
@@ -16,6 +15,18 @@
   "traits": [
     "Toy",
     "Token"
+  ],
+  "abilities": [
+    {
+      "type": null,
+      "description": "+3/+3 for each full Heart you're missing (when summoned).",
+      "gold_description": null
+    },
+    {
+      "type": null,
+      "description": "Summoned by Raggedy Ann",
+      "gold_description": null
+    }
   ],
   "attack": 3,
   "health": 3,

@@ -1,6 +1,5 @@
 {
   "name": "Tink",
-  "description": "When a character in front of me attacks, give it +1/+1.",
   "type": "characters",
   "rarity": "uncommon",
   "images": [
@@ -25,9 +24,14 @@
     "Fae",
     "Hero"
   ],
-  "ability_type": "Support",
+  "abilities": [
+    {
+      "type": "Support",
+      "description": "When a character in front of me attacks, give it +1/+1.",
+      "gold_description": "When a character in front of me attacks, give it +2/+2."
+    }
+  ],
   "attack": 3,
   "health": 3,
-  "deck_type": "Shared",
-  "gold_description": "When a character in front of me attacks, give it +2/+2."
+  "deck_type": "Shared"
 }

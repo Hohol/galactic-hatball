@@ -1,6 +1,5 @@
 {
   "name": "Billy Bones",
-  "description": "The next character you recruit has +5 Attack.",
   "type": "characters",
   "rarity": "uncommon",
   "images": [
@@ -21,9 +20,14 @@
     "Pirate",
     "Villain"
   ],
-  "ability_type": "Hunt",
+  "abilities": [
+    {
+      "type": "Hunt",
+      "description": "The next character you recruit has +5 Attack.",
+      "gold_description": "The next character you recruit has +10 Attack."
+    }
+  ],
   "attack": 5,
   "health": 2,
-  "deck_type": "Shared",
-  "gold_description": "The next character you recruit has +10 Attack."
+  "deck_type": "Shared"
 }

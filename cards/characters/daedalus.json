@@ -1,6 +1,5 @@
 {
   "name": "Daedalus",
-  "description": "Double the slot buffs in front of me.",
   "type": "characters",
   "rarity": "legendary",
   "images": [
@@ -24,9 +23,19 @@
   "traits": [
     "Hero"
   ],
-  "ability_type": "Recruit",
+  "abilities": [
+    {
+      "type": "Recruit",
+      "description": "Give each of your slots +5/+5.",
+      "gold_description": "Give each of your slots +10/+10."
+    },
+    {
+      "type": "Support",
+      "description": "Double the slot buffs in front of me.",
+      "gold_description": "Triple the slot buffs in front of me."
+    }
+  ],
   "attack": 10,
   "health": 10,
-  "deck_type": "Collectible",
-  "gold_description": "Triple the slot buffs in front of me."
+  "deck_type": "Collectible"
 }

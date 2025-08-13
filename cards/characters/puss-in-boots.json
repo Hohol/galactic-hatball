@@ -1,6 +1,5 @@
 {
   "name": "Puss in Boots",
-  "description": "Give my slot +1 Attack. (When I attack and KO a character.)",
   "type": "characters",
   "rarity": "common",
   "images": [
@@ -26,9 +25,14 @@
     "Pirate",
     "Hero"
   ],
-  "ability_type": "Hunt",
+  "abilities": [
+    {
+      "type": "Hunt",
+      "description": "Give my slot +1 Attack. (When I attack and KO a character.)",
+      "gold_description": "Give my slot +2 Attack. (When I attack and KO a character.)"
+    }
+  ],
   "attack": 3,
   "health": 1,
-  "deck_type": "Shared",
-  "gold_description": "Give my slot +2 Attack. (When I attack and KO a character.)"
+  "deck_type": "Shared"
 }

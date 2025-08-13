@@ -1,6 +1,5 @@
 {
   "name": "Toadie",
-  "description": "Double the stats of the next Legendary you recruit.",
   "type": "characters",
   "rarity": "uncommon",
   "images": [
@@ -24,9 +23,14 @@
   "traits": [
     "Fae"
   ],
-  "ability_type": "Recruit",
+  "abilities": [
+    {
+      "type": "Recruit",
+      "description": "Double the stats of the next Legendary you recruit.",
+      "gold_description": "Triple the stats of the next Legendary you recruit."
+    }
+  ],
   "attack": 4,
   "health": 5,
-  "deck_type": "Collectible",
-  "gold_description": "Triple the stats of the next Legendary you recruit."
+  "deck_type": "Collectible"
 }

@@ -1,6 +1,5 @@
 {
   "name": "Punxsutawney Phil",
-  "description": "If I haven't attacked this fight, summon a copy of me.",
   "type": "characters",
   "rarity": "rare",
   "images": [
@@ -20,7 +19,13 @@
   "traits": [
     "Animal"
   ],
-  "ability_type": "Farewell",
+  "abilities": [
+    {
+      "type": "Farewell",
+      "description": "If I haven't attacked this fight, summon a copy of me.",
+      "gold_description": null
+    }
+  ],
   "attack": 4,
   "health": 3,
   "deck_type": "Shared"

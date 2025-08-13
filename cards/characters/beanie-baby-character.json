@@ -1,6 +1,5 @@
 {
   "name": "Beanie Baby (Character)",
-  "description": "I become a worthless treasure.",
   "type": "characters",
   "rarity": "common",
   "images": [
@@ -25,9 +24,14 @@
     "Toy",
     "Animal"
   ],
-  "ability_type": "Farewell",
+  "abilities": [
+    {
+      "type": "Farewell",
+      "description": "I become a worthless treasure.",
+      "gold_description": "I become a Gem Mint Beanie Baby."
+    }
+  ],
   "attack": 2,
   "health": 4,
-  "deck_type": "Collectible",
-  "gold_description": "I become a Gem Mint Beanie Baby."
+  "deck_type": "Collectible"
 }

@@ -1,6 +1,5 @@
 {
   "name": "Shipshape Inspector",
-  "description": "Have each of your slots buffed.",
   "type": "characters",
   "rarity": "rare",
   "images": [
@@ -25,7 +24,13 @@
     "Pirate",
     "Toy"
   ],
-  "ability_type": "Quest",
+  "abilities": [
+    {
+      "type": "Quest",
+      "description": "Have each of your slots buffed.",
+      "gold_description": null
+    }
+  ],
   "attack": 7,
   "health": 7,
   "deck_type": "Shared"

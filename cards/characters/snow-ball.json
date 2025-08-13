@@ -1,6 +1,5 @@
 {
   "name": "Snow Ball",
-  "description": "I get +1/+1, then improve this bonus by +1/+1.",
   "type": "characters",
   "rarity": "uncommon",
   "images": [
@@ -24,9 +23,14 @@
   "traits": [
     "Toy"
   ],
-  "ability_type": "Farewell",
+  "abilities": [
+    {
+      "type": "Farewell",
+      "description": "I get +1/+1, then improve this bonus by +1/+1.",
+      "gold_description": "I get +2/+2, then improve this bonus by +2/+2."
+    }
+  ],
   "attack": 2,
   "health": 2,
-  "deck_type": "Shared",
-  "gold_description": "I get +2/+2, then improve this bonus by +2/+2."
+  "deck_type": "Shared"
 }

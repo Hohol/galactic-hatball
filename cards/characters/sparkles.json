@@ -1,6 +1,5 @@
 {
   "name": "Sparkles",
-  "description": "Each fight, give all your characters +3 Attack.",
   "type": "characters",
   "rarity": "epic",
   "images": [
@@ -25,8 +24,14 @@
     "Fae",
     "Villain"
   ],
+  "abilities": [
+    {
+      "type": null,
+      "description": "Each fight, give all your characters +3 Attack.",
+      "gold_description": "Each fight, give all your characters +6 Attack."
+    }
+  ],
   "attack": 9,
   "health": 9,
-  "deck_type": "Shared",
-  "gold_description": "Each fight, give all your characters +6 Attack."
+  "deck_type": "Shared"
 }

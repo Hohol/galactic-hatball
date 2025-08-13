@@ -1,6 +1,5 @@
 {
   "name": "Forgotten Present",
-  "description": "Give my slot +1/+1. (When I'm KO'd.)",
   "type": "characters",
   "rarity": "common",
   "images": [
@@ -24,8 +23,13 @@
   "traits": [
     "Toy"
   ],
-  "ability_type": "Farewell",
+  "abilities": [
+    {
+      "type": "Farewell",
+      "description": "Give my slot +1/+1. (When I'm KO'd.)",
+      "gold_description": "Give my slot +2/+2. (When I'm KO'd.)"
+    }
+  ],
   "health": 3,
-  "deck_type": "Shared",
-  "gold_description": "Give my slot +2/+2. (When I'm KO'd.)"
+  "deck_type": "Shared"
 }

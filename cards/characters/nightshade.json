@@ -1,6 +1,5 @@
 {
   "name": "Nightshade",
-  "description": "Buffs from spells give an additional +1/+1 for the rest of the game.",
   "type": "characters",
   "rarity": "rare",
   "images": [
@@ -22,9 +21,14 @@
     "Mage",
     "Villain"
   ],
-  "ability_type": "Recruit",
+  "abilities": [
+    {
+      "type": "Recruit",
+      "description": "Buffs from spells give an additional +1/+1 for the rest of the game.",
+      "gold_description": "Buffs from spells give an additional +2/+2 for the rest of the game."
+    }
+  ],
   "attack": 7,
   "health": 5,
-  "deck_type": "Collectible",
-  "gold_description": "Buffs from spells give an additional +2/+2 for the rest of the game."
+  "deck_type": "Collectible"
 }

@@ -1,6 +1,5 @@
 {
   "name": "Smug",
-  "description": "When you discover a treasure, the left one is always Legendary.",
   "type": "characters",
   "rarity": "epic",
   "images": [
@@ -25,9 +24,19 @@
     "Dragon",
     "Villain"
   ],
-  "ability_type": "Treasure Hoard 3",
+  "abilities": [
+    {
+      "type": "Treasure Hoard 3",
+      "description": null,
+      "gold_description": null
+    },
+    {
+      "type": null,
+      "description": "When you discover a treasure, the left one is always Legendary.",
+      "gold_description": "When you discover a treasure, your choices are always Legendary."
+    }
+  ],
   "attack": 10,
   "health": 10,
-  "deck_type": "Collectible",
-  "gold_description": "When you discover a treasure, your choices are always Legendary."
+  "deck_type": "Collectible"
 }

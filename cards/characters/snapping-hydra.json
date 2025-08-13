@@ -1,6 +1,5 @@
 {
   "name": "Snapping Hydra",
-  "description": "Double my attack.",
   "type": "characters",
   "rarity": "epic",
   "images": [
@@ -25,8 +24,14 @@
     "Dragon",
     "Animal"
   ],
+  "abilities": [
+    {
+      "type": "Farewell",
+      "description": "Double my attack.",
+      "gold_description": "Triple my attack."
+    }
+  ],
   "attack": 6,
   "health": 1,
-  "deck_type": "Collectible",
-  "gold_description": "Triple my attack."
+  "deck_type": "Collectible"
 }

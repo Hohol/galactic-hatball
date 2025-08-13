@@ -1,6 +1,5 @@
 {
   "name": "The Big Bad Wolf",
-  "description": "Gain the stats of the KO'd character.",
   "type": "characters",
   "rarity": "secret rare",
   "images": [
@@ -25,9 +24,14 @@
     "Animal",
     "Villain"
   ],
-  "ability_type": "Hunt",
+  "abilities": [
+    {
+      "type": "Hunt",
+      "description": "Gain the stats of the KO'd character.",
+      "gold_description": "Gain double the stats of the KO'd character."
+    }
+  ],
   "attack": 50,
   "health": 10,
-  "deck_type": "Shared",
-  "gold_description": "Gain double the stats of the KO'd character."
+  "deck_type": "Shared"
 }

@@ -1,6 +1,5 @@
 {
   "name": "Wizard of Oz",
-  "description": "(X) (+2/+2 for each spell you've cast this game.)",
   "type": "characters",
   "rarity": "legendary",
   "images": [
@@ -25,9 +24,14 @@
     "Mage",
     "Villain"
   ],
-  "ability_type": "Support",
+  "abilities": [
+    {
+      "type": "Support",
+      "description": "(X) (+2/+2 for each spell you've cast this game.)",
+      "gold_description": "(X) (+4/+4 for each spell you've cast this game.)"
+    }
+  ],
   "attack": 3,
   "health": 3,
-  "deck_type": "Shared",
-  "gold_description": "(X) (+4/+4 for each spell you've cast this game.)"
+  "deck_type": "Shared"
 }

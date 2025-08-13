@@ -1,6 +1,5 @@
 {
   "name": "Nameless One",
-  "description": "When you golden me, transform me into a random Legendary character.",
   "type": "characters",
   "rarity": "rare",
   "images": [
@@ -24,9 +23,19 @@
   "traits": [
     "Pirate"
   ],
-  "ability_type": "Hunt",
+  "abilities": [
+    {
+      "type": "Hunt",
+      "description": "+4/+4.",
+      "gold_description": "+8/+8."
+    },
+    {
+      "type": null,
+      "description": "When you golden me, transform me into a random Legendary character.",
+      "gold_description": "+8/+8."
+    }
+  ],
   "attack": 8,
   "health": 6,
-  "deck_type": "Shared",
-  "gold_description": "+8/+8."
+  "deck_type": "Shared"
 }

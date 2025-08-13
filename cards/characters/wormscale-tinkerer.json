@@ -1,6 +1,5 @@
 {
   "name": "Wormscale Tinkerer",
-  "description": "Each fight, improve your treasure buffs by +1/+1.",
   "type": "characters",
   "rarity": "legendary",
   "images": [
@@ -21,9 +20,19 @@
     "Fae",
     "Dragon"
   ],
-  "ability_type": "Treasure Hoard 1",
+  "abilities": [
+    {
+      "type": "Treasure Hoard 1",
+      "description": null,
+      "gold_description": null
+    },
+    {
+      "type": null,
+      "description": "Each fight, improve your treasure buffs by +1/+1.",
+      "gold_description": "Each fight, improve your treasure buffs by +2/+2."
+    }
+  ],
   "attack": 15,
   "health": 15,
-  "deck_type": "Collectible",
-  "gold_description": "Each fight, improve your treasure buffs by +2/+2."
+  "deck_type": "Collectible"
 }

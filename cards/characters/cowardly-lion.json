@@ -1,6 +1,5 @@
 {
   "name": "Cowardly Lion",
-  "description": "I survive damage 3 times.",
   "type": "characters",
   "rarity": "uncommon",
   "images": [
@@ -23,6 +22,18 @@
   ],
   "traits": [
     "Animal"
+  ],
+  "abilities": [
+    {
+      "type": null,
+      "description": "I'm too cowardly to attack.",
+      "gold_description": null
+    },
+    {
+      "type": "Quest",
+      "description": "I survive damage 3 times.",
+      "gold_description": null
+    }
   ],
   "attack": 2,
   "health": 7,

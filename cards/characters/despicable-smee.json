@@ -1,6 +1,5 @@
 {
   "name": "Despicable Smee",
-  "description": "When one of your Pirates attacks, give them +2 Attack.",
   "type": "characters",
   "rarity": "common",
   "images": [
@@ -25,8 +24,14 @@
     "Pirate",
     "Villain"
   ],
+  "abilities": [
+    {
+      "type": null,
+      "description": "When one of your Pirates attacks, give them +2 Attack.",
+      "gold_description": "When one of your Pirates attacks, give them +4 Attack."
+    }
+  ],
   "attack": 1,
   "health": 2,
-  "deck_type": "Shared",
-  "gold_description": "When one of your Pirates attacks, give them +4 Attack."
+  "deck_type": "Shared"
 }

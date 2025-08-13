@@ -1,6 +1,5 @@
 {
   "name": "Pie Rat",
-  "description": "Give my slot +2/+1.",
   "type": "characters",
   "rarity": "uncommon",
   "images": [
@@ -25,9 +24,14 @@
     "Animal",
     "Pirate"
   ],
-  "ability_type": "Hunt",
+  "abilities": [
+    {
+      "type": "Hunt",
+      "description": "Give my slot +2/+1.",
+      "gold_description": "Give my slot +4/+2."
+    }
+  ],
   "attack": 4,
   "health": 2,
-  "deck_type": "Shared",
-  "gold_description": "Give my slot +4/+2."
+  "deck_type": "Shared"
 }

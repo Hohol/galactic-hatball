@@ -1,6 +1,5 @@
 {
   "name": "Scarecrow",
-  "description": "Pick 8 cards from the shop.",
   "type": "characters",
   "rarity": "epic",
   "images": [
@@ -24,7 +23,13 @@
   "traits": [
     "Toy"
   ],
-  "ability_type": "Quest",
+  "abilities": [
+    {
+      "type": "Quest",
+      "description": "Pick 8 cards from the shop.",
+      "gold_description": null
+    }
+  ],
   "attack": 10,
   "health": 10,
   "deck_type": "Shared"

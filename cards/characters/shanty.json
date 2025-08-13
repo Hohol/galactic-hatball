@@ -1,6 +1,5 @@
 {
   "name": "Shanty",
-  "description": "Give your shop +1/+1.",
   "type": "characters",
   "rarity": "uncommon",
   "images": [
@@ -21,9 +20,14 @@
     "Fae",
     "Pirate"
   ],
-  "ability_type": "Hunt",
+  "abilities": [
+    {
+      "type": "Hunt",
+      "description": "Give your shop +1/+1.",
+      "gold_description": "Give your shop +2/+2."
+    }
+  ],
   "attack": 3,
   "health": 2,
-  "deck_type": "Collectible",
-  "gold_description": "Give your shop +2/+2."
+  "deck_type": "Collectible"
 }

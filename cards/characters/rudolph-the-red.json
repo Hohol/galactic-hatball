@@ -1,6 +1,5 @@
 {
   "name": "Rudolph the Red",
-  "description": "Your first shop each turn is all spells instead of characters.",
   "type": "characters",
   "rarity": "epic",
   "images": [
@@ -25,8 +24,14 @@
     "Mage",
     "Animal"
   ],
+  "abilities": [
+    {
+      "type": null,
+      "description": "Your first shop each turn is all spells instead of characters.",
+      "gold_description": "Get a bonus shop of all spells each turn."
+    }
+  ],
   "attack": 12,
   "health": 12,
-  "deck_type": "Collectible",
-  "gold_description": "Get a bonus shop of all spells each turn."
+  "deck_type": "Collectible"
 }

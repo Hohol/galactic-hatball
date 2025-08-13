@@ -1,6 +1,5 @@
 {
   "name": "Long Johns Silver",
-  "description": "Bronze characters become Silver. (Even me!)",
   "type": "characters",
   "rarity": "legendary",
   "images": [
@@ -25,7 +24,13 @@
     "Pirate",
     "Villain"
   ],
-  "ability_type": "Recruit",
+  "abilities": [
+    {
+      "type": "Recruit",
+      "description": "Bronze characters become Silver. (Even me!)",
+      "gold_description": null
+    }
+  ],
   "attack": 20,
   "health": 20,
   "deck_type": "Shared"

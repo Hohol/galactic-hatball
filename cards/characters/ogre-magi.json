@@ -1,6 +1,5 @@
 {
   "name": "Ogre Magi",
-  "description": "Cast a spell at the start of your next turn.",
   "type": "characters",
   "rarity": "epic",
   "images": [
@@ -26,9 +25,14 @@
     "Pirate",
     "Villain"
   ],
-  "ability_type": "Hunt",
+  "abilities": [
+    {
+      "type": "Hunt",
+      "description": "Cast a spell at the start of your next turn.",
+      "gold_description": "Cast 2 spells at the start of your next turn."
+    }
+  ],
   "attack": 12,
   "health": 4,
-  "deck_type": "Collectible",
-  "gold_description": "Cast 2 spells at the start of your next turn."
+  "deck_type": "Collectible"
 }

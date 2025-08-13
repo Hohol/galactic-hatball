@@ -1,6 +1,5 @@
 {
   "name": "Mysterio, the Great and Powerful",
-  "description": "Transform your Bronze characters into characters of your shop's rarity.",
   "type": "characters",
   "rarity": "epic",
   "images": [
@@ -24,9 +23,14 @@
   "traits": [
     "Mage"
   ],
-  "ability_type": "Recruit",
+  "abilities": [
+    {
+      "type": "Recruit",
+      "description": "Transform your Bronze characters into characters of your shop's rarity.",
+      "gold_description": "Transform your Bronze characters into characters one rarity higher than your shop."
+    }
+  ],
   "attack": 7,
   "health": 7,
-  "deck_type": "Collectible",
-  "gold_description": "Transform your Bronze characters into characters one rarity higher than your shop."
+  "deck_type": "Collectible"
 }

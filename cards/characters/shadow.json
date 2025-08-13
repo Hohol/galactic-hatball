@@ -1,6 +1,5 @@
 {
   "name": "Shadow",
-  "description": "Summon your last character that was KO'd this fight and give +10/+10.",
   "type": "characters",
   "rarity": "secret rare",
   "images": [
@@ -20,9 +19,14 @@
   "traits": [
     "Villain"
   ],
-  "ability_type": "Farewell",
+  "abilities": [
+    {
+      "type": "Farewell",
+      "description": "Summon your last character that was KO'd this fight and give +10/+10.",
+      "gold_description": "Summon your last 2 characters that were KO'd this fight and give +20/+20."
+    }
+  ],
   "attack": 20,
   "health": 20,
-  "deck_type": "Shared",
-  "gold_description": "Summon your last 2 characters that were KO'd this fight and give +20/+20."
+  "deck_type": "Shared"
 }

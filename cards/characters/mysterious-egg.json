@@ -1,6 +1,5 @@
 {
   "name": "Mysterious Egg",
-  "description": "After 3 turns, I hatch into a random character one rarity higher than your shop.",
   "type": "characters",
   "rarity": "common",
   "images": [
@@ -23,6 +22,13 @@
   ],
   "traits": [
     "Egg"
+  ],
+  "abilities": [
+    {
+      "type": null,
+      "description": "After 3 turns, I hatch into a random character one rarity higher than your shop.",
+      "gold_description": null
+    }
   ],
   "health": 1,
   "deck_type": "Shared"

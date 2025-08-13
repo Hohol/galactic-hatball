@@ -1,6 +1,5 @@
 {
   "name": "The Kraken",
-  "description": "Give all three front row slots +8/+8",
   "type": "characters",
   "rarity": "legendary",
   "images": [
@@ -26,9 +25,14 @@
     "Pirate",
     "Villain"
   ],
-  "ability_type": "Hunt",
+  "abilities": [
+    {
+      "type": "Hunt",
+      "description": "Give all three front row slots +8/+8",
+      "gold_description": "Give all three front row slots +16/+16"
+    }
+  ],
   "attack": 16,
   "health": 16,
-  "deck_type": "Shared",
-  "gold_description": "Give all three front row slots +16/+16"
+  "deck_type": "Shared"
 }

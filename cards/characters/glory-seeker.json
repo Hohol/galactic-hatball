@@ -1,6 +1,5 @@
 {
   "name": "Glory Seeker",
-  "description": "Your next shop is all Heroes.",
   "type": "characters",
   "rarity": "common",
   "images": [
@@ -20,9 +19,14 @@
   "traits": [
     "Hero"
   ],
-  "ability_type": "Recruit",
+  "abilities": [
+    {
+      "type": "Recruit",
+      "description": "Your next shop is all Heroes.",
+      "gold_description": "Get a bonus shop of all Heroes."
+    }
+  ],
   "attack": 3,
   "health": 2,
-  "deck_type": "Collectible",
-  "gold_description": "Get a bonus shop of all Heroes."
+  "deck_type": "Collectible"
 }

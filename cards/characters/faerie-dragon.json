@@ -1,6 +1,5 @@
 {
   "name": "Faerie Dragon",
-  "description": "I give the characters in front of me Treasure Hoard and +1/+1.",
   "type": "characters",
   "rarity": "rare",
   "images": [
@@ -25,9 +24,19 @@
     "Fae",
     "Dragon"
   ],
-  "ability_type": "Treasure Hoard 1",
+  "abilities": [
+    {
+      "type": "Treasure Hoard 1",
+      "description": null,
+      "gold_description": null
+    },
+    {
+      "type": "Support",
+      "description": "I give the characters in front of me Treasure Hoard and +1/+1.",
+      "gold_description": "I give the characters in front of me Treasure Hoard and +2/+2."
+    }
+  ],
   "attack": 3,
   "health": 3,
-  "deck_type": "Shared",
-  "gold_description": "I give the characters in front of me Treasure Hoard and +2/+2."
+  "deck_type": "Shared"
 }

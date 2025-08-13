@@ -1,6 +1,5 @@
 {
   "name": "Anne Bunny",
-  "description": "Animal\nPirate",
   "type": "characters",
   "rarity": "rare",
   "images": [
@@ -25,9 +24,14 @@
     "Animal",
     "Pirate"
   ],
-  "ability_type": "Hunt",
+  "abilities": [
+    {
+      "type": "Hunt",
+      "description": "+6/+6",
+      "gold_description": "+12/+12"
+    }
+  ],
   "attack": 6,
   "health": 6,
-  "deck_type": "Shared",
-  "gold_description": "+12/+12"
+  "deck_type": "Shared"
 }

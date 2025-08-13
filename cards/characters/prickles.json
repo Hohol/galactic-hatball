@@ -1,6 +1,5 @@
 {
   "name": "Prickles",
-  "description": "When a character in front of me is attacked, give it +1/+1.",
   "type": "characters",
   "rarity": "common",
   "images": [
@@ -24,8 +23,13 @@
   "traits": [
     "Fae"
   ],
-  "ability_type": "Support",
+  "abilities": [
+    {
+      "type": "Support",
+      "description": "When a character in front of me is attacked, give it +1/+1.",
+      "gold_description": "When a character in front of me is attacked, give it +2/+2."
+    }
+  ],
   "health": 2,
-  "deck_type": "Collectible",
-  "gold_description": "When a character in front of me is attacked, give it +2/+2."
+  "deck_type": "Collectible"
 }

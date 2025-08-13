@@ -1,6 +1,5 @@
 {
   "name": "Chip on the Ship",
-  "description": "Summon the Toys I broke.",
   "type": "characters",
   "rarity": "legendary",
   "images": [
@@ -24,6 +23,18 @@
   "traits": [
     "Fae",
     "Villain"
+  ],
+  "abilities": [
+    {
+      "type": null,
+      "description": "Each fight, I break your Toys that are in front of me.",
+      "gold_description": null
+    },
+    {
+      "type": "Farewell",
+      "description": "Summon the Toys I broke.",
+      "gold_description": null
+    }
   ],
   "attack": 1,
   "health": 1,

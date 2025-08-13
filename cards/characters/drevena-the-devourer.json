@@ -1,6 +1,5 @@
 {
   "name": "Drevena the Devourer",
-  "description": "When you pick a character from the shop, I gain the stats of the two you didn't take.",
   "type": "characters",
   "rarity": "secret rare",
   "images": [
@@ -24,8 +23,14 @@
   "traits": [
     "Fae"
   ],
+  "abilities": [
+    {
+      "type": null,
+      "description": "When you pick a character from the shop, I gain the stats of the two you didn't take.",
+      "gold_description": "When you pick a character from the shop, I gain double the stats of the two you didn't take."
+    }
+  ],
   "attack": 1,
   "health": 1,
-  "deck_type": "Shared",
-  "gold_description": "When you pick a character from the shop, I gain double the stats of the two you didn't take."
+  "deck_type": "Shared"
 }

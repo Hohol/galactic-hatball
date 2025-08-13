@@ -1,6 +1,5 @@
 {
   "name": "Ace of Hearts",
-  "description": "If you lost your last fight, get a bonus shop.",
   "type": "characters",
   "rarity": "uncommon",
   "images": [
@@ -25,7 +24,13 @@
     "Toy",
     "Hero"
   ],
-  "ability_type": "Recruit",
+  "abilities": [
+    {
+      "type": "Recruit",
+      "description": "If you lost your last fight, get a bonus shop.",
+      "gold_description": null
+    }
+  ],
   "attack": 4,
   "health": 3,
   "deck_type": "Collectible"

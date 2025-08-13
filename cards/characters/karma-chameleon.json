@@ -1,6 +1,5 @@
 {
   "name": "Karma Chameleon",
-  "description": "I transform into a character one rarity higher than your shop.",
   "type": "characters",
   "rarity": "uncommon",
   "images": [
@@ -24,9 +23,14 @@
   "traits": [
     "Animal"
   ],
-  "ability_type": "Hunt",
+  "abilities": [
+    {
+      "type": "Hunt",
+      "description": "I transform into a character one rarity higher than your shop.",
+      "gold_description": "I transform into a character two rarities higher than your shop."
+    }
+  ],
   "attack": 2,
   "health": 2,
-  "deck_type": "Shared",
-  "gold_description": "I transform into a character two rarities higher than your shop."
+  "deck_type": "Shared"
 }

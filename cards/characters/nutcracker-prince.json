@@ -1,6 +1,5 @@
 {
   "name": "Nutcracker Prince",
-  "description": "Give one of your Heroes +3/+4.",
   "type": "characters",
   "rarity": "uncommon",
   "images": [
@@ -25,9 +24,14 @@
     "Toy",
     "Hero"
   ],
-  "ability_type": "Farewell",
+  "abilities": [
+    {
+      "type": "Farewell",
+      "description": "Give one of your Heroes +3/+4.",
+      "gold_description": "Give one of your Heroes +6/+8."
+    }
+  ],
   "attack": 3,
   "health": 4,
-  "deck_type": "Collectible",
-  "gold_description": "Give one of your Heroes +6/+8."
+  "deck_type": "Collectible"
 }

@@ -1,6 +1,5 @@
 {
   "name": "Ten Million Fireflies",
-  "description": "When you recruit me or another Fae give all of your Fae EVERYWHERE +3/+3.",
   "type": "characters",
   "rarity": "epic",
   "images": [
@@ -24,9 +23,14 @@
   "traits": [
     "Fae"
   ],
-  "ability_type": "Recruit",
+  "abilities": [
+    {
+      "type": "Recruit",
+      "description": "When you recruit me or another Fae give all of your Fae EVERYWHERE +3/+3.",
+      "gold_description": "When you recruit me or another Fae give all of your Fae EVERYWHERE +6/+6."
+    }
+  ],
   "attack": 12,
   "health": 12,
-  "deck_type": "Shared",
-  "gold_description": "When you recruit me or another Fae give all of your Fae EVERYWHERE +6/+6."
+  "deck_type": "Shared"
 }

@@ -1,6 +1,5 @@
 {
   "name": "Goldilocks",
-  "description": "When you buff another slot, buff my slot by that much as well.",
   "type": "characters",
   "rarity": "legendary",
   "images": [
@@ -20,8 +19,14 @@
   "traits": [
     "Animal"
   ],
+  "abilities": [
+    {
+      "type": null,
+      "description": "When you buff another slot, buff my slot by that much as well.",
+      "gold_description": "When you buff another slot, buff my slot by twice that much as well."
+    }
+  ],
   "attack": 20,
   "health": 20,
-  "deck_type": "Shared",
-  "gold_description": "When you buff another slot, buff my slot by twice that much as well."
+  "deck_type": "Shared"
 }

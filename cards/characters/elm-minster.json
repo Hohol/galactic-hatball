@@ -1,6 +1,5 @@
 {
   "name": "Elm Minster",
-  "description": "Your buffs from spells give an extra +5/+5.",
   "type": "characters",
   "rarity": "legendary",
   "images": [
@@ -24,9 +23,19 @@
   "traits": [
     "Mage"
   ],
-  "ability_type": "Quest",
+  "abilities": [
+    {
+      "type": "Quest",
+      "description": "Cast 4 spells in a single turn (Shop phase + fight).",
+      "gold_description": null
+    },
+    {
+      "type": null,
+      "description": "Your buffs from spells give an extra +5/+5.",
+      "gold_description": "Your buffs from spells give an extra +10/+10."
+    }
+  ],
   "attack": 50,
   "health": 10,
-  "deck_type": "Collectible",
-  "gold_description": "Your buffs from spells give an extra +10/+10."
+  "deck_type": "Collectible"
 }
