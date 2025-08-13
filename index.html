@@ -222,9 +222,12 @@
 
         .card-name {
             color: #ffd700;
-            font-size: 1.3rem;
             margin: 0;
             text-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+            white-space: nowrap;
+            overflow: hidden;
+            width: 100%;
+            font-size: 1.3rem;
         }
 
 
@@ -237,6 +240,30 @@
             line-height: 1.6;
             margin: 0;
             color: #e0e0e0;
+            text-align: center;
+        }
+        
+        .card-abilities {
+            text-align: center;
+        }
+        
+        .ability-line {
+            text-align: center;
+            margin: 5px 0;
+        }
+        
+        .card-body {
+            position: relative;
+            min-height: 120px;
+        }
+        
+        .card-traits {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            text-align: center;
+            padding-bottom: 10px;
         }
 
         .card-type {
@@ -972,7 +999,7 @@
                                         ` : ''}
                                         ${card.type === 'characters' && card.traits ? `
                                             <div class="card-traits">
-                                                <strong>Traits:</strong> ${card.traits.join(', ')}
+                                                ${card.traits.join(', ')}
                                             </div>
                                         ` : ''}
                                     </div>
@@ -992,6 +1019,9 @@
             
             // Initialize lazy loading for the newly displayed images
             lazyLoadImages();
+            
+            // Adjust font sizes to fit card names
+            adjustCardNameFontSizes();
         }
         
         // Update results count
@@ -1105,6 +1135,25 @@
                 });
             }
         });
+        
+        // Adjust font sizes to fit card names in one line
+        function adjustCardNameFontSizes() {
+            const cardNames = document.querySelectorAll('.card-name');
+            cardNames.forEach(cardName => {
+                const container = cardName.closest('.card');
+                const containerWidth = container.offsetWidth - 40; // Account for padding
+                
+                // Start with the default font size
+                let fontSize = 1.3;
+                cardName.style.fontSize = fontSize + 'rem';
+                
+                // Reduce font size until text fits
+                while (cardName.scrollWidth > containerWidth && fontSize > 0.7) {
+                    fontSize -= 0.1;
+                    cardName.style.fontSize = fontSize + 'rem';
+                }
+            });
+        }
         
         // Lazy loading implementation
         function lazyLoadImages() {
