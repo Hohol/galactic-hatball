@@ -87,7 +87,7 @@
             align-items: center;
             gap: 8px;
             cursor: pointer;
-            padding: 10px 20px;
+            padding: 8px 16px;
             border: 2px solid rgba(255, 215, 0, 0.3);
             border-radius: 20px;
             background: rgba(255, 255, 255, 0.1);
@@ -513,7 +513,7 @@
             display: flex;
             align-items: center;
             gap: 6px;
-            padding: 6px 12px;
+            padding: 8px 16px;
             background: rgba(78, 220, 196, 0.1);
             border: 1px solid rgba(78, 220, 196, 0.3);
             border-radius: 20px;
@@ -553,7 +553,7 @@
             display: flex;
             align-items: center;
             gap: 6px;
-            padding: 6px 12px;
+            padding: 8px 16px;
             background: rgba(138, 43, 226, 0.1);
             border: 1px solid rgba(138, 43, 226, 0.3);
             border-radius: 20px;
@@ -1178,7 +1178,7 @@
             const cardNames = document.querySelectorAll('.card-name');
             cardNames.forEach(cardName => {
                 const container = cardName.closest('.card');
-                const containerWidth = container.offsetWidth - 20; // Reduced padding adjustment
+                const containerWidth = container.offsetWidth - 30; // More strict padding adjustment
                 
                 // Reset to CSS font size first
                 cardName.style.fontSize = '';
@@ -1189,8 +1189,8 @@
                 console.log('Text scroll width:', cardName.scrollWidth);
                 console.log('Needs shrinking?', cardName.scrollWidth > containerWidth);
                 
-                // Only shrink if the text actually overflows significantly (more than 10px)
-                if (cardName.scrollWidth > containerWidth + 10) {
+                // Only shrink if the text actually overflows (more than 5px tolerance)
+                if (cardName.scrollWidth > containerWidth + 5) {
                     console.log('Shrinking font for:', cardName.textContent);
                     let fontSize = 1.6; // Start with CSS font size
                     cardName.style.fontSize = fontSize + 'rem';
