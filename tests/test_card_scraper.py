@@ -12,13 +12,13 @@ import os
 
 # Add the scraper directory to the path
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'scraper'))
-from card_scraper import WorkingGalaxyScraper
+from card_scraper import CardScraper
 
 
 class TestCardScraper(unittest.TestCase):
     def setUp(self):
         """Set up test fixtures"""
-        self.scraper = WorkingGalaxyScraper()
+        self.scraper = CardScraper()
         
     def create_mock_soup(self, html_content):
         """Helper method to create BeautifulSoup object from HTML string"""

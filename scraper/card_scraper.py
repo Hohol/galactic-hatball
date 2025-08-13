@@ -12,7 +12,7 @@ import re
 import argparse
 from urllib.parse import urljoin
 
-class WorkingGalaxyScraper:
+class CardScraper:
     def __init__(self):
         self.base_url = "https://onceuponagalaxy.wiki.gg"
         self.session = requests.Session()
@@ -833,7 +833,7 @@ if __name__ == "__main__":
     
     args = parser.parse_args()
     
-    scraper = WorkingGalaxyScraper()
+    scraper = CardScraper()
     
     if args.all:
         # Scrape all available categories with unlimited cards
