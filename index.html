@@ -658,7 +658,23 @@
                                         </div>
                                     ` : ''}
                                     <div class="card-body">
-                                        <p class="card-description">${card.description}</p>
+                                        ${card.type === 'characters' && card.abilities ? `
+                                            <div class="card-abilities">
+                                                ${card.abilities.map(ability => {
+                                                    if (ability.type && ability.description) {
+                                                        return `<div class="ability-line"><strong>${ability.type}:</strong> ${ability.description}</div>`;
+                                                    } else if (ability.type) {
+                                                        return `<div class="ability-line"><strong>${ability.type}</strong></div>`;
+                                                    } else if (ability.description) {
+                                                        return `<div class="ability-line">${ability.description}</div>`;
+                                                    } else {
+                                                        return '';
+                                                    }
+                                                }).join('')}
+                                            </div>
+                                        ` : card.description ? `
+                                            <p class="card-description">${card.description}</p>
+                                        ` : ''}
                                         ${card.type ? `<div class="card-type">Type: ${card.type}</div>` : ''}
                                     </div>
                                 </div>
@@ -698,10 +714,22 @@
             // Then filter by search term if provided
             if (searchTerm.trim()) {
                 const searchLower = searchTerm.toLowerCase();
-                filteredCards = filteredCards.filter(card => 
-                    card.name.toLowerCase().includes(searchLower) ||
-                    card.description.toLowerCase().includes(searchLower)
-                );
+                filteredCards = filteredCards.filter(card => {
+                    // Search in name
+                    if (card.name.toLowerCase().includes(searchLower)) return true;
+                    
+                    // Search in description (for treasures/spells)
+                    if (card.description && card.description.toLowerCase().includes(searchLower)) return true;
+                    
+                    // Search in abilities (for characters)
+                    if (card.abilities && card.abilities.some(ability => {
+                        if (ability.type && ability.type.toLowerCase().includes(searchLower)) return true;
+                        if (ability.description && ability.description.toLowerCase().includes(searchLower)) return true;
+                        return false;
+                    })) return true;
+                    
+                    return false;
+                });
             }
             
             displayCards(filteredCards);
