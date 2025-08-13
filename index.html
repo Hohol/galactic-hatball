@@ -213,6 +213,21 @@
             border: 2px solid rgba(255, 215, 0, 0.3);
             transition: all 0.3s ease;
         }
+        
+        .lazy-image {
+            background: linear-gradient(45deg, rgba(255, 215, 0, 0.1), rgba(255, 255, 255, 0.05));
+            min-height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        
+        .lazy-image::before {
+            content: "🖼️";
+            font-size: 2rem;
+            color: rgba(255, 215, 0, 0.5);
+        }
 
         .card-image img:hover {
             border-color: rgba(255, 215, 0, 0.8);
@@ -529,7 +544,12 @@
                                         <div class="card-images">
                                             ${card.images.map((img, index) => `
                                                 <div class="card-image ${index === 0 ? 'active' : ''}" data-image-index="${index}">
-                                                    <img src="${img.url}" alt="${img.type}" title="${img.type}">
+                                                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'/%3E" 
+                                                         data-src="${img.url}" 
+                                                         alt="${img.type}" 
+                                                         title="${img.type}"
+                                                         loading="lazy"
+                                                         class="lazy-image">
                                                     <div class="image-type">${img.type}</div>
                                                 </div>
                                             `).join('')}
@@ -559,6 +579,9 @@
             });
             
             cardsGrid.innerHTML = html;
+            
+            // Initialize lazy loading for the newly displayed images
+            lazyLoadImages();
         }
         
         // Update results count
@@ -621,6 +644,24 @@
                 });
             }
         });
+        
+        // Lazy loading implementation
+        function lazyLoadImages() {
+            const lazyImages = document.querySelectorAll('.lazy-image[data-src]');
+            
+            const imageObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        img.src = img.dataset.src;
+                        img.classList.remove('lazy-image');
+                        observer.unobserve(img);
+                    }
+                });
+            });
+            
+            lazyImages.forEach(img => imageObserver.observe(img));
+        }
     </script>
 </body>
 </html>
