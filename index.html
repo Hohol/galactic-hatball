@@ -293,13 +293,7 @@
             transform: scale(1.02);
         }
 
-        .image-type {
-            font-size: 0.8rem;
-            color: #ffd700;
-            margin-top: 5px;
-            text-transform: capitalize;
-            font-weight: bold;
-        }
+
 
         .image-nav {
             display: flex;
@@ -792,6 +786,17 @@
                 const allRarities = extractAllRarities(allCards);
                 populateRarityFilter(allRarities);
 
+                // Fix image types: replace "unknown" with "card" for character images
+                allCards.forEach(card => {
+                    if (card.images && Array.isArray(card.images)) {
+                        card.images.forEach(img => {
+                            if (img.type === 'unknown') {
+                                img.type = 'card';
+                            }
+                        });
+                    }
+                });
+
             } catch (error) {
                 console.error('Error loading cards:', error);
                 document.getElementById('cardsGrid').innerHTML = `
@@ -905,24 +910,50 @@
                                     </div>
                                     ${card.images && card.images.length > 0 ? `
                                         <div class="card-images">
-                                            ${card.images.map((img, index) => `
-                                                <div class="card-image ${index === 0 ? 'active' : ''}" data-image-index="${index}">
-                                                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'/%3E" 
-                                                         data-src="${img.url}" 
-                                                         alt="${img.type}" 
-                                                         title="${img.type}"
-                                                         loading="lazy"
-                                                         class="lazy-image">
-                                                    <div class="image-type">${img.type}</div>
-                                                </div>
-                                            `).join('')}
-                                            ${card.images.length > 1 ? `
-                                                <div class="image-nav">
-                                                    ${card.images.map((_, index) => `
-                                                        <button class="image-nav-btn ${index === 0 ? 'active' : ''}" data-image-index="${index}">${index + 1}</button>
-                                                    `).join('')}
-                                                </div>
-                                            ` : ''}
+                                                                                         ${(() => {
+                                                 // Priority: card > unknown > art > others
+                                                 const cardImages = card.images.filter(img => img.type === 'card');
+                                                 const unknownImages = card.images.filter(img => img.type === 'unknown');
+                                                 const artImages = card.images.filter(img => img.type === 'art');
+                                                 
+                                                 // Prefer card images, then unknown (which are card images), then art
+                                                 let imagesToShow = cardImages;
+                                                 if (imagesToShow.length === 0) {
+                                                     imagesToShow = unknownImages;
+                                                 }
+                                                 if (imagesToShow.length === 0) {
+                                                     imagesToShow = artImages;
+                                                 }
+                                                 if (imagesToShow.length === 0) {
+                                                     imagesToShow = card.images; // fallback to any image
+                                                 }
+                                                 
+                                                 const firstImage = imagesToShow[0];
+                                                 
+                                                 if (firstImage) {
+                                                     return `
+                                                         <div class="card-image active">
+                                                             <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'/%3E" 
+                                                                  data-src="${firstImage.url}" 
+                                                                  alt="Card image" 
+                                                                  title="Card image"
+                                                                  loading="lazy"
+                                                                  class="lazy-image">
+                                                         </div>
+                                                     `;
+                                                 }
+                                                 return '';
+                                             })()}
+                                             
+                                             <!-- Navigation buttons - commented out for now but kept for future use
+                                             ${card.images.length > 1 ? `
+                                                 <div class="image-nav">
+                                                     ${card.images.map((_, index) => `
+                                                         <button class="image-nav-btn ${index === 0 ? 'active' : ''}" data-image-index="${index}">${index + 1}</button>
+                                                     `).join('')}
+                                                 </div>
+                                             ` : ''}
+                                             -->
                                         </div>
                                     ` : ''}
                                     <div class="card-body">
