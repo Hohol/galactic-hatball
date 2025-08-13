@@ -1,0 +1,16 @@
+{
+  "name": "Star Scout",
+  "description": "A nimble explorer who can traverse the galaxy quickly. Specializes in discovering new planets and hidden resources.",
+  "type": "character",
+  "rarity": "common",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://via.placeholder.com/300x400/e74c3c/ffffff?text=Star+Scout+Art"
+    },
+    {
+      "type": "card",
+      "url": "https://via.placeholder.com/300x400/c0392b/ffffff?text=Star+Scout+Card"
+    }
+  ]
+}

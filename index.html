@@ -136,11 +136,11 @@
             color: #b8b8b8;
         }
 
-        .cards-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 20px;
+        .cards-container {
+            width: 100%;
         }
+
+
 
         .card {
             background: rgba(255, 255, 255, 0.1);
@@ -258,6 +258,55 @@
             color: #000;
         }
 
+        /* Card Type Sections */
+        .card-type-section {
+            margin-bottom: 40px;
+            width: 100%;
+        }
+
+        .type-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding: 15px 20px;
+            background: rgba(255, 215, 0, 0.1);
+            border-radius: 10px;
+            border: 1px solid rgba(255, 215, 0, 0.3);
+            width: 100%;
+        }
+
+        .type-title {
+            color: #ffd700;
+            font-size: 1.5rem;
+            margin: 0;
+            text-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+        }
+
+        .type-count {
+            color: #b8b8b8;
+            font-size: 0.9rem;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 5px 12px;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .type-cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            width: 100%;
+        }
+
+        /* Section separator */
+        .section-separator {
+            height: 2px;
+            background: linear-gradient(90deg, transparent, rgba(255, 215, 0, 0.5), transparent);
+            margin: 30px 0;
+            border-radius: 1px;
+        }
+
         .card-placeholder {
             background: rgba(255, 255, 255, 0.1);
             border-radius: 15px;
@@ -283,7 +332,7 @@
         }
 
         @media (min-width: 1200px) {
-            .cards-grid {
+            .type-cards-grid {
                 grid-template-columns: repeat(4, 1fr);
             }
         }
@@ -301,8 +350,14 @@
                 justify-content: center;
             }
             
-            .cards-grid {
+            .type-cards-grid {
                 grid-template-columns: 1fr;
+            }
+            
+            .type-header {
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
             }
         }
     </style>
@@ -327,7 +382,7 @@
                 <div class="results-count" id="resultsCount">0 cards found</div>
             </div>
             
-            <div class="cards-grid" id="cardsGrid">
+            <div class="cards-container" id="cardsGrid">
                 <div class="card-placeholder">
                     <p>Loading cards...</p>
                 </div>
@@ -342,16 +397,27 @@
         // Load all cards from JSON files
         async function loadCards() {
             try {
-                // First try to load the combined file
-                const combinedResponse = await fetch('cards/treasures/all_treasures.json');
-                if (combinedResponse.ok) {
-                    allCards = await combinedResponse.json();
-                    console.log(`Loaded ${allCards.length} cards from combined file`);
-                } else {
-                    // Fallback to individual files if combined file doesn't exist
-                    console.log('Combined file not found, loading individual files...');
-                    await loadIndividualCards();
+                // Load cards from multiple directories
+                allCards = [];
+                
+                // Load treasures
+                try {
+                    const treasuresResponse = await fetch('cards/treasures/all_treasures.json');
+                    if (treasuresResponse.ok) {
+                        const treasures = await treasuresResponse.json();
+                        allCards = allCards.concat(treasures);
+                        console.log(`Loaded ${treasures.length} treasure cards from combined file`);
+                    } else {
+                        console.log('Combined treasures file not found, loading individual files...');
+                        await loadCardsFromDirectory('treasures');
+                    }
+                } catch (error) {
+                    console.log('Error loading treasures, trying individual files...');
+                    await loadCardsFromDirectory('treasures');
                 }
+                
+                // Load characters
+                await loadCardsFromDirectory('characters');
                 
                 // Display all cards initially
                 displayCards(allCards);
@@ -368,13 +434,14 @@
             }
         }
         
-        // Load individual card files (fallback method)
-        async function loadIndividualCards() {
+        // Load cards from a specific directory
+        async function loadCardsFromDirectory(directory) {
             try {
-                // Get list of JSON files in treasures directory by fetching the directory listing
-                const response = await fetch('cards/treasures/');
+                // Get list of JSON files in the specified directory
+                const response = await fetch(`cards/${directory}/`);
                 if (!response.ok) {
-                    throw new Error('Could not access treasures directory');
+                    console.log(`Could not access ${directory} directory, skipping...`);
+                    return;
                 }
                 
                 const html = await response.text();
@@ -385,24 +452,26 @@
                 
                 // Find all links that end with .json
                 const links = doc.querySelectorAll('a[href$=".json"]');
-                const cardFiles = Array.from(links).map(link => 'cards/treasures/' + link.getAttribute('href'));
+                const cardFiles = Array.from(links).map(link => `cards/${directory}/` + link.getAttribute('href'));
                 
                 if (cardFiles.length === 0) {
-                    throw new Error('No JSON card files found in treasures directory');
+                    console.log(`No JSON card files found in ${directory} directory`);
+                    return;
                 }
                 
-                console.log(`Found ${cardFiles.length} card files:`, cardFiles);
+                console.log(`Found ${cardFiles.length} card files in ${directory}:`, cardFiles);
                 
                 const cardPromises = cardFiles.map(file => fetch(file).then(response => response.json()));
-                allCards = await Promise.all(cardPromises);
-                console.log(`Loaded ${allCards.length} cards from individual files`);
+                const directoryCards = await Promise.all(cardPromises);
+                allCards = allCards.concat(directoryCards);
+                console.log(`Loaded ${directoryCards.length} cards from ${directory} directory`);
             } catch (error) {
-                console.error('Error loading individual cards:', error);
-                throw error;
+                console.error(`Error loading cards from ${directory} directory:`, error);
+                // Don't throw error, just log it and continue with other directories
             }
         }
         
-        // Display cards in the grid
+        // Display cards in the grid, grouped by type
         function displayCards(cards) {
             const cardsGrid = document.getElementById('cardsGrid');
             
@@ -416,35 +485,71 @@
                 return;
             }
             
-            cardsGrid.innerHTML = cards.map(card => `
-                <div class="card">
-                    <div class="card-header">
-                        <h3 class="card-name">${card.name}</h3>
-                        ${card.rarity ? `<div class="card-rarity">${card.rarity}</div>` : ''}
-                    </div>
-                    ${card.images && card.images.length > 0 ? `
-                        <div class="card-images">
-                            ${card.images.map((img, index) => `
-                                <div class="card-image ${index === 0 ? 'active' : ''}" data-image-index="${index}">
-                                    <img src="${img.url}" alt="${img.type}" title="${img.type}">
-                                    <div class="image-type">${img.type}</div>
+            // Group cards by type
+            const cardsByType = {};
+            cards.forEach(card => {
+                const type = card.type || 'Unknown';
+                if (!cardsByType[type]) {
+                    cardsByType[type] = [];
+                }
+                cardsByType[type].push(card);
+            });
+            
+            // Generate HTML for each type section
+            let html = '';
+            const sortedTypes = Object.keys(cardsByType).sort();
+            
+            sortedTypes.forEach((type, index) => {
+                const typeCards = cardsByType[type];
+                const typeDisplayName = type.charAt(0).toUpperCase() + type.slice(1);
+                
+                html += `
+                    <div class="card-type-section">
+                        <div class="type-header">
+                            <h3 class="type-title">${typeDisplayName}</h3>
+                            <span class="type-count">${typeCards.length} card${typeCards.length !== 1 ? 's' : ''}</span>
+                        </div>
+                        <div class="type-cards-grid">
+                            ${typeCards.map(card => `
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h3 class="card-name">${card.name}</h3>
+                                        ${card.rarity ? `<div class="card-rarity">${card.rarity}</div>` : ''}
+                                    </div>
+                                    ${card.images && card.images.length > 0 ? `
+                                        <div class="card-images">
+                                            ${card.images.map((img, index) => `
+                                                <div class="card-image ${index === 0 ? 'active' : ''}" data-image-index="${index}">
+                                                    <img src="${img.url}" alt="${img.type}" title="${img.type}">
+                                                    <div class="image-type">${img.type}</div>
+                                                </div>
+                                            `).join('')}
+                                            ${card.images.length > 1 ? `
+                                                <div class="image-nav">
+                                                    ${card.images.map((_, index) => `
+                                                        <button class="image-nav-btn ${index === 0 ? 'active' : ''}" data-image-index="${index}">${index + 1}</button>
+                                                    `).join('')}
+                                                </div>
+                                            ` : ''}
+                                        </div>
+                                    ` : ''}
+                                    <div class="card-body">
+                                        <p class="card-description">${card.description}</p>
+                                        ${card.type ? `<div class="card-type">Type: ${card.type}</div>` : ''}
+                                    </div>
                                 </div>
                             `).join('')}
-                            ${card.images.length > 1 ? `
-                                <div class="image-nav">
-                                    ${card.images.map((_, index) => `
-                                        <button class="image-nav-btn ${index === 0 ? 'active' : ''}" data-image-index="${index}">${index + 1}</button>
-                                    `).join('')}
-                                </div>
-                            ` : ''}
                         </div>
-                    ` : ''}
-                    <div class="card-body">
-                        <p class="card-description">${card.description}</p>
-                        ${card.type ? `<div class="card-type">Type: ${card.type}</div>` : ''}
                     </div>
-                </div>
-            `).join('');
+                `;
+                
+                // Add separator between sections (but not after the last one)
+                if (index < sortedTypes.length - 1) {
+                    html += '<div class="section-separator"></div>';
+                }
+            });
+            
+            cardsGrid.innerHTML = html;
         }
         
         // Update results count
