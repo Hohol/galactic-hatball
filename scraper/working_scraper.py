@@ -33,9 +33,10 @@ class WorkingGalaxyScraper:
             print(f"Error fetching {url}: {e}")
             return None
     
-    def scrape_treasures_category(self, category_url):
-        """Scrape the treasures category page to get all treasure cards"""
-        print(f"Scraping treasures category: {category_url}")
+    def scrape_category(self, category_name, limit=10):
+        """Scrape any category page to get card data"""
+        category_url = f"https://onceuponagalaxy.wiki.gg/wiki/Category:{category_name}"
+        print(f"Scraping {category_name} category: {category_url}")
         
         content = self.get_page_content(category_url)
         if not content:
@@ -44,9 +45,9 @@ class WorkingGalaxyScraper:
         soup = BeautifulSoup(content, 'html.parser')
         
         # Save the raw HTML for inspection
-        with open('debug_treasures_page.html', 'w', encoding='utf-8') as f:
+        with open(f'debug_{category_name.lower()}_page.html', 'w', encoding='utf-8') as f:
             f.write(content)
-        print("Saved debug HTML to debug_treasures_page.html")
+        print(f"Saved debug HTML to debug_{category_name.lower()}_page.html")
         
         # Look for the main content area
         main_content = soup.find('div', id='mw-content-text')
@@ -82,7 +83,7 @@ class WorkingGalaxyScraper:
                     'href': href
                 })
         
-        print(f"Found {len(card_links)} potential card links")
+        print(f"Found {len(card_links)} potential {category_name} links")
         
         # Remove duplicates based on URL
         unique_links = []
@@ -92,13 +93,13 @@ class WorkingGalaxyScraper:
                 unique_links.append(link)
                 seen_urls.add(link['url'])
         
-        print(f"After deduplication: {len(unique_links)} unique card links")
+        print(f"After deduplication: {len(unique_links)} unique {category_name} links")
         
         # Scrape each card page
         cards = []
-        for i, link in enumerate(unique_links[:10]):  # Limit to first 10 for testing
-            print(f"\nScraping card {i+1}/{min(10, len(unique_links))}: {link['name']}")
-            card_data = self.scrape_card_page(link['url'], link['name'])
+        for i, link in enumerate(unique_links[:limit]):  # Limit to specified number
+            print(f"\nScraping {category_name} {i+1}/{min(limit, len(unique_links))}: {link['name']}")
+            card_data = self.scrape_card_page(link['url'], link['name'], category_name.lower())
             if card_data:
                 cards.append(card_data)
                 print(f"Successfully scraped: {card_data['name']}")
@@ -109,7 +110,7 @@ class WorkingGalaxyScraper:
         
         return cards
     
-    def scrape_card_page(self, card_url, expected_name):
+    def scrape_card_page(self, card_url, expected_name, card_type_name):
         """Scrape individual card page to extract card data"""
         content = self.get_page_content(card_url)
         if not content:
@@ -133,12 +134,11 @@ class WorkingGalaxyScraper:
         
         card_data = {
             "name": card_name,
-            "description": card_description or "No description available"
+            "description": card_description or "No description available",
+            "type": card_type_name  # Use the category name as the card type
         }
         
         # Add optional fields if found
-        if card_type:
-            card_data["type"] = card_type
         if card_rarity:
             card_data["rarity"] = card_rarity
         if card_cost:
@@ -385,12 +385,13 @@ class WorkingGalaxyScraper:
         
         return unique_images
     
-    def save_cards_to_json(self, cards, output_dir="cards/treasures"):
+    def save_cards_to_json(self, cards, category_name):
         """Save scraped cards to individual JSON files"""
         # Use absolute path to ensure files are saved to the correct location
         import os
         script_dir = os.path.dirname(os.path.abspath(__file__))
         project_root = os.path.dirname(script_dir)
+        output_dir = f"cards/{category_name.lower()}"
         absolute_output_dir = os.path.join(project_root, output_dir)
         
         if not os.path.exists(absolute_output_dir):
@@ -408,25 +409,22 @@ class WorkingGalaxyScraper:
                 
                 print(f"Saved: {filename}")
     
-    def run(self, category_url):
+    def run(self, category_name, limit=10):
         """Main method to run the scraper"""
-        print("Starting Working Once upon a Galaxy wiki scraper...")
+        print(f"Starting Working Once upon a Galaxy wiki scraper for {category_name}...")
         
-        # Scrape the treasures category
-        cards = self.scrape_treasures_category(category_url)
+        # Scrape the specified category
+        cards = self.scrape_category(category_name, limit)
         
         print(f"\nScraped {len(cards)} cards")
         
         # Save cards to JSON files
-        self.save_cards_to_json(cards)
+        self.save_cards_to_json(cards, category_name)
         
         print("Scraping completed!")
 
 if __name__ == "__main__":
     scraper = WorkingGalaxyScraper()
     
-    # URL for the treasures category
-    treasures_url = "https://onceuponagalaxy.wiki.gg/wiki/Category:Treasures"
-    
-    # Run the scraper
-    scraper.run(treasures_url)
+    # Scrape Characters category (first 10)
+    scraper.run("Characters", 10)

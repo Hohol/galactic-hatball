@@ -1,0 +1,24 @@
+{
+  "name": "Achilles",
+  "description": "Give me and your other characters +4/+2.",
+  "type": "characters",
+  "rarity": "rare",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/1/1a/Character_Achilles.png?fce514&format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/9/9e/Character_Achilles_Card_Bronze.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/e/e9/Character_Achilles_Card_Silver.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/2/29/Character_Achilles_Card_Gold.png?format=original"
+    }
+  ]
+}

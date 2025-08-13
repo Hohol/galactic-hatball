@@ -1,0 +1,24 @@
+{
+  "name": "Baby Bear",
+  "description": "Animal\nHero",
+  "type": "characters",
+  "rarity": "uncommon",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/8/8e/Character_Baby_Bear.png?3c9f43&format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/f/f3/Character_Baby_Bear_Card_Bronze.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/8/80/Character_Baby_Bear_Card_Silver.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/d/db/Character_Baby_Bear_Card_Gold.png?format=original"
+    }
+  ]
+}
