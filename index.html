@@ -32,7 +32,7 @@
         }
 
         .header h1 {
-            font-size: 3rem;
+            font-size: clamp(2rem, 4vw, 4rem);
             margin-bottom: 10px;
             background: linear-gradient(45deg, #ffd700, #ff6b6b, #4ecdc4);
             -webkit-background-clip: text;
@@ -42,7 +42,7 @@
         }
 
         .header p {
-            font-size: 1.2rem;
+            font-size: clamp(1rem, 1.5vw, 1.5rem);
             color: #b8b8b8;
         }
 
@@ -65,7 +65,7 @@
             color: rgba(255, 215, 0, 0.8);
             font-weight: bold;
             margin-bottom: 15px;
-            font-size: 1rem;
+            font-size: clamp(0.9rem, 1.2vw, 1.2rem);
         }
         
         .type-radio {
@@ -110,7 +110,7 @@
         
         .type-radio-btn {
             color: #fff;
-            font-size: 1rem;
+            font-size: clamp(0.9rem, 1.1vw, 1.1rem);
             font-weight: 500;
         }
 
@@ -127,7 +127,7 @@
             border-radius: 25px;
             background: rgba(255, 255, 255, 0.1);
             color: white;
-            font-size: 1.1rem;
+            font-size: clamp(1rem, 1.3vw, 1.3rem);
             border: 1px solid rgba(255, 255, 255, 0.3);
         }
 
@@ -147,7 +147,7 @@
             border: none;
             border-radius: 25px;
             color: #000;
-            font-size: 1.1rem;
+            font-size: clamp(1rem, 1.3vw, 1.3rem);
             font-weight: bold;
             cursor: pointer;
             transition: all 0.3s ease;
@@ -233,7 +233,7 @@
             white-space: nowrap;
             overflow: hidden;
             width: 100%;
-            font-size: 1.6rem;
+            font-size: clamp(1.2rem, 2vw, 2rem);
         }
 
 
@@ -247,7 +247,7 @@
             margin: 0;
             color: #e0e0e0;
             text-align: center;
-            font-size: 1.1rem;
+            font-size: clamp(0.9rem, 1.4vw, 1.4rem);
         }
         
         .card-abilities {
@@ -518,7 +518,7 @@
             border: 1px solid rgba(78, 220, 196, 0.3);
             border-radius: 20px;
             color: #4ecdc4;
-            font-size: 0.85rem;
+            font-size: clamp(0.8rem, 1vw, 1rem);
             cursor: pointer;
             transition: all 0.3s ease;
             user-select: none;
@@ -558,7 +558,7 @@
             border: 1px solid rgba(138, 43, 226, 0.3);
             border-radius: 20px;
             color: #8a2be2;
-            font-size: 0.85rem;
+            font-size: clamp(0.8rem, 1vw, 1rem);
             cursor: pointer;
             transition: all 0.3s ease;
             user-select: none;
@@ -1192,7 +1192,8 @@
                 // Only shrink if the text actually overflows (more than 5px tolerance)
                 if (cardName.scrollWidth > containerWidth + 5) {
                     console.log('Shrinking font for:', cardName.textContent);
-                    let fontSize = 1.6; // Start with CSS font size
+                    // Start with the responsive CSS font size (clamp(1.2rem, 2vw, 2rem))
+                    let fontSize = Math.max(1.2, Math.min(2, window.innerWidth * 0.02 / 16)); // Convert to rem
                     cardName.style.fontSize = fontSize + 'rem';
                     
                     // Reduce font size until text fits
