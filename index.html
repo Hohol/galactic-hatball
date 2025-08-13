@@ -512,6 +512,33 @@
                 cardsByType[type].push(card);
             });
             
+            // Sort cards within each type: first by rarity, then by name
+            Object.keys(cardsByType).forEach(type => {
+                cardsByType[type].sort((a, b) => {
+                    // Define rarity order (more common first)
+                    const rarityOrder = {
+                        'common': 1,
+                        'uncommon': 2,
+                        'rare': 3,
+                        'super rare': 4,
+                        'ultra rare': 5,
+                        'secret rare': 6
+                    };
+                    
+                    // Get rarity values, defaulting to lowest priority for unknown rarities
+                    const rarityA = rarityOrder[a.rarity?.toLowerCase()] || 999;
+                    const rarityB = rarityOrder[b.rarity?.toLowerCase()] || 999;
+                    
+                    // First sort by rarity
+                    if (rarityA !== rarityB) {
+                        return rarityA - rarityB;
+                    }
+                    
+                    // If same rarity, sort by name alphabetically
+                    return a.name.localeCompare(b.name);
+                });
+            });
+            
             console.log('Cards grouped by type:', cardsByType);
             console.log('Types found:', Object.keys(cardsByType));
             
