@@ -1,7 +1,7 @@
 {
   "name": "Alchemistry Set",
   "description": "Silver characters in your shop turn Golden.",
-  "type": "treasure",
+  "type": "treasures",
   "rarity": "rare",
   "images": [
     {

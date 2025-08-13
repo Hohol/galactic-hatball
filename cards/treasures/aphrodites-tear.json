@@ -1,7 +1,7 @@
 {
   "name": "Aphrodite's Tear",
   "description": "Your characters have +5/+5.",
-  "type": "treasure",
+  "type": "treasures",
   "rarity": "rare",
   "images": [
     {

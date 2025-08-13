@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Full scraper for Once upon a Galaxy wiki - gets all treasure cards
+Working scraper for Once upon a Galaxy wiki using curl user agent
 """
 
 import requests
@@ -9,9 +9,10 @@ import json
 import os
 import time
 import re
+import argparse
 from urllib.parse import urljoin
 
-class FullGalaxyScraper:
+class WorkingGalaxyScraper:
     def __init__(self):
         self.base_url = "https://onceuponagalaxy.wiki.gg"
         self.session = requests.Session()
@@ -33,15 +34,21 @@ class FullGalaxyScraper:
             print(f"Error fetching {url}: {e}")
             return None
     
-    def scrape_treasures_category(self, category_url):
-        """Scrape the treasures category page to get all treasure cards"""
-        print(f"Scraping treasures category: {category_url}")
+    def scrape_category(self, category_name, limit=10):
+        """Scrape any category page to get card data"""
+        category_url = f"https://onceuponagalaxy.wiki.gg/wiki/Category:{category_name}"
+        print(f"Scraping {category_name} category: {category_url}")
         
         content = self.get_page_content(category_url)
         if not content:
             return []
         
         soup = BeautifulSoup(content, 'html.parser')
+        
+        # Save the raw HTML for inspection
+        with open(f'debug_{category_name.lower()}_page.html', 'w', encoding='utf-8') as f:
+            f.write(content)
+        print(f"Saved debug HTML to debug_{category_name.lower()}_page.html")
         
         # Look for the main content area
         main_content = soup.find('div', id='mw-content-text')
@@ -52,36 +59,32 @@ class FullGalaxyScraper:
         # Look for links to individual card pages
         card_links = []
         
-        # Find the category listing section
-        category_section = main_content.find('div', class_='mw-category')
-        if category_section:
-            # Look for all links in the category groups
-            category_groups = category_section.find_all('div', class_='mw-category-group')
-            for group in category_groups:
-                links = group.find_all('a', href=True)
-                for link in links:
-                    href = link.get('href')
-                    text = link.get_text().strip()
-                    
-                    # Filter for likely card pages (not templates or categories)
-                    if (href.startswith('/wiki/') and 
-                        not href.startswith('/wiki/Template:') and
-                        not href.startswith('/wiki/Category:') and
-                        not href.startswith('/wiki/User:') and
-                        not href.startswith('/wiki/Talk:') and
-                        not href.startswith('/wiki/File:') and
-                        not href.startswith('/wiki/Help:') and
-                        not href.startswith('/wiki/Special:') and
-                        text and len(text) > 1 and
-                        not text.startswith('Template:')):
-                        
-                        card_links.append({
-                            'url': urljoin(self.base_url, href),
-                            'name': text,
-                            'href': href
-                        })
+        # Try different approaches to find card links
+        # 1. Look for links in the category listing
+        links = main_content.find_all('a', href=True)
+        for link in links:
+            href = link.get('href')
+            text = link.get_text().strip()
+            
+            # Filter for likely card pages (not templates or categories)
+            if (href.startswith('/wiki/') and 
+                not href.startswith('/wiki/Template:') and
+                not href.startswith('/wiki/Category:') and
+                not href.startswith('/wiki/User:') and
+                not href.startswith('/wiki/Talk:') and
+                not href.startswith('/wiki/File:') and
+                not href.startswith('/wiki/Help:') and
+                not href.startswith('/wiki/Special:') and
+                text and len(text) > 1 and
+                not text.startswith('Template:')):
+                
+                card_links.append({
+                    'url': urljoin(self.base_url, href),
+                    'name': text,
+                    'href': href
+                })
         
-        print(f"Found {len(card_links)} potential card links")
+        print(f"Found {len(card_links)} potential {category_name} links")
         
         # Remove duplicates based on URL
         unique_links = []
@@ -91,25 +94,24 @@ class FullGalaxyScraper:
                 unique_links.append(link)
                 seen_urls.add(link['url'])
         
-        print(f"After deduplication: {len(unique_links)} unique card links")
+        print(f"After deduplication: {len(unique_links)} unique {category_name} links")
         
         # Scrape each card page
         cards = []
-        for i, link in enumerate(unique_links):
-            print(f"\nScraping card {i+1}/{len(unique_links)}: {link['name']}")
-            card_data = self.scrape_card_page(link['url'], link['name'])
+        for i, link in enumerate(unique_links[:limit]):  # Limit to specified number
+            print(f"\nScraping {category_name} {i+1}/{min(limit, len(unique_links))}: {link['name']}")
+            card_data = self.scrape_card_page(link['url'], link['name'], category_name.lower())
             if card_data:
                 cards.append(card_data)
                 print(f"Successfully scraped: {card_data['name']}")
             else:
                 print(f"Failed to scrape: {link['name']}")
             
-            # Be respectful to the server - longer delay for full scraping
-            time.sleep(3)
+            time.sleep(2)  # Be respectful to the server
         
         return cards
     
-    def scrape_card_page(self, card_url, expected_name):
+    def scrape_card_page(self, card_url, expected_name, card_type_name):
         """Scrape individual card page to extract card data"""
         content = self.get_page_content(card_url)
         if not content:
@@ -133,12 +135,11 @@ class FullGalaxyScraper:
         
         card_data = {
             "name": card_name,
-            "description": card_description or "No description available"
+            "description": card_description or "No description available",
+            "type": card_type_name  # Use the category name as the card type
         }
         
         # Add optional fields if found
-        if card_type:
-            card_data["type"] = card_type
         if card_rarity:
             card_data["rarity"] = card_rarity
         if card_cost:
@@ -239,19 +240,17 @@ class FullGalaxyScraper:
     
     def extract_card_cost(self, soup):
         """Extract card cost if available"""
-        # Look for cost information in druid-infobox
-        infobox = soup.find('div', class_='druid-infobox')
-        if infobox:
-            cost_row = infobox.find('div', class_='druid-row-cost')
-            if cost_row:
-                cost_data = cost_row.find('div', class_='druid-data-cost')
-                if cost_data:
-                    cost_text = cost_data.get_text().strip()
-                    try:
-                        return int(cost_text)
-                    except ValueError:
-                        return cost_text
-        
+        # Look for cost information in content
+        main_content = soup.find('div', id='mw-content-text')
+        if main_content:
+            text = main_content.get_text()
+            # Look for cost patterns like "Cost: 3" or "3 cost"
+            cost_match = re.search(r'cost[:\s]*(\d+)', text.lower())
+            if cost_match:
+                try:
+                    return int(cost_match.group(1))
+                except ValueError:
+                    pass
         return None
     
     def extract_card_images(self, soup):
@@ -333,17 +332,16 @@ class FullGalaxyScraper:
                             parts = src.split('/')
                             if 'thumb' in parts:
                                 thumb_index = parts.index('thumb')
-                                # Keep everything before 'thumb' and after the size part
+                                # Keep everything before 'thumb' (base path)
                                 base_parts = parts[:thumb_index]
-                                filename_part = parts[thumb_index + 2]  # Skip 'thumb' and size
-                                # Extract just the filename without size prefix
-                                if 'px-' in filename_part:
-                                    filename = filename_part.split('px-', 1)[1]
-                                else:
-                                    filename = filename_part
+                                # The directories are the parts after 'thumb' but before the filename
+                                # The filename is the part before the size variant
+                                directories = parts[thumb_index + 1:thumb_index + 3]  # Get both directory parts (e.g., 'd', 'd5')
+                                filename = parts[thumb_index + 3]  # This is the actual filename
+                                size_variant = parts[thumb_index + 4]  # This is the size variant
                                 
-                                # Reconstruct the URL
-                                original_url = '/'.join(base_parts) + '/' + filename
+                                # Reconstruct the URL: base_parts + directories + filename
+                                original_url = '/'.join(base_parts + directories) + '/' + filename
                                 # Add format=original parameter
                                 if '?' in original_url:
                                     original_url += '&format=original'
@@ -360,38 +358,46 @@ class FullGalaxyScraper:
                         # Determine image type based on tab key
                         img_type = 'art' if tab_key == 'Art' else 'card' if tab_key == 'Card' else 'unknown'
                         
-                        images.append({
-                            'type': img_type,
-                            'url': original_url
-                        })
+                        # Only add if it's a different image (not a duplicate)
+                        is_duplicate = False
+                        for existing_img in images:
+                            # Check if this is essentially the same image (same filename, different cache params)
+                            existing_filename = existing_img['url'].split('/')[-1].split('?')[0]
+                            new_filename = original_url.split('/')[-1].split('?')[0]
+                            if existing_filename == new_filename:
+                                is_duplicate = True
+                                break
+                        
+                        if not is_duplicate:
+                            images.append({
+                                'type': img_type,
+                                'url': original_url
+                            })
         
-        # Remove duplicates based on URL
+        # Remove duplicates based on URL (final cleanup)
         unique_images = []
         seen_urls = set()
         for img in images:
-            if img['url'] not in seen_urls:
+            # Normalize URL by removing cache parameters for comparison
+            normalized_url = img['url'].split('?')[0]
+            if normalized_url not in seen_urls:
                 unique_images.append(img)
-                seen_urls.add(img['url'])
+                seen_urls.add(normalized_url)
         
         return unique_images
     
-    def save_cards_to_json(self, cards, output_dir="cards/treasures"):
+    def save_cards_to_json(self, cards, category_name):
         """Save scraped cards to individual JSON files"""
         # Use absolute path to ensure files are saved to the correct location
         import os
         script_dir = os.path.dirname(os.path.abspath(__file__))
         project_root = os.path.dirname(script_dir)
+        output_dir = f"cards/{category_name.lower()}"
         absolute_output_dir = os.path.join(project_root, output_dir)
         
         if not os.path.exists(absolute_output_dir):
             os.makedirs(absolute_output_dir)
         
-        # Clear existing JSON files in the output directory
-        for existing_file in os.listdir(absolute_output_dir):
-            if existing_file.endswith('.json'):
-                os.remove(os.path.join(absolute_output_dir, existing_file))
-        
-        # Save individual card files
         for card in cards:
             if card and card.get('name'):
                 # Create filename from card name
@@ -403,35 +409,72 @@ class FullGalaxyScraper:
                     json.dump(card, f, indent=2, ensure_ascii=False)
                 
                 print(f"Saved: {filename}")
-        
-        # Save combined file
-        combined_filename = os.path.join(absolute_output_dir, "all_treasures.json")
-        with open(combined_filename, 'w', encoding='utf-8') as f:
-            json.dump(cards, f, indent=2, ensure_ascii=False)
-        
-        print(f"Saved combined file: {combined_filename}")
     
-    def run(self, category_url):
-        """Main method to run the scraper"""
-        print("Starting Full Once upon a Galaxy wiki scraper...")
-        print("This will scrape ALL treasure cards (118 total)")
-        print("Estimated time: 6-8 minutes (with 3-second delays)")
+    def run(self, category_name, limit=10):
+        """Main method to run the scraper for a single category"""
+        print(f"Starting Working Once upon a Galaxy wiki scraper for {category_name}...")
         
-        # Scrape the treasures category
-        cards = self.scrape_treasures_category(category_url)
+        # Scrape the specified category
+        cards = self.scrape_category(category_name, limit)
         
         print(f"\nScraped {len(cards)} cards")
         
         # Save cards to JSON files
-        self.save_cards_to_json(cards)
+        self.save_cards_to_json(cards, category_name)
         
-        print("Full scraping completed!")
+        print("Scraping completed!")
+    
+    def run_all_categories(self):
+        """Main method to run the scraper for all available categories"""
+        print("Starting Working Once upon a Galaxy wiki scraper for all categories...")
+        
+        # Define available categories (you can add more as they become available)
+        available_categories = ["Characters", "Treasures", "Events", "Items"]
+        
+        for category in available_categories:
+            try:
+                print(f"\n{'='*50}")
+                print(f"Processing category: {category}")
+                print(f"{'='*50}")
+                
+                # Try to scrape this category (some might not exist yet)
+                cards = self.scrape_category(category, limit=None)  # Unlimited
+                
+                if cards:
+                    print(f"\nScraped {len(cards)} cards from {category}")
+                    self.save_cards_to_json(cards, category)
+                else:
+                    print(f"No cards found for category: {category}")
+                    
+            except Exception as e:
+                print(f"Error processing category {category}: {e}")
+                continue
+        
+        print("\nAll categories processing completed!")
 
 if __name__ == "__main__":
-    scraper = FullGalaxyScraper()
+    parser = argparse.ArgumentParser(description='Scrape Once upon a Galaxy wiki cards')
+    parser.add_argument('--categories', '-c', nargs='+', 
+                       help='Categories to scrape (e.g., Characters Treasures Events). Default: all available categories')
+    parser.add_argument('--limit', '-l', type=int, default=None,
+                       help='Limit number of cards per category (default: unlimited)')
+    parser.add_argument('--all', action='store_true',
+                       help='Scrape all available categories with unlimited cards')
     
-    # URL for the treasures category
-    treasures_url = "https://onceuponagalaxy.wiki.gg/wiki/Category:Treasures"
+    args = parser.parse_args()
     
-    # Run the scraper
-    scraper.run(treasures_url)
+    scraper = WorkingGalaxyScraper()
+    
+    if args.all:
+        # Scrape all available categories with unlimited cards
+        print("Scraping all available categories with unlimited cards...")
+        scraper.run_all_categories()
+    elif args.categories:
+        # Scrape specified categories with specified limit
+        for category in args.categories:
+            print(f"\n{'='*50}")
+            scraper.run(category, args.limit)
+    else:
+        # Default: scrape Characters with 10 cards limit
+        print("No categories specified. Using default: Characters with 10 card limit")
+        scraper.run("Characters", 10)
