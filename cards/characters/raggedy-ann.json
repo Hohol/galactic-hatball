@@ -20,5 +20,13 @@
       "type": "unknown",
       "url": "https://onceuponagalaxy.wiki.gg/images/9/94/Character_Raggedy_Ann_Card_Gold.png?format=original"
     }
-  ]
+  ],
+  "traits": [
+    "Toy"
+  ],
+  "ability_type": "Farewell",
+  "attack": 3,
+  "health": 3,
+  "deck_type": "Collectible",
+  "gold_description": "Summon a 3/3 Andy and give it +6/+6 for each heart you're missing."
 }

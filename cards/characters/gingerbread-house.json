@@ -20,5 +20,13 @@
       "type": "unknown",
       "url": "https://onceuponagalaxy.wiki.gg/images/1/13/Character_Gingerbread_House_Card_Gold.png?format=original"
     }
-  ]
+  ],
+  "traits": [
+    "Toy"
+  ],
+  "ability_type": "Farewell",
+  "attack": 2,
+  "health": 1,
+  "deck_type": "Shared",
+  "gold_description": "Give my neighbors +4 Attack."
 }

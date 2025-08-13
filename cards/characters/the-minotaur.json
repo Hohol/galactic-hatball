@@ -20,5 +20,12 @@
       "type": "unknown",
       "url": "https://onceuponagalaxy.wiki.gg/images/3/3d/Character_The_Minotaur_Card_Gold.png?format=original"
     }
-  ]
+  ],
+  "traits": [
+    "Animal",
+    "Villain"
+  ],
+  "attack": 7,
+  "health": 4,
+  "deck_type": "Shared"
 }

@@ -1,6 +1,6 @@
 {
   "name": "Jasmine Dragon",
-  "description": "Treasure Hoard 2",
+  "description": "When you collect your first Treasure each turn, you get a bonus shop.",
   "type": "characters",
   "rarity": "epic",
   "images": [
@@ -20,5 +20,13 @@
       "type": "unknown",
       "url": "https://onceuponagalaxy.wiki.gg/images/1/1b/Character_Jasmine_Dragon_Card_Gold.png?format=original"
     }
-  ]
+  ],
+  "traits": [
+    "Dragon"
+  ],
+  "ability_type": "Treasure Hoard 2",
+  "attack": 7,
+  "health": 7,
+  "deck_type": "Shared",
+  "gold_description": "When you collect your first Treasure each turn, you get two bonus shops."
 }

@@ -1,6 +1,6 @@
 {
   "name": "Maverick & Icewing",
-  "description": "Treasure Hoard 2",
+  "description": "Collect 2 Treasures.",
   "type": "characters",
   "rarity": "rare",
   "images": [
@@ -20,5 +20,12 @@
       "type": "unknown",
       "url": "https://onceuponagalaxy.wiki.gg/images/d/d1/Character_Maverick_%26_Icewing_Card_Gold.png?format=original"
     }
-  ]
+  ],
+  "traits": [
+    "Dragon"
+  ],
+  "ability_type": "Treasure Hoard 2",
+  "attack": 4,
+  "health": 4,
+  "deck_type": "Collectible"
 }

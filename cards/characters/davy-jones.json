@@ -1,6 +1,6 @@
 {
   "name": "Davy Jones",
-  "description": "Pirate\nVillain",
+  "description": "My slot gains +2/+2.",
   "type": "characters",
   "rarity": "rare",
   "images": [
@@ -20,5 +20,14 @@
       "type": "unknown",
       "url": "https://onceuponagalaxy.wiki.gg/images/9/95/Character_Davy_Jones_Card_Gold.png?format=original"
     }
-  ]
+  ],
+  "traits": [
+    "Pirate",
+    "Villain"
+  ],
+  "ability_type": "Hunt",
+  "attack": 7,
+  "health": 1,
+  "deck_type": "Shared",
+  "gold_description": "My slot gains +4/+4."
 }

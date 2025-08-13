@@ -20,5 +20,13 @@
       "type": "unknown",
       "url": "https://onceuponagalaxy.wiki.gg/images/e/e1/Character_Cheshire_Cat_Card_Gold.png?format=original"
     }
-  ]
+  ],
+  "traits": [
+    "Animal"
+  ],
+  "ability_type": "Farewell",
+  "attack": 6,
+  "health": 6,
+  "deck_type": "Shared",
+  "gold_description": "Give your Animals +12/+12."
 }

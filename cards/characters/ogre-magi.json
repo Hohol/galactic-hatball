@@ -1,6 +1,6 @@
 {
   "name": "Ogre Magi",
-  "description": "Mage\nPirate\nVillain",
+  "description": "Cast a spell at the start of your next turn.",
   "type": "characters",
   "rarity": "epic",
   "images": [
@@ -20,5 +20,15 @@
       "type": "unknown",
       "url": "https://onceuponagalaxy.wiki.gg/images/8/88/Character_Ogre_Magi_Card_Gold.png?format=original"
     }
-  ]
+  ],
+  "traits": [
+    "Mage",
+    "Pirate",
+    "Villain"
+  ],
+  "ability_type": "Hunt",
+  "attack": 12,
+  "health": 4,
+  "deck_type": "Collectible",
+  "gold_description": "Cast 2 spells at the start of your next turn."
 }

@@ -1,6 +1,6 @@
 {
   "name": "Toto",
-  "description": "Animal\nHero",
+  "description": "Your next shop has a Quest character.",
   "type": "characters",
   "rarity": "common",
   "images": [
@@ -20,5 +20,14 @@
       "type": "unknown",
       "url": "https://onceuponagalaxy.wiki.gg/images/c/c8/Character_Toto_Card_Gold.png?format=original"
     }
-  ]
+  ],
+  "traits": [
+    "Animal",
+    "Hero"
+  ],
+  "ability_type": "Recruit",
+  "attack": 3,
+  "health": 2,
+  "deck_type": "Collectible",
+  "gold_description": "Get a bonus shop with a Quest character."
 }

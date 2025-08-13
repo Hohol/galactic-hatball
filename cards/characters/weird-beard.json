@@ -20,5 +20,13 @@
       "type": "unknown",
       "url": "https://onceuponagalaxy.wiki.gg/images/9/96/Character_Weird_Beard_Card_Gold.png?format=original"
     }
-  ]
+  ],
+  "traits": [
+    "Pirate"
+  ],
+  "ability_type": "Recruit",
+  "attack": 20,
+  "health": 20,
+  "deck_type": "Collectible",
+  "gold_description": "Get (X) random treasures (two for each Pirate you've Silvered this game)."
 }

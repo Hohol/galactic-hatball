@@ -1,6 +1,6 @@
 {
   "name": "Flying Monkey",
-  "description": "Animal\nVillain",
+  "description": "(I attack back row characters first.)",
   "type": "characters",
   "rarity": "common",
   "images": [
@@ -20,5 +20,13 @@
       "type": "unknown",
       "url": "https://onceuponagalaxy.wiki.gg/images/0/06/Character_Flying_Monkey_Card_Gold.png?format=original"
     }
-  ]
+  ],
+  "traits": [
+    "Animal",
+    "Villain"
+  ],
+  "ability_type": "Sneak",
+  "attack": 3,
+  "health": 2,
+  "deck_type": "Shared"
 }

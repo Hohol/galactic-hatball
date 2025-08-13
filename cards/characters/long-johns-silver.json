@@ -1,6 +1,6 @@
 {
   "name": "Long Johns Silver",
-  "description": "Pirate\nVillain",
+  "description": "Bronze characters become Silver. (Even me!)",
   "type": "characters",
   "rarity": "legendary",
   "images": [
@@ -20,5 +20,13 @@
       "type": "unknown",
       "url": "https://onceuponagalaxy.wiki.gg/images/1/13/Character_Long_Johns_Silver_Card_Gold.png?format=original"
     }
-  ]
+  ],
+  "traits": [
+    "Pirate",
+    "Villain"
+  ],
+  "ability_type": "Recruit",
+  "attack": 20,
+  "health": 20,
+  "deck_type": "Shared"
 }

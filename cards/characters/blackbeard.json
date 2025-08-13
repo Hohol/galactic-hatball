@@ -1,6 +1,6 @@
 {
   "name": "Blackbeard",
-  "description": "Pirate\nVillain",
+  "description": "Trigger your other character's Hunt abilities.",
   "type": "characters",
   "rarity": "legendary",
   "images": [
@@ -20,5 +20,13 @@
       "type": "unknown",
       "url": "https://onceuponagalaxy.wiki.gg/images/b/b1/Character_Blackbeard_Card_Gold.png?format=original"
     }
-  ]
+  ],
+  "traits": [
+    "Pirate",
+    "Villain"
+  ],
+  "attack": 4,
+  "health": 4,
+  "deck_type": "Collectible",
+  "gold_description": "Trigger your other character's Hunt abilities twice."
 }

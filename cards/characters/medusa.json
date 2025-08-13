@@ -1,6 +1,6 @@
 {
   "name": "Medusa",
-  "description": "Mage\nVillain",
+  "description": "When I attack a character, transform it into a 3/3 cursed Statue.",
   "type": "characters",
   "rarity": "epic",
   "images": [
@@ -16,5 +16,13 @@
       "type": "unknown",
       "url": "https://onceuponagalaxy.wiki.gg/images/7/71/Character_Medusa_Card_Gold.png?format=original"
     }
-  ]
+  ],
+  "traits": [
+    "Mage",
+    "Villain"
+  ],
+  "ability_type": "Cursed",
+  "attack": 3,
+  "health": 3,
+  "deck_type": "Shared"
 }

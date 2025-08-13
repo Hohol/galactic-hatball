@@ -20,5 +20,11 @@
       "type": "unknown",
       "url": "https://onceuponagalaxy.wiki.gg/images/1/1a/Character_Itsy_Bitsy_Spider_Card_Gold.png?format=original"
     }
-  ]
+  ],
+  "traits": [
+    "Animal"
+  ],
+  "attack": 3,
+  "health": 3,
+  "deck_type": "Shared"
 }

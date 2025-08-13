@@ -16,5 +16,14 @@
       "type": "unknown",
       "url": "https://onceuponagalaxy.wiki.gg/images/c/c8/Character_Shanty_Card_Gold.png?format=original"
     }
-  ]
+  ],
+  "traits": [
+    "Fae",
+    "Pirate"
+  ],
+  "ability_type": "Hunt",
+  "attack": 3,
+  "health": 2,
+  "deck_type": "Collectible",
+  "gold_description": "Give your shop +2/+2."
 }

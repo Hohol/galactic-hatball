@@ -16,5 +16,13 @@
       "type": "unknown",
       "url": "https://onceuponagalaxy.wiki.gg/images/e/e4/Character_Sabrina_Card_Gold.png?format=original"
     }
-  ]
+  ],
+  "traits": [
+    "Mage"
+  ],
+  "ability_type": "Recruit",
+  "attack": 7,
+  "health": 6,
+  "deck_type": "Collectible",
+  "gold_description": "Get a bonus shop of all Mages."
 }

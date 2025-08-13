@@ -20,5 +20,13 @@
       "type": "unknown",
       "url": "https://onceuponagalaxy.wiki.gg/images/6/6c/Character_Sorcerer%27s_Mop_Card_Gold.png?format=original"
     }
-  ]
+  ],
+  "traits": [
+    "Mage",
+    "Toy"
+  ],
+  "attack": 8,
+  "health": 8,
+  "deck_type": "Shared",
+  "gold_description": "When you summon another character, give it double my attack and health."
 }

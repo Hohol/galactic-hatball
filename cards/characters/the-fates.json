@@ -20,5 +20,11 @@
       "type": "unknown",
       "url": "https://onceuponagalaxy.wiki.gg/images/4/48/Character_The_Fates_Card_Gold.png?format=original"
     }
-  ]
+  ],
+  "traits": [
+    "Mage"
+  ],
+  "attack": 2,
+  "health": 1,
+  "deck_type": "Collectible"
 }

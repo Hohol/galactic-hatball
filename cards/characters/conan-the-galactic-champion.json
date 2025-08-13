@@ -1,6 +1,6 @@
 {
   "name": "Conan the Galactic Champion",
-  "description": "Celestial\nHero",
+  "description": "Deal 200 damage.",
   "type": "characters",
   "rarity": "legendary",
   "images": [
@@ -20,5 +20,13 @@
       "type": "unknown",
       "url": "https://onceuponagalaxy.wiki.gg/images/e/e0/Character_Conan_the_Galactic_Champion_Card_Gold.png?format=original"
     }
-  ]
+  ],
+  "traits": [
+    "Celestial",
+    "Hero"
+  ],
+  "ability_type": "Quest",
+  "attack": 25,
+  "health": 25,
+  "deck_type": "Shared"
 }

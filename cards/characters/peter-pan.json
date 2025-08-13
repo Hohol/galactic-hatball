@@ -20,5 +20,13 @@
       "type": "unknown",
       "url": "https://onceuponagalaxy.wiki.gg/images/b/b7/Character_Peter_Pan_Card_Gold.png?format=original"
     }
-  ]
+  ],
+  "traits": [
+    "Hero"
+  ],
+  "ability_type": "Recruit",
+  "attack": 2,
+  "health": 4,
+  "deck_type": "Shared",
+  "gold_description": "Buffs from Fae give an additional +2 Health for the rest of the game."
 }

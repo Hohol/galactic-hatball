@@ -20,5 +20,13 @@
       "type": "unknown",
       "url": "https://onceuponagalaxy.wiki.gg/images/3/39/Character_G-Man%2C_Champion_of_Eternity_Card_Gold.png?format=original"
     }
-  ]
+  ],
+  "traits": [
+    "Toy",
+    "Hero"
+  ],
+  "attack": 1,
+  "health": 20,
+  "deck_type": "Shared",
+  "gold_description": "When I'm attacked, I gain attack equal to double the attacker's current health."
 }

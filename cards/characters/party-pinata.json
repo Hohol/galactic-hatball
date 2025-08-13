@@ -20,5 +20,13 @@
       "type": "unknown",
       "url": "https://onceuponagalaxy.wiki.gg/images/4/40/Character_Party_Pinata_Card_Gold.png?format=original"
     }
-  ]
+  ],
+  "traits": [
+    "Toy"
+  ],
+  "ability_type": "Farewell",
+  "attack": 8,
+  "health": 6,
+  "deck_type": "Collectible",
+  "gold_description": "Give all your Toys everywhere +2/+2."
 }

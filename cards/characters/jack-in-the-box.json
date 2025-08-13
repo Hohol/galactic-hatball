@@ -1,6 +1,6 @@
 {
   "name": "Jack in the Box",
-  "description": "Toy\nVillain",
+  "description": "Summon a 1/1 Jack.",
   "type": "characters",
   "rarity": "common",
   "images": [
@@ -20,5 +20,14 @@
       "type": "unknown",
       "url": "https://onceuponagalaxy.wiki.gg/images/7/75/Character_Jack_in_the_Box_Card_Gold.png?format=original"
     }
-  ]
+  ],
+  "traits": [
+    "Toy",
+    "Villain"
+  ],
+  "ability_type": "Farewell",
+  "attack": 1,
+  "health": 1,
+  "deck_type": "Shared",
+  "gold_description": "Summon a 2/2 Jack."
 }

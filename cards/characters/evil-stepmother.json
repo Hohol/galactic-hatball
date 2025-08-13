@@ -20,5 +20,12 @@
       "type": "unknown",
       "url": "https://onceuponagalaxy.wiki.gg/images/1/1f/Character_Evil_Stepmother_Card_Gold.png?format=original"
     }
-  ]
+  ],
+  "traits": [
+    "Villain"
+  ],
+  "ability_type": "Quest",
+  "attack": 3,
+  "health": 1,
+  "deck_type": "Shared"
 }

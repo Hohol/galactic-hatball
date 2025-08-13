@@ -20,5 +20,12 @@
       "type": "unknown",
       "url": "https://onceuponagalaxy.wiki.gg/images/7/7f/Character_Guardian_of_the_Grove_Card_Gold.png?format=original"
     }
-  ]
+  ],
+  "traits": [
+    "Animal"
+  ],
+  "attack": 15,
+  "health": 15,
+  "deck_type": "Shared",
+  "gold_description": "When one of your Animals attacks, give all of your Animals +10/+10."
 }

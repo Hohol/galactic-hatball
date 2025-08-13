@@ -20,5 +20,13 @@
       "type": "unknown",
       "url": "https://onceuponagalaxy.wiki.gg/images/e/ee/Character_Hercules_Card_Gold.png?format=original"
     }
-  ]
+  ],
+  "traits": [
+    "Hero"
+  ],
+  "ability_type": "Hunt",
+  "attack": 10,
+  "health": 10,
+  "deck_type": "Collectible",
+  "gold_description": "+20/+20, then triple this buff."
 }

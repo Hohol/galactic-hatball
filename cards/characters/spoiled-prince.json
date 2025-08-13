@@ -20,5 +20,12 @@
       "type": "unknown",
       "url": "https://onceuponagalaxy.wiki.gg/images/c/cd/Character_Spoiled_Prince_Card_Gold.png?format=original"
     }
-  ]
+  ],
+  "traits": [
+    "Villain"
+  ],
+  "attack": 4,
+  "health": 4,
+  "deck_type": "Shared",
+  "gold_description": "When you get a new Toy, I get +8/+8."
 }

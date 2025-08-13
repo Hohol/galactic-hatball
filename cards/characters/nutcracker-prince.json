@@ -20,5 +20,14 @@
       "type": "unknown",
       "url": "https://onceuponagalaxy.wiki.gg/images/d/da/Character_Nutcracker_Prince_Card_Gold.png?format=original"
     }
-  ]
+  ],
+  "traits": [
+    "Toy",
+    "Hero"
+  ],
+  "ability_type": "Farewell",
+  "attack": 3,
+  "health": 4,
+  "deck_type": "Collectible",
+  "gold_description": "Give one of your Heroes +6/+8."
 }

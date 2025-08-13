@@ -16,5 +16,13 @@
       "type": "unknown",
       "url": "https://onceuponagalaxy.wiki.gg/images/1/15/Character_Innkeeper_Card_Gold.png?format=original"
     }
-  ]
+  ],
+  "traits": [
+    "Pirate"
+  ],
+  "ability_type": "Support",
+  "attack": 10,
+  "health": 10,
+  "deck_type": "Collectible",
+  "gold_description": "When a character I'm supporting Hunts, improve my support by +10/+10."
 }

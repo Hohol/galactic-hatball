@@ -20,5 +20,13 @@
       "type": "unknown",
       "url": "https://onceuponagalaxy.wiki.gg/images/c/cc/Character_Titania_Card_Gold.png?format=original"
     }
-  ]
+  ],
+  "traits": [
+    "Fae"
+  ],
+  "ability_type": "Support",
+  "attack": 10,
+  "health": 20,
+  "deck_type": "Shared",
+  "gold_description": "Each fight, give characters in front of me +40 Health."
 }

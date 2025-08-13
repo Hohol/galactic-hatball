@@ -1,6 +1,6 @@
 {
   "name": "The Kraken",
-  "description": "Animal\nPirate\nVillain",
+  "description": "Give all three front row slots +8/+8",
   "type": "characters",
   "rarity": "legendary",
   "images": [
@@ -20,5 +20,15 @@
       "type": "unknown",
       "url": "https://onceuponagalaxy.wiki.gg/images/d/de/Character_The_Kraken_Card_Gold.png?format=original"
     }
-  ]
+  ],
+  "traits": [
+    "Animal",
+    "Pirate",
+    "Villain"
+  ],
+  "ability_type": "Hunt",
+  "attack": 16,
+  "health": 16,
+  "deck_type": "Shared",
+  "gold_description": "Give all three front row slots +16/+16"
 }

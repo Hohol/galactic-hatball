@@ -1,6 +1,6 @@
 {
   "name": "Mephisto",
-  "description": "Celestial\nVillain",
+  "description": "When a character in front of me is KO'd, it is gone for good and I steal its Attack and Health.",
   "type": "characters",
   "rarity": "legendary",
   "images": [
@@ -16,5 +16,14 @@
       "type": "unknown",
       "url": "https://onceuponagalaxy.wiki.gg/images/c/c3/Character_Mephisto_Card_Gold.png?format=original"
     }
-  ]
+  ],
+  "traits": [
+    "Celestial",
+    "Villain"
+  ],
+  "ability_type": "Support",
+  "attack": 6,
+  "health": 6,
+  "deck_type": "Collectible",
+  "gold_description": "When a character in front of me is KO'd, it is gone for good and I double steal its Attack and Health."
 }

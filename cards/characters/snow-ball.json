@@ -20,5 +20,13 @@
       "type": "unknown",
       "url": "https://onceuponagalaxy.wiki.gg/images/5/5e/Character_Snow_Ball_Card_Gold.png?format=original"
     }
-  ]
+  ],
+  "traits": [
+    "Toy"
+  ],
+  "ability_type": "Farewell",
+  "attack": 2,
+  "health": 2,
+  "deck_type": "Shared",
+  "gold_description": "I get +2/+2, then improve this bonus by +2/+2."
 }

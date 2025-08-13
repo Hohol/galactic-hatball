@@ -20,5 +20,10 @@
       "type": "unknown",
       "url": "https://onceuponagalaxy.wiki.gg/images/f/f8/Character_Mysterious_Egg_Card_Gold.png?format=original"
     }
-  ]
+  ],
+  "traits": [
+    "Egg"
+  ],
+  "health": 1,
+  "deck_type": "Shared"
 }

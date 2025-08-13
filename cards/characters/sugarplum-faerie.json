@@ -20,5 +20,13 @@
       "type": "unknown",
       "url": "https://onceuponagalaxy.wiki.gg/images/3/3a/Character_Sugarplum_Faerie_Card_Gold.png?format=original"
     }
-  ]
+  ],
+  "traits": [
+    "Fae"
+  ],
+  "ability_type": "Recruit",
+  "attack": 5,
+  "health": 5,
+  "deck_type": "Shared",
+  "gold_description": "When you recruit a Fae (including me), give your shop +2/+2 for the rest of the game."
 }

@@ -20,5 +20,12 @@
       "type": "unknown",
       "url": "https://onceuponagalaxy.wiki.gg/images/8/85/Character_Frankenstein%27s_Doctor_Card_Gold.png?format=original"
     }
-  ]
+  ],
+  "traits": [
+    "Villain"
+  ],
+  "attack": 14,
+  "health": 14,
+  "deck_type": "Shared",
+  "gold_description": "Your characters have \"Farewell -- Give my slot +8/+8.\""
 }

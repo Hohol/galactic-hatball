@@ -20,5 +20,13 @@
       "type": "unknown",
       "url": "https://onceuponagalaxy.wiki.gg/images/1/1f/Character_Wormtongue_Card_Gold.png?format=original"
     }
-  ]
+  ],
+  "traits": [
+    "Villain"
+  ],
+  "ability_type": "Recruit",
+  "attack": 3,
+  "health": 2,
+  "deck_type": "Collectible",
+  "gold_description": "Get a bonus shop of all Villains."
 }

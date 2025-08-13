@@ -1,6 +1,6 @@
 {
   "name": "The Dreamer",
-  "description": "Celestial\nHero",
+  "description": "When I attack, I deal a million bonus damage.",
   "type": "characters",
   "rarity": "rare",
   "images": [
@@ -16,5 +16,13 @@
       "type": "unknown",
       "url": "https://onceuponagalaxy.wiki.gg/images/a/ac/Character_The_Dreamer_Card_Gold.png?format=original"
     }
-  ]
+  ],
+  "traits": [
+    "Celestial",
+    "Hero"
+  ],
+  "attack": 1,
+  "health": 1,
+  "deck_type": "Shared",
+  "gold_description": "When I attack, I deal a billion bonus damage."
 }

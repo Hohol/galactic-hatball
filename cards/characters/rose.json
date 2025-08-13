@@ -16,5 +16,13 @@
       "type": "unknown",
       "url": "https://onceuponagalaxy.wiki.gg/images/0/08/Character_Rose_Card_Gold.png?format=original"
     }
-  ]
+  ],
+  "traits": [
+    "Fae"
+  ],
+  "ability_type": "Recruit",
+  "attack": 1,
+  "health": 1,
+  "deck_type": "Shared",
+  "gold_description": "Characters in your shop get +2 Health."
 }

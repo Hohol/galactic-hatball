@@ -1,6 +1,6 @@
 {
   "name": "Puss in Boots",
-  "description": "Animal\nPirate\nHero",
+  "description": "Give my slot +1 Attack. (When I attack and KO a character.)",
   "type": "characters",
   "rarity": "common",
   "images": [
@@ -20,5 +20,15 @@
       "type": "unknown",
       "url": "https://onceuponagalaxy.wiki.gg/images/2/27/Character_Puss_in_Boots_Card_Gold.png?format=original"
     }
-  ]
+  ],
+  "traits": [
+    "Animal",
+    "Pirate",
+    "Hero"
+  ],
+  "ability_type": "Hunt",
+  "attack": 3,
+  "health": 1,
+  "deck_type": "Shared",
+  "gold_description": "Give my slot +2 Attack. (When I attack and KO a character.)"
 }

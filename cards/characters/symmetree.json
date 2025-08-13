@@ -20,5 +20,11 @@
       "type": "unknown",
       "url": "https://onceuponagalaxy.wiki.gg/images/f/f9/Character_Symmetree_Card_Gold.png?format=original"
     }
-  ]
+  ],
+  "traits": [
+    "Tree"
+  ],
+  "attack": 3,
+  "health": 3,
+  "deck_type": "Shared"
 }

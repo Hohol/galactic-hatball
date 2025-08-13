@@ -16,5 +16,11 @@
       "type": "unknown",
       "url": "https://onceuponagalaxy.wiki.gg/images/a/a9/Character_Stinky_Card_Gold.png?format=original"
     }
-  ]
+  ],
+  "traits": [
+    "Animal"
+  ],
+  "health": 25,
+  "deck_type": "Shared",
+  "gold_description": "After I'm attacked, deal double that much damage to a random enemy."
 }

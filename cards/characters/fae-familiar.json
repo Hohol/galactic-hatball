@@ -1,6 +1,6 @@
 {
   "name": "Fae Familiar",
-  "description": "Fae\nAnimal\nMage",
+  "description": "When you cast a spell, give me +1/+1.",
   "type": "characters",
   "rarity": "uncommon",
   "images": [
@@ -20,5 +20,14 @@
       "type": "unknown",
       "url": "https://onceuponagalaxy.wiki.gg/images/e/e6/Character_Fae_Familiar_Card_Gold.png?format=original"
     }
-  ]
+  ],
+  "traits": [
+    "Fae",
+    "Animal",
+    "Mage"
+  ],
+  "attack": 4,
+  "health": 4,
+  "deck_type": "Collectible",
+  "gold_description": "When you cast a spell, give me +2/+2."
 }

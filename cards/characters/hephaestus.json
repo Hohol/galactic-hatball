@@ -1,6 +1,6 @@
 {
   "name": "Hephaestus",
-  "description": "Dragon\nCelestial",
+  "description": "When I appear in the shop, Golden me if you have a Common, Uncommon, and Rare treasure.",
   "type": "characters",
   "rarity": "legendary",
   "images": [
@@ -20,5 +20,13 @@
       "type": "unknown",
       "url": "https://onceuponagalaxy.wiki.gg/images/0/01/Character_Hephaestus_Card_Gold.png?format=original"
     }
-  ]
+  ],
+  "traits": [
+    "Dragon",
+    "Celestial"
+  ],
+  "ability_type": "Treasure Hoard 3",
+  "attack": 30,
+  "health": 30,
+  "deck_type": "Collectible"
 }

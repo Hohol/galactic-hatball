@@ -12,5 +12,11 @@
       "type": "unknown",
       "url": "https://onceuponagalaxy.wiki.gg/images/6/63/Character_George_Card_Bronze.png?format=original"
     }
-  ]
+  ],
+  "traits": [
+    "Token"
+  ],
+  "attack": 1,
+  "health": 1,
+  "deck_type": "Shared"
 }

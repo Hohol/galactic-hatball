@@ -20,5 +20,13 @@
       "type": "unknown",
       "url": "https://onceuponagalaxy.wiki.gg/images/7/7a/Character_Pan%27s_Shadow_Card_Gold.png?format=original"
     }
-  ]
+  ],
+  "traits": [
+    "Villain"
+  ],
+  "ability_type": "Recruit",
+  "attack": 4,
+  "health": 2,
+  "deck_type": "Shared",
+  "gold_description": "Buffs from Fae give an additional +2 Attack for the rest of the game."
 }

@@ -20,5 +20,11 @@
       "type": "unknown",
       "url": "https://onceuponagalaxy.wiki.gg/images/7/7c/Character_Nessie_Card_Gold.png?format=original"
     }
-  ]
+  ],
+  "traits": [
+    "Animal"
+  ],
+  "attack": 50,
+  "health": 50,
+  "deck_type": "Shared"
 }

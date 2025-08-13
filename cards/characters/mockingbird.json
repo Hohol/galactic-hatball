@@ -20,5 +20,14 @@
       "type": "unknown",
       "url": "https://onceuponagalaxy.wiki.gg/images/5/56/Character_Mockingbird_Card_Gold.png?format=original"
     }
-  ]
+  ],
+  "traits": [
+    "Animal",
+    "Toy"
+  ],
+  "ability_type": "Farewell",
+  "attack": 6,
+  "health": 6,
+  "deck_type": "Shared",
+  "gold_description": "Summon 2 random Animals and give them +6/+6 for each of your other Animals that were KO'd this fight."
 }

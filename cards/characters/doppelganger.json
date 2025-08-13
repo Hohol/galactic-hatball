@@ -1,0 +1,28 @@
+{
+  "name": "Doppelganger",
+  "description": "Clone the enemy that KO'd me.",
+  "type": "characters",
+  "rarity": "secret rare",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/5/5a/Character_Doppelganger_Card_Bronze.png?2fa53a&format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/1/1f/Character_Doppelganger_Card_Silver.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/c/cc/Character_Doppelganger_Card_Gold.png?format=original"
+    }
+  ],
+  "traits": [
+    "ALL"
+  ],
+  "ability_type": "Farewell",
+  "attack": 1,
+  "health": 1,
+  "deck_type": "Shared",
+  "gold_description": "Clone the enemy that KO'd me twice."
+}

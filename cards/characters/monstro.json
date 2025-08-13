@@ -1,6 +1,6 @@
 {
   "name": "Monstro",
-  "description": "I have +6/+6 for each Animal you have recruited this game.",
+  "description": "I have 100 Attack or Health during a fight.",
   "type": "characters",
   "rarity": "legendary",
   "images": [
@@ -20,5 +20,12 @@
       "type": "unknown",
       "url": "https://onceuponagalaxy.wiki.gg/images/5/50/Character_Monstro_Card_Gold.png?format=original"
     }
-  ]
+  ],
+  "traits": [
+    "Animal"
+  ],
+  "attack": 20,
+  "health": 20,
+  "deck_type": "Collectible",
+  "gold_description": "I have +12/+12 for each Animal you have recruited this game."
 }

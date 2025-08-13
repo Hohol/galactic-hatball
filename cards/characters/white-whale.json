@@ -20,5 +20,13 @@
       "type": "unknown",
       "url": "https://onceuponagalaxy.wiki.gg/images/e/e5/Character_White_Whale_Card_Gold.png?format=original"
     }
-  ]
+  ],
+  "traits": [
+    "Animal"
+  ],
+  "ability_type": "Farewell",
+  "attack": 18,
+  "health": 18,
+  "deck_type": "Shared",
+  "gold_description": "You and your opponent both find a Common treasure."
 }

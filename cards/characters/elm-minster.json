@@ -1,6 +1,6 @@
 {
   "name": "Elm Minster",
-  "description": "Cast 4 spells in a single turn (Shop phase + fight).",
+  "description": "Your buffs from spells give an extra +5/+5.",
   "type": "characters",
   "rarity": "legendary",
   "images": [
@@ -20,5 +20,13 @@
       "type": "unknown",
       "url": "https://onceuponagalaxy.wiki.gg/images/8/83/Character_Elm_Minster_Card_Gold.png?format=original"
     }
-  ]
+  ],
+  "traits": [
+    "Mage"
+  ],
+  "ability_type": "Quest",
+  "attack": 50,
+  "health": 10,
+  "deck_type": "Collectible",
+  "gold_description": "Your buffs from spells give an extra +10/+10."
 }

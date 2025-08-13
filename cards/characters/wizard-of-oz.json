@@ -1,6 +1,6 @@
 {
   "name": "Wizard of Oz",
-  "description": "Mage\nVillain",
+  "description": "(X) (+2/+2 for each spell you've cast this game.)",
   "type": "characters",
   "rarity": "legendary",
   "images": [
@@ -20,5 +20,14 @@
       "type": "unknown",
       "url": "https://onceuponagalaxy.wiki.gg/images/1/11/Character_Wizard_of_Oz_Card_Gold.png?format=original"
     }
-  ]
+  ],
+  "traits": [
+    "Mage",
+    "Villain"
+  ],
+  "ability_type": "Support",
+  "attack": 3,
+  "health": 3,
+  "deck_type": "Shared",
+  "gold_description": "(X) (+4/+4 for each spell you've cast this game.)"
 }

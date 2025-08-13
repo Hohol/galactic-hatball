@@ -1,6 +1,6 @@
 {
   "name": "Paul Bunyan",
-  "description": "Secret Rare",
+  "description": "Each fight, I become bigger than the largest enemy character.",
   "type": "characters",
   "rarity": "secret rare",
   "images": [
@@ -20,5 +20,10 @@
       "type": "unknown",
       "url": "https://onceuponagalaxy.wiki.gg/images/2/25/Character_Paul_Bunyan_Card_Gold.png?format=original"
     }
-  ]
+  ],
+  "traits": [
+    "Hero"
+  ],
+  "deck_type": "Shared",
+  "gold_description": "Each fight, I become twice the size of the largest enemy character."
 }

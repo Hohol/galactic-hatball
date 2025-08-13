@@ -20,5 +20,11 @@
       "type": "unknown",
       "url": "https://onceuponagalaxy.wiki.gg/images/3/3e/Character_Bronze_Goose_Card_Gold.png?format=original"
     }
-  ]
+  ],
+  "traits": [
+    "Animal"
+  ],
+  "attack": 15,
+  "health": 15,
+  "deck_type": "Shared"
 }

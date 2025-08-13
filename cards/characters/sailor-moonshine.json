@@ -20,5 +20,13 @@
       "type": "unknown",
       "url": "https://onceuponagalaxy.wiki.gg/images/3/31/Character_Sailor_Moonshine_Card_Gold.png?format=original"
     }
-  ]
+  ],
+  "traits": [
+    "Pirate"
+  ],
+  "ability_type": "Recruit",
+  "attack": 4,
+  "health": 3,
+  "deck_type": "Collectible",
+  "gold_description": "Get a bonus shop of all Pirates."
 }

@@ -1,6 +1,6 @@
 {
   "name": "Prospero",
-  "description": "I have +6/+6 for each Mage you have recruited this game.",
+  "description": "I have 100 Attack or Health during a fight.",
   "type": "characters",
   "rarity": "legendary",
   "images": [
@@ -20,5 +20,12 @@
       "type": "unknown",
       "url": "https://onceuponagalaxy.wiki.gg/images/3/36/Character_Prospero_Card_Gold.png?format=original"
     }
-  ]
+  ],
+  "traits": [
+    "Mage"
+  ],
+  "attack": 20,
+  "health": 20,
+  "deck_type": "Collectible",
+  "gold_description": "I have +12/+12 for each Mage you have recruited this game."
 }

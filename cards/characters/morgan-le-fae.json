@@ -1,6 +1,6 @@
 {
   "name": "Morgan Le Fae",
-  "description": "Fae\nMage\nVillain",
+  "description": "When you cast a spell, give a random character +1 Attack.",
   "type": "characters",
   "rarity": "uncommon",
   "images": [
@@ -20,5 +20,15 @@
       "type": "unknown",
       "url": "https://onceuponagalaxy.wiki.gg/images/7/7f/Character_Morgan_Le_Fae_Card_Gold.png?format=original"
     }
-  ]
+  ],
+  "traits": [
+    "Fae",
+    "Mage",
+    "Villain"
+  ],
+  "ability_type": "Ranged",
+  "attack": 2,
+  "health": 2,
+  "deck_type": "Collectible",
+  "gold_description": "When you cast a spell, give a random character +2 Attack."
 }

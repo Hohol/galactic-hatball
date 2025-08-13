@@ -1,6 +1,6 @@
 {
   "name": "Spirit of Vengeance",
-  "description": "Secret Rare",
+  "description": "I gain Attack and Health equal to the damage I was dealt.",
   "type": "characters",
   "rarity": "secret rare",
   "images": [
@@ -20,5 +20,13 @@
       "type": "unknown",
       "url": "https://onceuponagalaxy.wiki.gg/images/c/c1/Character_Spirit_of_Vengeance_Card_Gold.png?format=original"
     }
-  ]
+  ],
+  "traits": [
+    "Celestial"
+  ],
+  "ability_type": "Farewell",
+  "attack": 1,
+  "health": 1,
+  "deck_type": "Shared",
+  "gold_description": "I gain Attack and Health equal to double the damage I was dealt."
 }

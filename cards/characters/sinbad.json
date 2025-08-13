@@ -16,5 +16,11 @@
       "type": "unknown",
       "url": "https://onceuponagalaxy.wiki.gg/images/d/db/Character_Sinbad_Card_Gold.png?format=original"
     }
-  ]
+  ],
+  "traits": [
+    "Pirate"
+  ],
+  "attack": 8,
+  "health": 7,
+  "deck_type": "Collectible"
 }

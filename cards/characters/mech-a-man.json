@@ -1,6 +1,6 @@
 {
   "name": "Mech-a-Man",
-  "description": "Toy\nPirate\nHero",
+  "description": "Summon a random Toy.",
   "type": "characters",
   "rarity": "uncommon",
   "images": [
@@ -20,5 +20,15 @@
       "type": "unknown",
       "url": "https://onceuponagalaxy.wiki.gg/images/5/55/Character_Mech-a-Man_Card_Gold.png?format=original"
     }
-  ]
+  ],
+  "traits": [
+    "Toy",
+    "Pirate",
+    "Hero"
+  ],
+  "ability_type": "Hunt",
+  "attack": 2,
+  "health": 1,
+  "deck_type": "Collectible",
+  "gold_description": "Summon two random Toys."
 }

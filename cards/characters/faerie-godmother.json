@@ -20,5 +20,13 @@
       "type": "unknown",
       "url": "https://onceuponagalaxy.wiki.gg/images/b/b5/Character_Faerie_Godmother_Card_Gold.png?format=original"
     }
-  ]
+  ],
+  "traits": [
+    "Mage",
+    "Fae"
+  ],
+  "attack": 2,
+  "health": 5,
+  "deck_type": "Shared",
+  "gold_description": "Each fight, give your other characters +1/+1."
 }

@@ -1,6 +1,6 @@
 {
   "name": "Baby Bear",
-  "description": "Animal\nHero",
+  "description": "Each fight, give your Animals' slots +1 Health.",
   "type": "characters",
   "rarity": "uncommon",
   "images": [
@@ -27,5 +27,6 @@
   ],
   "attack": 3,
   "health": 3,
-  "deck_type": "Shared"
+  "deck_type": "Shared",
+  "gold_description": "Each fight, give your Animals' slots +2 Health."
 }

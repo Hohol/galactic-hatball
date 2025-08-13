@@ -1,6 +1,6 @@
 {
   "name": "Mechanical Dragon",
-  "description": "Treasure Hoard 1",
+  "description": "Get a Dragon Claw. (Your characters have +1 Attack.)",
   "type": "characters",
   "rarity": "rare",
   "images": [
@@ -20,5 +20,14 @@
       "type": "unknown",
       "url": "https://onceuponagalaxy.wiki.gg/images/f/f4/Character_Mechanical_Dragon_Card_Gold.png?format=original"
     }
-  ]
+  ],
+  "traits": [
+    "Dragon",
+    "Toy"
+  ],
+  "ability_type": "Treasure Hoard 1",
+  "attack": 2,
+  "health": 2,
+  "deck_type": "Collectible",
+  "gold_description": "Get 2 Dragon Claws. (Your characters have +1 Attack.)"
 }

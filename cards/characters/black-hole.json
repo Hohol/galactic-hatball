@@ -20,5 +20,11 @@
       "type": "unknown",
       "url": "https://onceuponagalaxy.wiki.gg/images/8/87/Character_Black_Hole_Card_Gold.png?format=original"
     }
-  ]
+  ],
+  "traits": [
+    "Celestial"
+  ],
+  "ability_type": "Farewell",
+  "health": 1,
+  "deck_type": "Collectible"
 }

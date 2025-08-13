@@ -1,6 +1,6 @@
 {
   "name": "Ironcast Dragon",
-  "description": "Mage\nDragon",
+  "description": "When you cast a spell directly on me, get a random Common treasure.",
   "type": "characters",
   "rarity": "epic",
   "images": [
@@ -20,5 +20,14 @@
       "type": "unknown",
       "url": "https://onceuponagalaxy.wiki.gg/images/c/c5/Character_Ironcast_Dragon_Card_Gold.png?format=original"
     }
-  ]
+  ],
+  "traits": [
+    "Mage",
+    "Dragon"
+  ],
+  "ability_type": "Treasure Hoard 1",
+  "attack": 12,
+  "health": 12,
+  "deck_type": "Shared",
+  "gold_description": "When you cast a spell directly on me, get a random Uncommon treasure."
 }

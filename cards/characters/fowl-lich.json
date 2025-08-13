@@ -1,6 +1,6 @@
 {
   "name": "Fowl Lich",
-  "description": "Animal\nMage\nVillain",
+  "description": "I gain +1/+1 when one of your other Animals is KO'd.",
   "type": "characters",
   "rarity": "uncommon",
   "images": [
@@ -20,5 +20,14 @@
       "type": "unknown",
       "url": "https://onceuponagalaxy.wiki.gg/images/4/43/Character_Fowl_Lich_Card_Gold.png?format=original"
     }
-  ]
+  ],
+  "traits": [
+    "Animal",
+    "Mage",
+    "Villain"
+  ],
+  "attack": 5,
+  "health": 5,
+  "deck_type": "Shared",
+  "gold_description": "I gain +2/+2 when one of your other Animals is KO'd."
 }

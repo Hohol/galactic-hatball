@@ -1,6 +1,6 @@
 {
   "name": "Flopsy",
-  "description": "Treasure Hoard 4",
+  "description": "The leftmost character in your shop gets my stats.",
   "type": "characters",
   "rarity": "legendary",
   "images": [
@@ -16,5 +16,14 @@
       "type": "unknown",
       "url": "https://onceuponagalaxy.wiki.gg/images/1/17/Character_Flopsy_Card_Gold.png?format=original"
     }
-  ]
+  ],
+  "traits": [
+    "Fae",
+    "Dragon"
+  ],
+  "ability_type": "Treasure Hoard 4",
+  "attack": 8,
+  "health": 8,
+  "deck_type": "Collectible",
+  "gold_description": "The leftmost character in your shop gets double my stats."
 }

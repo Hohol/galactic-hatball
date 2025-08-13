@@ -1,6 +1,6 @@
 {
   "name": "Baby Dragon",
-  "description": "Dragon\nAnimal",
+  "description": "(Treasure Hoard gives +1/+1 to this character for each treasure you have.)",
   "type": "characters",
   "rarity": "common",
   "images": [
@@ -28,5 +28,6 @@
   "ability_type": "Treasure Hoard 1",
   "attack": 2,
   "health": 3,
-  "deck_type": "Shared"
+  "deck_type": "Shared",
+  "gold_description": "(Treasure Hoard gives +2/+2 to this character for each treasure you have.)"
 }

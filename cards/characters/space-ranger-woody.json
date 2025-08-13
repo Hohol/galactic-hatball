@@ -20,5 +20,13 @@
       "type": "unknown",
       "url": "https://onceuponagalaxy.wiki.gg/images/2/21/Character_Space_Ranger_Woody_Card_Gold.png?format=original"
     }
-  ]
+  ],
+  "traits": [
+    "Toy"
+  ],
+  "ability_type": "Recruit",
+  "attack": 3,
+  "health": 5,
+  "deck_type": "Collectible",
+  "gold_description": "Get a bonus shop of all Toys."
 }

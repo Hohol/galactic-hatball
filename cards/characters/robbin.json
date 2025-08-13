@@ -1,6 +1,6 @@
 {
   "name": "Robbin'",
-  "description": "Pirate\nHero",
+  "description": "When you recruit a Pirate, both of us get +10 Attack.",
   "type": "characters",
   "rarity": "epic",
   "images": [
@@ -20,5 +20,14 @@
       "type": "unknown",
       "url": "https://onceuponagalaxy.wiki.gg/images/f/f6/Character_Robbin%27_Card_Gold.png?format=original"
     }
-  ]
+  ],
+  "traits": [
+    "Pirate",
+    "Hero"
+  ],
+  "ability_type": "Ranged",
+  "attack": 5,
+  "health": 5,
+  "deck_type": "Shared",
+  "gold_description": "When you recruit a Pirate, both of us get +20 Attack."
 }

@@ -1,6 +1,6 @@
 {
   "name": "Shadow",
-  "description": "Secret Rare",
+  "description": "Summon your last character that was KO'd this fight and give +10/+10.",
   "type": "characters",
   "rarity": "secret rare",
   "images": [
@@ -16,5 +16,13 @@
       "type": "unknown",
       "url": "https://onceuponagalaxy.wiki.gg/images/f/fb/Character_Shadow_Card_Gold.png?format=original"
     }
-  ]
+  ],
+  "traits": [
+    "Villain"
+  ],
+  "ability_type": "Farewell",
+  "attack": 20,
+  "health": 20,
+  "deck_type": "Shared",
+  "gold_description": "Summon your last 2 characters that were KO'd this fight and give +20/+20."
 }

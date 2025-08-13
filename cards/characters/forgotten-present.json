@@ -20,5 +20,12 @@
       "type": "unknown",
       "url": "https://onceuponagalaxy.wiki.gg/images/8/80/Character_Forgotten_Present_Card_Gold.png?format=original"
     }
-  ]
+  ],
+  "traits": [
+    "Toy"
+  ],
+  "ability_type": "Farewell",
+  "health": 3,
+  "deck_type": "Shared",
+  "gold_description": "Give my slot +2/+2. (When I'm KO'd.)"
 }

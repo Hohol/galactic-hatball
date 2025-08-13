@@ -20,5 +20,14 @@
       "type": "unknown",
       "url": "https://onceuponagalaxy.wiki.gg/images/5/59/Character_Pix_Card_Gold.png?format=original"
     }
-  ]
+  ],
+  "traits": [
+    "Fae",
+    "Hero"
+  ],
+  "ability_type": "Support",
+  "attack": 1,
+  "health": 1,
+  "deck_type": "Shared",
+  "gold_description": "+6 Health. (To the characters in front of me.)"
 }

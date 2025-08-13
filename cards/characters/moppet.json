@@ -1,0 +1,32 @@
+{
+  "name": "Moppet",
+  "description": "When I survive a fight, get a random spell.",
+  "type": "characters",
+  "rarity": "rare",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/5/5d/Character_Moppet.png?7c971f&format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/c/cf/Character_Moppet_Card_Bronze.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/e/ef/Character_Moppet_Card_Silver.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/e/e3/Character_Moppet_Card_Gold.png?format=original"
+    }
+  ],
+  "traits": [
+    "Mage",
+    "Toy"
+  ],
+  "attack": 4,
+  "health": 9,
+  "deck_type": "Collectible",
+  "gold_description": "When I survive a fight, get two random spells."
+}

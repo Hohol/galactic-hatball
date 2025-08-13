@@ -20,5 +20,13 @@
       "type": "unknown",
       "url": "https://onceuponagalaxy.wiki.gg/images/8/85/Character_Mysterio%2C_the_Great_and_Powerful_Card_Gold.png?format=original"
     }
-  ]
+  ],
+  "traits": [
+    "Mage"
+  ],
+  "ability_type": "Recruit",
+  "attack": 7,
+  "health": 7,
+  "deck_type": "Collectible",
+  "gold_description": "Transform your Bronze characters into characters one rarity higher than your shop."
 }

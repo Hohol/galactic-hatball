@@ -20,5 +20,12 @@
       "type": "unknown",
       "url": "https://onceuponagalaxy.wiki.gg/images/9/91/Character_Prickles_Card_Gold.png?format=original"
     }
-  ]
+  ],
+  "traits": [
+    "Fae"
+  ],
+  "ability_type": "Support",
+  "health": 2,
+  "deck_type": "Collectible",
+  "gold_description": "When a character in front of me is attacked, give it +2/+2."
 }

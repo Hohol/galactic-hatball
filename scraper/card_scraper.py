@@ -111,7 +111,9 @@ class WorkingGalaxyScraper:
             card_data = self.scrape_card_page(link['url'], link['name'], category_name.lower())
             if card_data:
                 cards.append(card_data)
-                print(f"Successfully scraped: {card_data['name']}")
+                # Save the card immediately after scraping
+                self.save_single_card_to_json(card_data, category_name.lower())
+                print(f"Successfully scraped and saved: {card_data['name']}")
             else:
                 print(f"Failed to scrape: {link['name']}")
             
@@ -542,6 +544,29 @@ class WorkingGalaxyScraper:
         self.save_cards_to_json(cards, category_name)
         
         print("Scraping completed!")
+    
+    def save_single_card_to_json(self, card, category_name):
+        """Save a single card to JSON file immediately"""
+        # Use absolute path to ensure files are saved to the correct location
+        import os
+        script_dir = os.path.dirname(os.path.abspath(__file__))
+        project_root = os.path.dirname(script_dir)
+        output_dir = f"cards/{category_name}"
+        absolute_output_dir = os.path.join(project_root, output_dir)
+        
+        if not os.path.exists(absolute_output_dir):
+            os.makedirs(absolute_output_dir)
+        
+        if card and card.get('name'):
+            # Create filename from card name
+            filename = card['name'].lower().replace(' ', '-').replace(':', '').replace('(', '').replace(')', '')
+            filename = re.sub(r'[^a-z0-9\-]', '', filename)
+            filename = os.path.join(absolute_output_dir, f"{filename}.json")
+            
+            with open(filename, 'w', encoding='utf-8') as f:
+                json.dump(card, f, indent=2, ensure_ascii=False)
+            
+            print(f"  Saved: {filename}")
     
     def run_all_categories(self):
         """Main method to run the scraper for all available categories"""

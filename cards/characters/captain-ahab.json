@@ -16,5 +16,12 @@
       "type": "unknown",
       "url": "https://onceuponagalaxy.wiki.gg/images/a/a7/Character_Captain_Ahab_Card_Gold.png?format=original"
     }
-  ]
+  ],
+  "traits": [
+    "Pirate"
+  ],
+  "ability_type": "Hunt",
+  "attack": 6,
+  "health": 3,
+  "deck_type": "Shared"
 }

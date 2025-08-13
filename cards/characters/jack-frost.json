@@ -1,6 +1,6 @@
 {
   "name": "Jack Frost",
-  "description": "This character is a default collectible for the following Captains:",
+  "description": "+5 Health",
   "type": "characters",
   "rarity": "uncommon",
   "images": [
@@ -20,5 +20,13 @@
       "type": "unknown",
       "url": "https://onceuponagalaxy.wiki.gg/images/e/e8/Character_Jack_Frost_Card_Gold.png?format=original"
     }
-  ]
+  ],
+  "traits": [
+    "Fae"
+  ],
+  "ability_type": "Support",
+  "attack": 2,
+  "health": 3,
+  "deck_type": "Shared",
+  "gold_description": "+10 Health"
 }

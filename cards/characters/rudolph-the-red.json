@@ -1,6 +1,6 @@
 {
   "name": "Rudolph the Red",
-  "description": "Mage\nAnimal",
+  "description": "Your first shop each turn is all spells instead of characters.",
   "type": "characters",
   "rarity": "epic",
   "images": [
@@ -20,5 +20,13 @@
       "type": "unknown",
       "url": "https://onceuponagalaxy.wiki.gg/images/1/10/Character_Rudolph_the_Red_Card_Gold.png?format=original"
     }
-  ]
+  ],
+  "traits": [
+    "Mage",
+    "Animal"
+  ],
+  "attack": 12,
+  "health": 12,
+  "deck_type": "Collectible",
+  "gold_description": "Get a bonus shop of all spells each turn."
 }

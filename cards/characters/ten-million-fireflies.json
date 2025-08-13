@@ -20,5 +20,13 @@
       "type": "unknown",
       "url": "https://onceuponagalaxy.wiki.gg/images/d/de/Character_Ten_Million_Fireflies_Card_Gold.png?format=original"
     }
-  ]
+  ],
+  "traits": [
+    "Fae"
+  ],
+  "ability_type": "Recruit",
+  "attack": 12,
+  "health": 12,
+  "deck_type": "Shared",
+  "gold_description": "When you recruit me or another Fae give all of your Fae EVERYWHERE +6/+6."
 }

@@ -1,6 +1,6 @@
 {
   "name": "Scarrr",
-  "description": "Animal\nPirate\nVillain",
+  "description": "When any of your characters hunt, give Villains in your shop +4/+4.",
   "type": "characters",
   "rarity": "epic",
   "images": [
@@ -16,5 +16,15 @@
       "type": "unknown",
       "url": "https://onceuponagalaxy.wiki.gg/images/d/db/Character_Scarrr_Card_Gold.png?format=original"
     }
-  ]
+  ],
+  "traits": [
+    "Animal",
+    "Pirate",
+    "Villain"
+  ],
+  "ability_type": "Hunt",
+  "attack": 10,
+  "health": 6,
+  "deck_type": "Shared",
+  "gold_description": "When any of your characters hunt, give Villains in your shop +8/+8."
 }

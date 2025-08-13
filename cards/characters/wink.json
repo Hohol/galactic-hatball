@@ -20,5 +20,13 @@
       "type": "unknown",
       "url": "https://onceuponagalaxy.wiki.gg/images/f/fc/Character_Wink_Card_Gold.png?format=original"
     }
-  ]
+  ],
+  "traits": [
+    "Hero"
+  ],
+  "ability_type": "Hunt",
+  "attack": 2,
+  "health": 1,
+  "deck_type": "Collectible",
+  "gold_description": "Buffs from Fae give an additional +2/+2 for the rest of the game."
 }

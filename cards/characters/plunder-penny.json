@@ -1,6 +1,6 @@
 {
   "name": "Plunder Penny",
-  "description": "Mage\nPirate",
+  "description": "Improve your buffs from spells by +1 Attack.",
   "type": "characters",
   "rarity": "common",
   "images": [
@@ -20,5 +20,14 @@
       "type": "unknown",
       "url": "https://onceuponagalaxy.wiki.gg/images/1/13/Character_Plunder_Penny_Card_Gold.png?format=original"
     }
-  ]
+  ],
+  "traits": [
+    "Mage",
+    "Pirate"
+  ],
+  "ability_type": "Hunt",
+  "attack": 1,
+  "health": 1,
+  "deck_type": "Collectible",
+  "gold_description": "Improve your buffs from spells by +2 Attack."
 }

@@ -28,5 +28,6 @@
   "ability_type": "Hunt",
   "attack": 6,
   "health": 6,
-  "deck_type": "Shared"
+  "deck_type": "Shared",
+  "gold_description": "+12/+12"
 }

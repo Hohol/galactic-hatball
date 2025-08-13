@@ -20,5 +20,13 @@
       "type": "unknown",
       "url": "https://onceuponagalaxy.wiki.gg/images/1/1d/Character_Goodie_Bag_Card_Gold.png?format=original"
     }
-  ]
+  ],
+  "traits": [
+    "Toy"
+  ],
+  "ability_type": "Farewell",
+  "attack": 1,
+  "health": 1,
+  "deck_type": "Shared",
+  "gold_description": "Summon a random Common character then give it double my stats."
 }

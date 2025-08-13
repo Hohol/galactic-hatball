@@ -1,6 +1,6 @@
 {
   "name": "Mighty Mouse",
-  "description": "Animal\nHero",
+  "description": "Animals and Heroes in your shop have +4/+4. After you recruit one, improve this ability by +2/+2.",
   "type": "characters",
   "rarity": "epic",
   "images": [
@@ -20,5 +20,13 @@
       "type": "unknown",
       "url": "https://onceuponagalaxy.wiki.gg/images/1/1d/Character_Mighty_Mouse_Card_Gold.png?format=original"
     }
-  ]
+  ],
+  "traits": [
+    "Animal",
+    "Hero"
+  ],
+  "attack": 10,
+  "health": 10,
+  "deck_type": "Shared",
+  "gold_description": "Animals and Heroes in your shop have +8/+8. After you recruit one, improve this ability by +4/+4."
 }

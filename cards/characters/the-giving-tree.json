@@ -16,5 +16,14 @@
       "type": "unknown",
       "url": "https://onceuponagalaxy.wiki.gg/images/1/1f/Character_The_Giving_Tree_Card_Gold.png?format=original"
     }
-  ]
+  ],
+  "traits": [
+    "Plant",
+    "Hero"
+  ],
+  "ability_type": "Farewell",
+  "attack": 1,
+  "health": 1,
+  "deck_type": "Collectible",
+  "gold_description": "I don't return, but my double roots remain (as a slot buff)."
 }

@@ -1,6 +1,6 @@
 {
   "name": "The Rat King",
-  "description": "Animal\nPirate",
+  "description": "Give my slot +25/+25.",
   "type": "characters",
   "rarity": "legendary",
   "images": [
@@ -20,5 +20,14 @@
       "type": "unknown",
       "url": "https://onceuponagalaxy.wiki.gg/images/9/92/Character_The_Rat_King_Card_Gold.png?format=original"
     }
-  ]
+  ],
+  "traits": [
+    "Animal",
+    "Pirate"
+  ],
+  "ability_type": "Sneak",
+  "attack": 20,
+  "health": 15,
+  "deck_type": "Collectible",
+  "gold_description": "Give my slot +50/+50."
 }

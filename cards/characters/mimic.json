@@ -20,5 +20,11 @@
       "type": "unknown",
       "url": "https://onceuponagalaxy.wiki.gg/images/a/ad/Character_Mimic_Card_Gold.png?format=original"
     }
-  ]
+  ],
+  "traits": [
+    "ALL"
+  ],
+  "attack": 5,
+  "health": 5,
+  "deck_type": "Collectible"
 }

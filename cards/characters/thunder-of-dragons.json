@@ -1,6 +1,6 @@
 {
   "name": "Thunder of Dragons",
-  "description": "Treasure Hoard 2",
+  "description": "Your next shop is all Dragons.",
   "type": "characters",
   "rarity": "epic",
   "images": [
@@ -20,5 +20,13 @@
       "type": "unknown",
       "url": "https://onceuponagalaxy.wiki.gg/images/b/bb/Character_Thunder_of_Dragons_Card_Gold.png?format=original"
     }
-  ]
+  ],
+  "traits": [
+    "Dragon"
+  ],
+  "ability_type": "Treasure Hoard 2",
+  "attack": 7,
+  "health": 7,
+  "deck_type": "Collectible",
+  "gold_description": "Get a bonus shop of all Dragons."
 }

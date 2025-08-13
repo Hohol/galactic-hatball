@@ -1,6 +1,6 @@
 {
   "name": "Wormscale Tinkerer",
-  "description": "Treasure Hoard 1",
+  "description": "Each fight, improve your treasure buffs by +1/+1.",
   "type": "characters",
   "rarity": "legendary",
   "images": [
@@ -16,5 +16,14 @@
       "type": "unknown",
       "url": "https://onceuponagalaxy.wiki.gg/images/5/5f/Character_Wormscale_Tinkerer_Card_Gold.png?format=original"
     }
-  ]
+  ],
+  "traits": [
+    "Fae",
+    "Dragon"
+  ],
+  "ability_type": "Treasure Hoard 1",
+  "attack": 15,
+  "health": 15,
+  "deck_type": "Collectible",
+  "gold_description": "Each fight, improve your treasure buffs by +2/+2."
 }

@@ -1,6 +1,6 @@
 {
   "name": "Combustible Dragon",
-  "description": "Dragon\nVillain",
+  "description": "Deal (X) damage to an enemy. (Equal to my Treasure Hoard bonus.)",
   "type": "characters",
   "rarity": "rare",
   "images": [
@@ -20,5 +20,13 @@
       "type": "unknown",
       "url": "https://onceuponagalaxy.wiki.gg/images/d/df/Character_Combustible_Dragon_Card_Gold.png?format=original"
     }
-  ]
+  ],
+  "traits": [
+    "Dragon",
+    "Villain"
+  ],
+  "ability_type": "Treasure Hoard 2",
+  "attack": 6,
+  "health": 4,
+  "deck_type": "Collectible"
 }

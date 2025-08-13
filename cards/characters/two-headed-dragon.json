@@ -1,6 +1,6 @@
 {
   "name": "Two-Headed Dragon",
-  "description": "Dragon\nVillain\nHero",
+  "description": "When you Golden me, keep an extra treasure.",
   "type": "characters",
   "rarity": "epic",
   "images": [
@@ -20,5 +20,14 @@
       "type": "unknown",
       "url": "https://onceuponagalaxy.wiki.gg/images/7/76/Character_Two-Headed_Dragon_Card_Gold.png?format=original"
     }
-  ]
+  ],
+  "traits": [
+    "Dragon",
+    "Villain",
+    "Hero"
+  ],
+  "ability_type": "Treasure Hoard 2",
+  "attack": 8,
+  "health": 8,
+  "deck_type": "Shared"
 }

@@ -16,5 +16,13 @@
       "type": "unknown",
       "url": "https://onceuponagalaxy.wiki.gg/images/6/6a/Character_Glory_Seeker_Card_Gold.png?format=original"
     }
-  ]
+  ],
+  "traits": [
+    "Hero"
+  ],
+  "ability_type": "Recruit",
+  "attack": 3,
+  "health": 2,
+  "deck_type": "Collectible",
+  "gold_description": "Get a bonus shop of all Heroes."
 }

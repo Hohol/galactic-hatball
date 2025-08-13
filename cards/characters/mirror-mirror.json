@@ -20,5 +20,13 @@
       "type": "unknown",
       "url": "https://onceuponagalaxy.wiki.gg/images/7/7a/Character_Mirror_Mirror_Card_Gold.png?format=original"
     }
-  ]
+  ],
+  "traits": [
+    "Villain"
+  ],
+  "ability_type": "Support",
+  "attack": 1,
+  "health": 1,
+  "deck_type": "Collectible",
+  "gold_description": "When a character I'm supporting is attacked by a ranged character, also deal double that much damage back to them."
 }

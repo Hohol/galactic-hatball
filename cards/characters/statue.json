@@ -1,6 +1,6 @@
 {
   "name": "Statue",
-  "description": "(Cannot be buffed)",
+  "description": "Summoned by Medusa",
   "type": "characters",
   "rarity": "common",
   "images": [
@@ -12,5 +12,13 @@
       "type": "unknown",
       "url": "https://onceuponagalaxy.wiki.gg/images/0/03/Character_Statue_Card_Bronze.png?format=original"
     }
-  ]
+  ],
+  "traits": [
+    "Rock",
+    "Token"
+  ],
+  "ability_type": "Cursed",
+  "attack": 3,
+  "health": 3,
+  "deck_type": "Shared"
 }

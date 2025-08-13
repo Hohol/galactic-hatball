@@ -1,6 +1,6 @@
 {
   "name": "Smug",
-  "description": "Dragon\nVillain",
+  "description": "When you discover a treasure, the left one is always Legendary.",
   "type": "characters",
   "rarity": "epic",
   "images": [
@@ -20,5 +20,14 @@
       "type": "unknown",
       "url": "https://onceuponagalaxy.wiki.gg/images/b/b0/Character_Smug_Card_Gold.png?format=original"
     }
-  ]
+  ],
+  "traits": [
+    "Dragon",
+    "Villain"
+  ],
+  "ability_type": "Treasure Hoard 3",
+  "attack": 10,
+  "health": 10,
+  "deck_type": "Collectible",
+  "gold_description": "When you discover a treasure, your choices are always Legendary."
 }

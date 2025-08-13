@@ -27,5 +27,6 @@
   "ability_type": "Hunt",
   "attack": 7,
   "health": 5,
-  "deck_type": "Shared"
+  "deck_type": "Shared",
+  "gold_description": "Give enemy characters +4/+2."
 }

@@ -20,5 +20,14 @@
       "type": "unknown",
       "url": "https://onceuponagalaxy.wiki.gg/images/5/57/Character_Charlotte_Card_Gold.png?format=original"
     }
-  ]
+  ],
+  "traits": [
+    "Fae",
+    "Animal"
+  ],
+  "ability_type": "Farewell",
+  "attack": 8,
+  "health": 8,
+  "deck_type": "Collectible",
+  "gold_description": "Give me +16/+16 for each character supporting me. Then give those characters this buff as well."
 }

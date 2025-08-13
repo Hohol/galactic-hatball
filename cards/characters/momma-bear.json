@@ -20,5 +20,12 @@
       "type": "unknown",
       "url": "https://onceuponagalaxy.wiki.gg/images/5/5d/Character_Momma_Bear_Card_Gold.png?format=original"
     }
-  ]
+  ],
+  "traits": [
+    "Animal"
+  ],
+  "attack": 5,
+  "health": 5,
+  "deck_type": "Shared",
+  "gold_description": "Each fight, give your Animals' slots +4/+4."
 }

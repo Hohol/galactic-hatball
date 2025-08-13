@@ -1,6 +1,6 @@
 {
   "name": "Nightshade",
-  "description": "Fae\nMage\nVillain",
+  "description": "Buffs from spells give an additional +1/+1 for the rest of the game.",
   "type": "characters",
   "rarity": "rare",
   "images": [
@@ -16,5 +16,15 @@
       "type": "unknown",
       "url": "https://onceuponagalaxy.wiki.gg/images/6/6e/Character_Nightshade_Card_Gold.png?format=original"
     }
-  ]
+  ],
+  "traits": [
+    "Fae",
+    "Mage",
+    "Villain"
+  ],
+  "ability_type": "Recruit",
+  "attack": 7,
+  "health": 5,
+  "deck_type": "Collectible",
+  "gold_description": "Buffs from spells give an additional +2/+2 for the rest of the game."
 }

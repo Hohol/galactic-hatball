@@ -20,5 +20,13 @@
       "type": "unknown",
       "url": "https://onceuponagalaxy.wiki.gg/images/5/52/Character_Daisy_Jones_Card_Gold.png?format=original"
     }
-  ]
+  ],
+  "traits": [
+    "Pirate"
+  ],
+  "ability_type": "Hunt",
+  "attack": 12,
+  "health": 8,
+  "deck_type": "Shared",
+  "gold_description": "+4/+4 and trigger the Farewell abilities of the characters behind me."
 }

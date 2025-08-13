@@ -1,6 +1,6 @@
 {
   "name": "Snapping Hydra",
-  "description": "Dragon\nAnimal",
+  "description": "Double my attack.",
   "type": "characters",
   "rarity": "epic",
   "images": [
@@ -20,5 +20,13 @@
       "type": "unknown",
       "url": "https://onceuponagalaxy.wiki.gg/images/a/af/Character_Snapping_Hydra_Card_Gold.png?format=original"
     }
-  ]
+  ],
+  "traits": [
+    "Dragon",
+    "Animal"
+  ],
+  "attack": 6,
+  "health": 1,
+  "deck_type": "Collectible",
+  "gold_description": "Triple my attack."
 }

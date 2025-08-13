@@ -1,6 +1,6 @@
 {
   "name": "Cowardly Lion",
-  "description": "I'm too cowardly to attack.",
+  "description": "I survive damage 3 times.",
   "type": "characters",
   "rarity": "uncommon",
   "images": [
@@ -20,5 +20,11 @@
       "type": "unknown",
       "url": "https://onceuponagalaxy.wiki.gg/images/e/e3/Character_Cowardly_Lion_Card_Gold.png?format=original"
     }
-  ]
+  ],
+  "traits": [
+    "Animal"
+  ],
+  "attack": 2,
+  "health": 7,
+  "deck_type": "Shared"
 }

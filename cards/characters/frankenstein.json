@@ -1,6 +1,6 @@
 {
   "name": "Frankenstein",
-  "description": "Toy\nVillain",
+  "description": "When ANY character is KO'd, I get +2/+2.",
   "type": "characters",
   "rarity": "epic",
   "images": [
@@ -20,5 +20,13 @@
       "type": "unknown",
       "url": "https://onceuponagalaxy.wiki.gg/images/3/36/Character_Frankenstein_Card_Gold.png?format=original"
     }
-  ]
+  ],
+  "traits": [
+    "Toy",
+    "Villain"
+  ],
+  "attack": 2,
+  "health": 2,
+  "deck_type": "Shared",
+  "gold_description": "When ANY character is KO'd, I get +4/+4."
 }

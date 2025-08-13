@@ -20,5 +20,13 @@
       "type": "unknown",
       "url": "https://onceuponagalaxy.wiki.gg/images/3/35/Character_Karma_Chameleon_Card_Gold.png?format=original"
     }
-  ]
+  ],
+  "traits": [
+    "Animal"
+  ],
+  "ability_type": "Hunt",
+  "attack": 2,
+  "health": 2,
+  "deck_type": "Shared",
+  "gold_description": "I transform into a character two rarities higher than your shop."
 }

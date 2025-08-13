@@ -1,6 +1,6 @@
 {
   "name": "Tsarmina, the Tyrant",
-  "description": "Animal\nVillain",
+  "description": "I see you successfully Hunt 6 times.",
   "type": "characters",
   "rarity": "rare",
   "images": [
@@ -20,5 +20,14 @@
       "type": "unknown",
       "url": "https://onceuponagalaxy.wiki.gg/images/8/8d/Character_Tsarmina%2C_the_Tyrant_Card_Gold.png?format=original"
     }
-  ]
+  ],
+  "traits": [
+    "Animal",
+    "Villain"
+  ],
+  "ability_type": "Support",
+  "attack": 3,
+  "health": 3,
+  "deck_type": "Collectible",
+  "gold_description": "The characters in front of me have \"Hunt -- +6/+6.\""
 }

@@ -1,6 +1,6 @@
 {
   "name": "Magnificent",
-  "description": "Dragon\nVillain",
+  "description": "When you recruit a Villain give it and me Treasure Hoard.",
   "type": "characters",
   "rarity": "epic",
   "images": [
@@ -20,5 +20,14 @@
       "type": "unknown",
       "url": "https://onceuponagalaxy.wiki.gg/images/6/6d/Character_Magnificent_Card_Gold.png?format=original"
     }
-  ]
+  ],
+  "traits": [
+    "Dragon",
+    "Villain"
+  ],
+  "ability_type": "Treasure Hoard 1",
+  "attack": 6,
+  "health": 8,
+  "deck_type": "Shared",
+  "gold_description": "When you recruit a Villain give it and me Treasure Hoard 2."
 }

@@ -20,5 +20,11 @@
       "type": "unknown",
       "url": "https://onceuponagalaxy.wiki.gg/images/f/f8/Character_Wind_Up_Toy_Card_Gold.png?format=original"
     }
-  ]
+  ],
+  "traits": [
+    "Toy"
+  ],
+  "health": 3,
+  "deck_type": "Shared",
+  "gold_description": "When I'm attacked, give me +2 Attack."
 }

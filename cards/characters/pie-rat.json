@@ -1,6 +1,6 @@
 {
   "name": "Pie Rat",
-  "description": "Animal\nPirate",
+  "description": "Give my slot +2/+1.",
   "type": "characters",
   "rarity": "uncommon",
   "images": [
@@ -20,5 +20,14 @@
       "type": "unknown",
       "url": "https://onceuponagalaxy.wiki.gg/images/8/8c/Character_Pie_Rat_Card_Gold.png?format=original"
     }
-  ]
+  ],
+  "traits": [
+    "Animal",
+    "Pirate"
+  ],
+  "ability_type": "Hunt",
+  "attack": 4,
+  "health": 2,
+  "deck_type": "Shared",
+  "gold_description": "Give my slot +4/+2."
 }

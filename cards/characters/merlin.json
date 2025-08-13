@@ -20,5 +20,13 @@
       "type": "unknown",
       "url": "https://onceuponagalaxy.wiki.gg/images/1/11/Character_Merlin_Card_Gold.png?format=original"
     }
-  ]
+  ],
+  "traits": [
+    "Mage",
+    "Hero"
+  ],
+  "attack": 7,
+  "health": 9,
+  "deck_type": "Shared",
+  "gold_description": "When you cast a spell, give your characters +10/+10."
 }

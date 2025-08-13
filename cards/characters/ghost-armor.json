@@ -1,6 +1,6 @@
 {
   "name": "Ghost Armor",
-  "description": "Secret Rare",
+  "description": "Give another character my Attack and Health.",
   "type": "characters",
   "rarity": "secret rare",
   "images": [
@@ -16,5 +16,13 @@
       "type": "unknown",
       "url": "https://onceuponagalaxy.wiki.gg/images/1/1b/Character_Ghost_Armor_Card_Gold.png?format=original"
     }
-  ]
+  ],
+  "traits": [
+    "Villain"
+  ],
+  "ability_type": "Farewell",
+  "attack": 1,
+  "health": 1,
+  "deck_type": "Shared",
+  "gold_description": "Give another character double my Attack and Health."
 }

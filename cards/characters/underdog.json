@@ -1,6 +1,6 @@
 {
   "name": "Underdog",
-  "description": "Animal\nHero",
+  "description": "If you have fewer characters than the enemy when I attack, first give my slot +2/+2.",
   "type": "characters",
   "rarity": "common",
   "images": [
@@ -20,5 +20,13 @@
       "type": "unknown",
       "url": "https://onceuponagalaxy.wiki.gg/images/e/e4/Character_Underdog_Card_Gold.png?format=original"
     }
-  ]
+  ],
+  "traits": [
+    "Animal",
+    "Hero"
+  ],
+  "attack": 1,
+  "health": 3,
+  "deck_type": "Collectible",
+  "gold_description": "If you have fewer characters than the enemy when I attack, first give my slot +4/+4."
 }

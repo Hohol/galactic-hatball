@@ -1,6 +1,6 @@
 {
   "name": "Captain Hook",
-  "description": "Pirate\nVillain",
+  "description": "+20 Attack and summon the KO'd character.",
   "type": "characters",
   "rarity": "legendary",
   "images": [
@@ -20,5 +20,14 @@
       "type": "unknown",
       "url": "https://onceuponagalaxy.wiki.gg/images/d/d5/Character_Captain_Hook_Card_Gold.png?format=original"
     }
-  ]
+  ],
+  "traits": [
+    "Pirate",
+    "Villain"
+  ],
+  "ability_type": "Hunt",
+  "attack": 20,
+  "health": 15,
+  "deck_type": "Shared",
+  "gold_description": "+40 Attack and summon the KO'd character."
 }

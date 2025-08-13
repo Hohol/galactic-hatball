@@ -1,6 +1,6 @@
 {
   "name": "Sir Francis Drake",
-  "description": "Dragon\nPirate",
+  "description": "Get a random Common treasure, then improve this ability.",
   "type": "characters",
   "rarity": "epic",
   "images": [
@@ -16,5 +16,14 @@
       "type": "unknown",
       "url": "https://onceuponagalaxy.wiki.gg/images/5/5f/Character_Sir_Francis_Drake_Card_Gold.png?format=original"
     }
-  ]
+  ],
+  "traits": [
+    "Dragon",
+    "Pirate"
+  ],
+  "ability_type": "Treasure Hoard 2",
+  "attack": 10,
+  "health": 8,
+  "deck_type": "Collectible",
+  "gold_description": "Get 2 random Common treasures, then improve this ability."
 }

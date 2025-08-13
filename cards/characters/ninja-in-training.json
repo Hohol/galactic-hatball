@@ -20,5 +20,14 @@
       "type": "unknown",
       "url": "https://onceuponagalaxy.wiki.gg/images/a/a8/Character_Ninja-in-Training_Card_Gold.png?format=original"
     }
-  ]
+  ],
+  "traits": [
+    "Toy",
+    "Animal",
+    "Hero"
+  ],
+  "ability_type": "Sneak",
+  "attack": 7,
+  "health": 4,
+  "deck_type": "Shared"
 }

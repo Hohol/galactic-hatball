@@ -1,6 +1,6 @@
 {
   "name": "Tiamat",
-  "description": "Secret Rare",
+  "description": "All your Dragons have \"Farewell -- Get a random treasure.\"",
   "type": "characters",
   "rarity": "secret rare",
   "images": [
@@ -20,5 +20,14 @@
       "type": "unknown",
       "url": "https://onceuponagalaxy.wiki.gg/images/f/f3/Character_Tiamat_Card_Gold.png?format=original"
     }
-  ]
+  ],
+  "traits": [
+    "Dragon",
+    "Celestial"
+  ],
+  "ability_type": "Treasure Hoard 5",
+  "attack": 5,
+  "health": 5,
+  "deck_type": "Shared",
+  "gold_description": "All your Dragons have \"Farewell -- Get 2 random treasures.\""
 }
