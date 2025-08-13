@@ -20,5 +20,13 @@
       "type": "unknown",
       "url": "https://onceuponagalaxy.wiki.gg/images/a/a3/Character_Anne_Bunny_Card_Gold.png?format=original"
     }
-  ]
+  ],
+  "traits": [
+    "Animal",
+    "Pirate"
+  ],
+  "ability_type": "Hunt",
+  "attack": 6,
+  "health": 6,
+  "deck_type": "Shared"
 }

@@ -20,5 +20,12 @@
       "type": "unknown",
       "url": "https://onceuponagalaxy.wiki.gg/images/d/db/Character_Baby_Bear_Card_Gold.png?format=original"
     }
-  ]
+  ],
+  "traits": [
+    "Animal",
+    "Hero"
+  ],
+  "attack": 3,
+  "health": 3,
+  "deck_type": "Shared"
 }

@@ -20,5 +20,12 @@
       "type": "unknown",
       "url": "https://onceuponagalaxy.wiki.gg/images/7/7c/Character_Bahamut_Card_Gold.png?format=original"
     }
-  ]
+  ],
+  "traits": [
+    "Dragon"
+  ],
+  "ability_type": "Treasure Hoard 5",
+  "attack": 25,
+  "health": 25,
+  "deck_type": "Shared"
 }

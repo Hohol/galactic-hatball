@@ -20,5 +20,12 @@
       "type": "unknown",
       "url": "https://onceuponagalaxy.wiki.gg/images/6/64/Character_Aladdin_Card_Gold.png?format=original"
     }
-  ]
+  ],
+  "traits": [
+    "Pirate",
+    "Hero"
+  ],
+  "attack": 2,
+  "health": 1,
+  "deck_type": "Collectible"
 }

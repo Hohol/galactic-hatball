@@ -20,5 +20,13 @@
       "type": "unknown",
       "url": "https://onceuponagalaxy.wiki.gg/images/2/24/Character_Ace_of_Hearts_Card_Gold.png?format=original"
     }
-  ]
+  ],
+  "traits": [
+    "Toy",
+    "Hero"
+  ],
+  "ability_type": "Recruit",
+  "attack": 4,
+  "health": 3,
+  "deck_type": "Collectible"
 }

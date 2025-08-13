@@ -1,6 +1,6 @@
 {
   "name": "Zeus",
-  "description": "Secret Rare",
+  "description": "Double the first spell you cast each turn. I have +5 Attack for each spell you've cast this game.",
   "type": "characters",
   "rarity": "secret rare",
   "images": [
@@ -16,5 +16,14 @@
       "type": "unknown",
       "url": "https://onceuponagalaxy.wiki.gg/images/0/0d/Character_Zeus_Card_Gold.png?format=original"
     }
-  ]
+  ],
+  "traits": [
+    "Mage",
+    "Celestial"
+  ],
+  "ability_type": "Ranged",
+  "attack": 30,
+  "health": 30,
+  "deck_type": "Shared",
+  "gold_description": "Triple the first spell you cast each turn. I have +10 Attack for each spell you've cast this game."
 }

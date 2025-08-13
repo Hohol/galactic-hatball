@@ -141,6 +141,14 @@ class WorkingGalaxyScraper:
         card_cost = self.extract_card_cost(soup)
         card_images = self.extract_card_images(soup)
         
+        # Extract character-specific properties
+        card_traits = self.extract_card_traits(soup)
+        card_ability_type = self.extract_card_ability_type(soup)
+        card_attack = self.extract_card_attack(soup)
+        card_health = self.extract_card_health(soup)
+        card_deck_type = self.extract_card_deck_type(soup)
+        card_gold_description = self.extract_card_gold_description(soup)
+        
         card_data = {
             "name": card_name,
             "description": card_description or "No description available",
@@ -154,6 +162,18 @@ class WorkingGalaxyScraper:
             card_data["cost"] = card_cost
         if card_images:
             card_data["images"] = card_images
+        if card_traits:
+            card_data["traits"] = card_traits
+        if card_ability_type:
+            card_data["ability_type"] = card_ability_type
+        if card_attack:
+            card_data["attack"] = card_attack
+        if card_health:
+            card_data["health"] = card_health
+        if card_deck_type:
+            card_data["deck_type"] = card_deck_type
+        if card_gold_description:
+            card_data["gold_description"] = card_gold_description
         
         return card_data
     
@@ -183,21 +203,29 @@ class WorkingGalaxyScraper:
         # Look for description in the druid-infobox (card attributes)
         infobox = soup.find('div', class_='druid-infobox')
         if infobox:
-            # Look for the ability section
-            ability_row = infobox.find('div', class_='druid-row-ability')
-            if ability_row:
-                ability_data = ability_row.find('div', class_='druid-data-ability')
-                if ability_data:
-                    # Get the text content, but clean up links
-                    ability_text = ability_data.get_text().strip()
-                    if ability_text:
-                        return ability_text
+            # Try different possible description row names
+            description_selectors = [
+                'druid-row-ability_2_description',  # Zeus style
+                'druid-row-ability_description'     # Barrel of Monkeys style
+            ]
             
-            # If no ability found, look for any other descriptive text
+            for selector in description_selectors:
+                ability_desc_row = infobox.find('div', class_=selector)
+                if ability_desc_row:
+                    # Try to find the corresponding data div
+                    data_selector = selector.replace('druid-row-', 'druid-data-')
+                    ability_desc_data = ability_desc_row.find('div', class_=data_selector)
+                    if ability_desc_data:
+                        # Get the text content, but clean up links
+                        ability_text = ability_desc_data.get_text().strip()
+                        if ability_text and len(ability_text) > 5:
+                            return ability_text
+            
+            # Fallback: Look for any other descriptive text in data cells
             all_data = infobox.find_all('div', class_='druid-data')
             for data in all_data:
                 text = data.get_text().strip()
-                if text and len(text) > 10 and not text.startswith('http'):
+                if text and len(text) > 10 and not text.startswith('http') and not text.lower() in ['secret rare', 'ultra rare', 'super rare', 'rare', 'uncommon', 'common']:
                     return text
         
         # Fallback to main content area
@@ -255,6 +283,93 @@ class WorkingGalaxyScraper:
                     return int(cost_match.group(1))
                 except ValueError:
                     pass
+        return None
+    
+    def extract_card_traits(self, soup):
+        """Extract card traits if available"""
+        infobox = soup.find('div', class_='druid-infobox')
+        if infobox:
+            traits_row = infobox.find('div', class_='druid-row-traits')
+            if traits_row:
+                traits_data = traits_row.find('div', class_='druid-data-traits')
+                if traits_data:
+                    # Extract trait links
+                    trait_links = traits_data.find_all('a')
+                    if trait_links:
+                        return [link.get_text().strip() for link in trait_links]
+        return None
+    
+    def extract_card_ability_type(self, soup):
+        """Extract card ability type if available"""
+        infobox = soup.find('div', class_='druid-infobox')
+        if infobox:
+            ability_type_row = infobox.find('div', class_='druid-row-ability_type')
+            if ability_type_row:
+                ability_type_data = ability_type_row.find('div', class_='druid-data-ability_type')
+                if ability_type_data:
+                    return ability_type_data.get_text().strip()
+        return None
+    
+    def extract_card_attack(self, soup):
+        """Extract card attack value if available"""
+        infobox = soup.find('div', class_='druid-infobox')
+        if infobox:
+            attack_row = infobox.find('div', class_='druid-row-attack')
+            if attack_row:
+                attack_data = attack_row.find('div', class_='druid-data-attack')
+                if attack_data:
+                    try:
+                        return int(attack_data.get_text().strip())
+                    except ValueError:
+                        pass
+        return None
+    
+    def extract_card_health(self, soup):
+        """Extract card health value if available"""
+        infobox = soup.find('div', class_='druid-infobox')
+        if infobox:
+            health_row = infobox.find('div', class_='druid-row-health')
+            if health_row:
+                health_data = health_row.find('div', class_='druid-data-health')
+                if health_data:
+                    try:
+                        return int(health_data.get_text().strip())
+                    except ValueError:
+                        pass
+        return None
+    
+    def extract_card_deck_type(self, soup):
+        """Extract card deck type if available"""
+        infobox = soup.find('div', class_='druid-infobox')
+        if infobox:
+            deck_type_row = infobox.find('div', class_='druid-row-deck_type')
+            if deck_type_row:
+                deck_type_data = deck_type_row.find('div', class_='druid-data-deck_type')
+                if deck_type_data:
+                    return deck_type_data.get_text().strip()
+        return None
+    
+    def extract_card_gold_description(self, soup):
+        """Extract card gold description if available"""
+        infobox = soup.find('div', class_='druid-infobox')
+        if infobox:
+            # Try different possible gold description row names
+            gold_description_selectors = [
+                'druid-row-ability_2_description_gold',  # Zeus style
+                'druid-row-ability_description_gold'     # Barrel of Monkeys style
+            ]
+            
+            for selector in gold_description_selectors:
+                gold_desc_row = infobox.find('div', class_=selector)
+                if gold_desc_row:
+                    # Try to find the corresponding data div
+                    data_selector = selector.replace('druid-row-', 'druid-data-')
+                    gold_desc_data = gold_desc_row.find('div', class_=data_selector)
+                    if gold_desc_data:
+                        # Get the text content, but clean up links
+                        gold_text = gold_desc_data.get_text().strip()
+                        if gold_text and len(gold_text) > 5:
+                            return gold_text
         return None
     
     def extract_card_images(self, soup):
@@ -455,6 +570,54 @@ class WorkingGalaxyScraper:
                 continue
         
         print("\nAll categories processing completed!")
+    
+    def scrape_specific_cards(self, card_names, category_name):
+        """Scrape specific cards by name from a category"""
+        print(f"Scraping specific {category_name} cards: {', '.join(card_names)}")
+        
+        # First get the category page to find the card URLs
+        category_url = f"{self.base_url}/wiki/Category:{category_name}"
+        content = self.get_page_content(category_url)
+        if not content:
+            print(f"Could not access {category_name} category page")
+            return []
+        
+        soup = BeautifulSoup(content, 'html.parser')
+        
+        # Look for the main content area
+        main_content = soup.find('div', id='mw-content-text')
+        if not main_content:
+            print("Could not find main content area")
+            return []
+        
+        # Find URLs for the specific cards
+        card_urls = {}
+        links = main_content.find_all('a', href=True)
+        for link in links:
+            href = link.get('href')
+            text = link.get_text().strip()
+            
+            # Check if this link matches one of our target cards
+            if (href.startswith('/wiki/') and 
+                not href.startswith('/wiki/Template:') and
+                not href.startswith('/wiki/Category:') and
+                text in card_names):
+                
+                card_urls[text] = urljoin(self.base_url, href)
+        
+        print(f"Found URLs for {len(card_urls)} out of {len(card_names)} requested cards")
+        
+        # Scrape each found card
+        cards = []
+        for card_name, url in card_urls.items():
+            card_data = self.scrape_card_page(url, card_name, category_name)
+            if card_data:
+                cards.append(card_data)
+                print(f"Successfully scraped: {card_name}")
+            else:
+                print(f"Failed to scrape: {card_name}")
+        
+        return cards
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Scrape Once upon a Galaxy wiki cards')
@@ -464,6 +627,8 @@ if __name__ == "__main__":
                        help='Limit number of cards per category (default: unlimited)')
     parser.add_argument('--all', action='store_true',
                        help='Scrape all available categories with unlimited cards')
+    parser.add_argument('--cards', '-n', nargs='+',
+                       help='Specific card names to scrape (requires --categories)')
     
     args = parser.parse_args()
     
@@ -474,10 +639,22 @@ if __name__ == "__main__":
         print("Scraping all available categories with unlimited cards...")
         scraper.run_all_categories()
     elif args.categories:
-        # Scrape specified categories with specified limit
-        for category in args.categories:
-            print(f"\n{'='*50}")
-            scraper.run(category, args.limit)
+        if args.cards:
+            # Scrape specific cards from specified categories
+            for category in args.categories:
+                print(f"\n{'='*50}")
+                print(f"Scraping specific cards from {category}...")
+                cards = scraper.scrape_specific_cards(args.cards, category)
+                if cards:
+                    scraper.save_cards_to_json(cards, category)
+                    print(f"Scraped {len(cards)} specific cards from {category}")
+                else:
+                    print(f"No specific cards found in {category}")
+        else:
+            # Scrape specified categories with specified limit
+            for category in args.categories:
+                print(f"\n{'='*50}")
+                scraper.run(category, args.limit)
     else:
         # Default: scrape Characters with 10 cards limit
         print("No categories specified. Using default: Characters with 10 card limit")
