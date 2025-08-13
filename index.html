@@ -233,7 +233,7 @@
             white-space: nowrap;
             overflow: hidden;
             width: 100%;
-            font-size: 1.3rem;
+            font-size: 1.6rem;
         }
 
 
@@ -1160,16 +1160,29 @@
             const cardNames = document.querySelectorAll('.card-name');
             cardNames.forEach(cardName => {
                 const container = cardName.closest('.card');
-                const containerWidth = container.offsetWidth - 40; // Account for padding
+                const containerWidth = container.offsetWidth - 20; // Reduced padding adjustment
                 
-                // Start with the default font size
-                let fontSize = 1.3;
-                cardName.style.fontSize = fontSize + 'rem';
+                // Reset to CSS font size first
+                cardName.style.fontSize = '';
                 
-                // Reduce font size until text fits
-                while (cardName.scrollWidth > containerWidth && fontSize > 0.7) {
-                    fontSize -= 0.1;
+                // Debug logging
+                console.log('Card name:', cardName.textContent);
+                console.log('Container width:', containerWidth);
+                console.log('Text scroll width:', cardName.scrollWidth);
+                console.log('Needs shrinking?', cardName.scrollWidth > containerWidth);
+                
+                // Only shrink if the text actually overflows significantly (more than 10px)
+                if (cardName.scrollWidth > containerWidth + 10) {
+                    console.log('Shrinking font for:', cardName.textContent);
+                    let fontSize = 1.6; // Start with CSS font size
                     cardName.style.fontSize = fontSize + 'rem';
+                    
+                    // Reduce font size until text fits
+                    while (cardName.scrollWidth > containerWidth && fontSize > 0.7) {
+                        fontSize -= 0.1;
+                        cardName.style.fontSize = fontSize + 'rem';
+                    }
+                    console.log('Final font size:', fontSize);
                 }
             });
         }
