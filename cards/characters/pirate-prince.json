@@ -1,0 +1,24 @@
+{
+  "name": "Pirate Prince",
+  "description": "Pirate\nHero",
+  "type": "characters",
+  "rarity": "legendary",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/d/d1/Character_Pirate_Prince.png?7e83eb&format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/e/eb/Character_Pirate_Prince_Card_Bronze.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/8/81/Character_Pirate_Prince_Card_Silver.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/9/9d/Character_Pirate_Prince_Card_Gold.png?format=original"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "name": "The Dreamer",
+  "description": "Celestial\nHero",
+  "type": "characters",
+  "rarity": "rare",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/e/ef/Character_The_Dreamer_Card_Bronze.png?545dce&format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/5/5f/Character_The_Dreamer_Card_Silver.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/a/ac/Character_The_Dreamer_Card_Gold.png?format=original"
+    }
+  ]
+}

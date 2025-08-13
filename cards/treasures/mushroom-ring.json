@@ -1,0 +1,16 @@
+{
+  "name": "Mushroom Ring",
+  "description": "Your Recruit abilities are also Farewell abilities.",
+  "type": "treasures",
+  "rarity": "rare",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/3/3b/Treasure_Mushroom_Ring.png?32d5c6&format=original"
+    },
+    {
+      "type": "card",
+      "url": "https://onceuponagalaxy.wiki.gg/images/6/6b/Treasure_Mushroom_Ring_Card.png?format=original"
+    }
+  ]
+}

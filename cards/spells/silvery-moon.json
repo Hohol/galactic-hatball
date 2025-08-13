@@ -1,0 +1,12 @@
+{
+  "name": "Silvery Moon",
+  "description": "Turn a Bronze character Silver and give it +1/+1.",
+  "type": "spells",
+  "rarity": "uncommon",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/3/36/Spell_Silvery_Moon_Card.png?ecb18d&format=original"
+    }
+  ]
+}

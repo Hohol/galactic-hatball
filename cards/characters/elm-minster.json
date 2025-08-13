@@ -1,0 +1,24 @@
+{
+  "name": "Elm Minster",
+  "description": "Cast 4 spells in a single turn (Shop phase + fight).",
+  "type": "characters",
+  "rarity": "legendary",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/8/85/Character_Elm_Minster.png?812bfc&format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/b/bd/Character_Elm_Minster_Card_Bronze.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/e/e0/Character_Elm_Minster_Card_Silver.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/8/83/Character_Elm_Minster_Card_Gold.png?format=original"
+    }
+  ]
+}

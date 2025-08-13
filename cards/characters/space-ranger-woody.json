@@ -1,0 +1,24 @@
+{
+  "name": "Space Ranger Woody",
+  "description": "Your next shop is all Toys.",
+  "type": "characters",
+  "rarity": "uncommon",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/b/b5/Character_Space_Ranger_Woody.png?d15c02&format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/3/39/Character_Space_Ranger_Woody_Card_Bronze.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/4/43/Character_Space_Ranger_Woody_Card_Silver.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/2/21/Character_Space_Ranger_Woody_Card_Gold.png?format=original"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "name": "Robin Hood's Bow",
+  "description": "Give +4 Attack to the first character you recruit each turn.",
+  "type": "treasures",
+  "rarity": "common",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/6/6a/Treasure_Robin_Hood%27s_Bow.png?44afcc&format=original"
+    },
+    {
+      "type": "card",
+      "url": "https://onceuponagalaxy.wiki.gg/images/8/8c/Treasure_Robin_Hood%27s_Bow_Card.png?format=original"
+    }
+  ]
+}

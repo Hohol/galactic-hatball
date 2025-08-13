@@ -1,0 +1,24 @@
+{
+  "name": "Pie Rat",
+  "description": "Animal\nPirate",
+  "type": "characters",
+  "rarity": "uncommon",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/7/76/Character_Pie_Rat.png?f16a07&format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/9/99/Character_Pie_Rat_Card_Bronze.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/2/2f/Character_Pie_Rat_Card_Silver.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/8/8c/Character_Pie_Rat_Card_Gold.png?format=original"
+    }
+  ]
+}

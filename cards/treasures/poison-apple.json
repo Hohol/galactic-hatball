@@ -1,0 +1,16 @@
+{
+  "name": "Poison Apple",
+  "description": "When an enemy KOs one of your Villains, reduce that enemy's health to 1.",
+  "type": "treasures",
+  "rarity": "epic",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/5/56/Treasure_Poison_Apple.png?6c167c&format=original"
+    },
+    {
+      "type": "card",
+      "url": "https://onceuponagalaxy.wiki.gg/images/b/b5/Treasure_Poison_Apple_Card.png?format=original"
+    }
+  ]
+}

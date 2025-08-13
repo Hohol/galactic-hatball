@@ -1,0 +1,24 @@
+{
+  "name": "Symmetree",
+  "description": "At the start of each fight, my attack and health become the higher of the two.",
+  "type": "characters",
+  "rarity": "uncommon",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/b/b4/Character_Symmetree.png?1916a0&format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/7/76/Character_Symmetree_Card_Bronze.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/c/cc/Character_Symmetree_Card_Silver.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/f/f9/Character_Symmetree_Card_Gold.png?format=original"
+    }
+  ]
+}

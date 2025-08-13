@@ -1,0 +1,24 @@
+{
+  "name": "Snow Ball",
+  "description": "I get +1/+1, then improve this bonus by +1/+1.",
+  "type": "characters",
+  "rarity": "uncommon",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/b/b1/Character_Snow_Ball.png?59d951&format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/9/9c/Character_Snow_Ball_Card_Bronze.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/a/a2/Character_Snow_Ball_Card_Silver.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/5/5e/Character_Snow_Ball_Card_Gold.png?format=original"
+    }
+  ]
+}

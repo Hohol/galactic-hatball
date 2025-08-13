@@ -1,0 +1,24 @@
+{
+  "name": "Paul Bunyan",
+  "description": "Secret Rare",
+  "type": "characters",
+  "rarity": "secret rare",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/1/10/Character_Paul_Bunyan.png?5b84cb&format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/d/dc/Character_Paul_Bunyan_Card_Bronze.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/c/c5/Character_Paul_Bunyan_Card_Silver.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/2/25/Character_Paul_Bunyan_Card_Gold.png?format=original"
+    }
+  ]
+}

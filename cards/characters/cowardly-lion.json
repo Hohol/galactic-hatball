@@ -1,0 +1,24 @@
+{
+  "name": "Cowardly Lion",
+  "description": "I'm too cowardly to attack.",
+  "type": "characters",
+  "rarity": "uncommon",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/6/60/Character_Cowardly_Lion.png?31edb2&format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/8/83/Character_Cowardly_Lion_Card_Bronze.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/d/dd/Character_Cowardly_Lion_Card_Silver.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/e/e3/Character_Cowardly_Lion_Card_Gold.png?format=original"
+    }
+  ]
+}

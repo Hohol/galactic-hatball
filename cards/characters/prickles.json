@@ -1,0 +1,24 @@
+{
+  "name": "Prickles",
+  "description": "When a character in front of me is attacked, give it +1/+1.",
+  "type": "characters",
+  "rarity": "common",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/3/30/Character_Prickles.png?dce0fa&format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/2/26/Character_Prickles_Card_Bronze.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/6/63/Character_Prickles_Card_Silver.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/9/91/Character_Prickles_Card_Gold.png?format=original"
+    }
+  ]
+}

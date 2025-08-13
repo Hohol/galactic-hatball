@@ -1,0 +1,16 @@
+{
+  "name": "Lucky Chest",
+  "description": "The next treasure you discover is a rarity higher.",
+  "type": "treasures",
+  "rarity": "common",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/d/d7/Treasure_Lucky_Chest.png?ab6adf&format=original"
+    },
+    {
+      "type": "card",
+      "url": "https://onceuponagalaxy.wiki.gg/images/b/b0/Treasure_Lucky_Chest_Card.png?format=original"
+    }
+  ]
+}

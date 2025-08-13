@@ -1,0 +1,16 @@
+{
+  "name": "Jack",
+  "description": "Toy\nPirate\nVillain\nToken",
+  "type": "characters",
+  "rarity": "common",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/d/de/Character_Jack.png?7c8927&format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/7/7a/Character_Jack_Card_Bronze.png?format=original"
+    }
+  ]
+}

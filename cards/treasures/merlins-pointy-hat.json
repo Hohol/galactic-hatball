@@ -1,0 +1,16 @@
+{
+  "name": "Merlin's Pointy Hat",
+  "description": "Buffs from your spells give an additional +1/+1. Improve this by +1/+1 when you recruit a Mage.",
+  "type": "treasures",
+  "rarity": "uncommon",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/5/58/Treasure_Merlin%27s_Pointy_Hat.png?67c99f&format=original"
+    },
+    {
+      "type": "card",
+      "url": "https://onceuponagalaxy.wiki.gg/images/6/62/Treasure_Merlin%27s_Pointy_Hat_Card.png?format=original"
+    }
+  ]
+}

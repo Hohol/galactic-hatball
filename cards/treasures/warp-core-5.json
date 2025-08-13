@@ -1,0 +1,12 @@
+{
+  "name": "Warp Core +5",
+  "description": "Your characters have +5/+5.",
+  "type": "treasures",
+  "rarity": "legendary",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/d/d4/Treasure_Warp_Core_%2B5_Card.png?3c3850&format=original"
+    }
+  ]
+}

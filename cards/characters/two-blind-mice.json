@@ -1,0 +1,24 @@
+{
+  "name": "Two Blind Mice",
+  "description": "Buffs on me are doubled.",
+  "type": "characters",
+  "rarity": "rare",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/2/2f/Character_Two_Blind_Mice.png?52bcf8&format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/f/f0/Character_Two_Blind_Mice_Card_Bronze.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/3/37/Character_Two_Blind_Mice_Card_Silver.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/d/db/Character_Two_Blind_Mice_Card_Gold.png?format=original"
+    }
+  ]
+}

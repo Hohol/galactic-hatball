@@ -1,0 +1,24 @@
+{
+  "name": "Nutcracker Prince",
+  "description": "Give one of your Heroes +3/+4.",
+  "type": "characters",
+  "rarity": "uncommon",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/d/df/Character_Nutcracker_Prince.png?4016d3&format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/0/0e/Character_Nutcracker_Prince_Card_Bronze.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/9/9a/Character_Nutcracker_Prince_Card_Silver.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/d/da/Character_Nutcracker_Prince_Card_Gold.png?format=original"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "name": "Prince Charming, the Heartbreaker",
+  "description": "Break a Heart. (Cracks one of your hearts.)",
+  "type": "characters",
+  "rarity": "uncommon",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/5/52/Character_Prince_Charming%2C_the_Heartbreaker.png?d31259&format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/5/55/Character_Prince_Charming%2C_the_Heartbreaker_Card_Bronze.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/d/dc/Character_Prince_Charming%2C_the_Heartbreaker_Card_Silver.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/f/f8/Character_Prince_Charming%2C_the_Heartbreaker_Card_Gold.png?format=original"
+    }
+  ]
+}

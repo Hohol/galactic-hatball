@@ -1,0 +1,20 @@
+{
+  "name": "Zeus",
+  "description": "Secret Rare",
+  "type": "characters",
+  "rarity": "secret rare",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/a/ae/Character_Zeus_Card_Bronze.png?a34852&format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/9/92/Character_Zeus_Card_Silver.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/0/0d/Character_Zeus_Card_Gold.png?format=original"
+    }
+  ]
+}

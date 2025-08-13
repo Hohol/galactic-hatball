@@ -1,0 +1,24 @@
+{
+  "name": "Conan the Galactic Champion",
+  "description": "Celestial\nHero",
+  "type": "characters",
+  "rarity": "legendary",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/c/c7/Character_Conan_the_Galactic_Champion.png?98700d&format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/c/ce/Character_Conan_the_Galactic_Champion_Card_Bronze.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/f/f2/Character_Conan_the_Galactic_Champion_Card_Silver.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/e/e0/Character_Conan_the_Galactic_Champion_Card_Gold.png?format=original"
+    }
+  ]
+}

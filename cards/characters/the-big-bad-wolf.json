@@ -1,0 +1,24 @@
+{
+  "name": "The Big Bad Wolf",
+  "description": "Secret Rare",
+  "type": "characters",
+  "rarity": "secret rare",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/6/6a/Character_The_Big_Bad_Wolf.png?4a86cc&format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/3/35/Character_The_Big_Bad_Wolf_Card_Bronze.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/c/cb/Character_The_Big_Bad_Wolf_Card_Silver.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/5/5e/Character_The_Big_Bad_Wolf_Card_Gold.png?format=original"
+    }
+  ]
+}

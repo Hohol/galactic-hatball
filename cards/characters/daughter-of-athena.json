@@ -1,0 +1,24 @@
+{
+  "name": "Daughter of Athena",
+  "description": "Recruit 3 Heroes.",
+  "type": "characters",
+  "rarity": "common",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/4/47/Character_Daughter_of_Athena.png?c65390&format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/d/da/Character_Daughter_of_Athena_Card_Bronze.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/5/55/Character_Daughter_of_Athena_Card_Silver.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/a/ae/Character_Daughter_of_Athena_Card_Gold.png?format=original"
+    }
+  ]
+}

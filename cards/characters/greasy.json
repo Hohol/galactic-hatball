@@ -1,0 +1,16 @@
+{
+  "name": "Greasy",
+  "description": "Summoned by Barrel of Monkeys",
+  "type": "characters",
+  "rarity": "common",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/b/bb/Character_Greasy.png?98c19d&format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/2/26/Character_Greasy_Card_Bronze.png?format=original"
+    }
+  ]
+}

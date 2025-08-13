@@ -1,0 +1,12 @@
+{
+  "name": "Mercy, Sword of Maximus",
+  "description": "Your characters have \"Hunt -- Give my slot +15/+15.\"",
+  "type": "treasures",
+  "rarity": "legendary",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/3/3f/Treasure_Mercy%2C_Sword_of_Maximus_Card.png?e97ce0&format=original"
+    }
+  ]
+}

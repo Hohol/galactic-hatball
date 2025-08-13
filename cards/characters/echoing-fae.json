@@ -1,0 +1,24 @@
+{
+  "name": "Echoing Fae",
+  "description": "Secret Rare",
+  "type": "characters",
+  "rarity": "secret rare",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/5/5f/Character_Echoing_Fae.png?b99036&format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/7/75/Character_Echoing_Fae_Card_Bronze.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/9/97/Character_Echoing_Fae_Card_Silver.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/d/d8/Character_Echoing_Fae_Card_Gold.png?format=original"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "name": "Weird Beard",
+  "description": "Get (X) random treasures (one for each Pirate you've Silvered this game).",
+  "type": "characters",
+  "rarity": "legendary",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/c/c7/Character_Weird_Beard.png?28d513&format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/5/5b/Character_Weird_Beard_Card_Bronze.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/7/71/Character_Weird_Beard_Card_Silver.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/9/96/Character_Weird_Beard_Card_Gold.png?format=original"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "name": "Trident of the Tides",
+  "description": "Each fight, give your characters +15 Attack. (Switch to +15 Health next turn)",
+  "type": "treasures",
+  "rarity": "legendary",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/7/7d/Treasure_Trident_of_the_Tides.png?4e8af8&format=original"
+    },
+    {
+      "type": "card",
+      "url": "https://onceuponagalaxy.wiki.gg/images/6/68/Treasure_Trident_of_the_Tides_Card.png?format=original"
+    }
+  ]
+}

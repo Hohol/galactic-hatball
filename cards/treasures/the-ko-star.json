@@ -1,0 +1,12 @@
+{
+  "name": "The KO Star",
+  "description": "Your Villains have +20/+20 for each Villain you have.",
+  "type": "treasures",
+  "rarity": "legendary",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/2/20/Treasure_The_KO_Star_Card.png?19c883&format=original"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "name": "Leftover Pieces",
+  "description": "When one of your Toys is KO'd, give the slots behind it +1/+1.",
+  "type": "treasures",
+  "rarity": "uncommon",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/8/8e/Treasure_Leftover_Pieces_Card.png?5282b5&format=original"
+    }
+  ]
+}

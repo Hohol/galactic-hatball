@@ -1,0 +1,16 @@
+{
+  "name": "Caesar",
+  "description": "Summoned by Barrel of Monkeys",
+  "type": "characters",
+  "rarity": "common",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/e/ed/Character_Caesar.png?22b992&format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/c/c1/Character_Caesar_Card_Bronze.png?format=original"
+    }
+  ]
+}

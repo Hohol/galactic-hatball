@@ -1,0 +1,24 @@
+{
+  "name": "Hungry Hyena",
+  "description": "Animal\nVillain",
+  "type": "characters",
+  "rarity": "uncommon",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/2/2c/Character_Hungry_Hyena.png?6fcb57&format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/9/90/Character_Hungry_Hyena_Card_Bronze.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/6/64/Character_Hungry_Hyena_Card_Silver.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/d/d9/Character_Hungry_Hyena_Card_Gold.png?format=original"
+    }
+  ]
+}

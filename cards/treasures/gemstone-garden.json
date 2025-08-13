@@ -1,0 +1,12 @@
+{
+  "name": "Gemstone Garden",
+  "description": "When you buff a slot, give it an additional +2/+2.",
+  "type": "treasures",
+  "rarity": "uncommon",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/2/21/Treasure_Gemstone_Garden_Card.png?ccc7a9&format=original"
+    }
+  ]
+}

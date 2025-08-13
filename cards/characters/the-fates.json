@@ -1,0 +1,24 @@
+{
+  "name": "The Fates",
+  "description": "When you Silver or Golden me, cast a spell.",
+  "type": "characters",
+  "rarity": "common",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/1/15/Character_The_Fates.png?3814e0&format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/4/48/Character_The_Fates_Card_Bronze.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/8/8d/Character_The_Fates_Card_Silver.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/4/48/Character_The_Fates_Card_Gold.png?format=original"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "name": "Tsarmina, the Tyrant",
+  "description": "Animal\nVillain",
+  "type": "characters",
+  "rarity": "rare",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/4/44/Character_Tsarmina%2C_the_Tyrant.png?966fb2&format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/7/73/Character_Tsarmina%2C_the_Tyrant_Card_Bronze.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/0/08/Character_Tsarmina%2C_the_Tyrant_Card_Silver.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/8/8d/Character_Tsarmina%2C_the_Tyrant_Card_Gold.png?format=original"
+    }
+  ]
+}

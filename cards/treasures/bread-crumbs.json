@@ -1,0 +1,16 @@
+{
+  "name": "Bread Crumbs",
+  "description": "The spell in your first shop each round is Lost in the Woods (See a new shop.)",
+  "type": "treasures",
+  "rarity": "common",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/6/6e/Treasure_Bread_Crumbs.png?42d793&format=original"
+    },
+    {
+      "type": "card",
+      "url": "https://onceuponagalaxy.wiki.gg/images/1/16/Treasure_Bread_Crumbs_Card.png?format=original"
+    }
+  ]
+}

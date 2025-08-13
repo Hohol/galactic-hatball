@@ -1,0 +1,24 @@
+{
+  "name": "Forgotten Present",
+  "description": "Give my slot +1/+1. (When I'm KO'd.)",
+  "type": "characters",
+  "rarity": "common",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/e/ef/Character_Forgotten_Present.png?ffb518&format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/7/7c/Character_Forgotten_Present_Card_Bronze.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/7/70/Character_Forgotten_Present_Card_Silver.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/8/80/Character_Forgotten_Present_Card_Gold.png?format=original"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "name": "Nameless One",
+  "description": "When you golden me, transform me into a random Legendary character.",
+  "type": "characters",
+  "rarity": "rare",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/b/b4/Character_Nameless_One.png?8e8046&format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/b/b2/Character_Nameless_One_Card_Bronze.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/c/cd/Character_Nameless_One_Card_Silver.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/1/18/Character_Nameless_One_Card_Gold.png?format=original"
+    }
+  ]
+}

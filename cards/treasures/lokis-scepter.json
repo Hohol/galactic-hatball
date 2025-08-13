@@ -1,0 +1,16 @@
+{
+  "name": "Loki's Scepter",
+  "description": "When you cast a spell on a Mage, cast it again on another random Mage.",
+  "type": "treasures",
+  "rarity": "epic",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/a/af/Treasure_Loki%27s_Scepter.png?a80e64&format=original"
+    },
+    {
+      "type": "card",
+      "url": "https://onceuponagalaxy.wiki.gg/images/c/ca/Treasure_Loki%27s_Scepter_Card.png?format=original"
+    }
+  ]
+}

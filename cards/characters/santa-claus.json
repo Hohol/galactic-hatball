@@ -1,0 +1,24 @@
+{
+  "name": "Santa Claus",
+  "description": "When I survive damage, summon a random Toy.",
+  "type": "characters",
+  "rarity": "uncommon",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/7/7b/Character_Santa_Claus.png?c69bb8&format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/a/a0/Character_Santa_Claus_Card_Bronze.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/8/89/Character_Santa_Claus_Card_Silver.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/2/2b/Character_Santa_Claus_Card_Gold.png?format=original"
+    }
+  ]
+}

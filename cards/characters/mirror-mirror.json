@@ -1,0 +1,24 @@
+{
+  "name": "Mirror Mirror",
+  "description": "When a character I'm supporting is attacked by a ranged character, also deal that much damage back to them.",
+  "type": "characters",
+  "rarity": "common",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/c/cc/Character_Mirror_Mirror.png?ad3c9e&format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/4/44/Character_Mirror_Mirror_Card_Bronze.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/3/39/Character_Mirror_Mirror_Card_Silver.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/7/7a/Character_Mirror_Mirror_Card_Gold.png?format=original"
+    }
+  ]
+}

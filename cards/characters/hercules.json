@@ -1,0 +1,24 @@
+{
+  "name": "Hercules",
+  "description": "+10/+10, then double this buff.",
+  "type": "characters",
+  "rarity": "legendary",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/3/34/Character_Hercules.png?849048&format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/d/d2/Character_Hercules_Card_Bronze.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/a/ac/Character_Hercules_Card_Silver.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/e/ee/Character_Hercules_Card_Gold.png?format=original"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "name": "Faerie Queen",
+  "description": "I have +6/+6 for each Fae you have recruited this game.",
+  "type": "characters",
+  "rarity": "legendary",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/0/01/Character_Faerie_Queen.png?a9ae32&format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/1/1f/Character_Faerie_Queen_Card_Bronze.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/3/39/Character_Faerie_Queen_Card_Silver.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/6/6e/Character_Faerie_Queen_Card_Gold.png?format=original"
+    }
+  ]
+}

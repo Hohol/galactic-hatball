@@ -1,0 +1,24 @@
+{
+  "name": "Tiamat",
+  "description": "Secret Rare",
+  "type": "characters",
+  "rarity": "secret rare",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/d/dd/Character_Tiamat.png?16b7a7&format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/e/e4/Character_Tiamat_Card_Bronze.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/b/be/Character_Tiamat_Card_Silver.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/f/f3/Character_Tiamat_Card_Gold.png?format=original"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "name": "Bounty Contract",
+  "description": "Your front row has \"Hunt -- +1/+1\".",
+  "type": "treasures",
+  "rarity": "common",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/4/43/Treasure_Bounty_Contract.png?2d0605&format=original"
+    },
+    {
+      "type": "card",
+      "url": "https://onceuponagalaxy.wiki.gg/images/2/28/Treasure_Bounty_Contract_Card.png?format=original"
+    }
+  ]
+}

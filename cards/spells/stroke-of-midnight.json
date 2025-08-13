@@ -1,0 +1,12 @@
+{
+  "name": "Stroke of Midnight",
+  "description": "Transform an enemy character into a random Common character.",
+  "type": "spells",
+  "rarity": "legendary",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/d/d3/Spell_Stroke_of_Midnight_Card.png?de5690&format=original"
+    }
+  ]
+}

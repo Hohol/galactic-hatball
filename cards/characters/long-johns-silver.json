@@ -1,0 +1,24 @@
+{
+  "name": "Long Johns Silver",
+  "description": "Pirate\nVillain",
+  "type": "characters",
+  "rarity": "legendary",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/9/94/Character_Long_Johns_Silver.png?32c0d9&format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/8/85/Character_Long_Johns_Silver_Card_Bronze.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/1/12/Character_Long_Johns_Silver_Card_Silver.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/1/13/Character_Long_Johns_Silver_Card_Gold.png?format=original"
+    }
+  ]
+}

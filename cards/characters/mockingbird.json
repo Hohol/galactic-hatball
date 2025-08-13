@@ -1,0 +1,24 @@
+{
+  "name": "Mockingbird",
+  "description": "Summon a random Animal and give it +6/+6 for each of your other Animals that were KO'd this fight.",
+  "type": "characters",
+  "rarity": "epic",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/e/ee/Character_Mockingbird.png?579323&format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/b/bc/Character_Mockingbird_Card_Bronze.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/4/48/Character_Mockingbird_Card_Silver.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/5/56/Character_Mockingbird_Card_Gold.png?format=original"
+    }
+  ]
+}

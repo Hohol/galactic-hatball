@@ -1,0 +1,24 @@
+{
+  "name": "Jill Sunshine",
+  "description": "This character is a default collectible for the following Captains:",
+  "type": "characters",
+  "rarity": "uncommon",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/9/95/Character_Jill_Sunshine.png?e771b3&format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/b/b7/Character_Jill_Sunshine_Card_Bronze.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/1/13/Character_Jill_Sunshine_Card_Silver.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/3/38/Character_Jill_Sunshine_Card_Gold.png?format=original"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "name": "Mortakon",
+  "description": "When you summon a character, give it and me +2/+2.",
+  "type": "characters",
+  "rarity": "rare",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/f/f2/Character_Mortakon.png?e465b0&format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/3/3e/Character_Mortakon_Card_Bronze.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/8/8a/Character_Mortakon_Card_Silver.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/5/52/Character_Mortakon_Card_Gold.png?format=original"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "name": "Lightning in a Bottle",
+  "description": "When you find another treasure, cast the spell and empty the bottle.",
+  "type": "treasures",
+  "rarity": "uncommon",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/b/b9/Treasure_Lightning_in_a_Bottle_Card.png?a28c35&format=original"
+    }
+  ]
+}

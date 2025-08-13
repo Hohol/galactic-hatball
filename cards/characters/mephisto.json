@@ -1,0 +1,20 @@
+{
+  "name": "Mephisto",
+  "description": "Celestial\nVillain",
+  "type": "characters",
+  "rarity": "legendary",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/1/1d/Character_Mephisto_Card_Bronze.png?f40b56&format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/b/bd/Character_Mephisto_Card_Silver.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/c/c3/Character_Mephisto_Card_Gold.png?format=original"
+    }
+  ]
+}

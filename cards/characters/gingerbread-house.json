@@ -1,0 +1,24 @@
+{
+  "name": "Gingerbread House",
+  "description": "Give my neighbors +2 Attack.",
+  "type": "characters",
+  "rarity": "common",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/d/da/Character_Gingerbread_House.png?68484f&format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/a/aa/Character_Gingerbread_House_Card_Bronze.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/6/6e/Character_Gingerbread_House_Card_Silver.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/1/13/Character_Gingerbread_House_Card_Gold.png?format=original"
+    }
+  ]
+}

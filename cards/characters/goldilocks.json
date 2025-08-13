@@ -1,0 +1,20 @@
+{
+  "name": "Goldilocks",
+  "description": "When you buff another slot, buff my slot by that much as well.",
+  "type": "characters",
+  "rarity": "legendary",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/0/06/Character_Goldilocks_Card_Bronze.png?617cba&format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/e/e5/Character_Goldilocks_Card_Silver.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/4/40/Character_Goldilocks_Card_Gold.png?format=original"
+    }
+  ]
+}

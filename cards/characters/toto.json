@@ -1,0 +1,24 @@
+{
+  "name": "Toto",
+  "description": "Animal\nHero",
+  "type": "characters",
+  "rarity": "common",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/6/66/Character_Toto.png?1e46f8&format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/1/1e/Character_Toto_Card_Bronze.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/3/33/Character_Toto_Card_Silver.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/c/c8/Character_Toto_Card_Gold.png?format=original"
+    }
+  ]
+}

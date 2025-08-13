@@ -1,0 +1,16 @@
+{
+  "name": "Wand of Anger",
+  "description": "When you cast a spell, give your characters +1 Attack.",
+  "type": "treasures",
+  "rarity": "common",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/e/ec/Treasure_Wand_of_Anger.png?accaaf&format=original"
+    },
+    {
+      "type": "card",
+      "url": "https://onceuponagalaxy.wiki.gg/images/f/f4/Treasure_Wand_of_Anger_Card.png?format=original"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "name": "Three Bags Full",
+  "description": "Discover a Common treasure.",
+  "type": "spells",
+  "rarity": "rare",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/a/aa/Spell_Three_Bags_Full.png?8666b5&format=original"
+    },
+    {
+      "type": "card",
+      "url": "https://onceuponagalaxy.wiki.gg/images/d/de/Spell_Three_Bags_Full_Card.png?format=original"
+    }
+  ]
+}

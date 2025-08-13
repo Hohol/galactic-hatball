@@ -1,0 +1,24 @@
+{
+  "name": "Despicable Smee",
+  "description": "Pirate\nVillain",
+  "type": "characters",
+  "rarity": "common",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/a/ad/Character_Despicable_Smee.png?b2044c&format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/c/c7/Character_Despicable_Smee_Card_Bronze.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/f/fc/Character_Despicable_Smee_Card_Silver.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/b/b7/Character_Despicable_Smee_Card_Gold.png?format=original"
+    }
+  ]
+}

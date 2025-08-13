@@ -1,0 +1,16 @@
+{
+  "name": "Pipin' Hot Pie",
+  "description": "When one of your Animals is KO'd, give its slot +2/+2.",
+  "type": "treasures",
+  "rarity": "uncommon",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/9/9c/Treasure_Pipin%27_Hot_Pie.png?8403e1&format=original"
+    },
+    {
+      "type": "card",
+      "url": "https://onceuponagalaxy.wiki.gg/images/b/b3/Treasure_Pipin%27_Hot_Pie_Card.png?format=original"
+    }
+  ]
+}

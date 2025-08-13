@@ -1,0 +1,24 @@
+{
+  "name": "Sorcerer's Mop",
+  "description": "When you summon another character, give it my attack and health.",
+  "type": "characters",
+  "rarity": "legendary",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/1/11/Character_Sorcerer%27s_Mop.png?1fe5ba&format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/b/b0/Character_Sorcerer%27s_Mop_Card_Bronze.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/3/3f/Character_Sorcerer%27s_Mop_Card_Silver.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/6/6c/Character_Sorcerer%27s_Mop_Card_Gold.png?format=original"
+    }
+  ]
+}

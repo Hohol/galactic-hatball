@@ -1,0 +1,24 @@
+{
+  "name": "Raggedy Ann",
+  "description": "Summon a 3/3 Andy and give it +3/+3 for each heart you're missing.",
+  "type": "characters",
+  "rarity": "rare",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/3/3d/Character_Raggedy_Ann.png?c8695c&format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/7/71/Character_Raggedy_Ann_Card_Bronze.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/0/0e/Character_Raggedy_Ann_Card_Silver.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/9/94/Character_Raggedy_Ann_Card_Gold.png?format=original"
+    }
+  ]
+}

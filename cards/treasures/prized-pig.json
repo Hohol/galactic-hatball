@@ -1,0 +1,12 @@
+{
+  "name": "Prized Pig",
+  "description": "Your Mages are also Animals. Your Animals are also Mages. They have +2/+2.",
+  "type": "treasures",
+  "rarity": "uncommon",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/2/2c/Treasure_Prized_Pig_Card.png?30e810&format=original"
+    }
+  ]
+}

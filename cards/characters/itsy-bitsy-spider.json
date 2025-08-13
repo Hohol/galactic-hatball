@@ -1,0 +1,24 @@
+{
+  "name": "Itsy Bitsy Spider",
+  "description": "This character is a default collectible for the following Captains:",
+  "type": "characters",
+  "rarity": "common",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/3/3a/Character_Itsy_Bitsy_Spider.png?65af59&format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/a/af/Character_Itsy_Bitsy_Spider_Card_Bronze.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/9/97/Character_Itsy_Bitsy_Spider_Card_Silver.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/1/1a/Character_Itsy_Bitsy_Spider_Card_Gold.png?format=original"
+    }
+  ]
+}

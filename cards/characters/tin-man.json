@@ -1,0 +1,24 @@
+{
+  "name": "Tin Man",
+  "description": "Have a Heart (exactly one full heart).",
+  "type": "characters",
+  "rarity": "rare",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/7/7f/Character_Tin_Man.png?13f30d&format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/b/b5/Character_Tin_Man_Card_Bronze.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/2/23/Character_Tin_Man_Card_Silver.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/4/4d/Character_Tin_Man_Card_Gold.png?format=original"
+    }
+  ]
+}

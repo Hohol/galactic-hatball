@@ -1,0 +1,20 @@
+{
+  "name": "Innkeeper",
+  "description": "When a character I'm supporting Hunts, improve my support by +5/+5.",
+  "type": "characters",
+  "rarity": "epic",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/f/f3/Character_Innkeeper_Card_Bronze.png?8c2992&format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/5/52/Character_Innkeeper_Card_Silver.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/1/15/Character_Innkeeper_Card_Gold.png?format=original"
+    }
+  ]
+}

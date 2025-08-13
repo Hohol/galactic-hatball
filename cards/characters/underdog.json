@@ -1,0 +1,24 @@
+{
+  "name": "Underdog",
+  "description": "Animal\nHero",
+  "type": "characters",
+  "rarity": "common",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/0/05/Character_Underdog.png?2074ac&format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/3/3d/Character_Underdog_Card_Bronze.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/f/fa/Character_Underdog_Card_Silver.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/e/e4/Character_Underdog_Card_Gold.png?format=original"
+    }
+  ]
+}

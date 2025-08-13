@@ -1,0 +1,20 @@
+{
+  "name": "The Giving Tree",
+  "description": "I don't return, but my roots remain (as a slot buff).",
+  "type": "characters",
+  "rarity": "rare",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/b/b0/Character_The_Giving_Tree_Card_Bronze.png?a8672f&format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/1/1f/Character_The_Giving_Tree_Card_Silver.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/1/1f/Character_The_Giving_Tree_Card_Gold.png?format=original"
+    }
+  ]
+}

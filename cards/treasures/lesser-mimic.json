@@ -1,0 +1,16 @@
+{
+  "name": "Lesser Mimic",
+  "description": "I transform into a copy of the next treasure you discover.",
+  "type": "treasures",
+  "rarity": "common",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/2/2b/Treasure_Lesser_Mimic.png?953065&format=original"
+    },
+    {
+      "type": "card",
+      "url": "https://onceuponagalaxy.wiki.gg/images/0/03/Treasure_Lesser_Mimic_Card.png?format=original"
+    }
+  ]
+}

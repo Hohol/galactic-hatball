@@ -1,0 +1,12 @@
+{
+  "name": "Lightning Bolt",
+  "description": "Deal 20 damage to an enemy.",
+  "type": "spells",
+  "rarity": "rare",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/9/99/Spell_Lightning_Bolt_Card.png?9012be&format=original"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "name": "Thorn",
+  "description": "Characters in your shop get +1 Attack.",
+  "type": "characters",
+  "rarity": "common",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/0/09/Character_Thorn_Card_Bronze.png?752d68&format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/d/d3/Character_Thorn_Card_Silver.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/4/40/Character_Thorn_Card_Gold.png?format=original"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "name": "Frankenstein's Doctor",
+  "description": "Your characters have \"Farewell -- Give my slot +4/+4.\"",
+  "type": "characters",
+  "rarity": "legendary",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/9/9b/Character_Frankenstein%27s_Doctor.png?191519&format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/8/86/Character_Frankenstein%27s_Doctor_Card_Bronze.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/1/14/Character_Frankenstein%27s_Doctor_Card_Silver.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/8/85/Character_Frankenstein%27s_Doctor_Card_Gold.png?format=original"
+    }
+  ]
+}

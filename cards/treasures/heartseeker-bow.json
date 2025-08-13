@@ -1,0 +1,12 @@
+{
+  "name": "Heartseeker Bow",
+  "description": "Your Hunt characters have +7 Attack.",
+  "type": "treasures",
+  "rarity": "uncommon",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/5/58/Treasure_Heartseeker_Bow_Card.png?b2665e&format=original"
+    }
+  ]
+}

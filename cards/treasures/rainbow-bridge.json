@@ -1,0 +1,12 @@
+{
+  "name": "Rainbow Bridge",
+  "description": "Each fight, give a character of each rarity +5/+5.",
+  "type": "treasures",
+  "rarity": "epic",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/c/c7/Treasure_Rainbow_Bridge_Card.png?85f711&format=original"
+    }
+  ]
+}

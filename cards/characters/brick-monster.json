@@ -1,0 +1,24 @@
+{
+  "name": "Brick Monster",
+  "description": "I have +6/+6 for each Toy you have recruited this game.",
+  "type": "characters",
+  "rarity": "legendary",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/1/12/Character_Brick_Monster.png?ae03ff&format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/2/2c/Character_Brick_Monster_Card_Bronze.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/b/b2/Character_Brick_Monster_Card_Silver.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/5/54/Character_Brick_Monster_Card_Gold.png?format=original"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "name": "Melody's Lute",
+  "description": "When you pick a card, give a random character +1/+1, then improve this ability by +1/+1.",
+  "type": "treasures",
+  "rarity": "legendary",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/7/70/Treasure_Melody%27s_Lute_Card.png?be59b0&format=original"
+    }
+  ]
+}

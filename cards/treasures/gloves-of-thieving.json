@@ -1,0 +1,16 @@
+{
+  "name": "Gloves of Thieving",
+  "description": "After each fight, copy a random enemy treasure.",
+  "type": "treasures",
+  "rarity": "epic",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/8/86/Treasure_Gloves_of_Thieving.png?ef9714&format=original"
+    },
+    {
+      "type": "card",
+      "url": "https://onceuponagalaxy.wiki.gg/images/8/8a/Treasure_Gloves_of_Thieving_Card.png?format=original"
+    }
+  ]
+}

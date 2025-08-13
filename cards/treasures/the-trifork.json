@@ -1,0 +1,12 @@
+{
+  "name": "The Trifork",
+  "description": "Give your characters Treasure Hoard 3. The first time you discover a treasure each turn, collect all 3.",
+  "type": "treasures",
+  "rarity": "secret rare",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/3/3e/Treasure_The_Trifork_Card.png?a83230&format=original"
+    }
+  ]
+}

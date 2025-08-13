@@ -1,0 +1,16 @@
+{
+  "name": "Dragon Claw",
+  "description": "Your characters have +1 Attack.",
+  "type": "treasures",
+  "rarity": "rare",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/c/c5/Treasure_Dragon_Claw.png?539018&format=original"
+    },
+    {
+      "type": "card",
+      "url": "https://onceuponagalaxy.wiki.gg/images/6/6d/Treasure_Dragon_Claw_Card.png?format=original"
+    }
+  ]
+}

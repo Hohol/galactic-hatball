@@ -1,0 +1,24 @@
+{
+  "name": "Sunflaerie",
+  "description": "This character is a default collectible for the following Captains:",
+  "type": "characters",
+  "rarity": "epic",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/8/82/Character_Sunflaerie.png?3d8cc7&format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/5/5b/Character_Sunflaerie_Card_Bronze.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/f/f6/Character_Sunflaerie_Card_Silver.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/4/4c/Character_Sunflaerie_Card_Gold.png?format=original"
+    }
+  ]
+}

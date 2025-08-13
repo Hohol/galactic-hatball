@@ -1,0 +1,24 @@
+{
+  "name": "Don Quixote",
+  "description": "Your next shop has a (X) character. (One rarity higher than your shop.)",
+  "type": "characters",
+  "rarity": "rare",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/0/0c/Character_Don_Quixote.png?714db8&format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/6/63/Character_Don_Quixote_Card_Bronze.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/f/ff/Character_Don_Quixote_Card_Silver.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/9/91/Character_Don_Quixote_Card_Gold.png?format=original"
+    }
+  ]
+}

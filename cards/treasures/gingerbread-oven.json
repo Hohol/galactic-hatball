@@ -1,0 +1,12 @@
+{
+  "name": "Gingerbread Oven",
+  "description": "When one of your characters is KO'd, give your other characters +3/+3.",
+  "type": "treasures",
+  "rarity": "legendary",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/7/7b/Treasure_Gingerbread_Oven_Card.png?9c8eac&format=original"
+    }
+  ]
+}

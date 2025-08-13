@@ -1,0 +1,16 @@
+{
+  "name": "Bunyan's Axe",
+  "description": "Your characters have \"Farewell -- Give characters with less attack than me +6/+6.\"",
+  "type": "treasures",
+  "rarity": "legendary",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/b/bb/Treasure_Bunyan%27s_Axe.png?ffcb04&format=original"
+    },
+    {
+      "type": "card",
+      "url": "https://onceuponagalaxy.wiki.gg/images/b/bf/Treasure_Bunyan%27s_Axe_Card.png?format=original"
+    }
+  ]
+}

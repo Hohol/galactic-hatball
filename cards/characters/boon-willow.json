@@ -1,0 +1,24 @@
+{
+  "name": "Boon Willow",
+  "description": "Give both your back slots +2/+2.",
+  "type": "characters",
+  "rarity": "rare",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/0/0a/Character_Boon_Willow.png?2a6af4&format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/1/19/Character_Boon_Willow_Card_Bronze.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/6/62/Character_Boon_Willow_Card_Silver.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/0/00/Character_Boon_Willow_Card_Gold.png?format=original"
+    }
+  ]
+}

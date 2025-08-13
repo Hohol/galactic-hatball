@@ -1,0 +1,20 @@
+{
+  "name": "Nightshade",
+  "description": "Fae\nMage\nVillain",
+  "type": "characters",
+  "rarity": "rare",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/e/e2/Character_Nightshade_Card_Bronze.png?2e0b1f&format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/d/d2/Character_Nightshade_Card_Silver.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/6/6e/Character_Nightshade_Card_Gold.png?format=original"
+    }
+  ]
+}

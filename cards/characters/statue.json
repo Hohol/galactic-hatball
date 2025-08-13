@@ -1,0 +1,16 @@
+{
+  "name": "Statue",
+  "description": "(Cannot be buffed)",
+  "type": "characters",
+  "rarity": "common",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/1/1b/Character_Statue.png?136c4c&format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/0/03/Character_Statue_Card_Bronze.png?format=original"
+    }
+  ]
+}

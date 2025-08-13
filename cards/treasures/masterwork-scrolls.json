@@ -1,0 +1,12 @@
+{
+  "name": "Masterwork Scrolls",
+  "description": "Your buffs from spells give an additional +2/+2.",
+  "type": "treasures",
+  "rarity": "common",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/8/8c/Treasure_Masterwork_Scrolls_Card.png?7a2781&format=original"
+    }
+  ]
+}

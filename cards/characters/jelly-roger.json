@@ -1,0 +1,24 @@
+{
+  "name": "Jelly Roger",
+  "description": "Pirate\nHero",
+  "type": "characters",
+  "rarity": "rare",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/7/7c/Character_Jelly_Roger.png?6bc6f0&format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/5/50/Character_Jelly_Roger_Card_Bronze.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/9/9a/Character_Jelly_Roger_Card_Silver.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/5/58/Character_Jelly_Roger_Card_Gold.png?format=original"
+    }
+  ]
+}

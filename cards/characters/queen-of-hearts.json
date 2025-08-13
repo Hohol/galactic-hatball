@@ -1,0 +1,24 @@
+{
+  "name": "Queen of Hearts",
+  "description": "I have +8/+8 for each heart you're missing.",
+  "type": "characters",
+  "rarity": "epic",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/d/de/Character_Queen_of_Hearts.png?d4dd60&format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/4/42/Character_Queen_of_Hearts_Card_Bronze.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/f/f3/Character_Queen_of_Hearts_Card_Silver.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/0/01/Character_Queen_of_Hearts_Card_Gold.png?format=original"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "name": "Daedalus",
+  "description": "Give each of your slots +5/+5.",
+  "type": "characters",
+  "rarity": "legendary",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/2/22/Character_Daedalus.png?199935&format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/4/4a/Character_Daedalus_Card_Bronze.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/7/77/Character_Daedalus_Card_Silver.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/6/62/Character_Daedalus_Card_Gold.png?format=original"
+    }
+  ]
+}

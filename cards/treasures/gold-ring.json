@@ -1,0 +1,12 @@
+{
+  "name": "Gold Ring",
+  "description": "Your Golden characters have +3/+3.",
+  "type": "treasures",
+  "rarity": "common",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/1/18/Treasure_Gold_Ring_Card.png?f095ad&format=original"
+    }
+  ]
+}

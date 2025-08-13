@@ -1,0 +1,24 @@
+{
+  "name": "Spirit of Vengeance",
+  "description": "Secret Rare",
+  "type": "characters",
+  "rarity": "secret rare",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/4/40/Character_Spirit_of_Vengeance.png?d10b5e&format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/7/71/Character_Spirit_of_Vengeance_Card_Bronze.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/8/84/Character_Spirit_of_Vengeance_Card_Silver.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/c/c1/Character_Spirit_of_Vengeance_Card_Gold.png?format=original"
+    }
+  ]
+}

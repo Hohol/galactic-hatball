@@ -1,0 +1,24 @@
+{
+  "name": "Maverick & Icewing",
+  "description": "Treasure Hoard 2",
+  "type": "characters",
+  "rarity": "rare",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/9/98/Character_Maverick_%26_Icewing.png?e1c612&format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/d/db/Character_Maverick_%26_Icewing_Card_Bronze.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/b/be/Character_Maverick_%26_Icewing_Card_Silver.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/d/d1/Character_Maverick_%26_Icewing_Card_Gold.png?format=original"
+    }
+  ]
+}

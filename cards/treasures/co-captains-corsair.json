@@ -1,0 +1,16 @@
+{
+  "name": "Co-Captain's Corsair",
+  "description": "Choose an additional Captain.",
+  "type": "treasures",
+  "rarity": "rare",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/3/3c/Treasure_Co-Captain%27s_Corsair.png?a0667c&format=original"
+    },
+    {
+      "type": "card",
+      "url": "https://onceuponagalaxy.wiki.gg/images/c/c4/Treasure_Co-Captain%27s_Corsair_Card.png?format=original"
+    }
+  ]
+}

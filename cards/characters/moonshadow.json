@@ -1,0 +1,24 @@
+{
+  "name": "Moonshadow",
+  "description": "+10/+10. Your support characters have ranged.",
+  "type": "characters",
+  "rarity": "legendary",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/a/a0/Character_Moonshadow.png?ad7d3a&format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/e/ee/Character_Moonshadow_Card_Bronze.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/3/3b/Character_Moonshadow_Card_Silver.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/f/f8/Character_Moonshadow_Card_Gold.png?format=original"
+    }
+  ]
+}

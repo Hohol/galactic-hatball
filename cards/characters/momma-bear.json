@@ -1,0 +1,24 @@
+{
+  "name": "Momma Bear",
+  "description": "Each fight, give your Animals' slots +2/+2.",
+  "type": "characters",
+  "rarity": "rare",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/7/7a/Character_Momma_Bear.png?541293&format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/e/e4/Character_Momma_Bear_Card_Bronze.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/2/28/Character_Momma_Bear_Card_Silver.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/5/5d/Character_Momma_Bear_Card_Gold.png?format=original"
+    }
+  ]
+}

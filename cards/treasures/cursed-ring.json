@@ -1,0 +1,12 @@
+{
+  "name": "Cursed Ring",
+  "description": "Villains in your shop have +2/+2.",
+  "type": "treasures",
+  "rarity": "common",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/f/f2/Treasure_Cursed_Ring_Card.png?d4761d&format=original"
+    }
+  ]
+}

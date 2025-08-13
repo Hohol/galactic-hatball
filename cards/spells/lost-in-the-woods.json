@@ -1,0 +1,12 @@
+{
+  "name": "Lost in the Woods",
+  "description": "Get a Bonus shop.",
+  "type": "spells",
+  "rarity": "rare",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/8/81/Spell_Lost_in_the_Woods_Card.png?db81f8&format=original"
+    }
+  ]
+}

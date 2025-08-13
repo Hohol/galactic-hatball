@@ -1,0 +1,24 @@
+{
+  "name": "Shipshape Inspector",
+  "description": "Have each of your slots buffed.",
+  "type": "characters",
+  "rarity": "rare",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/f/f1/Character_Shipshape_Inspector.png?41ac84&format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/1/17/Character_Shipshape_Inspector_Card_Bronze.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/9/98/Character_Shipshape_Inspector_Card_Silver.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/5/56/Character_Shipshape_Inspector_Card_Gold.png?format=original"
+    }
+  ]
+}

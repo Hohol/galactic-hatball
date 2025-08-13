@@ -1,0 +1,24 @@
+{
+  "name": "Two-Headed Dragon",
+  "description": "Dragon\nVillain\nHero",
+  "type": "characters",
+  "rarity": "epic",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/b/b6/Character_Two-Headed_Dragon.png?ff85b0&format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/2/2f/Character_Two-Headed_Dragon_Card_Bronze.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/4/4d/Character_Two-Headed_Dragon_Card_Silver.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/7/76/Character_Two-Headed_Dragon_Card_Gold.png?format=original"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "name": "Wand of Shielding",
+  "description": "When you cast a spell, give your characters +1 Health.",
+  "type": "treasures",
+  "rarity": "common",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/a/a2/Treasure_Wand_of_Shielding.png?540b0a&format=original"
+    },
+    {
+      "type": "card",
+      "url": "https://onceuponagalaxy.wiki.gg/images/c/cb/Treasure_Wand_of_Shielding_Card.png?format=original"
+    }
+  ]
+}

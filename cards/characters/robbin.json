@@ -1,0 +1,24 @@
+{
+  "name": "Robbin'",
+  "description": "Pirate\nHero",
+  "type": "characters",
+  "rarity": "epic",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/e/e1/Character_Robbin%27.png?202c20&format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/d/d7/Character_Robbin%27_Card_Bronze.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/a/a1/Character_Robbin%27_Card_Silver.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/f/f6/Character_Robbin%27_Card_Gold.png?format=original"
+    }
+  ]
+}

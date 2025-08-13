@@ -1,0 +1,16 @@
+{
+  "name": "Sword of Valor",
+  "description": "When one of your Heroes attacks, give all your characters +1/+1.",
+  "type": "treasures",
+  "rarity": "uncommon",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/9/92/Treasure_Sword_of_Valor.png?22708d&format=original"
+    },
+    {
+      "type": "card",
+      "url": "https://onceuponagalaxy.wiki.gg/images/a/a6/Treasure_Sword_of_Valor_Card.png?format=original"
+    }
+  ]
+}

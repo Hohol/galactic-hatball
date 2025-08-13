@@ -1,0 +1,24 @@
+{
+  "name": "Mechanical Dragon",
+  "description": "Treasure Hoard 1",
+  "type": "characters",
+  "rarity": "rare",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/6/62/Character_Mechanical_Dragon.png?7c190a&format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/8/84/Character_Mechanical_Dragon_Card_Bronze.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/7/79/Character_Mechanical_Dragon_Card_Silver.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/f/f4/Character_Mechanical_Dragon_Card_Gold.png?format=original"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "name": "Peter Pan",
+  "description": "Buffs from Fae give an additional +1 Health for the rest of the game.",
+  "type": "characters",
+  "rarity": "uncommon",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/9/92/Character_Peter_Pan.png?e3f70a&format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/a/ae/Character_Peter_Pan_Card_Bronze.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/0/0d/Character_Peter_Pan_Card_Silver.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/b/b7/Character_Peter_Pan_Card_Gold.png?format=original"
+    }
+  ]
+}

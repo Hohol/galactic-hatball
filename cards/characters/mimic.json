@@ -1,0 +1,24 @@
+{
+  "name": "Mimic",
+  "description": "When you recruit a Ranged character, I gain Ranged. The same is also true of Sneak and Treasure Hoard.",
+  "type": "characters",
+  "rarity": "rare",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/8/83/Character_Mimic.png?89fb12&format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/1/1a/Character_Mimic_Card_Bronze.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/1/1b/Character_Mimic_Card_Silver.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/a/ad/Character_Mimic_Card_Gold.png?format=original"
+    }
+  ]
+}

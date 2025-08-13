@@ -1,0 +1,24 @@
+{
+  "name": "Fire-Breathing Dragon",
+  "description": "Treasure Hoard 1",
+  "type": "characters",
+  "rarity": "rare",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/c/cc/Character_Fire-Breathing_Dragon.png?cbea74&format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/a/a5/Character_Fire-Breathing_Dragon_Card_Bronze.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/0/07/Character_Fire-Breathing_Dragon_Card_Silver.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/e/ef/Character_Fire-Breathing_Dragon_Card_Gold.png?format=original"
+    }
+  ]
+}

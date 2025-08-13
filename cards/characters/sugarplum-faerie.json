@@ -1,0 +1,24 @@
+{
+  "name": "Sugarplum Faerie",
+  "description": "When you recruit a Fae (including me), give your shop +1/+1 for the rest of the game.",
+  "type": "characters",
+  "rarity": "rare",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/1/1f/Character_Sugarplum_Faerie.png?361f4c&format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/e/e9/Character_Sugarplum_Faerie_Card_Bronze.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/b/b2/Character_Sugarplum_Faerie_Card_Silver.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/3/3a/Character_Sugarplum_Faerie_Card_Gold.png?format=original"
+    }
+  ]
+}

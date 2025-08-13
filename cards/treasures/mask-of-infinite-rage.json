@@ -1,0 +1,16 @@
+{
+  "name": "Mask of Infinite Rage",
+  "description": "Your characters have +5 Attack. Double this bonus whenever you lose a fight.",
+  "type": "treasures",
+  "rarity": "rare",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/4/44/Treasure_Mask_of_Infinite_Rage.png?6898ed&format=original"
+    },
+    {
+      "type": "card",
+      "url": "https://onceuponagalaxy.wiki.gg/images/f/fa/Treasure_Mask_of_Infinite_Rage_Card.png?format=original"
+    }
+  ]
+}

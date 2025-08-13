@@ -1,0 +1,16 @@
+{
+  "name": "Faerie Queen's Wand",
+  "description": "Your buffs from spells give an additional +7/+7.",
+  "type": "treasures",
+  "rarity": "epic",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/f/fa/Treasure_Faerie_Queen%27s_Wand.png?65556c&format=original"
+    },
+    {
+      "type": "card",
+      "url": "https://onceuponagalaxy.wiki.gg/images/d/d1/Treasure_Faerie_Queen%27s_Wand_Card.png?format=original"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "name": "Tiamat's Claw",
+  "description": "When five of your characters are KO'd, get a random treasure. (Dragons count double)",
+  "type": "treasures",
+  "rarity": "legendary",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/8/82/Treasure_Tiamat%27s_Claw.png?c2af2d&format=original"
+    },
+    {
+      "type": "card",
+      "url": "https://onceuponagalaxy.wiki.gg/images/8/80/Treasure_Tiamat%27s_Claw_Card.png?format=original"
+    }
+  ]
+}

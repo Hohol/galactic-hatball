@@ -1,0 +1,24 @@
+{
+  "name": "Tink",
+  "description": "When a character in front of me attacks, give it +1/+1.",
+  "type": "characters",
+  "rarity": "uncommon",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/0/08/Character_Tink.png?66a579&format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/8/8a/Character_Tink_Card_Bronze.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/9/9d/Character_Tink_Card_Silver.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/0/0d/Character_Tink_Card_Gold.png?format=original"
+    }
+  ]
+}

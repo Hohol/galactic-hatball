@@ -1,0 +1,24 @@
+{
+  "name": "Nessie",
+  "description": "This character is a default collectible for the following Captains:",
+  "type": "characters",
+  "rarity": "legendary",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/9/92/Character_Nessie.png?b229e1&format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/e/e5/Character_Nessie_Card_Bronze.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/e/e5/Character_Nessie_Card_Silver.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/7/7c/Character_Nessie_Card_Gold.png?format=original"
+    }
+  ]
+}

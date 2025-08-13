@@ -1,0 +1,12 @@
+{
+  "name": "Santa's Cookies",
+  "description": "When you summon a character, give its slot +3/+3.",
+  "type": "treasures",
+  "rarity": "rare",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/b/b5/Treasure_Santa%27s_Cookies_Card.png?1ba0c3&format=original"
+    }
+  ]
+}

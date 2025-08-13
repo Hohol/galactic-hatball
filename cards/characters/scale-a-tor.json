@@ -1,0 +1,24 @@
+{
+  "name": "Scale-a-tor",
+  "description": "I have +6/+6 for each Dragon you have recruited this game.",
+  "type": "characters",
+  "rarity": "legendary",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/e/e3/Character_Scale-a-tor.png?739ce6&format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/1/11/Character_Scale-a-tor_Card_Bronze.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/7/7a/Character_Scale-a-tor_Card_Silver.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/2/2c/Character_Scale-a-tor_Card_Gold.png?format=original"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "name": "Busted Bot",
+  "description": "Summon a 2/2 Bot Pilot.",
+  "type": "characters",
+  "rarity": "common",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/a/aa/Character_Busted_Bot.png?9bc734&format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/c/cd/Character_Busted_Bot_Card_Bronze.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/5/52/Character_Busted_Bot_Card_Silver.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/8/8d/Character_Busted_Bot_Card_Gold.png?format=original"
+    }
+  ]
+}

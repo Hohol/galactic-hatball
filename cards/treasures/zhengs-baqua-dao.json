@@ -1,0 +1,12 @@
+{
+  "name": "Zheng's Baqua Dao",
+  "description": "After 5 of your characters attack, get a bonus shop of all Legendary characters.",
+  "type": "treasures",
+  "rarity": "legendary",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/f/fe/Treasure_Zheng%27s_Baqua_Dao_Card.png?6979e4&format=original"
+    }
+  ]
+}

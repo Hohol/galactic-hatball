@@ -1,0 +1,24 @@
+{
+  "name": "Morgan Le Fae",
+  "description": "Fae\nMage\nVillain",
+  "type": "characters",
+  "rarity": "uncommon",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/9/9f/Character_Morgan_Le_Fae.png?c134c2&format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/7/7c/Character_Morgan_Le_Fae_Card_Bronze.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/9/93/Character_Morgan_Le_Fae_Card_Silver.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/7/7f/Character_Morgan_Le_Fae_Card_Gold.png?format=original"
+    }
+  ]
+}

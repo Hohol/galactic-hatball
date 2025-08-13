@@ -1,0 +1,16 @@
+{
+  "name": "Star Shield",
+  "description": "Your first slot has +5 Health.",
+  "type": "treasures",
+  "rarity": "common",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/9/93/Treasure_Star_Shield.png?9f2b78&format=original"
+    },
+    {
+      "type": "card",
+      "url": "https://onceuponagalaxy.wiki.gg/images/7/79/Treasure_Star_Shield_Card.png?format=original"
+    }
+  ]
+}

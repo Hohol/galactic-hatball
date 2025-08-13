@@ -1,0 +1,12 @@
+{
+  "name": "Parting Gift",
+  "description": "Double your Farewell abilities.",
+  "type": "treasures",
+  "rarity": "epic",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/6/67/Treasure_Parting_Gift_Card.png?692c6e&format=original"
+    }
+  ]
+}

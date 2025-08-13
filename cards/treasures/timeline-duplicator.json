@@ -1,0 +1,16 @@
+{
+  "name": "Timeline Duplicator",
+  "description": "Double your Captain's ability.",
+  "type": "treasures",
+  "rarity": "rare",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/7/7f/Treasure_Timeline_Duplicator.png?84943a&format=original"
+    },
+    {
+      "type": "card",
+      "url": "https://onceuponagalaxy.wiki.gg/images/f/f6/Treasure_Timeline_Duplicator_Card.png?format=original"
+    }
+  ]
+}

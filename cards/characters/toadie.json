@@ -1,0 +1,24 @@
+{
+  "name": "Toadie",
+  "description": "Double the stats of the next Legendary you recruit.",
+  "type": "characters",
+  "rarity": "uncommon",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/5/51/Character_Toadie.png?cad4fe&format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/4/46/Character_Toadie_Card_Bronze.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/3/31/Character_Toadie_Card_Silver.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/b/b0/Character_Toadie_Card_Gold.png?format=original"
+    }
+  ]
+}

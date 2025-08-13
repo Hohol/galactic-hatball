@@ -1,0 +1,12 @@
+{
+  "name": "Energizer",
+  "description": "Your treasure buffs give an additional +2/+2.",
+  "type": "treasures",
+  "rarity": "rare",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/4/40/Treasure_Energizer_Card.png?92e283&format=original"
+    }
+  ]
+}

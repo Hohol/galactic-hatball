@@ -1,0 +1,24 @@
+{
+  "name": "Beanie Baby (Character)",
+  "description": "I become a worthless treasure.",
+  "type": "characters",
+  "rarity": "common",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/d/d3/Character_Beanie_Baby.png?83e873&format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/6/6c/Character_Beanie_Baby_Card_Bronze.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/b/b8/Character_Beanie_Baby_Card_Silver.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/4/4a/Character_Beanie_Baby_Card_Gold.png?format=original"
+    }
+  ]
+}

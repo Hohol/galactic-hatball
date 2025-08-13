@@ -1,0 +1,24 @@
+{
+  "name": "Guinevere",
+  "description": "I have +20/+20 for each Quest you've completed.",
+  "type": "characters",
+  "rarity": "legendary",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/e/e2/Character_Guinevere.png?9952a0&format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/b/b0/Character_Guinevere_Card_Bronze.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/5/53/Character_Guinevere_Card_Silver.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/8/8f/Character_Guinevere_Card_Gold.png?format=original"
+    }
+  ]
+}

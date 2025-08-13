@@ -1,0 +1,24 @@
+{
+  "name": "Goodie Bag",
+  "description": "Summon a random Common character then give it my stats.",
+  "type": "characters",
+  "rarity": "rare",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/c/c5/Character_Goodie_Bag.png?5db5b6&format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/8/86/Character_Goodie_Bag_Card_Bronze.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/b/b6/Character_Goodie_Bag_Card_Silver.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/1/1d/Character_Goodie_Bag_Card_Gold.png?format=original"
+    }
+  ]
+}

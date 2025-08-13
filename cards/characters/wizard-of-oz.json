@@ -1,0 +1,24 @@
+{
+  "name": "Wizard of Oz",
+  "description": "Mage\nVillain",
+  "type": "characters",
+  "rarity": "legendary",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/0/02/Character_Wizard_of_Oz.png?2195dd&format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/5/56/Character_Wizard_of_Oz_Card_Bronze.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/8/8c/Character_Wizard_of_Oz_Card_Silver.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/1/11/Character_Wizard_of_Oz_Card_Gold.png?format=original"
+    }
+  ]
+}

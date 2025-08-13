@@ -1,0 +1,16 @@
+{
+  "name": "Fortifications",
+  "description": "Your characters have +2 Health.",
+  "type": "treasures",
+  "rarity": "common",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/0/09/Treasure_Fortifications.png?bef9a7&format=original"
+    },
+    {
+      "type": "card",
+      "url": "https://onceuponagalaxy.wiki.gg/images/d/d6/Treasure_Fortifications_Card.png?format=original"
+    }
+  ]
+}

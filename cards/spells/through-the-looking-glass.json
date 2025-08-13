@@ -1,0 +1,16 @@
+{
+  "name": "Through the Looking Glass",
+  "description": "Transform a character into a random Bronze character of your shop's rarity.",
+  "type": "spells",
+  "rarity": "epic",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/b/b9/Spell_Through_the_Looking_Glass.png?424e41&format=original"
+    },
+    {
+      "type": "card",
+      "url": "https://onceuponagalaxy.wiki.gg/images/c/c7/Spell_Through_the_Looking_Glass_Card.png?format=original"
+    }
+  ]
+}

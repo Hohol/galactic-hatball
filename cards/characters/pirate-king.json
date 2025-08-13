@@ -1,0 +1,24 @@
+{
+  "name": "Pirate King",
+  "description": "I have +6/+6 for each Pirate you have recruited this game.",
+  "type": "characters",
+  "rarity": "legendary",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/5/5b/Character_Pirate_King.png?8c5756&format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/b/bf/Character_Pirate_King_Card_Bronze.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/d/d4/Character_Pirate_King_Card_Silver.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/5/51/Character_Pirate_King_Card_Gold.png?format=original"
+    }
+  ]
+}

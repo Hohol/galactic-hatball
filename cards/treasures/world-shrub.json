@@ -1,0 +1,16 @@
+{
+  "name": "World Shrub",
+  "description": "Your characters count as all character types.",
+  "type": "treasures",
+  "rarity": "secret rare",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/2/2f/Treasure_World_Shrub.png?45cd59&format=original"
+    },
+    {
+      "type": "card",
+      "url": "https://onceuponagalaxy.wiki.gg/images/4/4a/Treasure_World_Shrub_Card.png?format=original"
+    }
+  ]
+}

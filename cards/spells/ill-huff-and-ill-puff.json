@@ -1,0 +1,12 @@
+{
+  "name": "I'll Huff and I'll Puff",
+  "description": "Deal 15 damage to an enemy. If this KOs it, give your characters +4/+4.",
+  "type": "spells",
+  "rarity": "epic",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/5/5c/Spell_I%27ll_Huff_and_I%27ll_Puff_Card.png?29ff13&format=original"
+    }
+  ]
+}

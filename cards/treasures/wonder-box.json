@@ -1,0 +1,16 @@
+{
+  "name": "Wonder Box",
+  "description": "When you cast a spell directly on a character, also cast it on all your other characters.",
+  "type": "treasures",
+  "rarity": "secret rare",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/4/47/Treasure_Wonder_Box.png?3a551f&format=original"
+    },
+    {
+      "type": "card",
+      "url": "https://onceuponagalaxy.wiki.gg/images/7/75/Treasure_Wonder_Box_Card.png?format=original"
+    }
+  ]
+}

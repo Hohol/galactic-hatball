@@ -1,0 +1,12 @@
+{
+  "name": "Mix-O Match-O",
+  "description": "Choose a character. At the start of the fight, its stats grow to match the enemy across from it.",
+  "type": "spells",
+  "rarity": "legendary",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/d/d2/Spell_Mix-O_Match-O_Card.png?b79204&format=original"
+    }
+  ]
+}

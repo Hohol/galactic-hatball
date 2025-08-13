@@ -1,0 +1,16 @@
+{
+  "name": "Drafty Window",
+  "description": "Your Recruit abilities trigger twice.",
+  "type": "treasures",
+  "rarity": "uncommon",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/f/fa/Treasure_Drafty_Window.png?3ad170&format=original"
+    },
+    {
+      "type": "card",
+      "url": "https://onceuponagalaxy.wiki.gg/images/f/f0/Treasure_Drafty_Window_Card.png?format=original"
+    }
+  ]
+}

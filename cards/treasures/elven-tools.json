@@ -1,0 +1,16 @@
+{
+  "name": "Elven Tools",
+  "description": "When you summon a character, give it +5 Attack.",
+  "type": "treasures",
+  "rarity": "common",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/0/0c/Treasure_Elven_Tools.png?fb9c32&format=original"
+    },
+    {
+      "type": "card",
+      "url": "https://onceuponagalaxy.wiki.gg/images/5/51/Treasure_Elven_Tools_Card.png?format=original"
+    }
+  ]
+}

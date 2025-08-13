@@ -1,0 +1,24 @@
+{
+  "name": "Davy Jones",
+  "description": "Pirate\nVillain",
+  "type": "characters",
+  "rarity": "rare",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/6/68/Character_Davy_Jones.png?111655&format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/a/a8/Character_Davy_Jones_Card_Bronze.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/e/ea/Character_Davy_Jones_Card_Silver.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/9/95/Character_Davy_Jones_Card_Gold.png?format=original"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "name": "Sir Francis Drake",
+  "description": "Dragon\nPirate",
+  "type": "characters",
+  "rarity": "epic",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/7/7b/Character_Sir_Francis_Drake_Card_Bronze.png?c0eaaf&format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/1/16/Character_Sir_Francis_Drake_Card_Silver.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/5/5f/Character_Sir_Francis_Drake_Card_Gold.png?format=original"
+    }
+  ]
+}

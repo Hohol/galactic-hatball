@@ -98,8 +98,16 @@ class WorkingGalaxyScraper:
         
         # Scrape each card page
         cards = []
-        for i, link in enumerate(unique_links[:limit]):  # Limit to specified number
-            print(f"\nScraping {category_name} {i+1}/{min(limit, len(unique_links))}: {link['name']}")
+        # Handle unlimited case
+        if limit is None:
+            links_to_process = unique_links
+            total_count = len(unique_links)
+        else:
+            links_to_process = unique_links[:limit]
+            total_count = min(limit, len(unique_links))
+        
+        for i, link in enumerate(links_to_process):
+            print(f"\nScraping {category_name} {i+1}/{total_count}: {link['name']}")
             card_data = self.scrape_card_page(link['url'], link['name'], category_name.lower())
             if card_data:
                 cards.append(card_data)
@@ -424,8 +432,8 @@ class WorkingGalaxyScraper:
         """Main method to run the scraper for all available categories"""
         print("Starting Working Once upon a Galaxy wiki scraper for all categories...")
         
-        # Define available categories (you can add more as they become available)
-        available_categories = ["Characters", "Treasures", "Events", "Items"]
+        # Define available categories (only the ones that actually exist on the wiki)
+        available_categories = ["Characters", "Treasures", "Spells"]
         
         for category in available_categories:
             try:

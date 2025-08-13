@@ -1,0 +1,16 @@
+{
+  "name": "Magic Acorn",
+  "description": "Your supports support all your front slots.",
+  "type": "treasures",
+  "rarity": "common",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/c/c2/Treasure_Magic_Acorn.png?fe6396&format=original"
+    },
+    {
+      "type": "card",
+      "url": "https://onceuponagalaxy.wiki.gg/images/c/cf/Treasure_Magic_Acorn_Card.png?format=original"
+    }
+  ]
+}

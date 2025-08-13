@@ -1,0 +1,20 @@
+{
+  "name": "Punxsutawney Phil",
+  "description": "If I haven't attacked this fight, summon a copy of me.",
+  "type": "characters",
+  "rarity": "rare",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/0/07/Character_Punxsutawney_Phil_Card_Bronze.png?548f3d&format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/9/9a/Character_Punxsutawney_Phil_Card_Silver.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/f/f9/Character_Punxsutawney_Phil_Card_Gold.png?format=original"
+    }
+  ]
+}

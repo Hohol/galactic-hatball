@@ -1,0 +1,12 @@
+{
+  "name": "Pumpkin Spice Latte",
+  "description": "Heal a cracked Heart. See a new shop.",
+  "type": "spells",
+  "rarity": "uncommon",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/9/9d/Spell_Pumpkin_Spice_Latte_Card.png?66e932&format=original"
+    }
+  ]
+}
