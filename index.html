@@ -954,26 +954,12 @@
                                     ${card.images && card.images.length > 0 ? `
                                         <div class="card-images">
                                                                                          ${(() => {
-                                                 // Priority: card > unknown > art > others
-                                                 const cardImages = card.images.filter(img => img.type === 'card');
-                                                 const unknownImages = card.images.filter(img => img.type === 'unknown');
-                                                 const artImages = card.images.filter(img => img.type === 'art');
+                                                 // Priority: images with "Bronze" in URL > type-based priority > others
+                                                 const bronzeImages = card.images.filter(img => img.url.includes('Bronze'));
                                                  
-                                                 // Prefer card images, then unknown (which are card images), then art
-                                                 let imagesToShow = cardImages;
-                                                 if (imagesToShow.length === 0) {
-                                                     imagesToShow = unknownImages;
-                                                 }
-                                                 if (imagesToShow.length === 0) {
-                                                     imagesToShow = artImages;
-                                                 }
-                                                 if (imagesToShow.length === 0) {
-                                                     imagesToShow = card.images; // fallback to any image
-                                                 }
-                                                 
-                                                 const firstImage = imagesToShow[0];
-                                                 
-                                                 if (firstImage) {
+                                                 if (bronzeImages.length > 0) {
+                                                     // If we have Bronze images, use them
+                                                     const firstImage = bronzeImages[0];
                                                      return `
                                                          <div class="card-image active">
                                                              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'/%3E" 
@@ -984,8 +970,39 @@
                                                                   class="lazy-image">
                                                          </div>
                                                      `;
+                                                 } else {
+                                                     // Fallback to type-based priority: card > unknown > art > others
+                                                     const cardImages = card.images.filter(img => img.type === 'card');
+                                                     const unknownImages = card.images.filter(img => img.type === 'unknown');
+                                                     const artImages = card.images.filter(img => img.type === 'art');
+                                                     
+                                                     let imagesToShow = cardImages;
+                                                     if (imagesToShow.length === 0) {
+                                                         imagesToShow = unknownImages;
+                                                     }
+                                                     if (imagesToShow.length === 0) {
+                                                         imagesToShow = artImages;
+                                                     }
+                                                     if (imagesToShow.length === 0) {
+                                                         imagesToShow = card.images; // fallback to any image
+                                                     }
+                                                     
+                                                     const firstImage = imagesToShow[0];
+                                                     
+                                                     if (firstImage) {
+                                                         return `
+                                                             <div class="card-image active">
+                                                                 <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'/%3E" 
+                                                                      data-src="${firstImage.url}" 
+                                                                      alt="Card image" 
+                                                                      title="Card image"
+                                                                      loading="lazy"
+                                                                      class="lazy-image">
+                                                             </div>
+                                                         `;
+                                                     }
+                                                     return '';
                                                  }
-                                                 return '';
                                              })()}
                                              
                                              <!-- Navigation buttons - commented out for now but kept for future use
