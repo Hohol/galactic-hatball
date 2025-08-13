@@ -495,6 +495,44 @@
             color: #4ecdc4;
             font-weight: 600;
         }
+    
+        .rarity-checkboxes {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 8px;
+        }
+    
+        .rarity-checkbox {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 12px;
+            background: rgba(255, 107, 107, 0.1);
+            border: 1px solid rgba(255, 107, 107, 0.3);
+            border-radius: 20px;
+            color: #ff6b6b;
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            user-select: none;
+        }
+    
+        .rarity-checkbox:hover {
+            background: rgba(255, 107, 107, 0.2);
+            border-color: rgba(255, 107, 107, 0.5);
+            transform: translateY(-1px);
+        }
+    
+        .rarity-checkbox input[type="checkbox"] {
+            margin: 0;
+            accent-color: #ff6b6b;
+        }
+    
+        .rarity-checkbox input[type="checkbox"]:checked + span {
+            color: #ff6b6b;
+            font-weight: 600;
+        }
     </style>
 </head>
 <body>
@@ -527,6 +565,13 @@
                     <!-- Traits will be populated dynamically -->
                 </div>
             </div>
+            
+            <div class="filter-box" id="rarity-filter" style="display: none;">
+                <label>Rarity:</label>
+                <div class="rarity-checkboxes" id="rarity-checkboxes">
+                    <!-- Rarities will be populated dynamically -->
+                </div>
+            </div>
         </div>
 
         <div class="results-section">
@@ -548,6 +593,34 @@
         let allCards = [];
         let selectedType = 'all';
         let selectedTraits = new Set();
+        let selectedRarities = new Set();
+        
+        // Define rarity order (more common first)
+        const rarityOrder = {
+            'common': 1,
+            'uncommon': 2,
+            'rare': 3,
+            'epic': 4,
+            'legendary': 5,
+            'secret rare': 6
+        };
+        
+        // Sort cards: first by rarity, then by name
+        function sortCards(cards) {
+            return cards.sort((a, b) => {
+                // Get rarity values, defaulting to lowest priority for unknown rarities
+                const rarityA = rarityOrder[a.rarity?.toLowerCase()] || 999;
+                const rarityB = rarityOrder[b.rarity?.toLowerCase()] || 999;
+                
+                // First sort by rarity
+                if (rarityA !== rarityB) {
+                    return rarityA - rarityB;
+                }
+                
+                // If same rarity, sort by name alphabetically
+                return a.name.localeCompare(b.name);
+            });
+        }
         
         // Extract all unique traits from cards
         function extractAllTraits(cards) {
@@ -558,6 +631,22 @@
                 }
             });
             return Array.from(traits).sort();
+        }
+        
+        // Extract all unique rarities from cards
+        function extractAllRarities(cards) {
+            const rarities = new Set();
+            cards.forEach(card => {
+                if (card.rarity) {
+                    rarities.add(card.rarity);
+                }
+            });
+            
+            return Array.from(rarities).sort((a, b) => {
+                const orderA = rarityOrder[a.toLowerCase()] || 999;
+                const orderB = rarityOrder[b.toLowerCase()] || 999;
+                return orderA - orderB;
+            });
         }
         
         // Populate trait filter checkboxes
@@ -607,6 +696,53 @@
             });
         }
         
+        // Populate rarity filter checkboxes
+        function populateRarityFilter(rarities) {
+            const rarityFilter = document.getElementById('rarity-filter');
+            const rarityCheckboxes = document.getElementById('rarity-checkboxes');
+            
+            if (rarities.length === 0) {
+                rarityFilter.style.display = 'none';
+                return;
+            }
+            
+            rarityFilter.style.display = 'block';
+            rarityCheckboxes.innerHTML = '';
+            
+            rarities.forEach(rarity => {
+                const checkboxDiv = document.createElement('div');
+                checkboxDiv.className = 'rarity-checkbox';
+                
+                const checkbox = document.createElement('input');
+                checkbox.type = 'checkbox';
+                checkbox.id = `rarity-${rarity.replace(/\s+/g, '-').toLowerCase()}`;
+                checkbox.value = rarity;
+                
+                const span = document.createElement('span');
+                span.textContent = rarity;
+                
+                checkboxDiv.appendChild(checkbox);
+                checkboxDiv.appendChild(span);
+                
+                // Make entire rarity element clickable
+                checkboxDiv.addEventListener('click', function(e) {
+                    // Don't trigger twice if clicking directly on checkbox
+                    if (e.target !== checkbox) {
+                        checkbox.checked = !checkbox.checked;
+                    }
+                    
+                    if (checkbox.checked) {
+                        selectedRarities.add(checkbox.value);
+                    } else {
+                        selectedRarities.delete(checkbox.value);
+                    }
+                    searchCards();
+                });
+                
+                rarityCheckboxes.appendChild(checkboxDiv);
+            });
+        }
+        
         // Load all cards from JSON files
         async function loadCards() {
             try {
@@ -629,6 +765,10 @@
                 // Extract and populate traits
                 const allTraits = extractAllTraits(allCards);
                 populateTraitFilter(allTraits);
+
+                // Extract and populate rarities
+                const allRarities = extractAllRarities(allCards);
+                populateRarityFilter(allRarities);
 
             } catch (error) {
                 console.error('Error loading cards:', error);
@@ -706,29 +846,7 @@
             
             // Sort cards within each type: first by rarity, then by name
             Object.keys(cardsByType).forEach(type => {
-                cardsByType[type].sort((a, b) => {
-                    // Define rarity order (more common first)
-                    const rarityOrder = {
-                        'common': 1,
-                        'uncommon': 2,
-                        'rare': 3,
-                        'super rare': 4,
-                        'ultra rare': 5,
-                        'secret rare': 6
-                    };
-                    
-                    // Get rarity values, defaulting to lowest priority for unknown rarities
-                    const rarityA = rarityOrder[a.rarity?.toLowerCase()] || 999;
-                    const rarityB = rarityOrder[b.rarity?.toLowerCase()] || 999;
-                    
-                    // First sort by rarity
-                    if (rarityA !== rarityB) {
-                        return rarityA - rarityB;
-                    }
-                    
-                    // If same rarity, sort by name alphabetically
-                    return a.name.localeCompare(b.name);
-                });
+                cardsByType[type] = sortCards(cardsByType[type]);
             });
             
             console.log('Cards grouped by type:', cardsByType);
@@ -834,6 +952,13 @@
                 filteredCards = filteredCards.filter(card => card.type === selectedType);
             }
             
+            // Apply rarity filter
+            if (selectedRarities.size > 0) {
+                filteredCards = filteredCards.filter(card => {
+                    return selectedRarities.has(card.rarity);
+                });
+            }
+            
             // Then filter by search term if provided
             if (searchTerm.trim()) {
                 const searchLower = searchTerm.toLowerCase();
@@ -869,7 +994,7 @@
                     return Array.from(selectedTraits).every(trait => cardTraits.includes(trait));
                 });
             }
-
+            
             displayCards(filteredCards);
             updateResultsCount(filteredCards.length);
         }
