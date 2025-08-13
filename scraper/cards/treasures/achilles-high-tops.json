@@ -1,0 +1,20 @@
+{
+  "name": "Achilles' High Tops",
+  "description": "Each fight, give your Heroes +3/+3.",
+  "type": "treasure",
+  "rarity": "uncommon",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/3/3c/Treasure_Achilles%27_High_Tops.png?1b7488&format=original"
+    },
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/3/3c/Treasure_Achilles%27_High_Tops.png/Treasure_Achilles%27_High_Tops.png?1b7488&format=original"
+    },
+    {
+      "type": "card",
+      "url": "https://onceuponagalaxy.wiki.gg/images/8/87/Treasure_Achilles%27_High_Tops_Card.png/Treasure_Achilles%27_High_Tops_Card.png?87aee6&format=original"
+    }
+  ]
+}

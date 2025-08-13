@@ -260,25 +260,46 @@ class FullGalaxyScraper:
         
         # Method 1: Look for Open Graph images (most reliable)
         og_images = soup.find_all('meta', property='og:image')
-        for og_img in og_images:
+        # Only process the first Open Graph image (usually the best quality)
+        if og_images:
+            og_img = og_images[0]  # Take only the first one
             url = og_img.get('content')
             if url and url.startswith('http'):
-                # Determine image type based on URL
+                # For Open Graph images, convert thumbnails to original format
                 if 'thumb' in url:
-                    # This is a thumbnail, get the original
-                    # Fix: properly reconstruct the original URL
+                    # Convert thumbnail to original format
+                    # Remove /thumb/ and the size part, keep the base path
                     parts = url.split('/')
                     if 'thumb' in parts:
                         thumb_index = parts.index('thumb')
-                        # Remove 'thumb' and the size part, but keep the directory structure
-                        original_parts = parts[:thumb_index] + parts[thumb_index+2:]
-                        original_url = '/'.join(original_parts)
+                        # Keep everything before 'thumb' (base path)
+                        base_parts = parts[:thumb_index]
+                        # The directories are the parts after 'thumb' but before the filename
+                        # The filename is the part before the size variant
+                        directories = parts[thumb_index + 1:thumb_index + 3]  # Get both directory parts (e.g., 'd', 'd5')
+                        filename = parts[thumb_index + 3]  # This is the actual filename
+                        size_variant = parts[thumb_index + 4]  # This is the size variant
                         
-                        images.append({
-                            'type': 'art',
-                            'url': original_url
-                        })
+                        # Reconstruct the URL: base_parts + directories + filename
+                        original_url = '/'.join(base_parts + directories) + '/' + filename
+                        
+                        # Add format=original parameter
+                        if '?' in original_url:
+                            original_url += '&format=original'
+                        else:
+                            original_url += '?format=original'
+                    
+                    images.append({
+                        'type': 'art',
+                        'url': original_url
+                    })
                 else:
+                    # Already an original image, add format=original if needed
+                    if '?' in url:
+                        url += '&format=original'
+                    else:
+                        url += '?format=original'
+                    
                     images.append({
                         'type': 'art',
                         'url': url
@@ -292,39 +313,49 @@ class FullGalaxyScraper:
             if main_images:
                 # Look for image files (not tabs)
                 image_files = main_images.find_all('div', class_='druid-main-images-file')
-                print(f"      Found {len(image_files)} image files")
                 
                 for img_file in image_files:
                     # Get the tab key to determine type
                     tab_key = img_file.get('data-druid-tab-key', 'unknown')
-                    print(f"      Processing {tab_key} tab")
                     
                     # Find the img tag within this file div
                     img_tag = img_file.find('img', src=True)
                     if img_tag:
                         src = img_tag.get('src')
                         alt = img_tag.get('alt', '')
-                        print(f"      Found img: src='{src}', alt='{alt}'")
                         
                         if src and not src.startswith('http'):
                             src = urljoin(self.base_url, src)
-                            print(f"      Converted to full URL: {src}")
                         
-                        # Get the original image URL (not thumbnail)
+                        # Convert thumbnail to original format
                         if 'thumb' in src:
-                            print(f"      Contains 'thumb', processing...")
+                            # Convert thumbnail to original format
                             parts = src.split('/')
                             if 'thumb' in parts:
                                 thumb_index = parts.index('thumb')
-                                # Remove 'thumb' and the size part, but keep the directory structure
-                                original_parts = parts[:thumb_index] + parts[thumb_index+2:]
-                                original_url = '/'.join(original_parts)
-                                print(f"      Original URL: {original_url}")
-                            else:
-                                original_url = src
+                                # Keep everything before 'thumb' and after the size part
+                                base_parts = parts[:thumb_index]
+                                filename_part = parts[thumb_index + 2]  # Skip 'thumb' and size
+                                # Extract just the filename without size prefix
+                                if 'px-' in filename_part:
+                                    filename = filename_part.split('px-', 1)[1]
+                                else:
+                                    filename = filename_part
+                                
+                                # Reconstruct the URL
+                                original_url = '/'.join(base_parts) + '/' + filename
+                                # Add format=original parameter
+                                if '?' in original_url:
+                                    original_url += '&format=original'
+                                else:
+                                    original_url += '?format=original'
                         else:
                             original_url = src
-                            print(f"      Using as-is: {original_url}")
+                            # Add format=original parameter if not present
+                            if '?' in original_url:
+                                original_url += '&format=original'
+                            else:
+                                original_url += '?format=original'
                         
                         # Determine image type based on tab key
                         img_type = 'art' if tab_key == 'Art' else 'card' if tab_key == 'Card' else 'unknown'
@@ -333,9 +364,6 @@ class FullGalaxyScraper:
                             'type': img_type,
                             'url': original_url
                         })
-                        print(f"      ✓ Added {img_type} image: {original_url}")
-                    else:
-                        print(f"      ✗ No img tag found in {tab_key} tab")
         
         # Remove duplicates based on URL
         unique_images = []
@@ -349,31 +377,38 @@ class FullGalaxyScraper:
     
     def save_cards_to_json(self, cards, output_dir="cards/treasures"):
         """Save scraped cards to individual JSON files"""
-        if not os.path.exists(output_dir):
-            os.makedirs(output_dir)
+        # Use absolute path to ensure files are saved to the correct location
+        import os
+        script_dir = os.path.dirname(os.path.abspath(__file__))
+        project_root = os.path.dirname(script_dir)
+        absolute_output_dir = os.path.join(project_root, output_dir)
         
-        # Clear existing card files (except README)
-        for filename in os.listdir(output_dir):
-            if filename.endswith('.json') and filename != 'README.md':
-                os.remove(os.path.join(output_dir, filename))
-                print(f"Removed old file: {filename}")
+        if not os.path.exists(absolute_output_dir):
+            os.makedirs(absolute_output_dir)
         
+        # Clear existing JSON files in the output directory
+        for existing_file in os.listdir(absolute_output_dir):
+            if existing_file.endswith('.json'):
+                os.remove(os.path.join(absolute_output_dir, existing_file))
+        
+        # Save individual card files
         for card in cards:
             if card and card.get('name'):
                 # Create filename from card name
                 filename = card['name'].lower().replace(' ', '-').replace(':', '').replace('(', '').replace(')', '')
                 filename = re.sub(r'[^a-z0-9\-]', '', filename)
-                filename = f"{output_dir}/{filename}.json"
+                filename = os.path.join(absolute_output_dir, f"{filename}.json")
                 
                 with open(filename, 'w', encoding='utf-8') as f:
                     json.dump(card, f, indent=2, ensure_ascii=False)
                 
                 print(f"Saved: {filename}")
         
-        # Also save a combined file with all cards
-        combined_filename = f"{output_dir}/all_treasures.json"
+        # Save combined file
+        combined_filename = os.path.join(absolute_output_dir, "all_treasures.json")
         with open(combined_filename, 'w', encoding='utf-8') as f:
             json.dump(cards, f, indent=2, ensure_ascii=False)
+        
         print(f"Saved combined file: {combined_filename}")
     
     def run(self, category_url):

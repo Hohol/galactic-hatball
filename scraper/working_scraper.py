@@ -258,25 +258,46 @@ class WorkingGalaxyScraper:
         
         # Method 1: Look for Open Graph images (most reliable)
         og_images = soup.find_all('meta', property='og:image')
-        for og_img in og_images:
+        # Only process the first Open Graph image (usually the best quality)
+        if og_images:
+            og_img = og_images[0]  # Take only the first one
             url = og_img.get('content')
             if url and url.startswith('http'):
-                # Determine image type based on URL
+                # For Open Graph images, convert thumbnails to original format
                 if 'thumb' in url:
-                    # This is a thumbnail, get the original
-                    # Fix: properly reconstruct the original URL
+                    # Convert thumbnail to original format
+                    # Remove /thumb/ and the size part, keep the base path
                     parts = url.split('/')
                     if 'thumb' in parts:
                         thumb_index = parts.index('thumb')
-                        # Remove 'thumb' and the size part, but keep the directory structure
-                        original_parts = parts[:thumb_index] + parts[thumb_index+2:]
-                        original_url = '/'.join(original_parts)
+                        # Keep everything before 'thumb' (base path)
+                        base_parts = parts[:thumb_index]
+                        # The directories are the parts after 'thumb' but before the filename
+                        # The filename is the part before the size variant
+                        directories = parts[thumb_index + 1:thumb_index + 3]  # Get both directory parts (e.g., 'd', 'd5')
+                        filename = parts[thumb_index + 3]  # This is the actual filename
+                        size_variant = parts[thumb_index + 4]  # This is the size variant
                         
-                        images.append({
-                            'type': 'art',
-                            'url': original_url
-                        })
+                        # Reconstruct the URL: base_parts + directories + filename
+                        original_url = '/'.join(base_parts + directories) + '/' + filename
+                        
+                        # Add format=original parameter
+                        if '?' in original_url:
+                            original_url += '&format=original'
+                        else:
+                            original_url += '?format=original'
+                    
+                    images.append({
+                        'type': 'art',
+                        'url': original_url
+                    })
                 else:
+                    # Already an original image, add format=original if needed
+                    if '?' in url:
+                        url += '&format=original'
+                    else:
+                        url += '?format=original'
+                    
                     images.append({
                         'type': 'art',
                         'url': url
@@ -304,48 +325,83 @@ class WorkingGalaxyScraper:
                         if src and not src.startswith('http'):
                             src = urljoin(self.base_url, src)
                         
-                        # Get the original image URL (not thumbnail)
+                        # Convert thumbnail to original format
                         if 'thumb' in src:
+                            # Convert thumbnail to original format
                             parts = src.split('/')
                             if 'thumb' in parts:
                                 thumb_index = parts.index('thumb')
-                                # Remove 'thumb' and the size part, but keep the directory structure
-                                original_parts = parts[:thumb_index] + parts[thumb_index+2:]
-                                original_url = '/'.join(original_parts)
-                            else:
-                                original_url = src
+                                # Keep everything before 'thumb' (base path)
+                                base_parts = parts[:thumb_index]
+                                # The directories are the parts after 'thumb' but before the filename
+                                # The filename is the part before the size variant
+                                directories = parts[thumb_index + 1:thumb_index + 3]  # Get both directory parts (e.g., 'd', 'd5')
+                                filename = parts[thumb_index + 3]  # This is the actual filename
+                                size_variant = parts[thumb_index + 4]  # This is the size variant
+                                
+                                # Reconstruct the URL: base_parts + directories + filename
+                                original_url = '/'.join(base_parts + directories) + '/' + filename
+                                # Add format=original parameter
+                                if '?' in original_url:
+                                    original_url += '&format=original'
+                                else:
+                                    original_url += '?format=original'
                         else:
                             original_url = src
+                            # Add format=original parameter if not present
+                            if '?' in original_url:
+                                original_url += '&format=original'
+                            else:
+                                original_url += '?format=original'
                         
                         # Determine image type based on tab key
                         img_type = 'art' if tab_key == 'Art' else 'card' if tab_key == 'Card' else 'unknown'
                         
-                        images.append({
-                            'type': img_type,
-                            'url': original_url
-                        })
+                        # Only add if it's a different image (not a duplicate)
+                        is_duplicate = False
+                        for existing_img in images:
+                            # Check if this is essentially the same image (same filename, different cache params)
+                            existing_filename = existing_img['url'].split('/')[-1].split('?')[0]
+                            new_filename = original_url.split('/')[-1].split('?')[0]
+                            if existing_filename == new_filename:
+                                is_duplicate = True
+                                break
+                        
+                        if not is_duplicate:
+                            images.append({
+                                'type': img_type,
+                                'url': original_url
+                            })
         
-        # Remove duplicates based on URL
+        # Remove duplicates based on URL (final cleanup)
         unique_images = []
         seen_urls = set()
         for img in images:
-            if img['url'] not in seen_urls:
+            # Normalize URL by removing cache parameters for comparison
+            normalized_url = img['url'].split('?')[0]
+            if normalized_url not in seen_urls:
                 unique_images.append(img)
-                seen_urls.add(img['url'])
+                seen_urls.add(normalized_url)
         
         return unique_images
     
     def save_cards_to_json(self, cards, output_dir="cards/treasures"):
         """Save scraped cards to individual JSON files"""
-        if not os.path.exists(output_dir):
-            os.makedirs(output_dir)
+        # Use absolute path to ensure files are saved to the correct location
+        import os
+        script_dir = os.path.dirname(os.path.abspath(__file__))
+        project_root = os.path.dirname(script_dir)
+        absolute_output_dir = os.path.join(project_root, output_dir)
+        
+        if not os.path.exists(absolute_output_dir):
+            os.makedirs(absolute_output_dir)
         
         for card in cards:
             if card and card.get('name'):
                 # Create filename from card name
                 filename = card['name'].lower().replace(' ', '-').replace(':', '').replace('(', '').replace(')', '')
                 filename = re.sub(r'[^a-z0-9\-]', '', filename)
-                filename = f"{output_dir}/{filename}.json"
+                filename = os.path.join(absolute_output_dir, f"{filename}.json")
                 
                 with open(filename, 'w', encoding='utf-8') as f:
                     json.dump(card, f, indent=2, ensure_ascii=False)
