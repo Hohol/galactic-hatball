@@ -437,6 +437,26 @@
                 text-align: center;
             }
         }
+
+        .ability-line strong {
+            color: #ffd700;
+            text-shadow: 0 0 5px rgba(255, 215, 0, 0.3);
+        }
+
+        .card-traits {
+            margin: 10px 0;
+            padding: 8px 12px;
+            background: rgba(78, 220, 196, 0.1);
+            border-radius: 6px;
+            border-left: 3px solid #4ecdc4;
+            color: #4ecdc4;
+            font-size: 0.9rem;
+        }
+
+        .card-traits strong {
+            color: #4ecdc4;
+            text-shadow: 0 0 5px rgba(78, 220, 196, 0.3);
+        }
     </style>
 </head>
 <body>
@@ -675,7 +695,11 @@
                                         ` : card.description ? `
                                             <p class="card-description">${card.description}</p>
                                         ` : ''}
-                                        ${card.type ? `<div class="card-type">Type: ${card.type}</div>` : ''}
+                                        ${card.type === 'characters' && card.traits ? `
+                                            <div class="card-traits">
+                                                <strong>Traits:</strong> ${card.traits.join(', ')}
+                                            </div>
+                                        ` : ''}
                                     </div>
                                 </div>
                             `).join('')}
