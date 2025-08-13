@@ -134,9 +134,6 @@ class WorkingGalaxyScraper:
         if not card_name:
             return None
         
-        # Extract card description/effect text
-        card_description = self.extract_card_description(soup)
-        
         # Extract other card properties if available
         card_type = self.extract_card_type(soup)
         card_rarity = self.extract_card_rarity(soup)
@@ -145,15 +142,15 @@ class WorkingGalaxyScraper:
         
         # Extract character-specific properties
         card_traits = self.extract_card_traits(soup)
-        card_ability_type = self.extract_card_ability_type(soup)
         card_attack = self.extract_card_attack(soup)
         card_health = self.extract_card_health(soup)
         card_deck_type = self.extract_card_deck_type(soup)
-        card_gold_description = self.extract_card_gold_description(soup)
+        
+        # Extract abilities as a list
+        card_abilities = self.extract_card_abilities(soup)
         
         card_data = {
             "name": card_name,
-            "description": card_description or "No description available",
             "type": card_type_name  # Use the category name as the card type
         }
         
@@ -166,16 +163,14 @@ class WorkingGalaxyScraper:
             card_data["images"] = card_images
         if card_traits:
             card_data["traits"] = card_traits
-        if card_ability_type:
-            card_data["ability_type"] = card_ability_type
+        if card_abilities:
+            card_data["abilities"] = card_abilities
         if card_attack:
             card_data["attack"] = card_attack
         if card_health:
             card_data["health"] = card_health
         if card_deck_type:
             card_data["deck_type"] = card_deck_type
-        if card_gold_description:
-            card_data["gold_description"] = card_gold_description
         
         return card_data
     
@@ -220,14 +215,18 @@ class WorkingGalaxyScraper:
                     if ability_desc_data:
                         # Get the text content, but clean up links
                         ability_text = ability_desc_data.get_text().strip()
-                        if ability_text and len(ability_text) > 5:
+                        if ability_text:
                             return ability_text
             
-            # Fallback: Look for any other descriptive text in data cells
+            # Fallback: Look for any other descriptive text in data cells, but exclude traits
             all_data = infobox.find_all('div', class_='druid-data')
             for data in all_data:
                 text = data.get_text().strip()
-                if text and len(text) > 10 and not text.startswith('http') and not text.lower() in ['secret rare', 'ultra rare', 'super rare', 'rare', 'uncommon', 'common']:
+                if (text and 
+                    not text.startswith('http') and 
+                    not text.lower() in ['secret rare', 'ultra rare', 'super rare', 'rare', 'uncommon', 'common'] and
+                    not text in ['Dragon', 'Villain'] and  # Exclude trait values
+                    not any(trait in text for trait in ['Dragon', 'Villain', 'Mage', 'Hero', 'Celestial'])):  # Exclude trait-like text
                     return text
         
         # Fallback to main content area
@@ -237,7 +236,7 @@ class WorkingGalaxyScraper:
             paragraphs = main_content.find_all('p')
             for p in paragraphs:
                 text = p.get_text().strip()
-                if text and len(text) > 20 and not text.startswith('This page was last edited'):
+                if text and not text.startswith('This page was last edited'):
                     return text
         
         return None
@@ -349,29 +348,6 @@ class WorkingGalaxyScraper:
                 deck_type_data = deck_type_row.find('div', class_='druid-data-deck_type')
                 if deck_type_data:
                     return deck_type_data.get_text().strip()
-        return None
-    
-    def extract_card_gold_description(self, soup):
-        """Extract card gold description if available"""
-        infobox = soup.find('div', class_='druid-infobox')
-        if infobox:
-            # Try different possible gold description row names
-            gold_description_selectors = [
-                'druid-row-ability_2_description_gold',  # Zeus style
-                'druid-row-ability_description_gold'     # Barrel of Monkeys style
-            ]
-            
-            for selector in gold_description_selectors:
-                gold_desc_row = infobox.find('div', class_=selector)
-                if gold_desc_row:
-                    # Try to find the corresponding data div
-                    data_selector = selector.replace('druid-row-', 'druid-data-')
-                    gold_desc_data = gold_desc_row.find('div', class_=data_selector)
-                    if gold_desc_data:
-                        # Get the text content, but clean up links
-                        gold_text = gold_desc_data.get_text().strip()
-                        if gold_text and len(gold_text) > 5:
-                            return gold_text
         return None
     
     def extract_card_images(self, soup):
@@ -643,6 +619,197 @@ class WorkingGalaxyScraper:
                 print(f"Failed to scrape: {card_name}")
         
         return cards
+
+    def extract_primary_ability_description(self, soup):
+        """Extract primary ability description if available"""
+        infobox = soup.find('div', class_='druid-infobox')
+        if infobox:
+            # Look for primary ability description row names
+            description_selectors = [
+                'druid-row-ability_description'     # Primary ability description
+            ]
+            
+            for selector in description_selectors:
+                ability_desc_row = infobox.find('div', class_=selector)
+                if ability_desc_row:
+                    # Try to find the corresponding data div
+                    data_selector = selector.replace('druid-row-', 'druid-data-')
+                    ability_desc_data = ability_desc_row.find('div', class_=data_selector)
+                    if ability_desc_data:
+                        # Get the text content, but clean up links
+                        ability_text = ability_desc_data.get_text().strip()
+                        if ability_text:
+                            return ability_text
+        return None
+    
+    def extract_primary_ability_gold_description(self, soup):
+        """Extract primary ability gold description if available"""
+        infobox = soup.find('div', class_='druid-infobox')
+        if infobox:
+            # Look for primary ability gold description row names
+            gold_description_selectors = [
+                'druid-row-ability_description_gold'     # Primary ability gold description
+            ]
+            
+            for selector in gold_description_selectors:
+                gold_desc_row = infobox.find('div', class_=selector)
+                if gold_desc_row:
+                    # Try to find the corresponding data div
+                    data_selector = selector.replace('druid-row-', 'druid-data-')
+                    gold_desc_data = gold_desc_row.find('div', class_=data_selector)
+                    if gold_desc_data:
+                        # Get the text content, but clean up links
+                        gold_text = gold_desc_data.get_text().strip()
+                        if gold_text:
+                            return gold_text
+        return None
+        
+        # Don't fall back to other data cells as they might be traits or other unrelated info
+        # Only return actual ability descriptions found in dedicated ability description rows
+        pass
+        
+        # Don't fall back to main content area as it might contain unrelated wiki content
+        return None
+
+    def extract_card_abilities(self, soup):
+        """Extract all card abilities as a list"""
+        abilities = []
+        infobox = soup.find('div', class_='druid-infobox')
+        if not infobox:
+            return abilities
+        
+        # Look for primary ability
+        primary_type = self.extract_card_ability_type(soup)
+        primary_desc = self.extract_primary_ability_description(soup)
+        primary_gold = self.extract_primary_ability_gold_description(soup)
+        
+        # Only add primary ability if it has meaningful content
+        if primary_type or (primary_desc and primary_desc not in ['Dragon', 'Villain'] and len(primary_desc) > 0):
+            abilities.append({
+                "type": primary_type,
+                "description": primary_desc,
+                "gold_description": primary_gold
+            })
+        
+        # Look for secondary ability
+        secondary_type = self.extract_card_ability_2_type(soup)
+        secondary_desc = self.extract_card_ability_2_description(soup)
+        secondary_gold = self.extract_card_ability_2_gold_description(soup)
+        
+        if secondary_type or secondary_desc:
+            abilities.append({
+                "type": secondary_type,
+                "description": secondary_desc,
+                "gold_description": secondary_gold
+            })
+        
+        # Look for tertiary ability (if exists)
+        tertiary_type = self.extract_card_ability_3_type(soup)
+        tertiary_desc = self.extract_card_ability_3_description(soup)
+        tertiary_gold = self.extract_card_ability_3_gold_description(soup)
+        
+        if tertiary_type or tertiary_desc:
+            abilities.append({
+                "type": tertiary_type,
+                "description": tertiary_desc,
+                "gold_description": tertiary_gold
+            })
+        
+        return abilities
+    
+    def extract_card_ability_2_type(self, soup):
+        """Extract secondary ability type if available"""
+        infobox = soup.find('div', class_='druid-infobox')
+        if infobox:
+            ability_type_row = infobox.find('div', class_='druid-row-ability_2_type')
+            if ability_type_row:
+                ability_type_data = ability_type_row.find('div', class_='druid-data-ability_2_type')
+                if ability_type_data:
+                    return ability_type_data.get_text().strip()
+        return None
+    
+    def extract_card_ability_2_description(self, soup):
+        """Extract secondary ability description if available"""
+        infobox = soup.find('div', class_='druid-infobox')
+        if infobox:
+            ability_desc_row = infobox.find('div', class_='druid-row-ability_2_description')
+            if ability_desc_row:
+                ability_desc_data = ability_desc_row.find('div', class_='druid-data-ability_2_description')
+                if ability_desc_data:
+                    ability_text = ability_desc_data.get_text().strip()
+                    if ability_text:
+                        return ability_text
+        return None
+    
+    def extract_card_ability_2_gold_description(self, soup):
+        """Extract secondary ability gold description if available"""
+        infobox = soup.find('div', class_='druid-infobox')
+        if infobox:
+            # Try different possible gold description row names for secondary ability
+            gold_description_selectors = [
+                'druid-row-ability_2_description_gold',  # Zeus style
+                'druid-row-ability_description_gold'     # Barrel of Monkeys style
+            ]
+            
+            for selector in gold_description_selectors:
+                gold_desc_row = infobox.find('div', class_=selector)
+                if gold_desc_row:
+                    # Try to find the corresponding data div
+                    data_selector = selector.replace('druid-row-', 'druid-data-')
+                    gold_desc_data = gold_desc_row.find('div', class_=data_selector)
+                    if gold_desc_data:
+                        # Get the text content, but clean up links
+                        gold_text = gold_desc_data.get_text().strip()
+                        if gold_text:
+                            return gold_text
+        return None
+    
+    def extract_card_ability_3_type(self, soup):
+        """Extract tertiary ability type if available"""
+        infobox = soup.find('div', class_='druid-infobox')
+        if infobox:
+            ability_type_row = infobox.find('div', class_='druid-row-ability_3_type')
+            if ability_type_row:
+                ability_type_data = ability_type_row.find('div', class_='druid-data-ability_3_type')
+                if ability_type_data:
+                    return ability_type_data.get_text().strip()
+        return None
+    
+    def extract_card_ability_3_description(self, soup):
+        """Extract tertiary ability description if available"""
+        infobox = soup.find('div', class_='druid-infobox')
+        if infobox:
+            ability_desc_row = infobox.find('div', class_='druid-row-ability_3_description')
+            if ability_desc_row:
+                ability_desc_data = ability_desc_row.find('div', class_='druid-data-ability_3_description')
+                if ability_desc_data:
+                    ability_text = ability_desc_data.get_text().strip()
+                    if ability_text:
+                        return ability_text
+        return None
+    
+    def extract_card_ability_3_gold_description(self, soup):
+        """Extract tertiary ability gold description if available"""
+        infobox = soup.find('div', class_='druid-infobox')
+        if infobox:
+            # Try different possible gold description row names for tertiary ability
+            gold_description_selectors = [
+                'druid-row-ability_3_description_gold',  # Zeus style
+                'druid-row-ability_description_gold'     # Barrel of Monkeys style
+            ]
+            
+            for selector in gold_description_selectors:
+                gold_desc_row = infobox.find('div', class_=selector)
+                if gold_desc_row:
+                    # Try to find the corresponding data div
+                    data_selector = selector.replace('druid-row-', 'druid-data-')
+                    gold_desc_data = gold_desc_row.find('div', class_=data_selector)
+                    if gold_desc_data:
+                        # Get the text content, but clean up links
+                        gold_text = gold_desc_data.get_text().strip()
+                        if gold_text:
+                            return gold_text
+        return None
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Scrape Once upon a Galaxy wiki cards')
