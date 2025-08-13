@@ -455,22 +455,18 @@
             try {
                 console.log(`Starting to load cards from ${directory} directory...`);
                 
-                // Get list of JSON files in the specified directory
-                const response = await fetch(`cards/${directory}/`);
-                if (!response.ok) {
-                    console.log(`Could not access ${directory} directory, skipping...`);
+                // Get the manifest file to find all card files
+                const manifestResponse = await fetch('cards-manifest.txt');
+                if (!manifestResponse.ok) {
+                    console.log(`Could not access cards-manifest.txt, skipping ${directory}...`);
                     return;
                 }
                 
-                const html = await response.text();
+                const manifestText = await manifestResponse.text();
+                const allFiles = manifestText.trim().split('\n');
                 
-                // Parse the directory listing HTML to find JSON files
-                const parser = new DOMParser();
-                const doc = parser.parseFromString(html, 'text/html');
-                
-                // Find all links that end with .json
-                const links = doc.querySelectorAll('a[href$=".json"]');
-                const cardFiles = Array.from(links).map(link => `cards/${directory}/` + link.getAttribute('href'));
+                // Filter files for this directory
+                const cardFiles = allFiles.filter(file => file.startsWith(`cards/${directory}/`));
                 
                 if (cardFiles.length === 0) {
                     console.log(`No JSON card files found in ${directory} directory`);
