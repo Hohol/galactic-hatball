@@ -1,0 +1,32 @@
+{
+  "name": "Bottled Starlight",
+  "description": "All your slots have +30/+30. If you get 1st place, get a bonus reward.",
+  "type": "treasure",
+  "rarity": "secret rare",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/b/b0/Treasure_Bottled_Starlight.png?848273"
+    },
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/b0/Treasure_Bottled_Starlight.png/800px-Treasure_Bottled_Starlight.png?848273"
+    },
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/b0/Treasure_Bottled_Starlight.png/640px-Treasure_Bottled_Starlight.png?848273"
+    },
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/b0/Treasure_Bottled_Starlight.png/630px-Treasure_Bottled_Starlight.png?848273"
+    },
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/b0/Treasure_Bottled_Starlight.png/300px-Treasure_Bottled_Starlight.png?848273"
+    },
+    {
+      "type": "card",
+      "url": "https://onceuponagalaxy.wiki.gg/images/bd/Treasure_Bottled_Starlight_Card.png/300px-Treasure_Bottled_Starlight_Card.png?17eccc"
+    }
+  ]
+}

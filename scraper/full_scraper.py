@@ -129,6 +129,7 @@ class FullGalaxyScraper:
         card_type = self.extract_card_type(soup)
         card_rarity = self.extract_card_rarity(soup)
         card_cost = self.extract_card_cost(soup)
+        card_images = self.extract_card_images(soup)
         
         card_data = {
             "name": card_name,
@@ -142,6 +143,8 @@ class FullGalaxyScraper:
             card_data["rarity"] = card_rarity
         if card_cost:
             card_data["cost"] = card_cost
+        if card_images:
+            card_data["images"] = card_images
         
         return card_data
     
@@ -250,6 +253,99 @@ class FullGalaxyScraper:
                         return cost_text
         
         return None
+    
+    def extract_card_images(self, soup):
+        """Extract art and card images from the page"""
+        images = []
+        
+        # Method 1: Look for Open Graph images (most reliable)
+        og_images = soup.find_all('meta', property='og:image')
+        for og_img in og_images:
+            url = og_img.get('content')
+            if url and url.startswith('http'):
+                # Determine image type based on URL
+                if 'thumb' in url:
+                    # This is a thumbnail, get the original
+                    # Fix: properly reconstruct the original URL
+                    parts = url.split('/')
+                    if 'thumb' in parts:
+                        thumb_index = parts.index('thumb')
+                        # Remove 'thumb' and the size part, but keep the directory structure
+                        original_parts = parts[:thumb_index] + parts[thumb_index+2:]
+                        original_url = '/'.join(original_parts)
+                        
+                        images.append({
+                            'type': 'art',
+                            'url': original_url
+                        })
+                else:
+                    images.append({
+                        'type': 'art',
+                        'url': url
+                    })
+        
+        # Method 2: Look for images in druid-infobox (most specific)
+        infobox = soup.find('div', class_='druid-infobox')
+        if infobox:
+            # Find the main images section
+            main_images = infobox.find('div', class_='druid-main-images')
+            if main_images:
+                # Look for image files (not tabs)
+                image_files = main_images.find_all('div', class_='druid-main-images-file')
+                print(f"      Found {len(image_files)} image files")
+                
+                for img_file in image_files:
+                    # Get the tab key to determine type
+                    tab_key = img_file.get('data-druid-tab-key', 'unknown')
+                    print(f"      Processing {tab_key} tab")
+                    
+                    # Find the img tag within this file div
+                    img_tag = img_file.find('img', src=True)
+                    if img_tag:
+                        src = img_tag.get('src')
+                        alt = img_tag.get('alt', '')
+                        print(f"      Found img: src='{src}', alt='{alt}'")
+                        
+                        if src and not src.startswith('http'):
+                            src = urljoin(self.base_url, src)
+                            print(f"      Converted to full URL: {src}")
+                        
+                        # Get the original image URL (not thumbnail)
+                        if 'thumb' in src:
+                            print(f"      Contains 'thumb', processing...")
+                            parts = src.split('/')
+                            if 'thumb' in parts:
+                                thumb_index = parts.index('thumb')
+                                # Remove 'thumb' and the size part, but keep the directory structure
+                                original_parts = parts[:thumb_index] + parts[thumb_index+2:]
+                                original_url = '/'.join(original_parts)
+                                print(f"      Original URL: {original_url}")
+                            else:
+                                original_url = src
+                        else:
+                            original_url = src
+                            print(f"      Using as-is: {original_url}")
+                        
+                        # Determine image type based on tab key
+                        img_type = 'art' if tab_key == 'Art' else 'card' if tab_key == 'Card' else 'unknown'
+                        
+                        images.append({
+                            'type': img_type,
+                            'url': original_url
+                        })
+                        print(f"      ✓ Added {img_type} image: {original_url}")
+                    else:
+                        print(f"      ✗ No img tag found in {tab_key} tab")
+        
+        # Remove duplicates based on URL
+        unique_images = []
+        seen_urls = set()
+        for img in images:
+            if img['url'] not in seen_urls:
+                unique_images.append(img)
+                seen_urls.add(img['url'])
+        
+        return unique_images
     
     def save_cards_to_json(self, cards, output_dir="cards/treasures"):
         """Save scraped cards to individual JSON files"""

@@ -192,6 +192,72 @@
             text-shadow: 0 0 10px rgba(78, 220, 196, 0.3);
         }
 
+        .card-images {
+            margin: 15px 0;
+            text-align: center;
+        }
+
+        .card-image {
+            display: none;
+            margin-bottom: 10px;
+        }
+
+        .card-image.active {
+            display: block;
+        }
+
+        .card-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            border: 2px solid rgba(255, 215, 0, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .card-image img:hover {
+            border-color: rgba(255, 215, 0, 0.8);
+            transform: scale(1.02);
+        }
+
+        .image-type {
+            font-size: 0.8rem;
+            color: #ffd700;
+            margin-top: 5px;
+            text-transform: capitalize;
+            font-weight: bold;
+        }
+
+        .image-nav {
+            display: flex;
+            justify-content: center;
+            gap: 5px;
+            margin-top: 10px;
+        }
+
+        .image-nav-btn {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+
+        .image-nav-btn:hover {
+            background: rgba(255, 215, 0, 0.3);
+            border-color: rgba(255, 215, 0, 0.8);
+        }
+
+        .image-nav-btn.active {
+            background: rgba(255, 215, 0, 0.5);
+            border-color: rgba(255, 215, 0, 1);
+            color: #000;
+        }
+
         .card-placeholder {
             background: rgba(255, 255, 255, 0.1);
             border-radius: 15px;
@@ -350,6 +416,23 @@
                         <h3 class="card-name">${card.name}</h3>
                         ${card.rarity ? `<div class="card-rarity">${card.rarity}</div>` : ''}
                     </div>
+                    ${card.images && card.images.length > 0 ? `
+                        <div class="card-images">
+                            ${card.images.map((img, index) => `
+                                <div class="card-image ${index === 0 ? 'active' : ''}" data-image-index="${index}">
+                                    <img src="${img.url}" alt="${img.type}" title="${img.type}">
+                                    <div class="image-type">${img.type}</div>
+                                </div>
+                            `).join('')}
+                            ${card.images.length > 1 ? `
+                                <div class="image-nav">
+                                    ${card.images.map((_, index) => `
+                                        <button class="image-nav-btn ${index === 0 ? 'active' : ''}" data-image-index="${index}">${index + 1}</button>
+                                    `).join('')}
+                                </div>
+                            ` : ''}
+                        </div>
+                    ` : ''}
                     <div class="card-body">
                         <p class="card-description">${card.description}</p>
                         ${card.type ? `<div class="card-type">Type: ${card.type}</div>` : ''}
@@ -398,6 +481,26 @@
         
         // Load cards when page loads
         document.addEventListener('DOMContentLoaded', loadCards);
+        
+        // Add event delegation for image navigation
+        document.addEventListener('click', function(e) {
+            if (e.target.classList.contains('image-nav-btn')) {
+                const card = e.target.closest('.card');
+                const imageIndex = parseInt(e.target.dataset.imageIndex);
+                
+                // Update active image
+                const images = card.querySelectorAll('.card-image');
+                const navBtns = card.querySelectorAll('.image-nav-btn');
+                
+                images.forEach((img, index) => {
+                    img.classList.toggle('active', index === imageIndex);
+                });
+                
+                navBtns.forEach((btn, index) => {
+                    btn.classList.toggle('active', index === imageIndex);
+                });
+            }
+        });
     </script>
 </body>
 </html>

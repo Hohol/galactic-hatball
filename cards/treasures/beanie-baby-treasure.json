@@ -2,5 +2,31 @@
   "name": "Beanie Baby (Treasure)",
   "description": "None. (Only available from the Farewell ability of a Bronze or Silver Beanie Baby (Character).)",
   "type": "treasure",
-  "rarity": "common"
+  "rarity": "common",
+  "images": [
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/5/53/Treasure_Beanie_Baby.png?83e873"
+    },
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/53/Treasure_Beanie_Baby.png/800px-Treasure_Beanie_Baby.png?83e873"
+    },
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/53/Treasure_Beanie_Baby.png/640px-Treasure_Beanie_Baby.png?83e873"
+    },
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/53/Treasure_Beanie_Baby.png/630px-Treasure_Beanie_Baby.png?83e873"
+    },
+    {
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/53/Treasure_Beanie_Baby.png/300px-Treasure_Beanie_Baby.png?83e873"
+    },
+    {
+      "type": "card",
+      "url": "https://onceuponagalaxy.wiki.gg/images/52/Treasure_Beanie_Baby_Card.png/300px-Treasure_Beanie_Baby_Card.png?6ce682"
+    }
+  ]
 }
