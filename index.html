@@ -271,7 +271,7 @@
         async function loadCards() {
             try {
                 // First try to load the combined file
-                const combinedResponse = await fetch('cards/all_treasures.json');
+                const combinedResponse = await fetch('cards/treasures/all_treasures.json');
                 if (combinedResponse.ok) {
                     allCards = await combinedResponse.json();
                     console.log(`Loaded ${allCards.length} cards from combined file`);
@@ -299,24 +299,27 @@
         // Load individual card files (fallback method)
         async function loadIndividualCards() {
             try {
-                // Get list of JSON files in cards directory
-                const response = await fetch('cards/');
+                // Get list of JSON files in treasures directory by fetching the directory listing
+                const response = await fetch('cards/treasures/');
                 if (!response.ok) {
-                    throw new Error('Could not access cards directory');
+                    throw new Error('Could not access treasures directory');
                 }
                 
-                // This is a simplified approach - in a real scenario you'd need to parse the directory listing
-                // For now, we'll use a known list of card files
-                const cardFiles = [
-                    'cards/1000-sword.json',
-                    'cards/achilles-high-tops.json',
-                    'cards/alchemistry-set.json',
-                    'cards/aphrodites-tear.json',
-                    'cards/beanie-baby-treasure.json',
-                    'cards/big-brass-cannonballs.json',
-                    'cards/blackbeards-comb.json',
-                    'cards/bo-peeps-crook.json'
-                ];
+                const html = await response.text();
+                
+                // Parse the directory listing HTML to find JSON files
+                const parser = new DOMParser();
+                const doc = parser.parseFromString(html, 'text/html');
+                
+                // Find all links that end with .json
+                const links = doc.querySelectorAll('a[href$=".json"]');
+                const cardFiles = Array.from(links).map(link => 'cards/treasures/' + link.getAttribute('href'));
+                
+                if (cardFiles.length === 0) {
+                    throw new Error('No JSON card files found in treasures directory');
+                }
+                
+                console.log(`Found ${cardFiles.length} card files:`, cardFiles);
                 
                 const cardPromises = cardFiles.map(file => fetch(file).then(response => response.json()));
                 allCards = await Promise.all(cardPromises);

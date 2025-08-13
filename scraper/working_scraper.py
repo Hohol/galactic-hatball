@@ -63,13 +63,17 @@ class WorkingGalaxyScraper:
             href = link.get('href')
             text = link.get_text().strip()
             
-            # Filter for likely card pages
+            # Filter for likely card pages (not templates or categories)
             if (href.startswith('/wiki/') and 
-                not href.startswith('/wiki/Special:') and
+                not href.startswith('/wiki/Template:') and
                 not href.startswith('/wiki/Category:') and
                 not href.startswith('/wiki/User:') and
                 not href.startswith('/wiki/Talk:') and
-                text and len(text) > 1):
+                not href.startswith('/wiki/File:') and
+                not href.startswith('/wiki/Help:') and
+                not href.startswith('/wiki/Special:') and
+                text and len(text) > 1 and
+                not text.startswith('Template:')):
                 
                 card_links.append({
                     'url': urljoin(self.base_url, href),
@@ -244,7 +248,7 @@ class WorkingGalaxyScraper:
                     pass
         return None
     
-    def save_cards_to_json(self, cards, output_dir="cards"):
+    def save_cards_to_json(self, cards, output_dir="cards/treasures"):
         """Save scraped cards to individual JSON files"""
         if not os.path.exists(output_dir):
             os.makedirs(output_dir)

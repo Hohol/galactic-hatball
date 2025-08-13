@@ -69,7 +69,11 @@ class FullGalaxyScraper:
                         not href.startswith('/wiki/Category:') and
                         not href.startswith('/wiki/User:') and
                         not href.startswith('/wiki/Talk:') and
-                        text and len(text) > 1):
+                        not href.startswith('/wiki/File:') and
+                        not href.startswith('/wiki/Help:') and
+                        not href.startswith('/wiki/Special:') and
+                        text and len(text) > 1 and
+                        not text.startswith('Template:')):
                         
                         card_links.append({
                             'url': urljoin(self.base_url, href),
@@ -247,7 +251,7 @@ class FullGalaxyScraper:
         
         return None
     
-    def save_cards_to_json(self, cards, output_dir="cards"):
+    def save_cards_to_json(self, cards, output_dir="cards/treasures"):
         """Save scraped cards to individual JSON files"""
         if not os.path.exists(output_dir):
             os.makedirs(output_dir)
