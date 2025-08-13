@@ -508,10 +508,10 @@
             align-items: center;
             gap: 6px;
             padding: 6px 12px;
-            background: rgba(255, 107, 107, 0.1);
-            border: 1px solid rgba(255, 107, 107, 0.3);
+            background: rgba(138, 43, 226, 0.1);
+            border: 1px solid rgba(138, 43, 226, 0.3);
             border-radius: 20px;
-            color: #ff6b6b;
+            color: #8a2be2;
             font-size: 0.85rem;
             cursor: pointer;
             transition: all 0.3s ease;
@@ -519,18 +519,18 @@
         }
     
         .rarity-checkbox:hover {
-            background: rgba(255, 107, 107, 0.2);
-            border-color: rgba(255, 107, 107, 0.5);
+            background: rgba(138, 43, 226, 0.2);
+            border-color: rgba(138, 43, 226, 0.5);
             transform: translateY(-1px);
         }
     
         .rarity-checkbox input[type="checkbox"] {
             margin: 0;
-            accent-color: #ff6b6b;
+            accent-color: #8a2be2;
         }
     
         .rarity-checkbox input[type="checkbox"]:checked + span {
-            color: #ff6b6b;
+            color: #8a2be2;
             font-weight: 600;
         }
     </style>
@@ -647,6 +647,12 @@
                 const orderB = rarityOrder[b.toLowerCase()] || 999;
                 return orderA - orderB;
             });
+        }
+        
+        // Capitalize rarity text (e.g., "secret rare" -> "Secret Rare")
+        function capitalizeRarity(rarity) {
+            if (!rarity) return rarity;
+            return rarity.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
         }
         
         // Populate trait filter checkboxes
@@ -811,7 +817,15 @@
                 const directoryCards = await Promise.all(cardPromises);
                 
                 console.log(`Before adding ${directory} cards, total cards: ${allCards.length}`);
-                allCards = allCards.concat(directoryCards);
+                directoryCards.forEach(card => {
+                    // Add the card to our collection
+                    allCards.push(card);
+                    
+                    // Capitalize rarity text for consistent display
+                    if (card.rarity) {
+                        card.rarity = capitalizeRarity(card.rarity);
+                    }
+                });
                 console.log(`After adding ${directory} cards, total cards: ${allCards.length}`);
                 console.log(`Loaded ${directoryCards.length} cards from ${directory} directory`);
             } catch (error) {
@@ -871,7 +885,7 @@
                                 <div class="card">
                                     <div class="card-header">
                                         <h3 class="card-name">${card.name}</h3>
-                                        ${card.rarity ? `<div class="card-rarity">${card.rarity.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')}</div>` : ''}
+                                        ${card.rarity ? `<div class="card-rarity">${card.rarity}</div>` : ''}
                                     </div>
                                     ${card.images && card.images.length > 0 ? `
                                         <div class="card-images">
