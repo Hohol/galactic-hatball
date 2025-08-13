@@ -529,9 +529,23 @@
             accent-color: #8a2be2;
         }
     
-        .rarity-checkbox input[type="checkbox"]:checked + span {
-            color: #8a2be2;
-            font-weight: 600;
+            .rarity-checkbox input[type="checkbox"]:checked + span {
+        color: #8a2be2;
+        font-weight: 600;
+    }
+    
+            .rarity-checkbox .rarity-icon {
+            width: 14px;
+            height: 14px;
+            vertical-align: middle;
+            margin-right: 4px;
+        }
+        
+        .rarity-icon {
+            width: 12px;
+            height: 12px;
+            vertical-align: middle;
+            margin-right: 4px;
         }
     </style>
 </head>
@@ -603,6 +617,16 @@
             'epic': 4,
             'legendary': 5,
             'secret rare': 6
+        };
+        
+        // Rarity icon URLs from the wiki
+        const rarityIcons = {
+            'common': 'https://onceuponagalaxy.wiki.gg/images/thumb/8/8c/Rarity_Common.png/24px-Rarity_Common.png',
+            'uncommon': 'https://onceuponagalaxy.wiki.gg/images/thumb/0/0f/Rarity_Uncommon.png/25px-Rarity_Uncommon.png',
+            'rare': 'https://onceuponagalaxy.wiki.gg/images/thumb/b/b9/Rarity_Rare.png/25px-Rarity_Rare.png',
+            'epic': 'https://onceuponagalaxy.wiki.gg/images/thumb/f/f2/Rarity_Epic.png/25px-Rarity_Epic.png',
+            'legendary': 'https://onceuponagalaxy.wiki.gg/images/thumb/f/fd/Rarity_Legendary.png/25px-Rarity_Legendary.png',
+            'secret rare': 'https://onceuponagalaxy.wiki.gg/images/thumb/c/ce/Rarity_Secret_Rare.png/25px-Rarity_Secret_Rare.png'
         };
         
         // Sort cards: first by rarity, then by name
@@ -725,7 +749,7 @@
                 checkbox.value = rarity;
                 
                 const span = document.createElement('span');
-                span.textContent = rarity;
+                span.innerHTML = `<img src="${rarityIcons[rarity.toLowerCase()]}" alt="${rarity}" class="rarity-icon">${rarity}`;
                 
                 checkboxDiv.appendChild(checkbox);
                 checkboxDiv.appendChild(span);
@@ -885,7 +909,7 @@
                                 <div class="card">
                                     <div class="card-header">
                                         <h3 class="card-name">${card.name}</h3>
-                                        ${card.rarity ? `<div class="card-rarity">${card.rarity}</div>` : ''}
+                                        ${card.rarity ? `<div class="card-rarity"><img src="${rarityIcons[card.rarity.toLowerCase()]}" alt="${card.rarity}" class="rarity-icon">${card.rarity}</div>` : ''}
                                     </div>
                                     ${card.images && card.images.length > 0 ? `
                                         <div class="card-images">
