@@ -158,6 +158,78 @@
             box-shadow: 0 10px 25px rgba(255, 215, 0, 0.4);
         }
 
+        .version-toggle-btn {
+            padding: 15px 30px;
+            background: linear-gradient(45deg, #8a2be2, #4ecdc4);
+            border: none;
+            border-radius: 25px;
+            color: white;
+            font-size: clamp(1rem, 1.3vw, 1.3rem);
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-left: 15px;
+        }
+
+        .version-toggle-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(138, 43, 226, 0.4);
+        }
+
+        .version-toggle-container {
+            text-align: center;
+            margin: 10px 0;
+            display: flex;
+            gap: 8px;
+            justify-content: center;
+        }
+
+        .version-btn {
+            padding: 8px 16px;
+            border: 2px solid;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            min-width: 70px;
+        }
+
+        .bronze-btn {
+            background: #2a2a2a;
+            border-color: #555;
+            color: #888;
+        }
+
+        .bronze-btn.active {
+            background: linear-gradient(45deg, #cd7f32, #b8860b);
+            border-color: #cd7f32;
+            color: #fff;
+            box-shadow: 0 0 10px rgba(205, 127, 50, 0.6);
+        }
+
+        .golden-btn {
+            background: #2a2a2a;
+            border-color: #555;
+            color: #888;
+        }
+
+        .golden-btn.active {
+            background: linear-gradient(45deg, #ffd700, #ff8c00);
+            border-color: #ffd700;
+            color: #000;
+            box-shadow: 0 0 10px rgba(255, 215, 0, 0.6);
+        }
+
+        .card-version-toggle:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(255, 215, 0, 0.4);
+        }
+
+        .card-header {
+            position: relative;
+        }
+
         .filters {
             display: flex;
             gap: 15px;
@@ -709,6 +781,7 @@
         <div class="search-section">
             <div class="search-box">
                 <input type="text" class="search-input" id="searchInput" placeholder="Search cards..." autocomplete="off">
+
             </div>
             <div class="filter-box">
                 <label>Type:</label>
@@ -755,6 +828,7 @@
         let selectedType = 'all';
         let selectedTraits = new Set();
         let selectedRarities = new Set();
+
         
         // Define rarity order (more common first)
         const rarityOrder = {
@@ -826,6 +900,91 @@
             // Then wrap buff numbers (+X) with spans
             return formattedText.replace(/(\+\s*\d+)/g, '<span class="buff-number">$1</span>');
         }
+
+        // Set individual card version to bronze or golden
+        function setCardVersion(cardId, version) {
+            const card = document.querySelector('[data-card-id="' + cardId + '"]');
+            if (!card) return;
+            
+            // Update the card's version
+            card.dataset.version = version;
+            
+            // Update button states
+            const bronzeBtn = card.querySelector('.bronze-btn');
+            const goldenBtn = card.querySelector('.golden-btn');
+            
+            if (bronzeBtn && goldenBtn) {
+                bronzeBtn.classList.remove('active');
+                goldenBtn.classList.remove('active');
+                
+                if (version === 'bronze') {
+                    bronzeBtn.classList.add('active');
+                } else if (version === 'golden') {
+                    goldenBtn.classList.add('active');
+                }
+            }
+            
+            // Refresh just this card's display
+            refreshCardDisplay(card);
+        }
+
+        // Refresh a single card's display (images and abilities)
+        function refreshCardDisplay(card) {
+            const cardId = card.dataset.cardId;
+            const version = card.dataset.version;
+            
+            // Find the card data
+            const cardData = allCards.find(c => c.name.toLowerCase().replace(/[^a-z0-9]/g, '-') === cardId);
+            if (!cardData) return;
+            
+            // Update the image
+            const imageContainer = card.querySelector('.card-images');
+            if (imageContainer && cardData.images && cardData.images.length > 0) {
+                const goldenImages = cardData.images.filter(img => img.url.includes('Gold'));
+                const bronzeImages = cardData.images.filter(img => img.url.includes('Bronze'));
+                
+                let imageToShow;
+                if (version === 'golden' && goldenImages.length > 0) {
+                    imageToShow = goldenImages[0];
+                } else if (bronzeImages.length > 0) {
+                    imageToShow = bronzeImages[0];
+                } else {
+                    // Fallback to any image
+                    imageToShow = cardData.images[0];
+                }
+                
+                if (imageToShow) {
+                    const img = imageContainer.querySelector('img');
+                    if (img) {
+                        img.dataset.src = imageToShow.url;
+                        img.src = imageToShow.url;
+                    }
+                }
+            }
+            
+            // Update the abilities
+            const abilitiesContainer = card.querySelector('.card-abilities');
+            if (abilitiesContainer && cardData.abilities) {
+                const abilitiesHTML = cardData.abilities.map(ability => {
+                    const descriptionToShow = version === 'golden' && ability.gold_description ? 
+                        ability.gold_description : ability.description;
+                    
+                    if (ability.type && descriptionToShow) {
+                        return `<div class="ability-line"><strong>${ability.type}:</strong> ${formatAbilityText(descriptionToShow)}</div>`;
+                    } else if (ability.type) {
+                        return `<div class="ability-line"><strong>${ability.type}</strong></div>`;
+                    } else if (descriptionToShow) {
+                        return `<div class="ability-line">${formatAbilityText(descriptionToShow)}</div>`;
+                    } else {
+                        return '';
+                    }
+                }).join('');
+                
+                abilitiesContainer.innerHTML = abilitiesHTML;
+            }
+        }
+
+
         
         // Populate trait filter checkboxes
         function populateTraitFilter(traits) {
@@ -1036,7 +1195,7 @@
                         </div>
                         <div class="type-cards-grid">
                             ${typeCards.map(card => `
-                                <div class="card">
+                                <div class="card" data-card-id="${card.name.toLowerCase().replace(/[^a-z0-9]/g, '-')}" data-version="bronze">
                                     <div class="card-header">
                                         <h3 class="card-name">
                                             ${card.rarity ? `<img src="${rarityIcons[card.rarity.toLowerCase()]}" alt="${card.rarity}" class="rarity-icon">` : ''}${card.name}
@@ -1045,11 +1204,26 @@
                                     ${card.images && card.images.length > 0 ? `
                                         <div class="card-images">
                                                                                          ${(() => {
-                                                 // Priority: images with "Bronze" in URL > type-based priority > others
+                                                 // Priority: Golden images when card version is golden, otherwise Bronze images > type-based priority > others
+                                                 const goldenImages = card.images.filter(img => img.url.includes('Gold'));
                                                  const bronzeImages = card.images.filter(img => img.url.includes('Bronze'));
+                                                 const cardVersion = 'bronze'; // Will be updated when we implement the toggle function
                                                  
-                                                 if (bronzeImages.length > 0) {
-                                                     // If we have Bronze images, use them
+                                                 if (cardVersion === 'golden' && goldenImages.length > 0) {
+                                                     // If this card is set to Golden and has Golden images, use them
+                                                     const firstImage = goldenImages[0];
+                                                     return `
+                                                         <div class="card-image active">
+                                                             <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'/%3E" 
+                                                                  data-src="${firstImage.url}" 
+                                                                  alt="Card image" 
+                                                                  title="Card image"
+                                                                  loading="lazy"
+                                                                  class="lazy-image">
+                                                         </div>
+                                                     `;
+                                                 } else if (bronzeImages.length > 0) {
+                                                     // If this card is set to Bronze or doesn't have Golden, use Bronze images
                                                      const firstImage = bronzeImages[0];
                                                      return `
                                                          <div class="card-image active">
@@ -1106,17 +1280,32 @@
                                              ` : ''}
                                              -->
                                         </div>
+                                        ${card.type === 'characters' && card.abilities && card.abilities.some(ability => ability.gold_description) ? `
+                                            <div class="version-toggle-container">
+                                                <button class="version-btn bronze-btn active" onclick="setCardVersion('${card.name.toLowerCase().replace(/[^a-z0-9]/g, '-')}', 'bronze')">
+                                                    Bronze
+                                                </button>
+                                                <button class="version-btn golden-btn" onclick="setCardVersion('${card.name.toLowerCase().replace(/[^a-z0-9]/g, '-')}', 'golden')">
+                                                    Golden
+                                                </button>
+                                            </div>
+                                        ` : ''}
                                     ` : ''}
                                     <div class="card-body">
                                         ${card.type === 'characters' && card.abilities ? `
                                             <div class="card-abilities">
                                                 ${card.abilities.map(ability => {
-                                                    if (ability.type && ability.description) {
-                                                        return `<div class="ability-line"><strong>${ability.type}:</strong> ${formatAbilityText(ability.description)}</div>`;
+                                                    // Use golden description if available and card version is golden
+                                                    const cardVersion = 'bronze'; // Will be updated when we implement the toggle function
+                                                    const descriptionToShow = cardVersion === 'golden' && ability.gold_description ? 
+                                                        ability.gold_description : ability.description;
+                                                    
+                                                    if (ability.type && descriptionToShow) {
+                                                        return `<div class="ability-line"><strong>${ability.type}:</strong> ${formatAbilityText(descriptionToShow)}</div>`;
                                                     } else if (ability.type) {
                                                         return `<div class="ability-line"><strong>${ability.type}</strong></div>`;
-                                                    } else if (ability.description) {
-                                                        return `<div class="ability-line">${formatAbilityText(ability.description)}</div>`;
+                                                    } else if (descriptionToShow) {
+                                                        return `<div class="ability-line">${formatAbilityText(descriptionToShow)}</div>`;
                                                     } else {
                                                         return '';
                                                     }
