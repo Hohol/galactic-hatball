@@ -703,18 +703,7 @@
         
         // Extract all unique rarities from cards
         function extractAllRarities(cards) {
-            const rarities = new Set();
-            cards.forEach(card => {
-                if (card.rarity) {
-                    rarities.add(card.rarity);
-                }
-            });
-            
-            return Array.from(rarities).sort((a, b) => {
-                const orderA = rarityOrder[a.toLowerCase()] || 999;
-                const orderB = rarityOrder[b.toLowerCase()] || 999;
-                return orderA - orderB;
-            });
+            return Object.keys(rarityOrder);
         }
         
         // Capitalize rarity text (e.g., "secret rare" -> "Secret Rare")
