@@ -1073,7 +1073,7 @@
             // Apply rarity filter
             if (selectedRarities.size > 0) {
                 filteredCards = filteredCards.filter(card => {
-                    return selectedRarities.has(card.rarity);
+                    return selectedRarities.has(card.rarity?.toLowerCase());
                 });
             }
             
