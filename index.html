@@ -1514,6 +1514,10 @@
                         observer.unobserve(img);
                     }
                 });
+            }, {
+                // Load images when they're 2-3 rows below the viewport
+                // This makes loading feel more seamless
+                rootMargin: '0px 0px 600px 0px' // 600px below viewport (2-3 rows)
             });
             
             lazyImages.forEach(img => imageObserver.observe(img));
