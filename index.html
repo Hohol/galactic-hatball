@@ -286,6 +286,7 @@
             width: calc(25% - 12px) !important;
             box-sizing: border-box !important;
             flex-shrink: 0 !important;
+            position: relative;
         }
 
         .card:hover {
@@ -312,6 +313,7 @@
 
         .card-body {
             color: #ffffff;
+            padding-bottom: 50px;
         }
 
         .card-description {
@@ -333,6 +335,10 @@
         
         .card-traits {
             text-align: center;
+            position: absolute;
+            bottom: 15px;
+            left: 15px;
+            right: 15px;
         }
 
         /* Style buff numbers (+X) in green */
@@ -1314,12 +1320,12 @@
                                         ` : card.description ? `
                                             <p class="card-description">${formatAbilityText(card.description)}</p>
                                         ` : ''}
-                                        ${card.type === 'characters' && card.traits ? `
-                                            <div class="card-traits">
-                                                ${card.traits.join(', ')}
-                                            </div>
-                                        ` : ''}
                                     </div>
+                                    ${card.type === 'characters' && card.traits ? `
+                                        <div class="card-traits">
+                                            ${card.traits.join(', ')}
+                                        </div>
+                                    ` : ''}
                                 </div>
                             `).join('')}
                         </div>
@@ -1339,6 +1345,8 @@
             
             // Adjust font sizes to fit card names
             adjustCardNameFontSizes();
+            
+
         }
         
         // Update results count
