@@ -672,13 +672,6 @@ class CardScraper:
                         if gold_text:
                             return gold_text
         return None
-        
-        # Don't fall back to other data cells as they might be traits or other unrelated info
-        # Only return actual ability descriptions found in dedicated ability description rows
-        pass
-        
-        # Don't fall back to main content area as it might contain unrelated wiki content
-        return None
 
     def extract_card_abilities(self, soup):
         """Extract all card abilities as a list"""
