@@ -263,6 +263,12 @@
             text-align: center;
         }
 
+        /* Style buff numbers (+X) in green */
+        .card-description .buff-number, .ability-line .buff-number {
+            color: #4ade80;
+            font-weight: bold;
+        }
+
         .card-type {
             font-size: 0.9rem;
             color: #4ecdc4;
@@ -711,6 +717,12 @@
             if (!rarity) return rarity;
             return rarity.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
         }
+
+        // Wrap buff numbers (+X) with spans for styling
+        function wrapBuffNumbers(text) {
+            if (!text) return text;
+            return text.replace(/(\+\s*\d+)/g, '<span class="buff-number">$1</span>');
+        }
         
         // Populate trait filter checkboxes
         function populateTraitFilter(traits) {
@@ -843,12 +855,9 @@
         // Load cards from a specific directory
         async function loadCardsFromDirectory(directory) {
             try {
-                console.log(`Starting to load cards from ${directory} directory...`);
-                
                 // Get the manifest file to find all card files
                 const manifestResponse = await fetch('cards-manifest.txt');
                 if (!manifestResponse.ok) {
-                    console.log(`Could not access cards-manifest.txt, skipping ${directory}...`);
                     return;
                 }
                 
@@ -859,16 +868,12 @@
                 const cardFiles = allFiles.filter(file => file.startsWith(`cards/${directory}/`));
                 
                 if (cardFiles.length === 0) {
-                    console.log(`No JSON card files found in ${directory} directory`);
                     return;
                 }
-                
-                console.log(`Found ${cardFiles.length} card files in ${directory}:`, cardFiles);
                 
                 const cardPromises = cardFiles.map(file => fetch(file).then(response => response.json()));
                 const directoryCards = await Promise.all(cardPromises);
                 
-                console.log(`Before adding ${directory} cards, total cards: ${allCards.length}`);
                 directoryCards.forEach(card => {
                     // Add the card to our collection
                     allCards.push(card);
@@ -878,11 +883,8 @@
                         card.rarity = capitalizeRarity(card.rarity);
                     }
                 });
-                console.log(`After adding ${directory} cards, total cards: ${allCards.length}`);
-                console.log(`Loaded ${directoryCards.length} cards from ${directory} directory`);
             } catch (error) {
-                console.error(`Error loading cards from ${directory} directory:`, error);
-                // Don't throw error, just log it and continue with other directories
+                // Don't throw error, just continue with other directories
             }
         }
         
@@ -914,9 +916,6 @@
             Object.keys(cardsByType).forEach(type => {
                 cardsByType[type] = sortCards(cardsByType[type]);
             });
-            
-            console.log('Cards grouped by type:', cardsByType);
-            console.log('Types found:', Object.keys(cardsByType));
             
             // Generate HTML for each type section
             let html = '';
@@ -1010,18 +1009,18 @@
                                             <div class="card-abilities">
                                                 ${card.abilities.map(ability => {
                                                     if (ability.type && ability.description) {
-                                                        return `<div class="ability-line"><strong>${ability.type}:</strong> ${ability.description}</div>`;
+                                                        return `<div class="ability-line"><strong>${ability.type}:</strong> ${wrapBuffNumbers(ability.description)}</div>`;
                                                     } else if (ability.type) {
                                                         return `<div class="ability-line"><strong>${ability.type}</strong></div>`;
                                                     } else if (ability.description) {
-                                                        return `<div class="ability-line">${ability.description}</div>`;
+                                                        return `<div class="ability-line">${wrapBuffNumbers(ability.description)}</div>`;
                                                     } else {
                                                         return '';
                                                     }
                                                 }).join('')}
                                             </div>
                                         ` : card.description ? `
-                                            <p class="card-description">${card.description}</p>
+                                            <p class="card-description">${wrapBuffNumbers(card.description)}</p>
                                         ` : ''}
                                         ${card.type === 'characters' && card.traits ? `
                                             <div class="card-traits">
@@ -1172,15 +1171,8 @@
                 // Reset to CSS font size first
                 cardName.style.fontSize = '';
                 
-                // Debug logging
-                console.log('Card name:', cardName.textContent);
-                console.log('Container width:', containerWidth);
-                console.log('Text scroll width:', cardName.scrollWidth);
-                console.log('Needs shrinking?', cardName.scrollWidth > containerWidth);
-                
                 // Only shrink if the text actually overflows (more than 5px tolerance)
                 if (cardName.scrollWidth > containerWidth + 5) {
-                    console.log('Shrinking font for:', cardName.textContent);
                     // Start with the responsive CSS font size (clamp(1.2rem, 2vw, 2rem))
                     let fontSize = Math.max(1.2, Math.min(2, window.innerWidth * 0.02 / 16)); // Convert to rem
                     cardName.style.fontSize = fontSize + 'rem';
@@ -1190,7 +1182,6 @@
                         fontSize -= 0.1;
                         cardName.style.fontSize = fontSize + 'rem';
                     }
-                    console.log('Final font size:', fontSize);
                 }
             });
         }
