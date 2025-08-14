@@ -992,6 +992,58 @@
 
 
         
+        // Equalize header heights in each row to align images
+        function equalizeHeaderHeights() {
+            const cardContainers = document.querySelectorAll('.type-cards-grid');
+            
+            cardContainers.forEach(container => {
+                const cards = container.querySelectorAll('.card');
+                if (cards.length === 0) return;
+                
+                // Group cards into rows based on their position
+                const cardPositions = Array.from(cards).map(card => {
+                    const rect = card.getBoundingClientRect();
+                    return { card, top: rect.top };
+                });
+                
+                // Group cards by row (cards with similar Y positions)
+                const rows = [];
+                let currentRow = [];
+                let lastTop = null;
+                
+                cardPositions.forEach(({ card, top }) => {
+                    if (lastTop === null || Math.abs(top - lastTop) < 10) {
+                        // Same row (within 10px tolerance)
+                        currentRow.push(card);
+                    } else {
+                        // New row
+                        if (currentRow.length > 0) {
+                            rows.push(currentRow);
+                        }
+                        currentRow = [card];
+                    }
+                    lastTop = top;
+                });
+                
+                // Don't forget the last row
+                if (currentRow.length > 0) {
+                    rows.push(currentRow);
+                }
+                
+                // Equalize header heights within each row
+                rows.forEach(row => {
+                    const headers = row.map(card => card.querySelector('.card-header'));
+                    const maxHeight = Math.max(...headers.map(header => header.offsetHeight));
+                    
+                    headers.forEach(header => {
+                        header.style.height = maxHeight + 'px';
+                        header.style.display = 'flex';
+                        header.style.alignItems = 'center';
+                    });
+                });
+            });
+        }
+
         // Populate trait filter checkboxes
         function populateTraitFilter(traits) {
             const traitFilter = document.getElementById('trait-filter');
@@ -1345,6 +1397,9 @@
             
             // Adjust font sizes to fit card names
             adjustCardNameFontSizes();
+            
+            // Equalize header heights in each row for image alignment
+            equalizeHeaderHeights();
             
 
         }
