@@ -558,6 +558,12 @@
                 gap: 15px;
             }
             
+            .card {
+                width: calc(100% - 12px) !important;
+                margin-bottom: 15px;
+                border: none !important;
+            }
+            
             .filters-container {
                 flex-direction: column;
                 gap: 15px;
@@ -582,6 +588,20 @@
             
             .header p {
                 font-size: clamp(1rem, 2vw, 1.3rem);
+            }
+        }
+        
+        /* Landscape mobile: show 4 columns */
+        @media screen and (orientation: landscape) and (max-height: 768px) {
+            .card {
+                width: calc(25% - 12px) !important;
+                margin-bottom: 15px;
+                border: none !important;
+            }
+            
+            .type-cards-grid {
+                grid-template-columns: repeat(4, 1fr) !important;
+                gap: 15px;
             }
         }
 
