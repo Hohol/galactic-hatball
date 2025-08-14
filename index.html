@@ -739,7 +739,7 @@
             background: rgba(138, 43, 226, 0.1);
             border: 1px solid rgba(138, 43, 226, 0.3);
             border-radius: 20px;
-            color: #8a2be2;
+            color: #e6d9f2;
             font-size: clamp(0.8rem, 1vw, 1rem);
             cursor: pointer;
             transition: all 0.3s ease;
@@ -1102,7 +1102,7 @@
                 rarityDiv.dataset.rarity = rarity;
                 
                 const span = document.createElement('span');
-                span.innerHTML = `<img src="${rarityIcons[rarity.toLowerCase()]}" alt="${rarity}" class="rarity-icon">${rarity}`;
+                span.innerHTML = `<img src="${rarityIcons[rarity.toLowerCase()]}" alt="${rarity}" class="rarity-icon">${rarity.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')}`;
                 
                 rarityDiv.appendChild(span);
                 
