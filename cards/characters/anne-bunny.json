@@ -4,20 +4,16 @@
   "rarity": "rare",
   "images": [
     {
-      "type": "art",
-      "url": "https://onceuponagalaxy.wiki.gg/images/c/c1/Character_Anne_Bunny.png?2dff31&format=original"
+      "url": "https://onceuponagalaxy.wiki.gg/images/0/09/Character_Anne_Bunny_Card_Bronze.png?format=original",
+      "type": "unknown",
+      "original": "original/anne-bunny_unknown_0.png",
+      "converted": "converted/anne-bunny_unknown_0.webp"
     },
     {
+      "url": "https://onceuponagalaxy.wiki.gg/images/a/a3/Character_Anne_Bunny_Card_Gold.png?format=original",
       "type": "unknown",
-      "url": "https://onceuponagalaxy.wiki.gg/images/0/09/Character_Anne_Bunny_Card_Bronze.png?format=original"
-    },
-    {
-      "type": "unknown",
-      "url": "https://onceuponagalaxy.wiki.gg/images/b/bc/Character_Anne_Bunny_Card_Silver.png?format=original"
-    },
-    {
-      "type": "unknown",
-      "url": "https://onceuponagalaxy.wiki.gg/images/a/a3/Character_Anne_Bunny_Card_Gold.png?format=original"
+      "original": "original/anne-bunny_unknown_1.png",
+      "converted": "converted/anne-bunny_unknown_1.webp"
     }
   ],
   "traits": [

@@ -4,16 +4,16 @@
   "rarity": "rare",
   "images": [
     {
+      "url": "https://onceuponagalaxy.wiki.gg/images/0/07/Character_Punxsutawney_Phil_Card_Bronze.png?548f3d&format=original",
       "type": "art",
-      "url": "https://onceuponagalaxy.wiki.gg/images/0/07/Character_Punxsutawney_Phil_Card_Bronze.png?548f3d&format=original"
+      "original": "original/punxsutawney-phil_art_0.png",
+      "converted": "converted/punxsutawney-phil_art_0.webp"
     },
     {
+      "url": "https://onceuponagalaxy.wiki.gg/images/f/f9/Character_Punxsutawney_Phil_Card_Gold.png?format=original",
       "type": "unknown",
-      "url": "https://onceuponagalaxy.wiki.gg/images/9/9a/Character_Punxsutawney_Phil_Card_Silver.png?format=original"
-    },
-    {
-      "type": "unknown",
-      "url": "https://onceuponagalaxy.wiki.gg/images/f/f9/Character_Punxsutawney_Phil_Card_Gold.png?format=original"
+      "original": "original/punxsutawney-phil_unknown_1.png",
+      "converted": "converted/punxsutawney-phil_unknown_1.webp"
     }
   ],
   "traits": [

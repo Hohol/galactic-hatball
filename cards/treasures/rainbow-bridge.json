@@ -5,8 +5,10 @@
   "rarity": "epic",
   "images": [
     {
+      "url": "https://onceuponagalaxy.wiki.gg/images/c/c7/Treasure_Rainbow_Bridge_Card.png?85f711&format=original",
       "type": "art",
-      "url": "https://onceuponagalaxy.wiki.gg/images/c/c7/Treasure_Rainbow_Bridge_Card.png?85f711&format=original"
+      "original": "original/rainbow-bridge_art_0.png",
+      "converted": "converted/rainbow-bridge_art_0.webp"
     }
   ]
 }

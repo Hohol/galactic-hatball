@@ -4,20 +4,28 @@
   "rarity": "epic",
   "images": [
     {
+      "url": "https://onceuponagalaxy.wiki.gg/images/7/70/Character_Bronze_Goose.png?bf157b&format=original",
       "type": "art",
-      "url": "https://onceuponagalaxy.wiki.gg/images/7/70/Character_Bronze_Goose.png?bf157b&format=original"
+      "original": "original/bronze-goose_art_0.png",
+      "converted": "converted/bronze-goose_art_0.webp"
     },
     {
+      "url": "https://onceuponagalaxy.wiki.gg/images/c/c5/Character_Bronze_Goose_Card_Bronze.png?format=original",
       "type": "unknown",
-      "url": "https://onceuponagalaxy.wiki.gg/images/c/c5/Character_Bronze_Goose_Card_Bronze.png?format=original"
+      "original": "original/bronze-goose_unknown_1.png",
+      "converted": "converted/bronze-goose_unknown_1.webp"
     },
     {
+      "url": "https://onceuponagalaxy.wiki.gg/images/2/2b/Character_Bronze_Goose_Card_Silver.png?format=original",
       "type": "unknown",
-      "url": "https://onceuponagalaxy.wiki.gg/images/2/2b/Character_Bronze_Goose_Card_Silver.png?format=original"
+      "original": "original/bronze-goose_unknown_2.png",
+      "converted": "converted/bronze-goose_unknown_2.webp"
     },
     {
+      "url": "https://onceuponagalaxy.wiki.gg/images/3/3e/Character_Bronze_Goose_Card_Gold.png?format=original",
       "type": "unknown",
-      "url": "https://onceuponagalaxy.wiki.gg/images/3/3e/Character_Bronze_Goose_Card_Gold.png?format=original"
+      "original": "original/bronze-goose_unknown_3.png",
+      "converted": "converted/bronze-goose_unknown_3.webp"
     }
   ],
   "traits": [

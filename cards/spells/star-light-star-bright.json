@@ -5,8 +5,10 @@
   "rarity": "epic",
   "images": [
     {
+      "url": "https://onceuponagalaxy.wiki.gg/images/7/78/Spell_Star_Light%2C_Star_Bright_Card.png?bc6433&format=original",
       "type": "art",
-      "url": "https://onceuponagalaxy.wiki.gg/images/7/78/Spell_Star_Light%2C_Star_Bright_Card.png?bc6433&format=original"
+      "original": "original/star-light,-star-bright_art_0.png",
+      "converted": "converted/star-light,-star-bright_art_0.webp"
     }
   ]
 }

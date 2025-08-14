@@ -5,12 +5,10 @@
   "rarity": "legendary",
   "images": [
     {
-      "type": "art",
-      "url": "https://onceuponagalaxy.wiki.gg/images/3/3d/Treasure_Statue_of_Olympus.png?b99812&format=original"
-    },
-    {
+      "url": "https://onceuponagalaxy.wiki.gg/images/1/13/Treasure_Statue_of_Olympus_Card.png?format=original",
       "type": "card",
-      "url": "https://onceuponagalaxy.wiki.gg/images/1/13/Treasure_Statue_of_Olympus_Card.png?format=original"
+      "original": "original/statue-of-olympus_card_0.png",
+      "converted": "converted/statue-of-olympus_card_0.webp"
     }
   ]
 }

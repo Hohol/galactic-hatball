@@ -5,8 +5,10 @@
   "rarity": "uncommon",
   "images": [
     {
+      "url": "https://onceuponagalaxy.wiki.gg/images/3/36/Spell_Silvery_Moon_Card.png?ecb18d&format=original",
       "type": "art",
-      "url": "https://onceuponagalaxy.wiki.gg/images/3/36/Spell_Silvery_Moon_Card.png?ecb18d&format=original"
+      "original": "original/silvery-moon_art_0.png",
+      "converted": "converted/silvery-moon_art_0.webp"
     }
   ]
 }

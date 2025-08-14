@@ -5,12 +5,10 @@
   "rarity": "epic",
   "images": [
     {
-      "type": "art",
-      "url": "https://onceuponagalaxy.wiki.gg/images/f/f2/Treasure_Midas%27_Throne.png?efee1d&format=original"
-    },
-    {
+      "url": "https://onceuponagalaxy.wiki.gg/images/a/a3/Treasure_Midas%27_Throne_Card.png?format=original",
       "type": "card",
-      "url": "https://onceuponagalaxy.wiki.gg/images/a/a3/Treasure_Midas%27_Throne_Card.png?format=original"
+      "original": "original/midas-throne_card_0.png",
+      "converted": "converted/midas-throne_card_0.webp"
     }
   ]
 }

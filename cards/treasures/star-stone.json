@@ -5,12 +5,10 @@
   "rarity": "legendary",
   "images": [
     {
-      "type": "art",
-      "url": "https://onceuponagalaxy.wiki.gg/images/4/44/Treasure_Star_Stone.png?84ed9f&format=original"
-    },
-    {
+      "url": "https://onceuponagalaxy.wiki.gg/images/4/40/Treasure_Star_Stone_Card.png?format=original",
       "type": "card",
-      "url": "https://onceuponagalaxy.wiki.gg/images/4/40/Treasure_Star_Stone_Card.png?format=original"
+      "original": "original/star-stone_card_0.png",
+      "converted": "converted/star-stone_card_0.webp"
     }
   ]
 }

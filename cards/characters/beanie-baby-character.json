@@ -4,20 +4,16 @@
   "rarity": "common",
   "images": [
     {
-      "type": "art",
-      "url": "https://onceuponagalaxy.wiki.gg/images/d/d3/Character_Beanie_Baby.png?83e873&format=original"
+      "url": "https://onceuponagalaxy.wiki.gg/images/6/6c/Character_Beanie_Baby_Card_Bronze.png?format=original",
+      "type": "unknown",
+      "original": "original/beanie-baby-(character)_unknown_0.png",
+      "converted": "converted/beanie-baby-(character)_unknown_0.webp"
     },
     {
+      "url": "https://onceuponagalaxy.wiki.gg/images/4/4a/Character_Beanie_Baby_Card_Gold.png?format=original",
       "type": "unknown",
-      "url": "https://onceuponagalaxy.wiki.gg/images/6/6c/Character_Beanie_Baby_Card_Bronze.png?format=original"
-    },
-    {
-      "type": "unknown",
-      "url": "https://onceuponagalaxy.wiki.gg/images/b/b8/Character_Beanie_Baby_Card_Silver.png?format=original"
-    },
-    {
-      "type": "unknown",
-      "url": "https://onceuponagalaxy.wiki.gg/images/4/4a/Character_Beanie_Baby_Card_Gold.png?format=original"
+      "original": "original/beanie-baby-(character)_unknown_1.png",
+      "converted": "converted/beanie-baby-(character)_unknown_1.webp"
     }
   ],
   "traits": [

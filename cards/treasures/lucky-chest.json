@@ -5,12 +5,10 @@
   "rarity": "common",
   "images": [
     {
-      "type": "art",
-      "url": "https://onceuponagalaxy.wiki.gg/images/d/d7/Treasure_Lucky_Chest.png?ab6adf&format=original"
-    },
-    {
+      "url": "https://onceuponagalaxy.wiki.gg/images/b/b0/Treasure_Lucky_Chest_Card.png?format=original",
       "type": "card",
-      "url": "https://onceuponagalaxy.wiki.gg/images/b/b0/Treasure_Lucky_Chest_Card.png?format=original"
+      "original": "original/lucky-chest_card_0.png",
+      "converted": "converted/lucky-chest_card_0.webp"
     }
   ]
 }

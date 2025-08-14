@@ -5,8 +5,10 @@
   "rarity": "rare",
   "images": [
     {
+      "url": "https://onceuponagalaxy.wiki.gg/images/3/3d/Spell_Down_Came_the_Rain_Card.png?42151f&format=original",
       "type": "art",
-      "url": "https://onceuponagalaxy.wiki.gg/images/3/3d/Spell_Down_Came_the_Rain_Card.png?42151f&format=original"
+      "original": "original/down-came-the-rain_art_0.png",
+      "converted": "converted/down-came-the-rain_art_0.webp"
     }
   ]
 }

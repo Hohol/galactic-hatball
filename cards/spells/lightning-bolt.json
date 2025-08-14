@@ -5,8 +5,10 @@
   "rarity": "rare",
   "images": [
     {
+      "url": "https://onceuponagalaxy.wiki.gg/images/9/99/Spell_Lightning_Bolt_Card.png?9012be&format=original",
       "type": "art",
-      "url": "https://onceuponagalaxy.wiki.gg/images/9/99/Spell_Lightning_Bolt_Card.png?9012be&format=original"
+      "original": "original/lightning-bolt_art_0.png",
+      "converted": "converted/lightning-bolt_art_0.webp"
     }
   ]
 }

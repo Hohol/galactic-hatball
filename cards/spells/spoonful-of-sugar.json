@@ -5,8 +5,10 @@
   "rarity": "uncommon",
   "images": [
     {
+      "url": "https://onceuponagalaxy.wiki.gg/images/1/1c/Spell_Spoonful_of_Sugar_Card.png?fbeaea&format=original",
       "type": "art",
-      "url": "https://onceuponagalaxy.wiki.gg/images/1/1c/Spell_Spoonful_of_Sugar_Card.png?fbeaea&format=original"
+      "original": "original/spoonful-of-sugar_art_0.png",
+      "converted": "converted/spoonful-of-sugar_art_0.webp"
     }
   ]
 }

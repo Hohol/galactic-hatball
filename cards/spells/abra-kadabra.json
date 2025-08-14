@@ -5,8 +5,10 @@
   "rarity": "epic",
   "images": [
     {
+      "url": "https://onceuponagalaxy.wiki.gg/images/b/b8/Spell_Abra_Kadabra_Card.png?675f0d&format=original",
       "type": "art",
-      "url": "https://onceuponagalaxy.wiki.gg/images/b/b8/Spell_Abra_Kadabra_Card.png?675f0d&format=original"
+      "original": "original/abra-kadabra_art_0.png",
+      "converted": "converted/abra-kadabra_art_0.webp"
     }
   ]
 }

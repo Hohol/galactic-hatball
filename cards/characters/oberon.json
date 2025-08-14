@@ -4,20 +4,16 @@
   "rarity": "legendary",
   "images": [
     {
-      "type": "art",
-      "url": "https://onceuponagalaxy.wiki.gg/images/c/cd/Character_Oberon.png?132ec1&format=original"
+      "url": "https://onceuponagalaxy.wiki.gg/images/5/5f/Character_Oberon_Card_Bronze.png?format=original",
+      "type": "unknown",
+      "original": "original/oberon_unknown_0.png",
+      "converted": "converted/oberon_unknown_0.webp"
     },
     {
+      "url": "https://onceuponagalaxy.wiki.gg/images/e/ef/Character_Oberon_Card_Gold.png?format=original",
       "type": "unknown",
-      "url": "https://onceuponagalaxy.wiki.gg/images/5/5f/Character_Oberon_Card_Bronze.png?format=original"
-    },
-    {
-      "type": "unknown",
-      "url": "https://onceuponagalaxy.wiki.gg/images/2/22/Character_Oberon_Card_Silver.png?format=original"
-    },
-    {
-      "type": "unknown",
-      "url": "https://onceuponagalaxy.wiki.gg/images/e/ef/Character_Oberon_Card_Gold.png?format=original"
+      "original": "original/oberon_unknown_1.png",
+      "converted": "converted/oberon_unknown_1.webp"
     }
   ],
   "traits": [

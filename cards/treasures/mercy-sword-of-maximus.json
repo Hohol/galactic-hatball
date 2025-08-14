@@ -5,8 +5,10 @@
   "rarity": "legendary",
   "images": [
     {
+      "url": "https://onceuponagalaxy.wiki.gg/images/3/3f/Treasure_Mercy%2C_Sword_of_Maximus_Card.png?e97ce0&format=original",
       "type": "art",
-      "url": "https://onceuponagalaxy.wiki.gg/images/3/3f/Treasure_Mercy%2C_Sword_of_Maximus_Card.png?e97ce0&format=original"
+      "original": "original/mercy,-sword-of-maximus_art_0.png",
+      "converted": "converted/mercy,-sword-of-maximus_art_0.webp"
     }
   ]
 }

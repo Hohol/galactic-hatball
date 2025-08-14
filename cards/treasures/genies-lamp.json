@@ -5,12 +5,10 @@
   "rarity": "uncommon",
   "images": [
     {
-      "type": "art",
-      "url": "https://onceuponagalaxy.wiki.gg/images/8/83/Treasure_Genie%27s_Lamp.png?3d3e4c&format=original"
-    },
-    {
+      "url": "https://onceuponagalaxy.wiki.gg/images/c/cb/Treasure_Genie%27s_Lamp_Card.png?format=original",
       "type": "card",
-      "url": "https://onceuponagalaxy.wiki.gg/images/c/cb/Treasure_Genie%27s_Lamp_Card.png?format=original"
+      "original": "original/genies-lamp_card_0.png",
+      "converted": "converted/genies-lamp_card_0.webp"
     }
   ]
 }

@@ -4,16 +4,16 @@
   "rarity": "uncommon",
   "images": [
     {
+      "url": "https://onceuponagalaxy.wiki.gg/images/b/b0/Character_Shanty_Card_Bronze.png?c0373f&format=original",
       "type": "art",
-      "url": "https://onceuponagalaxy.wiki.gg/images/b/b0/Character_Shanty_Card_Bronze.png?c0373f&format=original"
+      "original": "original/shanty_art_0.png",
+      "converted": "converted/shanty_art_0.webp"
     },
     {
+      "url": "https://onceuponagalaxy.wiki.gg/images/c/c8/Character_Shanty_Card_Gold.png?format=original",
       "type": "unknown",
-      "url": "https://onceuponagalaxy.wiki.gg/images/5/5f/Character_Shanty_Card_Silver.png?format=original"
-    },
-    {
-      "type": "unknown",
-      "url": "https://onceuponagalaxy.wiki.gg/images/c/c8/Character_Shanty_Card_Gold.png?format=original"
+      "original": "original/shanty_unknown_1.png",
+      "converted": "converted/shanty_unknown_1.webp"
     }
   ],
   "traits": [

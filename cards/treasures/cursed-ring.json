@@ -5,8 +5,10 @@
   "rarity": "common",
   "images": [
     {
+      "url": "https://onceuponagalaxy.wiki.gg/images/f/f2/Treasure_Cursed_Ring_Card.png?d4761d&format=original",
       "type": "art",
-      "url": "https://onceuponagalaxy.wiki.gg/images/f/f2/Treasure_Cursed_Ring_Card.png?d4761d&format=original"
+      "original": "original/cursed-ring_art_0.png",
+      "converted": "converted/cursed-ring_art_0.webp"
     }
   ]
 }

@@ -5,8 +5,10 @@
   "rarity": "rare",
   "images": [
     {
+      "url": "https://onceuponagalaxy.wiki.gg/images/8/81/Spell_Lost_in_the_Woods_Card.png?db81f8&format=original",
       "type": "art",
-      "url": "https://onceuponagalaxy.wiki.gg/images/8/81/Spell_Lost_in_the_Woods_Card.png?db81f8&format=original"
+      "original": "original/lost-in-the-woods_art_0.png",
+      "converted": "converted/lost-in-the-woods_art_0.webp"
     }
   ]
 }

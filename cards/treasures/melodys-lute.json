@@ -5,8 +5,10 @@
   "rarity": "legendary",
   "images": [
     {
+      "url": "https://onceuponagalaxy.wiki.gg/images/7/70/Treasure_Melody%27s_Lute_Card.png?be59b0&format=original",
       "type": "art",
-      "url": "https://onceuponagalaxy.wiki.gg/images/7/70/Treasure_Melody%27s_Lute_Card.png?be59b0&format=original"
+      "original": "original/melodys-lute_art_0.png",
+      "converted": "converted/melodys-lute_art_0.webp"
     }
   ]
 }

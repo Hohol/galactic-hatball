@@ -5,12 +5,10 @@
   "rarity": "rare",
   "images": [
     {
-      "type": "art",
-      "url": "https://onceuponagalaxy.wiki.gg/images/f/f6/Treasure_Hunter%27s_Horn.png?f0f330&format=original"
-    },
-    {
+      "url": "https://onceuponagalaxy.wiki.gg/images/4/44/Treasure_Hunter%27s_Horn_Card.png?format=original",
       "type": "card",
-      "url": "https://onceuponagalaxy.wiki.gg/images/4/44/Treasure_Hunter%27s_Horn_Card.png?format=original"
+      "original": "original/hunters-horn_card_0.png",
+      "converted": "converted/hunters-horn_card_0.webp"
     }
   ]
 }

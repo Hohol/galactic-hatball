@@ -5,8 +5,10 @@
   "rarity": "epic",
   "images": [
     {
+      "url": "https://onceuponagalaxy.wiki.gg/images/3/3b/Spell_Midas_Touch_Card.png?c28a85&format=original",
       "type": "art",
-      "url": "https://onceuponagalaxy.wiki.gg/images/3/3b/Spell_Midas_Touch_Card.png?c28a85&format=original"
+      "original": "original/midas-touch_art_0.png",
+      "converted": "converted/midas-touch_art_0.webp"
     }
   ]
 }

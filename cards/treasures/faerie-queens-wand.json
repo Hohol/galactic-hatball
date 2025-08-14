@@ -5,12 +5,10 @@
   "rarity": "epic",
   "images": [
     {
-      "type": "art",
-      "url": "https://onceuponagalaxy.wiki.gg/images/f/fa/Treasure_Faerie_Queen%27s_Wand.png?65556c&format=original"
-    },
-    {
+      "url": "https://onceuponagalaxy.wiki.gg/images/d/d1/Treasure_Faerie_Queen%27s_Wand_Card.png?format=original",
       "type": "card",
-      "url": "https://onceuponagalaxy.wiki.gg/images/d/d1/Treasure_Faerie_Queen%27s_Wand_Card.png?format=original"
+      "original": "original/faerie-queens-wand_card_0.png",
+      "converted": "converted/faerie-queens-wand_card_0.webp"
     }
   ]
 }

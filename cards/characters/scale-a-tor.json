@@ -4,20 +4,16 @@
   "rarity": "legendary",
   "images": [
     {
-      "type": "art",
-      "url": "https://onceuponagalaxy.wiki.gg/images/e/e3/Character_Scale-a-tor.png?739ce6&format=original"
+      "url": "https://onceuponagalaxy.wiki.gg/images/1/11/Character_Scale-a-tor_Card_Bronze.png?format=original",
+      "type": "unknown",
+      "original": "original/scale-a-tor_unknown_0.png",
+      "converted": "converted/scale-a-tor_unknown_0.webp"
     },
     {
+      "url": "https://onceuponagalaxy.wiki.gg/images/2/2c/Character_Scale-a-tor_Card_Gold.png?format=original",
       "type": "unknown",
-      "url": "https://onceuponagalaxy.wiki.gg/images/1/11/Character_Scale-a-tor_Card_Bronze.png?format=original"
-    },
-    {
-      "type": "unknown",
-      "url": "https://onceuponagalaxy.wiki.gg/images/7/7a/Character_Scale-a-tor_Card_Silver.png?format=original"
-    },
-    {
-      "type": "unknown",
-      "url": "https://onceuponagalaxy.wiki.gg/images/2/2c/Character_Scale-a-tor_Card_Gold.png?format=original"
+      "original": "original/scale-a-tor_unknown_1.png",
+      "converted": "converted/scale-a-tor_unknown_1.webp"
     }
   ],
   "traits": [

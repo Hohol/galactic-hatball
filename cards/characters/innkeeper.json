@@ -4,16 +4,16 @@
   "rarity": "epic",
   "images": [
     {
+      "url": "https://onceuponagalaxy.wiki.gg/images/f/f3/Character_Innkeeper_Card_Bronze.png?8c2992&format=original",
       "type": "art",
-      "url": "https://onceuponagalaxy.wiki.gg/images/f/f3/Character_Innkeeper_Card_Bronze.png?8c2992&format=original"
+      "original": "original/innkeeper_art_0.png",
+      "converted": "converted/innkeeper_art_0.webp"
     },
     {
+      "url": "https://onceuponagalaxy.wiki.gg/images/1/15/Character_Innkeeper_Card_Gold.png?format=original",
       "type": "unknown",
-      "url": "https://onceuponagalaxy.wiki.gg/images/5/52/Character_Innkeeper_Card_Silver.png?format=original"
-    },
-    {
-      "type": "unknown",
-      "url": "https://onceuponagalaxy.wiki.gg/images/1/15/Character_Innkeeper_Card_Gold.png?format=original"
+      "original": "original/innkeeper_unknown_1.png",
+      "converted": "converted/innkeeper_unknown_1.webp"
     }
   ],
   "traits": [

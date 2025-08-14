@@ -5,8 +5,10 @@
   "rarity": "uncommon",
   "images": [
     {
+      "url": "https://onceuponagalaxy.wiki.gg/images/8/8e/Treasure_Leftover_Pieces_Card.png?5282b5&format=original",
       "type": "art",
-      "url": "https://onceuponagalaxy.wiki.gg/images/8/8e/Treasure_Leftover_Pieces_Card.png?5282b5&format=original"
+      "original": "original/leftover-pieces_art_0.png",
+      "converted": "converted/leftover-pieces_art_0.webp"
     }
   ]
 }

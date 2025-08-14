@@ -4,16 +4,16 @@
   "rarity": "epic",
   "images": [
     {
+      "url": "https://onceuponagalaxy.wiki.gg/images/7/7b/Character_Sir_Francis_Drake_Card_Bronze.png?c0eaaf&format=original",
       "type": "art",
-      "url": "https://onceuponagalaxy.wiki.gg/images/7/7b/Character_Sir_Francis_Drake_Card_Bronze.png?c0eaaf&format=original"
+      "original": "original/sir-francis-drake_art_0.png",
+      "converted": "converted/sir-francis-drake_art_0.webp"
     },
     {
+      "url": "https://onceuponagalaxy.wiki.gg/images/5/5f/Character_Sir_Francis_Drake_Card_Gold.png?format=original",
       "type": "unknown",
-      "url": "https://onceuponagalaxy.wiki.gg/images/1/16/Character_Sir_Francis_Drake_Card_Silver.png?format=original"
-    },
-    {
-      "type": "unknown",
-      "url": "https://onceuponagalaxy.wiki.gg/images/5/5f/Character_Sir_Francis_Drake_Card_Gold.png?format=original"
+      "original": "original/sir-francis-drake_unknown_1.png",
+      "converted": "converted/sir-francis-drake_unknown_1.webp"
     }
   ],
   "traits": [

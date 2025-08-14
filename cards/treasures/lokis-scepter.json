@@ -5,12 +5,10 @@
   "rarity": "epic",
   "images": [
     {
-      "type": "art",
-      "url": "https://onceuponagalaxy.wiki.gg/images/a/af/Treasure_Loki%27s_Scepter.png?a80e64&format=original"
-    },
-    {
+      "url": "https://onceuponagalaxy.wiki.gg/images/c/ca/Treasure_Loki%27s_Scepter_Card.png?format=original",
       "type": "card",
-      "url": "https://onceuponagalaxy.wiki.gg/images/c/ca/Treasure_Loki%27s_Scepter_Card.png?format=original"
+      "original": "original/lokis-scepter_card_0.png",
+      "converted": "converted/lokis-scepter_card_0.webp"
     }
   ]
 }

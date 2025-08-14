@@ -5,8 +5,10 @@
   "rarity": "epic",
   "images": [
     {
+      "url": "https://onceuponagalaxy.wiki.gg/images/5/5c/Spell_I%27ll_Huff_and_I%27ll_Puff_Card.png?29ff13&format=original",
       "type": "art",
-      "url": "https://onceuponagalaxy.wiki.gg/images/5/5c/Spell_I%27ll_Huff_and_I%27ll_Puff_Card.png?29ff13&format=original"
+      "original": "original/ill-huff-and-ill-puff_art_0.png",
+      "converted": "converted/ill-huff-and-ill-puff_art_0.webp"
     }
   ]
 }

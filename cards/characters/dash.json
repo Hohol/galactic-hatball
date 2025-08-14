@@ -4,16 +4,16 @@
   "rarity": "rare",
   "images": [
     {
+      "url": "https://onceuponagalaxy.wiki.gg/images/c/c0/Character_Dash_Card_Bronze.png?9ee2e2&format=original",
       "type": "art",
-      "url": "https://onceuponagalaxy.wiki.gg/images/c/c0/Character_Dash_Card_Bronze.png?9ee2e2&format=original"
+      "original": "original/dash_art_0.png",
+      "converted": "converted/dash_art_0.webp"
     },
     {
+      "url": "https://onceuponagalaxy.wiki.gg/images/5/51/Character_Dash_Card_Gold.png?format=original",
       "type": "unknown",
-      "url": "https://onceuponagalaxy.wiki.gg/images/7/7d/Character_Dash_Card_Silver.png?format=original"
-    },
-    {
-      "type": "unknown",
-      "url": "https://onceuponagalaxy.wiki.gg/images/5/51/Character_Dash_Card_Gold.png?format=original"
+      "original": "original/dash_unknown_1.png",
+      "converted": "converted/dash_unknown_1.webp"
     }
   ],
   "traits": [

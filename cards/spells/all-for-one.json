@@ -5,8 +5,10 @@
   "rarity": "rare",
   "images": [
     {
+      "url": "https://onceuponagalaxy.wiki.gg/images/a/af/Spell_All_for_One_Card.png?22661b&format=original",
       "type": "art",
-      "url": "https://onceuponagalaxy.wiki.gg/images/a/af/Spell_All_for_One_Card.png?22661b&format=original"
+      "original": "original/all-for-one_art_0.png",
+      "converted": "converted/all-for-one_art_0.webp"
     }
   ]
 }

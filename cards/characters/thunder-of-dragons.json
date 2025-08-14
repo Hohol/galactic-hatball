@@ -4,20 +4,16 @@
   "rarity": "epic",
   "images": [
     {
-      "type": "art",
-      "url": "https://onceuponagalaxy.wiki.gg/images/8/81/Character_Thunder_of_Dragons.png?d11cbb&format=original"
+      "url": "https://onceuponagalaxy.wiki.gg/images/d/dd/Character_Thunder_of_Dragons_Card_Bronze.png?format=original",
+      "type": "unknown",
+      "original": "original/thunder-of-dragons_unknown_0.png",
+      "converted": "converted/thunder-of-dragons_unknown_0.webp"
     },
     {
+      "url": "https://onceuponagalaxy.wiki.gg/images/b/bb/Character_Thunder_of_Dragons_Card_Gold.png?format=original",
       "type": "unknown",
-      "url": "https://onceuponagalaxy.wiki.gg/images/d/dd/Character_Thunder_of_Dragons_Card_Bronze.png?format=original"
-    },
-    {
-      "type": "unknown",
-      "url": "https://onceuponagalaxy.wiki.gg/images/f/f7/Character_Thunder_of_Dragons_Card_Silver.png?format=original"
-    },
-    {
-      "type": "unknown",
-      "url": "https://onceuponagalaxy.wiki.gg/images/b/bb/Character_Thunder_of_Dragons_Card_Gold.png?format=original"
+      "original": "original/thunder-of-dragons_unknown_1.png",
+      "converted": "converted/thunder-of-dragons_unknown_1.webp"
     }
   ],
   "traits": [

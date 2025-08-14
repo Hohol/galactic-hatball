@@ -4,20 +4,16 @@
   "rarity": "epic",
   "images": [
     {
-      "type": "art",
-      "url": "https://onceuponagalaxy.wiki.gg/images/3/30/Character_Wicked_Witch.png?a224ab&format=original"
+      "url": "https://onceuponagalaxy.wiki.gg/images/9/99/Character_Wicked_Witch_Card_Bronze.png?format=original",
+      "type": "unknown",
+      "original": "original/wicked-witch_unknown_0.png",
+      "converted": "converted/wicked-witch_unknown_0.webp"
     },
     {
+      "url": "https://onceuponagalaxy.wiki.gg/images/1/1b/Character_Wicked_Witch_Card_Gold.png?format=original",
       "type": "unknown",
-      "url": "https://onceuponagalaxy.wiki.gg/images/9/99/Character_Wicked_Witch_Card_Bronze.png?format=original"
-    },
-    {
-      "type": "unknown",
-      "url": "https://onceuponagalaxy.wiki.gg/images/b/b3/Character_Wicked_Witch_Card_Silver.png?format=original"
-    },
-    {
-      "type": "unknown",
-      "url": "https://onceuponagalaxy.wiki.gg/images/1/1b/Character_Wicked_Witch_Card_Gold.png?format=original"
+      "original": "original/wicked-witch_unknown_1.png",
+      "converted": "converted/wicked-witch_unknown_1.webp"
     }
   ],
   "traits": [

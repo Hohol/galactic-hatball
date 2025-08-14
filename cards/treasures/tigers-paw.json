@@ -5,12 +5,10 @@
   "rarity": "uncommon",
   "images": [
     {
-      "type": "art",
-      "url": "https://onceuponagalaxy.wiki.gg/images/3/31/Treasure_Tiger%27s_Paw.png?d9deb8&format=original"
-    },
-    {
+      "url": "https://onceuponagalaxy.wiki.gg/images/3/37/Treasure_Tiger%27s_Paw_Card.png?format=original",
       "type": "card",
-      "url": "https://onceuponagalaxy.wiki.gg/images/3/37/Treasure_Tiger%27s_Paw_Card.png?format=original"
+      "original": "original/tigers-paw_card_0.png",
+      "converted": "converted/tigers-paw_card_0.webp"
     }
   ]
 }

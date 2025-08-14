@@ -5,12 +5,10 @@
   "rarity": "rare",
   "images": [
     {
-      "type": "art",
-      "url": "https://onceuponagalaxy.wiki.gg/images/7/7f/Treasure_Timeline_Duplicator.png?84943a&format=original"
-    },
-    {
+      "url": "https://onceuponagalaxy.wiki.gg/images/f/f6/Treasure_Timeline_Duplicator_Card.png?format=original",
       "type": "card",
-      "url": "https://onceuponagalaxy.wiki.gg/images/f/f6/Treasure_Timeline_Duplicator_Card.png?format=original"
+      "original": "original/timeline-duplicator_card_0.png",
+      "converted": "converted/timeline-duplicator_card_0.webp"
     }
   ]
 }

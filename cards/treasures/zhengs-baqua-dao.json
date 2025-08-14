@@ -5,8 +5,10 @@
   "rarity": "legendary",
   "images": [
     {
+      "url": "https://onceuponagalaxy.wiki.gg/images/f/fe/Treasure_Zheng%27s_Baqua_Dao_Card.png?6979e4&format=original",
       "type": "art",
-      "url": "https://onceuponagalaxy.wiki.gg/images/f/fe/Treasure_Zheng%27s_Baqua_Dao_Card.png?6979e4&format=original"
+      "original": "original/zhengs-baqua-dao_art_0.png",
+      "converted": "converted/zhengs-baqua-dao_art_0.webp"
     }
   ]
 }

@@ -5,12 +5,10 @@
   "rarity": "uncommon",
   "images": [
     {
-      "type": "art",
-      "url": "https://onceuponagalaxy.wiki.gg/images/c/cf/Treasure_Wand_of_Strength.png?b42eeb&format=original"
-    },
-    {
+      "url": "https://onceuponagalaxy.wiki.gg/images/1/1f/Treasure_Wand_of_Strength_Card.png?format=original",
       "type": "card",
-      "url": "https://onceuponagalaxy.wiki.gg/images/1/1f/Treasure_Wand_of_Strength_Card.png?format=original"
+      "original": "original/wand-of-strength_card_0.png",
+      "converted": "converted/wand-of-strength_card_0.webp"
     }
   ]
 }

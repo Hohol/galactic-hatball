@@ -5,8 +5,10 @@
   "rarity": "rare",
   "images": [
     {
+      "url": "https://onceuponagalaxy.wiki.gg/images/5/5b/Spell_Greed_Card.png?e029ca&format=original",
       "type": "art",
-      "url": "https://onceuponagalaxy.wiki.gg/images/5/5b/Spell_Greed_Card.png?e029ca&format=original"
+      "original": "original/greed_art_0.png",
+      "converted": "converted/greed_art_0.webp"
     }
   ]
 }

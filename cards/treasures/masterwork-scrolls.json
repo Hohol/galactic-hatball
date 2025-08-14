@@ -5,8 +5,10 @@
   "rarity": "common",
   "images": [
     {
+      "url": "https://onceuponagalaxy.wiki.gg/images/8/8c/Treasure_Masterwork_Scrolls_Card.png?7a2781&format=original",
       "type": "art",
-      "url": "https://onceuponagalaxy.wiki.gg/images/8/8c/Treasure_Masterwork_Scrolls_Card.png?7a2781&format=original"
+      "original": "original/masterwork-scrolls_art_0.png",
+      "converted": "converted/masterwork-scrolls_art_0.webp"
     }
   ]
 }

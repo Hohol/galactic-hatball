@@ -5,8 +5,10 @@
   "rarity": "rare",
   "images": [
     {
+      "url": "https://onceuponagalaxy.wiki.gg/images/5/5c/Treasure_Luckier_Chest_Card.png?2d7ed5&format=original",
       "type": "art",
-      "url": "https://onceuponagalaxy.wiki.gg/images/5/5c/Treasure_Luckier_Chest_Card.png?2d7ed5&format=original"
+      "original": "original/luckier-chest_art_0.png",
+      "converted": "converted/luckier-chest_art_0.webp"
     }
   ]
 }

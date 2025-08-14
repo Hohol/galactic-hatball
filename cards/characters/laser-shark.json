@@ -4,16 +4,16 @@
   "rarity": "common",
   "images": [
     {
+      "url": "https://onceuponagalaxy.wiki.gg/images/9/9e/Character_Laser_Shark_Card_Bronze.png?67c1df&format=original",
       "type": "art",
-      "url": "https://onceuponagalaxy.wiki.gg/images/9/9e/Character_Laser_Shark_Card_Bronze.png?67c1df&format=original"
+      "original": "original/laser-shark_art_0.png",
+      "converted": "converted/laser-shark_art_0.webp"
     },
     {
+      "url": "https://onceuponagalaxy.wiki.gg/images/7/75/Character_Laser_Shark_Card_Gold.png?format=original",
       "type": "unknown",
-      "url": "https://onceuponagalaxy.wiki.gg/images/8/8b/Character_Laser_Shark_Card_Silver.png?format=original"
-    },
-    {
-      "type": "unknown",
-      "url": "https://onceuponagalaxy.wiki.gg/images/7/75/Character_Laser_Shark_Card_Gold.png?format=original"
+      "original": "original/laser-shark_unknown_1.png",
+      "converted": "converted/laser-shark_unknown_1.webp"
     }
   ],
   "traits": [

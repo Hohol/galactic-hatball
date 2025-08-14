@@ -5,12 +5,10 @@
   "rarity": "legendary",
   "images": [
     {
-      "type": "art",
-      "url": "https://onceuponagalaxy.wiki.gg/images/d/dd/Treasure_Jack%27s_Magic_Beans.png?50002a&format=original"
-    },
-    {
+      "url": "https://onceuponagalaxy.wiki.gg/images/5/59/Treasure_Jack%27s_Magic_Beans_Card.png?format=original",
       "type": "card",
-      "url": "https://onceuponagalaxy.wiki.gg/images/5/59/Treasure_Jack%27s_Magic_Beans_Card.png?format=original"
+      "original": "original/jacks-magic-beans_card_0.png",
+      "converted": "converted/jacks-magic-beans_card_0.webp"
     }
   ]
 }

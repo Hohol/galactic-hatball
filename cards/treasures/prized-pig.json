@@ -5,8 +5,10 @@
   "rarity": "uncommon",
   "images": [
     {
+      "url": "https://onceuponagalaxy.wiki.gg/images/2/2c/Treasure_Prized_Pig_Card.png?30e810&format=original",
       "type": "art",
-      "url": "https://onceuponagalaxy.wiki.gg/images/2/2c/Treasure_Prized_Pig_Card.png?30e810&format=original"
+      "original": "original/prized-pig_art_0.png",
+      "converted": "converted/prized-pig_art_0.webp"
     }
   ]
 }

@@ -5,8 +5,10 @@
   "rarity": "rare",
   "images": [
     {
+      "url": "https://onceuponagalaxy.wiki.gg/images/7/77/Treasure_Dragon_Dice_Card.png?39df24&format=original",
       "type": "art",
-      "url": "https://onceuponagalaxy.wiki.gg/images/7/77/Treasure_Dragon_Dice_Card.png?39df24&format=original"
+      "original": "original/dragon-dice_art_0.png",
+      "converted": "converted/dragon-dice_art_0.webp"
     }
   ]
 }

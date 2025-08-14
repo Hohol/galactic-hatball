@@ -5,8 +5,10 @@
   "rarity": "rare",
   "images": [
     {
+      "url": "https://onceuponagalaxy.wiki.gg/images/1/1e/Treasure_Spellbook_Punch_Card_Card.png?b1b1cc&format=original",
       "type": "art",
-      "url": "https://onceuponagalaxy.wiki.gg/images/1/1e/Treasure_Spellbook_Punch_Card_Card.png?b1b1cc&format=original"
+      "original": "original/spellbook-punch-card_art_0.png",
+      "converted": "converted/spellbook-punch-card_art_0.webp"
     }
   ]
 }

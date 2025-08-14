@@ -4,20 +4,16 @@
   "rarity": "legendary",
   "images": [
     {
-      "type": "art",
-      "url": "https://onceuponagalaxy.wiki.gg/images/8/85/Character_Elm_Minster.png?812bfc&format=original"
+      "url": "https://onceuponagalaxy.wiki.gg/images/b/bd/Character_Elm_Minster_Card_Bronze.png?format=original",
+      "type": "unknown",
+      "original": "original/elm-minster_unknown_0.png",
+      "converted": "converted/elm-minster_unknown_0.webp"
     },
     {
+      "url": "https://onceuponagalaxy.wiki.gg/images/8/83/Character_Elm_Minster_Card_Gold.png?format=original",
       "type": "unknown",
-      "url": "https://onceuponagalaxy.wiki.gg/images/b/bd/Character_Elm_Minster_Card_Bronze.png?format=original"
-    },
-    {
-      "type": "unknown",
-      "url": "https://onceuponagalaxy.wiki.gg/images/e/e0/Character_Elm_Minster_Card_Silver.png?format=original"
-    },
-    {
-      "type": "unknown",
-      "url": "https://onceuponagalaxy.wiki.gg/images/8/83/Character_Elm_Minster_Card_Gold.png?format=original"
+      "original": "original/elm-minster_unknown_1.png",
+      "converted": "converted/elm-minster_unknown_1.webp"
     }
   ],
   "traits": [

@@ -5,12 +5,10 @@
   "rarity": "common",
   "images": [
     {
-      "type": "art",
-      "url": "https://onceuponagalaxy.wiki.gg/images/5/5c/Treasure_Gem_Mint_Beanie_Baby.png?83e873&format=original"
-    },
-    {
+      "url": "https://onceuponagalaxy.wiki.gg/images/2/27/Treasure_Gem_Mint_Beanie_Baby_Card.png?format=original",
       "type": "card",
-      "url": "https://onceuponagalaxy.wiki.gg/images/2/27/Treasure_Gem_Mint_Beanie_Baby_Card.png?format=original"
+      "original": "original/gem-mint-beanie-baby_card_0.png",
+      "converted": "converted/gem-mint-beanie-baby_card_0.webp"
     }
   ]
 }

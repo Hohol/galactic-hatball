@@ -5,12 +5,10 @@
   "rarity": "uncommon",
   "images": [
     {
-      "type": "art",
-      "url": "https://onceuponagalaxy.wiki.gg/images/6/69/Treasure_Dracula%27s_Fangs.png?9a376a&format=original"
-    },
-    {
+      "url": "https://onceuponagalaxy.wiki.gg/images/f/fc/Treasure_Dracula%27s_Fangs_Card.png?format=original",
       "type": "card",
-      "url": "https://onceuponagalaxy.wiki.gg/images/f/fc/Treasure_Dracula%27s_Fangs_Card.png?format=original"
+      "original": "original/draculas-fangs_card_0.png",
+      "converted": "converted/draculas-fangs_card_0.webp"
     }
   ]
 }

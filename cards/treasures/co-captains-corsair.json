@@ -5,12 +5,10 @@
   "rarity": "rare",
   "images": [
     {
-      "type": "art",
-      "url": "https://onceuponagalaxy.wiki.gg/images/3/3c/Treasure_Co-Captain%27s_Corsair.png?a0667c&format=original"
-    },
-    {
+      "url": "https://onceuponagalaxy.wiki.gg/images/c/c4/Treasure_Co-Captain%27s_Corsair_Card.png?format=original",
       "type": "card",
-      "url": "https://onceuponagalaxy.wiki.gg/images/c/c4/Treasure_Co-Captain%27s_Corsair_Card.png?format=original"
+      "original": "original/co-captains-corsair_card_0.png",
+      "converted": "converted/co-captains-corsair_card_0.webp"
     }
   ]
 }

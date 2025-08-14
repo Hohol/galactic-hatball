@@ -5,8 +5,10 @@
   "rarity": "legendary",
   "images": [
     {
+      "url": "https://onceuponagalaxy.wiki.gg/images/7/7b/Treasure_Gingerbread_Oven_Card.png?9c8eac&format=original",
       "type": "art",
-      "url": "https://onceuponagalaxy.wiki.gg/images/7/7b/Treasure_Gingerbread_Oven_Card.png?9c8eac&format=original"
+      "original": "original/gingerbread-oven_art_0.png",
+      "converted": "converted/gingerbread-oven_art_0.webp"
     }
   ]
 }

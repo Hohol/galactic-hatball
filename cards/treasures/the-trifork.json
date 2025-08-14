@@ -5,8 +5,10 @@
   "rarity": "secret rare",
   "images": [
     {
+      "url": "https://onceuponagalaxy.wiki.gg/images/3/3e/Treasure_The_Trifork_Card.png?a83230&format=original",
       "type": "art",
-      "url": "https://onceuponagalaxy.wiki.gg/images/3/3e/Treasure_The_Trifork_Card.png?a83230&format=original"
+      "original": "original/the-trifork_art_0.png",
+      "converted": "converted/the-trifork_art_0.webp"
     }
   ]
 }

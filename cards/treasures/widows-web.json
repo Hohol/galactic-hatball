@@ -5,8 +5,10 @@
   "rarity": "rare",
   "images": [
     {
+      "url": "https://onceuponagalaxy.wiki.gg/images/4/47/Treasure_Widow%27s_Web_Card.png?7d2151&format=original",
       "type": "art",
-      "url": "https://onceuponagalaxy.wiki.gg/images/4/47/Treasure_Widow%27s_Web_Card.png?7d2151&format=original"
+      "original": "original/widows-web_art_0.png",
+      "converted": "converted/widows-web_art_0.webp"
     }
   ]
 }

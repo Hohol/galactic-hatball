@@ -5,12 +5,10 @@
   "rarity": "common",
   "images": [
     {
-      "type": "art",
-      "url": "https://onceuponagalaxy.wiki.gg/images/2/2b/Treasure_Lesser_Mimic.png?953065&format=original"
-    },
-    {
+      "url": "https://onceuponagalaxy.wiki.gg/images/0/03/Treasure_Lesser_Mimic_Card.png?format=original",
       "type": "card",
-      "url": "https://onceuponagalaxy.wiki.gg/images/0/03/Treasure_Lesser_Mimic_Card.png?format=original"
+      "original": "original/lesser-mimic_card_0.png",
+      "converted": "converted/lesser-mimic_card_0.webp"
     }
   ]
 }

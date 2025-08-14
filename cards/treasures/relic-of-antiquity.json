@@ -5,12 +5,10 @@
   "rarity": "common",
   "images": [
     {
-      "type": "art",
-      "url": "https://onceuponagalaxy.wiki.gg/images/6/6e/Treasure_Relic_of_Antiquity.png?c35370&format=original"
-    },
-    {
+      "url": "https://onceuponagalaxy.wiki.gg/images/2/2c/Treasure_Relic_of_Antiquity_Card.png?format=original",
       "type": "card",
-      "url": "https://onceuponagalaxy.wiki.gg/images/2/2c/Treasure_Relic_of_Antiquity_Card.png?format=original"
+      "original": "original/relic-of-antiquity_card_0.png",
+      "converted": "converted/relic-of-antiquity_card_0.webp"
     }
   ]
 }

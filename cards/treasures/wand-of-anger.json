@@ -5,12 +5,10 @@
   "rarity": "common",
   "images": [
     {
-      "type": "art",
-      "url": "https://onceuponagalaxy.wiki.gg/images/e/ec/Treasure_Wand_of_Anger.png?accaaf&format=original"
-    },
-    {
+      "url": "https://onceuponagalaxy.wiki.gg/images/f/f4/Treasure_Wand_of_Anger_Card.png?format=original",
       "type": "card",
-      "url": "https://onceuponagalaxy.wiki.gg/images/f/f4/Treasure_Wand_of_Anger_Card.png?format=original"
+      "original": "original/wand-of-anger_card_0.png",
+      "converted": "converted/wand-of-anger_card_0.webp"
     }
   ]
 }

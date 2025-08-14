@@ -5,12 +5,10 @@
   "rarity": "uncommon",
   "images": [
     {
-      "type": "art",
-      "url": "https://onceuponagalaxy.wiki.gg/images/9/9c/Treasure_Pipin%27_Hot_Pie.png?8403e1&format=original"
-    },
-    {
+      "url": "https://onceuponagalaxy.wiki.gg/images/b/b3/Treasure_Pipin%27_Hot_Pie_Card.png?format=original",
       "type": "card",
-      "url": "https://onceuponagalaxy.wiki.gg/images/b/b3/Treasure_Pipin%27_Hot_Pie_Card.png?format=original"
+      "original": "original/pipin-hot-pie_card_0.png",
+      "converted": "converted/pipin-hot-pie_card_0.webp"
     }
   ]
 }

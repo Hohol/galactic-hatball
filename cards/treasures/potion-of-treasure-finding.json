@@ -5,12 +5,10 @@
   "rarity": "common",
   "images": [
     {
-      "type": "art",
-      "url": "https://onceuponagalaxy.wiki.gg/images/7/73/Treasure_Potion_of_Treasure_Finding.png?d1aade&format=original"
-    },
-    {
+      "url": "https://onceuponagalaxy.wiki.gg/images/4/4f/Treasure_Potion_of_Treasure_Finding_Card.png?format=original",
       "type": "card",
-      "url": "https://onceuponagalaxy.wiki.gg/images/4/4f/Treasure_Potion_of_Treasure_Finding_Card.png?format=original"
+      "original": "original/potion-of-treasure-finding_card_0.png",
+      "converted": "converted/potion-of-treasure-finding_card_0.webp"
     }
   ]
 }

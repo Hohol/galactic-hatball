@@ -4,16 +4,16 @@
   "rarity": "epic",
   "images": [
     {
+      "url": "https://onceuponagalaxy.wiki.gg/images/3/3c/Character_Stinky_Card_Bronze.png?d39c68&format=original",
       "type": "art",
-      "url": "https://onceuponagalaxy.wiki.gg/images/3/3c/Character_Stinky_Card_Bronze.png?d39c68&format=original"
+      "original": "original/stinky_art_0.png",
+      "converted": "converted/stinky_art_0.webp"
     },
     {
+      "url": "https://onceuponagalaxy.wiki.gg/images/a/a9/Character_Stinky_Card_Gold.png?format=original",
       "type": "unknown",
-      "url": "https://onceuponagalaxy.wiki.gg/images/e/e2/Character_Stinky_Card_Silver.png?format=original"
-    },
-    {
-      "type": "unknown",
-      "url": "https://onceuponagalaxy.wiki.gg/images/a/a9/Character_Stinky_Card_Gold.png?format=original"
+      "original": "original/stinky_unknown_1.png",
+      "converted": "converted/stinky_unknown_1.webp"
     }
   ],
   "traits": [

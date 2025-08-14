@@ -5,12 +5,10 @@
   "rarity": "legendary",
   "images": [
     {
-      "type": "art",
-      "url": "https://onceuponagalaxy.wiki.gg/images/f/f7/Treasure_Hand_of_Midas.png?c44927&format=original"
-    },
-    {
+      "url": "https://onceuponagalaxy.wiki.gg/images/c/c0/Treasure_Hand_of_Midas_Card.png?format=original",
       "type": "card",
-      "url": "https://onceuponagalaxy.wiki.gg/images/c/c0/Treasure_Hand_of_Midas_Card.png?format=original"
+      "original": "original/hand-of-midas_card_0.png",
+      "converted": "converted/hand-of-midas_card_0.webp"
     }
   ]
 }

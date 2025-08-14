@@ -5,8 +5,10 @@
   "rarity": "rare",
   "images": [
     {
+      "url": "https://onceuponagalaxy.wiki.gg/images/1/18/Treasure_Merlin%27s_Tome_Card.png?109645&format=original",
       "type": "art",
-      "url": "https://onceuponagalaxy.wiki.gg/images/1/18/Treasure_Merlin%27s_Tome_Card.png?109645&format=original"
+      "original": "original/merlins-tome_art_0.png",
+      "converted": "converted/merlins-tome_art_0.webp"
     }
   ]
 }

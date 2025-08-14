@@ -5,12 +5,10 @@
   "rarity": "common",
   "images": [
     {
-      "type": "art",
-      "url": "https://onceuponagalaxy.wiki.gg/images/6/6a/Treasure_Robin_Hood%27s_Bow.png?44afcc&format=original"
-    },
-    {
+      "url": "https://onceuponagalaxy.wiki.gg/images/8/8c/Treasure_Robin_Hood%27s_Bow_Card.png?format=original",
       "type": "card",
-      "url": "https://onceuponagalaxy.wiki.gg/images/8/8c/Treasure_Robin_Hood%27s_Bow_Card.png?format=original"
+      "original": "original/robin-hoods-bow_card_0.png",
+      "converted": "converted/robin-hoods-bow_card_0.webp"
     }
   ]
 }

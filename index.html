@@ -946,24 +946,15 @@
             // Update the image
             const imageContainer = card.querySelector('.card-images');
             if (imageContainer && cardData.images && cardData.images.length > 0) {
-                const goldenImages = cardData.images.filter(img => img.url.includes('Gold'));
-                const bronzeImages = cardData.images.filter(img => img.url.includes('Bronze'));
-                
-                let imageToShow;
-                if (version === 'golden' && goldenImages.length > 0) {
-                    imageToShow = goldenImages[0];
-                } else if (bronzeImages.length > 0) {
-                    imageToShow = bronzeImages[0];
-                } else {
-                    // Fallback to any image
-                    imageToShow = cardData.images[0];
-                }
+                // For now, just use the first image since our local image structure handles prioritization
+                // TODO: Implement proper Bronze/Gold switching logic
+                const imageToShow = cardData.images[0];
                 
                 if (imageToShow) {
                     const img = imageContainer.querySelector('img');
                     if (img) {
-                        img.dataset.src = imageToShow.url;
-                        img.src = imageToShow.url;
+                        img.dataset.src = getBestImageSource(imageToShow);
+                        img.src = getBestImageSource(imageToShow);
                     }
                 }
             }
@@ -992,6 +983,13 @@
 
 
         
+        // Find the best image source (converted > original > remote URL)
+        function getBestImageSource(image) {
+            if (image.converted) return `images/${image.converted}`;
+            if (image.original) return `images/${image.original}`;
+            return image.url;
+        }
+
         // Equalize header heights in each row to align images
         function equalizeHeaderHeights() {
             const cardContainers = document.querySelectorAll('.type-cards-grid');
@@ -1261,72 +1259,26 @@
                                     </div>
                                     ${card.images && card.images.length > 0 ? `
                                         <div class="card-images">
-                                                                                         ${(() => {
-                                                 // Priority: Golden images when card version is golden, otherwise Bronze images > type-based priority > others
-                                                 const goldenImages = card.images.filter(img => img.url.includes('Gold'));
-                                                 const bronzeImages = card.images.filter(img => img.url.includes('Bronze'));
-                                                 const cardVersion = 'bronze'; // Will be updated when we implement the toggle function
-                                                 
-                                                 if (cardVersion === 'golden' && goldenImages.length > 0) {
-                                                     // If this card is set to Golden and has Golden images, use them
-                                                     const firstImage = goldenImages[0];
-                                                     return `
-                                                         <div class="card-image active">
-                                                             <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'/%3E" 
-                                                                  data-src="${firstImage.url}" 
-                                                                  alt="Card image" 
-                                                                  title="Card image"
-                                                                  loading="lazy"
-                                                                  class="lazy-image">
-                                                         </div>
-                                                     `;
-                                                 } else if (bronzeImages.length > 0) {
-                                                     // If this card is set to Bronze or doesn't have Golden, use Bronze images
-                                                     const firstImage = bronzeImages[0];
-                                                     return `
-                                                         <div class="card-image active">
-                                                             <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'/%3E" 
-                                                                  data-src="${firstImage.url}" 
-                                                                  alt="Card image" 
-                                                                  title="Card image"
-                                                                  loading="lazy"
-                                                                  class="lazy-image">
-                                                         </div>
-                                                     `;
-                                                 } else {
-                                                     // Fallback to type-based priority: card > unknown > art > others
-                                                     const cardImages = card.images.filter(img => img.type === 'card');
-                                                     const unknownImages = card.images.filter(img => img.type === 'unknown');
-                                                     const artImages = card.images.filter(img => img.type === 'art');
-                                                     
-                                                     let imagesToShow = cardImages;
-                                                     if (imagesToShow.length === 0) {
-                                                         imagesToShow = unknownImages;
-                                                     }
-                                                     if (imagesToShow.length === 0) {
-                                                         imagesToShow = artImages;
-                                                     }
-                                                     if (imagesToShow.length === 0) {
-                                                         imagesToShow = card.images; // fallback to any image
-                                                     }
-                                                     
-                                                     const firstImage = imagesToShow[0];
-                                                     
-                                                     if (firstImage) {
-                                                         return `
-                                                             <div class="card-image active">
-                                                                 <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'/%3E" 
-                                                                      data-src="${firstImage.url}" 
-                                                                      alt="Card image" 
-                                                                      title="Card image"
-                                                                      loading="lazy"
-                                                                      class="lazy-image">
-                                                             </div>
-                                                         `;
-                                                     }
-                                                     return '';
-                                                 }
-                                             })()}
+                                            ${(() => {
+                                                // Priority: Local converted images > local original images > remote URLs
+                                                // For characters, prefer the first available image (Bronze/Gold logic handled by version toggle)
+                                                const firstImage = card.images[0];
+                                                
+                                                if (firstImage) {
+                                                    const bestSource = getBestImageSource(firstImage);
+                                                    return `
+                                                        <div class="card-image active">
+                                                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'/%3E" 
+                                                                 data-src="${bestSource}" 
+                                                                 alt="Card image" 
+                                                                 title="Card image"
+                                                                 loading="lazy"
+                                                                 class="lazy-image">
+                                                        </div>
+                                                    `;
+                                                }
+                                                return '';
+                                            })()}
                                              
                                              <!-- Navigation buttons - commented out for now but kept for future use
                                              ${card.images.length > 1 ? `

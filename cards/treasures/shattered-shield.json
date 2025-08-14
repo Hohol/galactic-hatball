@@ -5,12 +5,10 @@
   "rarity": "rare",
   "images": [
     {
-      "type": "art",
-      "url": "https://onceuponagalaxy.wiki.gg/images/1/1e/Treasure_Shattered_Shield.png?aef9e1&format=original"
-    },
-    {
+      "url": "https://onceuponagalaxy.wiki.gg/images/c/c2/Treasure_Shattered_Shield_Card.png?format=original",
       "type": "card",
-      "url": "https://onceuponagalaxy.wiki.gg/images/c/c2/Treasure_Shattered_Shield_Card.png?format=original"
+      "original": "original/shattered-shield_card_0.png",
+      "converted": "converted/shattered-shield_card_0.webp"
     }
   ]
 }

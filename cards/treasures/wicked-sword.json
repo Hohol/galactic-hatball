@@ -5,12 +5,10 @@
   "rarity": "uncommon",
   "images": [
     {
-      "type": "art",
-      "url": "https://onceuponagalaxy.wiki.gg/images/5/55/Treasure_Wicked_Sword.png?ff0fc5&format=original"
-    },
-    {
+      "url": "https://onceuponagalaxy.wiki.gg/images/5/52/Treasure_Wicked_Sword_Card.png?format=original",
       "type": "card",
-      "url": "https://onceuponagalaxy.wiki.gg/images/5/52/Treasure_Wicked_Sword_Card.png?format=original"
+      "original": "original/wicked-sword_card_0.png",
+      "converted": "converted/wicked-sword_card_0.webp"
     }
   ]
 }

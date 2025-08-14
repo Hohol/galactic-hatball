@@ -4,16 +4,16 @@
   "rarity": "secret rare",
   "images": [
     {
+      "url": "https://onceuponagalaxy.wiki.gg/images/a/a7/Character_Shadow_Card_Bronze.png?743b2e&format=original",
       "type": "art",
-      "url": "https://onceuponagalaxy.wiki.gg/images/a/a7/Character_Shadow_Card_Bronze.png?743b2e&format=original"
+      "original": "original/shadow_art_0.png",
+      "converted": "converted/shadow_art_0.webp"
     },
     {
+      "url": "https://onceuponagalaxy.wiki.gg/images/f/fb/Character_Shadow_Card_Gold.png?format=original",
       "type": "unknown",
-      "url": "https://onceuponagalaxy.wiki.gg/images/8/83/Character_Shadow_Card_Silver.png?format=original"
-    },
-    {
-      "type": "unknown",
-      "url": "https://onceuponagalaxy.wiki.gg/images/f/fb/Character_Shadow_Card_Gold.png?format=original"
+      "original": "original/shadow_unknown_1.png",
+      "converted": "converted/shadow_unknown_1.webp"
     }
   ],
   "traits": [

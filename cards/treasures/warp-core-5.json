@@ -5,8 +5,10 @@
   "rarity": "legendary",
   "images": [
     {
+      "url": "https://onceuponagalaxy.wiki.gg/images/d/d4/Treasure_Warp_Core_%2B5_Card.png?3c3850&format=original",
       "type": "art",
-      "url": "https://onceuponagalaxy.wiki.gg/images/d/d4/Treasure_Warp_Core_%2B5_Card.png?3c3850&format=original"
+      "original": "original/warp-core-+5_art_0.png",
+      "converted": "converted/warp-core-+5_art_0.webp"
     }
   ]
 }

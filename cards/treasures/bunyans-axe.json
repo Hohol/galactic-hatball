@@ -5,12 +5,10 @@
   "rarity": "legendary",
   "images": [
     {
-      "type": "art",
-      "url": "https://onceuponagalaxy.wiki.gg/images/b/bb/Treasure_Bunyan%27s_Axe.png?ffcb04&format=original"
-    },
-    {
+      "url": "https://onceuponagalaxy.wiki.gg/images/b/bf/Treasure_Bunyan%27s_Axe_Card.png?format=original",
       "type": "card",
-      "url": "https://onceuponagalaxy.wiki.gg/images/b/bf/Treasure_Bunyan%27s_Axe_Card.png?format=original"
+      "original": "original/bunyans-axe_card_0.png",
+      "converted": "converted/bunyans-axe_card_0.webp"
     }
   ]
 }

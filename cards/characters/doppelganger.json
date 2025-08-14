@@ -4,16 +4,16 @@
   "rarity": "secret rare",
   "images": [
     {
+      "url": "https://onceuponagalaxy.wiki.gg/images/5/5a/Character_Doppelganger_Card_Bronze.png?2fa53a&format=original",
       "type": "art",
-      "url": "https://onceuponagalaxy.wiki.gg/images/5/5a/Character_Doppelganger_Card_Bronze.png?2fa53a&format=original"
+      "original": "original/doppelganger_art_0.png",
+      "converted": "converted/doppelganger_art_0.webp"
     },
     {
+      "url": "https://onceuponagalaxy.wiki.gg/images/c/cc/Character_Doppelganger_Card_Gold.png?format=original",
       "type": "unknown",
-      "url": "https://onceuponagalaxy.wiki.gg/images/1/1f/Character_Doppelganger_Card_Silver.png?format=original"
-    },
-    {
-      "type": "unknown",
-      "url": "https://onceuponagalaxy.wiki.gg/images/c/cc/Character_Doppelganger_Card_Gold.png?format=original"
+      "original": "original/doppelganger_unknown_1.png",
+      "converted": "converted/doppelganger_unknown_1.webp"
     }
   ],
   "traits": [

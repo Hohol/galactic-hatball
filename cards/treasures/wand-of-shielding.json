@@ -5,12 +5,10 @@
   "rarity": "common",
   "images": [
     {
-      "type": "art",
-      "url": "https://onceuponagalaxy.wiki.gg/images/a/a2/Treasure_Wand_of_Shielding.png?540b0a&format=original"
-    },
-    {
+      "url": "https://onceuponagalaxy.wiki.gg/images/c/cb/Treasure_Wand_of_Shielding_Card.png?format=original",
       "type": "card",
-      "url": "https://onceuponagalaxy.wiki.gg/images/c/cb/Treasure_Wand_of_Shielding_Card.png?format=original"
+      "original": "original/wand-of-shielding_card_0.png",
+      "converted": "converted/wand-of-shielding_card_0.webp"
     }
   ]
 }

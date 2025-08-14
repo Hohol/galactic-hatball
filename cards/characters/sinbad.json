@@ -4,16 +4,16 @@
   "rarity": "rare",
   "images": [
     {
+      "url": "https://onceuponagalaxy.wiki.gg/images/1/19/Character_Sinbad_Card_Bronze.png?e36e05&format=original",
       "type": "art",
-      "url": "https://onceuponagalaxy.wiki.gg/images/1/19/Character_Sinbad_Card_Bronze.png?e36e05&format=original"
+      "original": "original/sinbad_art_0.png",
+      "converted": "converted/sinbad_art_0.webp"
     },
     {
+      "url": "https://onceuponagalaxy.wiki.gg/images/d/db/Character_Sinbad_Card_Gold.png?format=original",
       "type": "unknown",
-      "url": "https://onceuponagalaxy.wiki.gg/images/c/c0/Character_Sinbad_Card_Silver.png?format=original"
-    },
-    {
-      "type": "unknown",
-      "url": "https://onceuponagalaxy.wiki.gg/images/d/db/Character_Sinbad_Card_Gold.png?format=original"
+      "original": "original/sinbad_unknown_1.png",
+      "converted": "converted/sinbad_unknown_1.webp"
     }
   ],
   "traits": [

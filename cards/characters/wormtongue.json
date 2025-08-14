@@ -4,20 +4,16 @@
   "rarity": "common",
   "images": [
     {
-      "type": "art",
-      "url": "https://onceuponagalaxy.wiki.gg/images/7/78/Character_Wormtongue.png?28af1c&format=original"
+      "url": "https://onceuponagalaxy.wiki.gg/images/7/72/Character_Wormtongue_Card_Bronze.png?format=original",
+      "type": "unknown",
+      "original": "original/wormtongue_unknown_0.png",
+      "converted": "converted/wormtongue_unknown_0.webp"
     },
     {
+      "url": "https://onceuponagalaxy.wiki.gg/images/1/1f/Character_Wormtongue_Card_Gold.png?format=original",
       "type": "unknown",
-      "url": "https://onceuponagalaxy.wiki.gg/images/7/72/Character_Wormtongue_Card_Bronze.png?format=original"
-    },
-    {
-      "type": "unknown",
-      "url": "https://onceuponagalaxy.wiki.gg/images/9/9a/Character_Wormtongue_Card_Silver.png?format=original"
-    },
-    {
-      "type": "unknown",
-      "url": "https://onceuponagalaxy.wiki.gg/images/1/1f/Character_Wormtongue_Card_Gold.png?format=original"
+      "original": "original/wormtongue_unknown_1.png",
+      "converted": "converted/wormtongue_unknown_1.webp"
     }
   ],
   "traits": [

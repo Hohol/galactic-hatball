@@ -4,20 +4,16 @@
   "rarity": "legendary",
   "images": [
     {
-      "type": "art",
-      "url": "https://onceuponagalaxy.wiki.gg/images/9/9b/Character_Frankenstein%27s_Doctor.png?191519&format=original"
+      "url": "https://onceuponagalaxy.wiki.gg/images/8/86/Character_Frankenstein%27s_Doctor_Card_Bronze.png?format=original",
+      "type": "unknown",
+      "original": "original/frankensteins-doctor_unknown_0.png",
+      "converted": "converted/frankensteins-doctor_unknown_0.webp"
     },
     {
+      "url": "https://onceuponagalaxy.wiki.gg/images/8/85/Character_Frankenstein%27s_Doctor_Card_Gold.png?format=original",
       "type": "unknown",
-      "url": "https://onceuponagalaxy.wiki.gg/images/8/86/Character_Frankenstein%27s_Doctor_Card_Bronze.png?format=original"
-    },
-    {
-      "type": "unknown",
-      "url": "https://onceuponagalaxy.wiki.gg/images/1/14/Character_Frankenstein%27s_Doctor_Card_Silver.png?format=original"
-    },
-    {
-      "type": "unknown",
-      "url": "https://onceuponagalaxy.wiki.gg/images/8/85/Character_Frankenstein%27s_Doctor_Card_Gold.png?format=original"
+      "original": "original/frankensteins-doctor_unknown_1.png",
+      "converted": "converted/frankensteins-doctor_unknown_1.webp"
     }
   ],
   "traits": [

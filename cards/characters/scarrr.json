@@ -4,16 +4,16 @@
   "rarity": "epic",
   "images": [
     {
+      "url": "https://onceuponagalaxy.wiki.gg/images/b/b1/Character_Scarrr_Card_Bronze.png?ee14b7&format=original",
       "type": "art",
-      "url": "https://onceuponagalaxy.wiki.gg/images/b/b1/Character_Scarrr_Card_Bronze.png?ee14b7&format=original"
+      "original": "original/scarrr_art_0.png",
+      "converted": "converted/scarrr_art_0.webp"
     },
     {
+      "url": "https://onceuponagalaxy.wiki.gg/images/d/db/Character_Scarrr_Card_Gold.png?format=original",
       "type": "unknown",
-      "url": "https://onceuponagalaxy.wiki.gg/images/1/1f/Character_Scarrr_Card_Silver.png?format=original"
-    },
-    {
-      "type": "unknown",
-      "url": "https://onceuponagalaxy.wiki.gg/images/d/db/Character_Scarrr_Card_Gold.png?format=original"
+      "original": "original/scarrr_unknown_1.png",
+      "converted": "converted/scarrr_unknown_1.webp"
     }
   ],
   "traits": [

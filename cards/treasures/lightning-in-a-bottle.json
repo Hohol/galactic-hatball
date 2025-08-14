@@ -5,8 +5,10 @@
   "rarity": "uncommon",
   "images": [
     {
+      "url": "https://onceuponagalaxy.wiki.gg/images/b/b9/Treasure_Lightning_in_a_Bottle_Card.png?a28c35&format=original",
       "type": "art",
-      "url": "https://onceuponagalaxy.wiki.gg/images/b/b9/Treasure_Lightning_in_a_Bottle_Card.png?a28c35&format=original"
+      "original": "original/lightning-in-a-bottle_art_0.png",
+      "converted": "converted/lightning-in-a-bottle_art_0.webp"
     }
   ]
 }

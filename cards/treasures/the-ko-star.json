@@ -5,8 +5,10 @@
   "rarity": "legendary",
   "images": [
     {
+      "url": "https://onceuponagalaxy.wiki.gg/images/2/20/Treasure_The_KO_Star_Card.png?19c883&format=original",
       "type": "art",
-      "url": "https://onceuponagalaxy.wiki.gg/images/2/20/Treasure_The_KO_Star_Card.png?19c883&format=original"
+      "original": "original/the-ko-star_art_0.png",
+      "converted": "converted/the-ko-star_art_0.webp"
     }
   ]
 }

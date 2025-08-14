@@ -5,8 +5,10 @@
   "rarity": "rare",
   "images": [
     {
+      "url": "https://onceuponagalaxy.wiki.gg/images/4/40/Treasure_Energizer_Card.png?92e283&format=original",
       "type": "art",
-      "url": "https://onceuponagalaxy.wiki.gg/images/4/40/Treasure_Energizer_Card.png?92e283&format=original"
+      "original": "original/energizer_art_0.png",
+      "converted": "converted/energizer_art_0.webp"
     }
   ]
 }

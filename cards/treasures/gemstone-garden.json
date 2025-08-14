@@ -5,8 +5,10 @@
   "rarity": "uncommon",
   "images": [
     {
+      "url": "https://onceuponagalaxy.wiki.gg/images/2/21/Treasure_Gemstone_Garden_Card.png?ccc7a9&format=original",
       "type": "art",
-      "url": "https://onceuponagalaxy.wiki.gg/images/2/21/Treasure_Gemstone_Garden_Card.png?ccc7a9&format=original"
+      "original": "original/gemstone-garden_art_0.png",
+      "converted": "converted/gemstone-garden_art_0.webp"
     }
   ]
 }

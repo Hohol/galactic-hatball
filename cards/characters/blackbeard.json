@@ -4,20 +4,16 @@
   "rarity": "legendary",
   "images": [
     {
-      "type": "art",
-      "url": "https://onceuponagalaxy.wiki.gg/images/4/4e/Character_Blackbeard.png?cdc7d5&format=original"
+      "url": "https://onceuponagalaxy.wiki.gg/images/a/a3/Character_Blackbeard_Card_Bronze.png?format=original",
+      "type": "unknown",
+      "original": "original/blackbeard_unknown_0.png",
+      "converted": "converted/blackbeard_unknown_0.webp"
     },
     {
+      "url": "https://onceuponagalaxy.wiki.gg/images/b/b1/Character_Blackbeard_Card_Gold.png?format=original",
       "type": "unknown",
-      "url": "https://onceuponagalaxy.wiki.gg/images/a/a3/Character_Blackbeard_Card_Bronze.png?format=original"
-    },
-    {
-      "type": "unknown",
-      "url": "https://onceuponagalaxy.wiki.gg/images/e/e6/Character_Blackbeard_Card_Silver.png?format=original"
-    },
-    {
-      "type": "unknown",
-      "url": "https://onceuponagalaxy.wiki.gg/images/b/b1/Character_Blackbeard_Card_Gold.png?format=original"
+      "original": "original/blackbeard_unknown_1.png",
+      "converted": "converted/blackbeard_unknown_1.webp"
     }
   ],
   "traits": [

@@ -5,8 +5,10 @@
   "rarity": "rare",
   "images": [
     {
+      "url": "https://onceuponagalaxy.wiki.gg/images/5/55/Treasure_Gravity_Well_Card.png?7850dc&format=original",
       "type": "art",
-      "url": "https://onceuponagalaxy.wiki.gg/images/5/55/Treasure_Gravity_Well_Card.png?7850dc&format=original"
+      "original": "original/gravity-well_art_0.png",
+      "converted": "converted/gravity-well_art_0.webp"
     }
   ]
 }

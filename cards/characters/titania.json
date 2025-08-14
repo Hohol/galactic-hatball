@@ -4,20 +4,16 @@
   "rarity": "legendary",
   "images": [
     {
-      "type": "art",
-      "url": "https://onceuponagalaxy.wiki.gg/images/c/ce/Character_Titania.png?b446e7&format=original"
+      "url": "https://onceuponagalaxy.wiki.gg/images/1/15/Character_Titania_Card_Bronze.png?format=original",
+      "type": "unknown",
+      "original": "original/titania_unknown_0.png",
+      "converted": "converted/titania_unknown_0.webp"
     },
     {
+      "url": "https://onceuponagalaxy.wiki.gg/images/c/cc/Character_Titania_Card_Gold.png?format=original",
       "type": "unknown",
-      "url": "https://onceuponagalaxy.wiki.gg/images/1/15/Character_Titania_Card_Bronze.png?format=original"
-    },
-    {
-      "type": "unknown",
-      "url": "https://onceuponagalaxy.wiki.gg/images/f/fb/Character_Titania_Card_Silver.png?format=original"
-    },
-    {
-      "type": "unknown",
-      "url": "https://onceuponagalaxy.wiki.gg/images/c/cc/Character_Titania_Card_Gold.png?format=original"
+      "original": "original/titania_unknown_1.png",
+      "converted": "converted/titania_unknown_1.webp"
     }
   ],
   "traits": [

@@ -5,8 +5,10 @@
   "rarity": "common",
   "images": [
     {
+      "url": "https://onceuponagalaxy.wiki.gg/images/1/18/Treasure_Gold_Ring_Card.png?f095ad&format=original",
       "type": "art",
-      "url": "https://onceuponagalaxy.wiki.gg/images/1/18/Treasure_Gold_Ring_Card.png?f095ad&format=original"
+      "original": "original/gold-ring_art_0.png",
+      "converted": "converted/gold-ring_art_0.webp"
     }
   ]
 }

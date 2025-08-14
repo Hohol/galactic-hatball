@@ -4,20 +4,16 @@
   "rarity": "uncommon",
   "images": [
     {
-      "type": "art",
-      "url": "https://onceuponagalaxy.wiki.gg/images/b/b5/Character_Space_Ranger_Woody.png?d15c02&format=original"
+      "url": "https://onceuponagalaxy.wiki.gg/images/3/39/Character_Space_Ranger_Woody_Card_Bronze.png?format=original",
+      "type": "unknown",
+      "original": "original/space-ranger-woody_unknown_0.png",
+      "converted": "converted/space-ranger-woody_unknown_0.webp"
     },
     {
+      "url": "https://onceuponagalaxy.wiki.gg/images/2/21/Character_Space_Ranger_Woody_Card_Gold.png?format=original",
       "type": "unknown",
-      "url": "https://onceuponagalaxy.wiki.gg/images/3/39/Character_Space_Ranger_Woody_Card_Bronze.png?format=original"
-    },
-    {
-      "type": "unknown",
-      "url": "https://onceuponagalaxy.wiki.gg/images/4/43/Character_Space_Ranger_Woody_Card_Silver.png?format=original"
-    },
-    {
-      "type": "unknown",
-      "url": "https://onceuponagalaxy.wiki.gg/images/2/21/Character_Space_Ranger_Woody_Card_Gold.png?format=original"
+      "original": "original/space-ranger-woody_unknown_1.png",
+      "converted": "converted/space-ranger-woody_unknown_1.webp"
     }
   ],
   "traits": [

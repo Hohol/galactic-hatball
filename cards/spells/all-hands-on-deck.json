@@ -5,8 +5,10 @@
   "rarity": "rare",
   "images": [
     {
+      "url": "https://onceuponagalaxy.wiki.gg/images/3/3c/Spell_All_Hands_on_Deck_Card.png?486370&format=original",
       "type": "art",
-      "url": "https://onceuponagalaxy.wiki.gg/images/3/3c/Spell_All_Hands_on_Deck_Card.png?486370&format=original"
+      "original": "original/all-hands-on-deck_art_0.png",
+      "converted": "converted/all-hands-on-deck_art_0.webp"
     }
   ]
 }

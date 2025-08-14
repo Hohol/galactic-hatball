@@ -5,12 +5,10 @@
   "rarity": "epic",
   "images": [
     {
-      "type": "art",
-      "url": "https://onceuponagalaxy.wiki.gg/images/b/b9/Spell_Through_the_Looking_Glass.png?424e41&format=original"
-    },
-    {
+      "url": "https://onceuponagalaxy.wiki.gg/images/c/c7/Spell_Through_the_Looking_Glass_Card.png?format=original",
       "type": "card",
-      "url": "https://onceuponagalaxy.wiki.gg/images/c/c7/Spell_Through_the_Looking_Glass_Card.png?format=original"
+      "original": "original/through-the-looking-glass_card_0.png",
+      "converted": "converted/through-the-looking-glass_card_0.webp"
     }
   ]
 }

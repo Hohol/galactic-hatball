@@ -5,8 +5,10 @@
   "rarity": "uncommon",
   "images": [
     {
+      "url": "https://onceuponagalaxy.wiki.gg/images/0/0d/Treasure_Ring_of_the_Magus_Card.png?15ad49&format=original",
       "type": "art",
-      "url": "https://onceuponagalaxy.wiki.gg/images/0/0d/Treasure_Ring_of_the_Magus_Card.png?15ad49&format=original"
+      "original": "original/ring-of-the-magus_art_0.png",
+      "converted": "converted/ring-of-the-magus_art_0.webp"
     }
   ]
 }

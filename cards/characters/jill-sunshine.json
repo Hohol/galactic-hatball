@@ -4,20 +4,16 @@
   "rarity": "uncommon",
   "images": [
     {
-      "type": "art",
-      "url": "https://onceuponagalaxy.wiki.gg/images/9/95/Character_Jill_Sunshine.png?e771b3&format=original"
+      "url": "https://onceuponagalaxy.wiki.gg/images/b/b7/Character_Jill_Sunshine_Card_Bronze.png?format=original",
+      "type": "unknown",
+      "original": "original/jill-sunshine_unknown_0.png",
+      "converted": "converted/jill-sunshine_unknown_0.webp"
     },
     {
+      "url": "https://onceuponagalaxy.wiki.gg/images/3/38/Character_Jill_Sunshine_Card_Gold.png?format=original",
       "type": "unknown",
-      "url": "https://onceuponagalaxy.wiki.gg/images/b/b7/Character_Jill_Sunshine_Card_Bronze.png?format=original"
-    },
-    {
-      "type": "unknown",
-      "url": "https://onceuponagalaxy.wiki.gg/images/1/13/Character_Jill_Sunshine_Card_Silver.png?format=original"
-    },
-    {
-      "type": "unknown",
-      "url": "https://onceuponagalaxy.wiki.gg/images/3/38/Character_Jill_Sunshine_Card_Gold.png?format=original"
+      "original": "original/jill-sunshine_unknown_1.png",
+      "converted": "converted/jill-sunshine_unknown_1.webp"
     }
   ],
   "traits": [

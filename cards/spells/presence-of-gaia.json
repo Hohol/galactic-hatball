@@ -5,8 +5,10 @@
   "rarity": "uncommon",
   "images": [
     {
+      "url": "https://onceuponagalaxy.wiki.gg/images/3/3c/Spell_Presence_of_Gaia_Card.png?ca3088&format=original",
       "type": "art",
-      "url": "https://onceuponagalaxy.wiki.gg/images/3/3c/Spell_Presence_of_Gaia_Card.png?ca3088&format=original"
+      "original": "original/presence-of-gaia_art_0.png",
+      "converted": "converted/presence-of-gaia_art_0.webp"
     }
   ]
 }

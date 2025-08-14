@@ -5,8 +5,10 @@
   "rarity": "legendary",
   "images": [
     {
+      "url": "https://onceuponagalaxy.wiki.gg/images/d/d3/Spell_Stroke_of_Midnight_Card.png?de5690&format=original",
       "type": "art",
-      "url": "https://onceuponagalaxy.wiki.gg/images/d/d3/Spell_Stroke_of_Midnight_Card.png?de5690&format=original"
+      "original": "original/stroke-of-midnight_art_0.png",
+      "converted": "converted/stroke-of-midnight_art_0.webp"
     }
   ]
 }

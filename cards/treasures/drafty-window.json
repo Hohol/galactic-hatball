@@ -5,12 +5,10 @@
   "rarity": "uncommon",
   "images": [
     {
-      "type": "art",
-      "url": "https://onceuponagalaxy.wiki.gg/images/f/fa/Treasure_Drafty_Window.png?3ad170&format=original"
-    },
-    {
+      "url": "https://onceuponagalaxy.wiki.gg/images/f/f0/Treasure_Drafty_Window_Card.png?format=original",
       "type": "card",
-      "url": "https://onceuponagalaxy.wiki.gg/images/f/f0/Treasure_Drafty_Window_Card.png?format=original"
+      "original": "original/drafty-window_card_0.png",
+      "converted": "converted/drafty-window_card_0.webp"
     }
   ]
 }

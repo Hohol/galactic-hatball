@@ -4,16 +4,16 @@
   "rarity": "rare",
   "images": [
     {
+      "url": "https://onceuponagalaxy.wiki.gg/images/b/b0/Character_The_Giving_Tree_Card_Bronze.png?a8672f&format=original",
       "type": "art",
-      "url": "https://onceuponagalaxy.wiki.gg/images/b/b0/Character_The_Giving_Tree_Card_Bronze.png?a8672f&format=original"
+      "original": "original/the-giving-tree_art_0.png",
+      "converted": "converted/the-giving-tree_art_0.webp"
     },
     {
+      "url": "https://onceuponagalaxy.wiki.gg/images/1/1f/Character_The_Giving_Tree_Card_Gold.png?format=original",
       "type": "unknown",
-      "url": "https://onceuponagalaxy.wiki.gg/images/1/1f/Character_The_Giving_Tree_Card_Silver.png?format=original"
-    },
-    {
-      "type": "unknown",
-      "url": "https://onceuponagalaxy.wiki.gg/images/1/1f/Character_The_Giving_Tree_Card_Gold.png?format=original"
+      "original": "original/the-giving-tree_unknown_1.png",
+      "converted": "converted/the-giving-tree_unknown_1.webp"
     }
   ],
   "traits": [

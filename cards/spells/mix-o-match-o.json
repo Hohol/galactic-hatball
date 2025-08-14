@@ -5,8 +5,10 @@
   "rarity": "legendary",
   "images": [
     {
+      "url": "https://onceuponagalaxy.wiki.gg/images/d/d2/Spell_Mix-O_Match-O_Card.png?b79204&format=original",
       "type": "art",
-      "url": "https://onceuponagalaxy.wiki.gg/images/d/d2/Spell_Mix-O_Match-O_Card.png?b79204&format=original"
+      "original": "original/mix-o-match-o_art_0.png",
+      "converted": "converted/mix-o-match-o_art_0.webp"
     }
   ]
 }

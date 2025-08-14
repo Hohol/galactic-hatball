@@ -4,20 +4,16 @@
   "rarity": "uncommon",
   "images": [
     {
-      "type": "art",
-      "url": "https://onceuponagalaxy.wiki.gg/images/a/ab/Character_Catamari.png?d1cfee&format=original"
+      "url": "https://onceuponagalaxy.wiki.gg/images/6/66/Character_Catamari_Card_Bronze.png?format=original",
+      "type": "unknown",
+      "original": "original/catamari_unknown_0.png",
+      "converted": "converted/catamari_unknown_0.webp"
     },
     {
+      "url": "https://onceuponagalaxy.wiki.gg/images/1/1f/Character_Catamari_Card_Gold.png?format=original",
       "type": "unknown",
-      "url": "https://onceuponagalaxy.wiki.gg/images/6/66/Character_Catamari_Card_Bronze.png?format=original"
-    },
-    {
-      "type": "unknown",
-      "url": "https://onceuponagalaxy.wiki.gg/images/a/a1/Character_Catamari_Card_Silver.png?format=original"
-    },
-    {
-      "type": "unknown",
-      "url": "https://onceuponagalaxy.wiki.gg/images/1/1f/Character_Catamari_Card_Gold.png?format=original"
+      "original": "original/catamari_unknown_1.png",
+      "converted": "converted/catamari_unknown_1.webp"
     }
   ],
   "traits": [

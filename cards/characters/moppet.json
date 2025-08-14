@@ -4,20 +4,16 @@
   "rarity": "rare",
   "images": [
     {
-      "type": "art",
-      "url": "https://onceuponagalaxy.wiki.gg/images/5/5d/Character_Moppet.png?7c971f&format=original"
+      "url": "https://onceuponagalaxy.wiki.gg/images/c/cf/Character_Moppet_Card_Bronze.png?format=original",
+      "type": "unknown",
+      "original": "original/moppet_unknown_0.png",
+      "converted": "converted/moppet_unknown_0.webp"
     },
     {
+      "url": "https://onceuponagalaxy.wiki.gg/images/e/e3/Character_Moppet_Card_Gold.png?format=original",
       "type": "unknown",
-      "url": "https://onceuponagalaxy.wiki.gg/images/c/cf/Character_Moppet_Card_Bronze.png?format=original"
-    },
-    {
-      "type": "unknown",
-      "url": "https://onceuponagalaxy.wiki.gg/images/e/ef/Character_Moppet_Card_Silver.png?format=original"
-    },
-    {
-      "type": "unknown",
-      "url": "https://onceuponagalaxy.wiki.gg/images/e/e3/Character_Moppet_Card_Gold.png?format=original"
+      "original": "original/moppet_unknown_1.png",
+      "converted": "converted/moppet_unknown_1.webp"
     }
   ],
   "traits": [

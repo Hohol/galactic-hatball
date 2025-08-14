@@ -4,16 +4,16 @@
   "rarity": "epic",
   "images": [
     {
+      "url": "https://onceuponagalaxy.wiki.gg/images/9/99/Character_Pisces_Card_Bronze.png?428507&format=original",
       "type": "art",
-      "url": "https://onceuponagalaxy.wiki.gg/images/9/99/Character_Pisces_Card_Bronze.png?428507&format=original"
+      "original": "original/pisces_art_0.png",
+      "converted": "converted/pisces_art_0.webp"
     },
     {
+      "url": "https://onceuponagalaxy.wiki.gg/images/4/41/Character_Pisces_Card_Gold.png?format=original",
       "type": "unknown",
-      "url": "https://onceuponagalaxy.wiki.gg/images/2/21/Character_Pisces_Card_Silver.png?format=original"
-    },
-    {
-      "type": "unknown",
-      "url": "https://onceuponagalaxy.wiki.gg/images/4/41/Character_Pisces_Card_Gold.png?format=original"
+      "original": "original/pisces_unknown_1.png",
+      "converted": "converted/pisces_unknown_1.webp"
     }
   ],
   "traits": [

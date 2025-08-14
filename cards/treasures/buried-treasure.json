@@ -5,12 +5,10 @@
   "rarity": "rare",
   "images": [
     {
-      "type": "art",
-      "url": "https://onceuponagalaxy.wiki.gg/images/5/5c/Treasure_Buried_Treasure.png?517c0f&format=original"
-    },
-    {
+      "url": "https://onceuponagalaxy.wiki.gg/images/6/60/Treasure_Buried_Treasure_Card.png?format=original",
       "type": "card",
-      "url": "https://onceuponagalaxy.wiki.gg/images/6/60/Treasure_Buried_Treasure_Card.png?format=original"
+      "original": "original/buried-treasure_card_0.png",
+      "converted": "converted/buried-treasure_card_0.webp"
     }
   ]
 }

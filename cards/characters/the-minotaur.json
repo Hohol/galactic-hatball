@@ -4,20 +4,16 @@
   "rarity": "uncommon",
   "images": [
     {
-      "type": "art",
-      "url": "https://onceuponagalaxy.wiki.gg/images/d/d4/Character_The_Minotaur.png?7b1de8&format=original"
+      "url": "https://onceuponagalaxy.wiki.gg/images/6/6d/Character_The_Minotaur_Card_Bronze.png?format=original",
+      "type": "unknown",
+      "original": "original/the-minotaur_unknown_0.png",
+      "converted": "converted/the-minotaur_unknown_0.webp"
     },
     {
+      "url": "https://onceuponagalaxy.wiki.gg/images/3/3d/Character_The_Minotaur_Card_Gold.png?format=original",
       "type": "unknown",
-      "url": "https://onceuponagalaxy.wiki.gg/images/6/6d/Character_The_Minotaur_Card_Bronze.png?format=original"
-    },
-    {
-      "type": "unknown",
-      "url": "https://onceuponagalaxy.wiki.gg/images/d/d8/Character_The_Minotaur_Card_Silver.png?format=original"
-    },
-    {
-      "type": "unknown",
-      "url": "https://onceuponagalaxy.wiki.gg/images/3/3d/Character_The_Minotaur_Card_Gold.png?format=original"
+      "original": "original/the-minotaur_unknown_1.png",
+      "converted": "converted/the-minotaur_unknown_1.webp"
     }
   ],
   "traits": [

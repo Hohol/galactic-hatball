@@ -5,12 +5,10 @@
   "rarity": "rare",
   "images": [
     {
-      "type": "art",
-      "url": "https://onceuponagalaxy.wiki.gg/images/d/da/Treasure_Golden_Fountain.png?f1a433&format=original"
-    },
-    {
+      "url": "https://onceuponagalaxy.wiki.gg/images/2/2f/Treasure_Golden_Fountain_Card.png?format=original",
       "type": "card",
-      "url": "https://onceuponagalaxy.wiki.gg/images/2/2f/Treasure_Golden_Fountain_Card.png?format=original"
+      "original": "original/golden-fountain_card_0.png",
+      "converted": "converted/golden-fountain_card_0.webp"
     }
   ]
 }

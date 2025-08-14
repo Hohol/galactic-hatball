@@ -5,12 +5,10 @@
   "rarity": "rare",
   "images": [
     {
-      "type": "art",
-      "url": "https://onceuponagalaxy.wiki.gg/images/d/d2/Spell_Grow_Dough.png?cf28f3&format=original"
-    },
-    {
+      "url": "https://onceuponagalaxy.wiki.gg/images/a/a2/Spell_Grow_Dough_Card.png?format=original",
       "type": "card",
-      "url": "https://onceuponagalaxy.wiki.gg/images/a/a2/Spell_Grow_Dough_Card.png?format=original"
+      "original": "original/grow-dough_card_0.png",
+      "converted": "converted/grow-dough_card_0.webp"
     }
   ]
 }

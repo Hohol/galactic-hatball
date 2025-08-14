@@ -5,8 +5,10 @@
   "rarity": "epic",
   "images": [
     {
+      "url": "https://onceuponagalaxy.wiki.gg/images/5/5c/Treasure_Earth_Stone_Card.png?4b59b2&format=original",
       "type": "art",
-      "url": "https://onceuponagalaxy.wiki.gg/images/5/5c/Treasure_Earth_Stone_Card.png?4b59b2&format=original"
+      "original": "original/earth-stone_art_0.png",
+      "converted": "converted/earth-stone_art_0.webp"
     }
   ]
 }

@@ -5,12 +5,10 @@
   "rarity": "common",
   "images": [
     {
-      "type": "art",
-      "url": "https://onceuponagalaxy.wiki.gg/images/c/c2/Treasure_Magic_Acorn.png?fe6396&format=original"
-    },
-    {
+      "url": "https://onceuponagalaxy.wiki.gg/images/c/cf/Treasure_Magic_Acorn_Card.png?format=original",
       "type": "card",
-      "url": "https://onceuponagalaxy.wiki.gg/images/c/cf/Treasure_Magic_Acorn_Card.png?format=original"
+      "original": "original/magic-acorn_card_0.png",
+      "converted": "converted/magic-acorn_card_0.webp"
     }
   ]
 }

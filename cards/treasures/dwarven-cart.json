@@ -5,12 +5,10 @@
   "rarity": "uncommon",
   "images": [
     {
-      "type": "art",
-      "url": "https://onceuponagalaxy.wiki.gg/images/5/5b/Treasure_Dwarven_Cart.png?1c38d8&format=original"
-    },
-    {
+      "url": "https://onceuponagalaxy.wiki.gg/images/2/25/Treasure_Dwarven_Cart_Card.png?format=original",
       "type": "card",
-      "url": "https://onceuponagalaxy.wiki.gg/images/2/25/Treasure_Dwarven_Cart_Card.png?format=original"
+      "original": "original/dwarven-cart_card_0.png",
+      "converted": "converted/dwarven-cart_card_0.webp"
     }
   ]
 }

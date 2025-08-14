@@ -4,20 +4,16 @@
   "rarity": "legendary",
   "images": [
     {
-      "type": "art",
-      "url": "https://onceuponagalaxy.wiki.gg/images/5/56/Character_Captain_Hook.png?f1e91f&format=original"
+      "url": "https://onceuponagalaxy.wiki.gg/images/f/f9/Character_Captain_Hook_Card_Bronze.png?format=original",
+      "type": "unknown",
+      "original": "original/captain-hook_unknown_0.png",
+      "converted": "converted/captain-hook_unknown_0.webp"
     },
     {
+      "url": "https://onceuponagalaxy.wiki.gg/images/d/d5/Character_Captain_Hook_Card_Gold.png?format=original",
       "type": "unknown",
-      "url": "https://onceuponagalaxy.wiki.gg/images/f/f9/Character_Captain_Hook_Card_Bronze.png?format=original"
-    },
-    {
-      "type": "unknown",
-      "url": "https://onceuponagalaxy.wiki.gg/images/c/cf/Character_Captain_Hook_Card_Silver.png?format=original"
-    },
-    {
-      "type": "unknown",
-      "url": "https://onceuponagalaxy.wiki.gg/images/d/d5/Character_Captain_Hook_Card_Gold.png?format=original"
+      "original": "original/captain-hook_unknown_1.png",
+      "converted": "converted/captain-hook_unknown_1.webp"
     }
   ],
   "traits": [
