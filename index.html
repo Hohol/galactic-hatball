@@ -718,10 +718,16 @@
             return rarity.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
         }
 
-        // Wrap buff numbers (+X) with spans for styling
-        function wrapBuffNumbers(text) {
+        // Format ability text: convert "Type -- Description" patterns and style buff numbers
+        function formatAbilityText(text) {
             if (!text) return text;
-            return text.replace(/(\+\s*\d+)/g, '<span class="buff-number">$1</span>');
+            
+            // First, format "Type -- Description" patterns
+            // Use word boundaries and be more specific about what we capture
+            let formattedText = text.replace(/(\w+)\s*--\s*([^"]*?)(?=\s*"|$)/g, '<strong>$1:</strong> $2');
+            
+            // Then wrap buff numbers (+X) with spans
+            return formattedText.replace(/(\+\s*\d+)/g, '<span class="buff-number">$1</span>');
         }
         
         // Populate trait filter checkboxes
@@ -1009,18 +1015,18 @@
                                             <div class="card-abilities">
                                                 ${card.abilities.map(ability => {
                                                     if (ability.type && ability.description) {
-                                                        return `<div class="ability-line"><strong>${ability.type}:</strong> ${wrapBuffNumbers(ability.description)}</div>`;
+                                                        return `<div class="ability-line"><strong>${ability.type}:</strong> ${formatAbilityText(ability.description)}</div>`;
                                                     } else if (ability.type) {
                                                         return `<div class="ability-line"><strong>${ability.type}</strong></div>`;
                                                     } else if (ability.description) {
-                                                        return `<div class="ability-line">${wrapBuffNumbers(ability.description)}</div>`;
+                                                        return `<div class="ability-line">${formatAbilityText(ability.description)}</div>`;
                                                     } else {
                                                         return '';
                                                     }
                                                 }).join('')}
                                             </div>
                                         ` : card.description ? `
-                                            <p class="card-description">${wrapBuffNumbers(card.description)}</p>
+                                            <p class="card-description">${formatAbilityText(card.description)}</p>
                                         ` : ''}
                                         ${card.type === 'characters' && card.traits ? `
                                             <div class="card-traits">

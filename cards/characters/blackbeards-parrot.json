@@ -24,8 +24,8 @@
   "abilities": [
     {
       "type": null,
-      "description": "Your Pirates have \"Hunt -- Give my slot +3/+3.\"\"",
-      "gold_description": "Your Pirates have \"Hunt -- Give my slot +6/+6.\"\""
+      "description": "Your Pirates have \"Hunt -- Give my slot +3/+3.\"",
+      "gold_description": "Your Pirates have \"Hunt -- Give my slot +6/+6.\""
     }
   ],
   "attack": 8,
