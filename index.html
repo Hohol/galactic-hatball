@@ -289,6 +289,15 @@
             position: relative;
         }
 
+        /* Deck type styling */
+        .card.collectible .card-image img {
+            border: 3px solid rgba(192, 192, 192, 0.8);
+        }
+
+        .card.shared .card-image img {
+            border: 1px solid rgba(255, 215, 0, 0.2);
+        }
+
         .card:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 25px rgba(255, 215, 0, 0.2);
@@ -1250,7 +1259,7 @@
                         </div>
                         <div class="type-cards-grid">
                             ${typeCards.map(card => `
-                                <div class="card" data-card-id="${card.name.toLowerCase().replace(/[^a-z0-9]/g, '-')}" data-version="bronze">
+                                <div class="card${card.deck_type ? ` ${card.deck_type.toLowerCase()}` : ''}" data-card-id="${card.name.toLowerCase().replace(/[^a-z0-9]/g, '-')}" data-version="bronze">
                                     <div class="card-header">
                                         <h3 class="card-name">
                                             ${card.rarity ? `<img src="${rarityIcons[card.rarity.toLowerCase()]}" alt="${card.rarity}" class="rarity-icon">` : ''}${card.name}
