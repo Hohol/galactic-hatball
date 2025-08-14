@@ -79,7 +79,7 @@ class ImageScraper:
             img_type = img_data.get('type', 'unknown')
             
             # For characters, only process Bronze and Gold images
-            if 'Bronze' in url or 'Gold' in url:
+            if 'Bronze.png' in url or 'Gold.png' in url:
                 # Generate filename
                 safe_name = card_name.lower().replace(' ', '-').replace("'", '').replace('"', '')
                 filename = f"{safe_name}_{img_type}_{len(processed_images)}.png"
