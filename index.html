@@ -510,6 +510,18 @@
 
         /* Optimize layout for mobile portrait mode to simulate landscape */
         @media screen and (orientation: portrait) and (max-width: 768px) {
+            body {
+                padding: 0 !important;
+            }
+            
+            .container {
+                padding: 0 !important;
+            }
+            
+            .search-section {
+                padding: 15px !important;
+                margin-bottom: 20px !important;
+            }
             .card {
                 width: calc(100% - 12px) !important;
                 margin-bottom: 15px;
