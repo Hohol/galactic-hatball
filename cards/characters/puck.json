@@ -4,10 +4,18 @@
   "rarity": "common",
   "images": [
     {
+      "url": "https://onceuponagalaxy.wiki.gg/images/0/04/Character_Puck.png?da53fa&format=original",
+      "type": "art"
+    },
+    {
       "url": "https://onceuponagalaxy.wiki.gg/images/5/52/Character_Puck_Card_Bronze.png?format=original",
       "type": "unknown",
       "original": "original/puck_unknown_0.png",
       "converted": "converted/puck_unknown_0.webp"
+    },
+    {
+      "url": "https://onceuponagalaxy.wiki.gg/images/0/04/Character_Puck_Card_Silver.png?format=original",
+      "type": "unknown"
     },
     {
       "url": "https://onceuponagalaxy.wiki.gg/images/f/fa/Character_Puck_Card_Gold.png?format=original",

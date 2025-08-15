@@ -394,8 +394,8 @@ class CardScraper:
                             original_url += '?format=original'
                     
                     images.append({
-                        'type': 'art',
-                        'url': original_url
+                        'url': original_url,
+                        'type': 'art'
                     })
                 else:
                     # Already an original image, add format=original if needed
@@ -405,8 +405,8 @@ class CardScraper:
                         url += '?format=original'
                     
                     images.append({
-                        'type': 'art',
-                        'url': url
+                        'url': url,
+                        'type': 'art'
                     })
         
         # Method 2: Look for images in druid-infobox (most specific)
@@ -475,8 +475,8 @@ class CardScraper:
                         
                         if not is_duplicate:
                             images.append({
-                                'type': img_type,
-                                'url': original_url
+                                'url': original_url,
+                                'type': img_type
                             })
         
         # Remove duplicates based on URL (final cleanup)
@@ -491,29 +491,82 @@ class CardScraper:
         
         return unique_images
     
-    def save_cards_to_json(self, cards, category_name):
-        """Save scraped cards to individual JSON files"""
+    def merge_image_data(self, new_images, old_images):
+        """Merge new image data with old local image paths using URL as key"""
+        if not old_images:
+            return new_images
+        
+        # Create a mapping of old images by URL
+        old_image_map = {}
+        for old_img in old_images:
+            if old_img.get('url'):
+                old_image_map[old_img['url']] = old_img
+        
+        # Merge new images with old local paths, preserving original field order
+        merged_images = []
+        for new_img in new_images:
+            if new_img.get('url') and new_img['url'] in old_image_map:
+                # Use the old image structure to preserve field order
+                old_img = old_image_map[new_img['url']]
+                merged_img = old_img.copy()
+                # Update only the fields that should change, preserving original order
+                if 'type' in new_img:
+                    merged_img['type'] = new_img['type']
+                if 'url' in new_img:
+                    merged_img['url'] = new_img['url']
+            else:
+                # For new images, create with consistent field order matching original files
+                merged_img = {
+                    'url': new_img.get('url', ''),
+                    'type': new_img.get('type', 'unknown')
+                }
+            merged_images.append(merged_img)
+        
+        return merged_images
+
+    def save_card_with_image_preservation(self, card, category_name, is_batch=False):
+        """Save a single card to JSON file while preserving local image paths"""
         # Use absolute path to ensure files are saved to the correct location
         import os
         script_dir = os.path.dirname(os.path.abspath(__file__))
-        project_root = os.path.dirname(script_dir)
-        output_dir = f"cards/{category_name.lower()}"
+        project_root = os.path.dirname(os.path.dirname(script_dir))  # Go up one more level to project root
+        output_dir = f"cards/{category_name.lower() if is_batch else category_name}"
         absolute_output_dir = os.path.join(project_root, output_dir)
         
         if not os.path.exists(absolute_output_dir):
             os.makedirs(absolute_output_dir)
         
+        if card and card.get('name'):
+            # Create filename from card name
+            filename = card['name'].lower().replace(' ', '-').replace(':', '').replace('(', '').replace(')', '')
+            filename = re.sub(r'[^a-z0-9\-]', '', filename)
+            filename = os.path.join(absolute_output_dir, f"{filename}.json")
+            
+            # Try to read existing file to preserve local image paths
+            old_image_data = None
+            if os.path.exists(filename):
+                try:
+                    with open(filename, 'r', encoding='utf-8') as f:
+                        old_data = json.load(f)
+                        old_image_data = old_data.get('images', [])
+                except (json.JSONDecodeError, IOError):
+                    pass  # If file is corrupted or can't be read, ignore
+            
+            # Merge image data to preserve local paths
+            if old_image_data:
+                card['images'] = self.merge_image_data(card['images'], old_image_data)
+            
+            with open(filename, 'w', encoding='utf-8') as f:
+                json.dump(card, f, indent=2, ensure_ascii=False)
+            
+            print_prefix = "  " if not is_batch else ""
+            print(f"{print_prefix}Saved: {filename}")
+
+    def save_cards_to_json(self, cards, category_name):
+        """Save scraped cards to individual JSON files"""
         for card in cards:
             if card and card.get('name'):
-                # Create filename from card name
-                filename = card['name'].lower().replace(' ', '-').replace(':', '').replace('(', '').replace(')', '')
-                filename = re.sub(r'[^a-z0-9\-]', '', filename)
-                filename = os.path.join(absolute_output_dir, f"{filename}.json")
-                
-                with open(filename, 'w', encoding='utf-8') as f:
-                    json.dump(card, f, indent=2, ensure_ascii=False)
-                
-                print(f"Saved: {filename}")
+                self.save_card_with_image_preservation(card, category_name, is_batch=True)
     
     def run(self, category_name, limit=10):
         """Main method to run the scraper for a single category"""
@@ -531,26 +584,7 @@ class CardScraper:
     
     def save_single_card_to_json(self, card, category_name):
         """Save a single card to JSON file immediately"""
-        # Use absolute path to ensure files are saved to the correct location
-        import os
-        script_dir = os.path.dirname(os.path.abspath(__file__))
-        project_root = os.path.dirname(script_dir)
-        output_dir = f"cards/{category_name}"
-        absolute_output_dir = os.path.join(project_root, output_dir)
-        
-        if not os.path.exists(absolute_output_dir):
-            os.makedirs(absolute_output_dir)
-        
-        if card and card.get('name'):
-            # Create filename from card name
-            filename = card['name'].lower().replace(' ', '-').replace(':', '').replace('(', '').replace(')', '')
-            filename = re.sub(r'[^a-z0-9\-]', '', filename)
-            filename = os.path.join(absolute_output_dir, f"{filename}.json")
-            
-            with open(filename, 'w', encoding='utf-8') as f:
-                json.dump(card, f, indent=2, ensure_ascii=False)
-            
-            print(f"  Saved: {filename}")
+        self.save_card_with_image_preservation(card, category_name, is_batch=False)
     
     def run_all_categories(self):
         """Main method to run the scraper for all available categories"""
@@ -750,7 +784,6 @@ class CardScraper:
             # Try different possible gold description row names for secondary ability
             gold_description_selectors = [
                 'druid-row-ability_2_description_gold',  # Zeus style
-                'druid-row-ability_description_gold'     # Barrel of Monkeys style
             ]
             
             for selector in gold_description_selectors:

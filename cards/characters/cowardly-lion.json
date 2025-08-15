@@ -4,10 +4,18 @@
   "rarity": "uncommon",
   "images": [
     {
+      "url": "https://onceuponagalaxy.wiki.gg/images/6/60/Character_Cowardly_Lion.png?31edb2&format=original",
+      "type": "art"
+    },
+    {
       "url": "https://onceuponagalaxy.wiki.gg/images/8/83/Character_Cowardly_Lion_Card_Bronze.png?format=original",
       "type": "unknown",
       "original": "original/cowardly-lion_unknown_0.png",
       "converted": "converted/cowardly-lion_unknown_0.webp"
+    },
+    {
+      "url": "https://onceuponagalaxy.wiki.gg/images/d/dd/Character_Cowardly_Lion_Card_Silver.png?format=original",
+      "type": "unknown"
     },
     {
       "url": "https://onceuponagalaxy.wiki.gg/images/e/e3/Character_Cowardly_Lion_Card_Gold.png?format=original",

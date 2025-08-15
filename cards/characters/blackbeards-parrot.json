@@ -4,14 +4,18 @@
   "rarity": "rare",
   "images": [
     {
-      "url": "https://onceuponagalaxy.wiki.gg/images/6/66/Character_Blackbeard%27s_Parrot_Card_Bronze.png?297a76&format=original",
       "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/6/66/Character_Blackbeard%27s_Parrot_Card_Bronze.png?297a76&format=original",
       "original": "original/blackbeards-parrot_art_0.png",
       "converted": "converted/blackbeards-parrot_art_0.webp"
     },
     {
-      "url": "https://onceuponagalaxy.wiki.gg/images/3/3d/Character_Blackbeard%27s_Parrot_Card_Gold.png?format=original",
       "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/7/72/Character_Blackbeard%27s_Parrot_Card_Silver.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/3/3d/Character_Blackbeard%27s_Parrot_Card_Gold.png?format=original",
       "original": "original/blackbeards-parrot_unknown_1.png",
       "converted": "converted/blackbeards-parrot_unknown_1.webp"
     }

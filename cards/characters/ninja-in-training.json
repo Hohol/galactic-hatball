@@ -4,10 +4,18 @@
   "rarity": "epic",
   "images": [
     {
+      "url": "https://onceuponagalaxy.wiki.gg/images/b/b9/Character_Ninja-in-Training.png?e7c2a1&format=original",
+      "type": "art"
+    },
+    {
       "url": "https://onceuponagalaxy.wiki.gg/images/d/db/Character_Ninja-in-Training_Card_Bronze.png?format=original",
       "type": "unknown",
       "original": "original/ninja-in-training_unknown_0.png",
       "converted": "converted/ninja-in-training_unknown_0.webp"
+    },
+    {
+      "url": "https://onceuponagalaxy.wiki.gg/images/5/51/Character_Ninja-in-Training_Card_Silver.png?format=original",
+      "type": "unknown"
     },
     {
       "url": "https://onceuponagalaxy.wiki.gg/images/a/a8/Character_Ninja-in-Training_Card_Gold.png?format=original",

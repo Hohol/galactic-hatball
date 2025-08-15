@@ -4,10 +4,18 @@
   "rarity": "epic",
   "images": [
     {
+      "url": "https://onceuponagalaxy.wiki.gg/images/b/ba/Character_Daisy_Jones.png?3ca085&format=original",
+      "type": "art"
+    },
+    {
       "url": "https://onceuponagalaxy.wiki.gg/images/4/49/Character_Daisy_Jones_Card_Bronze.png?format=original",
       "type": "unknown",
       "original": "original/daisy-jones_unknown_0.png",
       "converted": "converted/daisy-jones_unknown_0.webp"
+    },
+    {
+      "url": "https://onceuponagalaxy.wiki.gg/images/e/ef/Character_Daisy_Jones_Card_Silver.png?format=original",
+      "type": "unknown"
     },
     {
       "url": "https://onceuponagalaxy.wiki.gg/images/5/52/Character_Daisy_Jones_Card_Gold.png?format=original",

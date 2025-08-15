@@ -4,14 +4,22 @@
   "rarity": "legendary",
   "images": [
     {
-      "url": "https://onceuponagalaxy.wiki.gg/images/3/3e/Character_Bahamut_Card_Bronze.png?format=original",
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/0/01/Character_Bahamut.png?b3f347&format=original"
+    },
+    {
       "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/3/3e/Character_Bahamut_Card_Bronze.png?format=original",
       "original": "original/bahamut_unknown_0.png",
       "converted": "converted/bahamut_unknown_0.webp"
     },
     {
-      "url": "https://onceuponagalaxy.wiki.gg/images/7/7c/Character_Bahamut_Card_Gold.png?format=original",
       "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/5/5b/Character_Bahamut_Card_Silver.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/7/7c/Character_Bahamut_Card_Gold.png?format=original",
       "original": "original/bahamut_unknown_1.png",
       "converted": "converted/bahamut_unknown_1.webp"
     }

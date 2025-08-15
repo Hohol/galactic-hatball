@@ -4,6 +4,10 @@
   "rarity": "common",
   "images": [
     {
+      "url": "https://onceuponagalaxy.wiki.gg/images/0/0b/Character_George.png?3e47e3&format=original",
+      "type": "art"
+    },
+    {
       "url": "https://onceuponagalaxy.wiki.gg/images/6/63/Character_George_Card_Bronze.png?format=original",
       "type": "unknown",
       "original": "original/george_unknown_0.png",

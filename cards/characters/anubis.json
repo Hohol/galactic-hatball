@@ -4,14 +4,22 @@
   "rarity": "legendary",
   "images": [
     {
-      "url": "https://onceuponagalaxy.wiki.gg/images/9/96/Character_Anubis_Card_Bronze.png?format=original",
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/c/cb/Character_Anubis.png?2654b1&format=original"
+    },
+    {
       "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/9/96/Character_Anubis_Card_Bronze.png?format=original",
       "original": "original/anubis_unknown_0.png",
       "converted": "converted/anubis_unknown_0.webp"
     },
     {
-      "url": "https://onceuponagalaxy.wiki.gg/images/0/07/Character_Anubis_Card_Gold.png?format=original",
       "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/8/85/Character_Anubis_Card_Silver.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/0/07/Character_Anubis_Card_Gold.png?format=original",
       "original": "original/anubis_unknown_1.png",
       "converted": "converted/anubis_unknown_1.webp"
     }

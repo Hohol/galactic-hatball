@@ -4,6 +4,10 @@
   "rarity": "common",
   "images": [
     {
+      "url": "https://onceuponagalaxy.wiki.gg/images/e/ed/Character_Caesar.png?22b992&format=original",
+      "type": "art"
+    },
+    {
       "url": "https://onceuponagalaxy.wiki.gg/images/c/c1/Character_Caesar_Card_Bronze.png?format=original",
       "type": "unknown",
       "original": "original/caesar_unknown_0.png",

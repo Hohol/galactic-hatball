@@ -4,10 +4,18 @@
   "rarity": "epic",
   "images": [
     {
+      "url": "https://onceuponagalaxy.wiki.gg/images/f/f8/Character_Mighty_Mouse.png?cf126d&format=original",
+      "type": "art"
+    },
+    {
       "url": "https://onceuponagalaxy.wiki.gg/images/2/26/Character_Mighty_Mouse_Card_Bronze.png?format=original",
       "type": "unknown",
       "original": "original/mighty-mouse_unknown_0.png",
       "converted": "converted/mighty-mouse_unknown_0.webp"
+    },
+    {
+      "url": "https://onceuponagalaxy.wiki.gg/images/e/ed/Character_Mighty_Mouse_Card_Silver.png?format=original",
+      "type": "unknown"
     },
     {
       "url": "https://onceuponagalaxy.wiki.gg/images/1/1d/Character_Mighty_Mouse_Card_Gold.png?format=original",

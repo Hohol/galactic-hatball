@@ -4,10 +4,18 @@
   "rarity": "legendary",
   "images": [
     {
+      "url": "https://onceuponagalaxy.wiki.gg/images/c/c7/Character_Conan_the_Galactic_Champion.png?98700d&format=original",
+      "type": "art"
+    },
+    {
       "url": "https://onceuponagalaxy.wiki.gg/images/c/ce/Character_Conan_the_Galactic_Champion_Card_Bronze.png?format=original",
       "type": "unknown",
       "original": "original/conan-the-galactic-champion_unknown_0.png",
       "converted": "converted/conan-the-galactic-champion_unknown_0.webp"
+    },
+    {
+      "url": "https://onceuponagalaxy.wiki.gg/images/f/f2/Character_Conan_the_Galactic_Champion_Card_Silver.png?format=original",
+      "type": "unknown"
     },
     {
       "url": "https://onceuponagalaxy.wiki.gg/images/e/e0/Character_Conan_the_Galactic_Champion_Card_Gold.png?format=original",

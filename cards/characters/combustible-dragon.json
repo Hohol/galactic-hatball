@@ -4,10 +4,18 @@
   "rarity": "rare",
   "images": [
     {
+      "url": "https://onceuponagalaxy.wiki.gg/images/f/f5/Character_Combustible_Dragon.png?d90590&format=original",
+      "type": "art"
+    },
+    {
       "url": "https://onceuponagalaxy.wiki.gg/images/b/b7/Character_Combustible_Dragon_Card_Bronze.png?format=original",
       "type": "unknown",
       "original": "original/combustible-dragon_unknown_0.png",
       "converted": "converted/combustible-dragon_unknown_0.webp"
+    },
+    {
+      "url": "https://onceuponagalaxy.wiki.gg/images/5/5a/Character_Combustible_Dragon_Card_Silver.png?format=original",
+      "type": "unknown"
     },
     {
       "url": "https://onceuponagalaxy.wiki.gg/images/d/df/Character_Combustible_Dragon_Card_Gold.png?format=original",

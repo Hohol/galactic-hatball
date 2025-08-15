@@ -4,10 +4,18 @@
   "rarity": "common",
   "images": [
     {
+      "url": "https://onceuponagalaxy.wiki.gg/images/a/ad/Character_Despicable_Smee.png?b2044c&format=original",
+      "type": "art"
+    },
+    {
       "url": "https://onceuponagalaxy.wiki.gg/images/c/c7/Character_Despicable_Smee_Card_Bronze.png?format=original",
       "type": "unknown",
       "original": "original/despicable-smee_unknown_0.png",
       "converted": "converted/despicable-smee_unknown_0.webp"
+    },
+    {
+      "url": "https://onceuponagalaxy.wiki.gg/images/f/fc/Character_Despicable_Smee_Card_Silver.png?format=original",
+      "type": "unknown"
     },
     {
       "url": "https://onceuponagalaxy.wiki.gg/images/b/b7/Character_Despicable_Smee_Card_Gold.png?format=original",

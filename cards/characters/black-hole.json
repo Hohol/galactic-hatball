@@ -4,14 +4,22 @@
   "rarity": "epic",
   "images": [
     {
-      "url": "https://onceuponagalaxy.wiki.gg/images/3/36/Character_Black_Hole_Card_Bronze.png?format=original",
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/5/5f/Character_Black_Hole.png?517362&format=original"
+    },
+    {
       "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/3/36/Character_Black_Hole_Card_Bronze.png?format=original",
       "original": "original/black-hole_unknown_0.png",
       "converted": "converted/black-hole_unknown_0.webp"
     },
     {
-      "url": "https://onceuponagalaxy.wiki.gg/images/8/87/Character_Black_Hole_Card_Gold.png?format=original",
       "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/c/cd/Character_Black_Hole_Card_Silver.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/8/87/Character_Black_Hole_Card_Gold.png?format=original",
       "original": "original/black-hole_unknown_1.png",
       "converted": "converted/black-hole_unknown_1.webp"
     }

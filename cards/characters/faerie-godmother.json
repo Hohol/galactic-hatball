@@ -4,10 +4,18 @@
   "rarity": "rare",
   "images": [
     {
+      "url": "https://onceuponagalaxy.wiki.gg/images/9/97/Character_Faerie_Godmother.png?987ad8&format=original",
+      "type": "art"
+    },
+    {
       "url": "https://onceuponagalaxy.wiki.gg/images/1/17/Character_Faerie_Godmother_Card_Bronze.png?format=original",
       "type": "unknown",
       "original": "original/faerie-godmother_unknown_0.png",
       "converted": "converted/faerie-godmother_unknown_0.webp"
+    },
+    {
+      "url": "https://onceuponagalaxy.wiki.gg/images/3/32/Character_Faerie_Godmother_Card_Silver.png?format=original",
+      "type": "unknown"
     },
     {
       "url": "https://onceuponagalaxy.wiki.gg/images/b/b5/Character_Faerie_Godmother_Card_Gold.png?format=original",

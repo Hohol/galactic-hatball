@@ -4,10 +4,18 @@
   "rarity": "rare",
   "images": [
     {
+      "url": "https://onceuponagalaxy.wiki.gg/images/6/68/Character_Davy_Jones.png?111655&format=original",
+      "type": "art"
+    },
+    {
       "url": "https://onceuponagalaxy.wiki.gg/images/a/a8/Character_Davy_Jones_Card_Bronze.png?format=original",
       "type": "unknown",
       "original": "original/davy-jones_unknown_0.png",
       "converted": "converted/davy-jones_unknown_0.webp"
+    },
+    {
+      "url": "https://onceuponagalaxy.wiki.gg/images/e/ea/Character_Davy_Jones_Card_Silver.png?format=original",
+      "type": "unknown"
     },
     {
       "url": "https://onceuponagalaxy.wiki.gg/images/9/95/Character_Davy_Jones_Card_Gold.png?format=original",
@@ -29,7 +37,7 @@
     {
       "type": "Farewell",
       "description": "My slot gains +2/+2.",
-      "gold_description": "My slot gains +4/+4."
+      "gold_description": null
     }
   ],
   "attack": 7,

@@ -4,10 +4,18 @@
   "rarity": "secret rare",
   "images": [
     {
+      "url": "https://onceuponagalaxy.wiki.gg/images/3/35/Character_Drevena_the_Devourer.png?3d673c&format=original",
+      "type": "art"
+    },
+    {
       "url": "https://onceuponagalaxy.wiki.gg/images/b/b7/Character_Drevena_the_Devourer_Card_Bronze.png?format=original",
       "type": "unknown",
       "original": "original/drevena-the-devourer_unknown_0.png",
       "converted": "converted/drevena-the-devourer_unknown_0.webp"
+    },
+    {
+      "url": "https://onceuponagalaxy.wiki.gg/images/4/4c/Character_Drevena_the_Devourer_Card_Silver.png?format=original",
+      "type": "unknown"
     },
     {
       "url": "https://onceuponagalaxy.wiki.gg/images/e/e7/Character_Drevena_the_Devourer_Card_Gold.png?format=original",

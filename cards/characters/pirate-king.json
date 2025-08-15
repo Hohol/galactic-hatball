@@ -4,10 +4,18 @@
   "rarity": "legendary",
   "images": [
     {
+      "url": "https://onceuponagalaxy.wiki.gg/images/5/5b/Character_Pirate_King.png?8c5756&format=original",
+      "type": "art"
+    },
+    {
       "url": "https://onceuponagalaxy.wiki.gg/images/b/bf/Character_Pirate_King_Card_Bronze.png?format=original",
       "type": "unknown",
       "original": "original/pirate-king_unknown_0.png",
       "converted": "converted/pirate-king_unknown_0.webp"
+    },
+    {
+      "url": "https://onceuponagalaxy.wiki.gg/images/d/d4/Character_Pirate_King_Card_Silver.png?format=original",
+      "type": "unknown"
     },
     {
       "url": "https://onceuponagalaxy.wiki.gg/images/5/51/Character_Pirate_King_Card_Gold.png?format=original",
@@ -28,7 +36,7 @@
     {
       "type": "Quest",
       "description": "I have 100 Attack or Health during a fight.",
-      "gold_description": "I have +12/+12 for each Pirate you have recruited this game."
+      "gold_description": null
     }
   ],
   "attack": 20,

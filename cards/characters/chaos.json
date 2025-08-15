@@ -4,10 +4,18 @@
   "rarity": "uncommon",
   "images": [
     {
+      "url": "https://onceuponagalaxy.wiki.gg/images/8/8a/Character_Chaos.png?af9ed1&format=original",
+      "type": "art"
+    },
+    {
       "url": "https://onceuponagalaxy.wiki.gg/images/a/a0/Character_Chaos_Card_Bronze.png?format=original",
       "type": "unknown",
       "original": "original/chaos_unknown_0.png",
       "converted": "converted/chaos_unknown_0.webp"
+    },
+    {
+      "url": "https://onceuponagalaxy.wiki.gg/images/c/c0/Character_Chaos_Card_Silver.png?format=original",
+      "type": "unknown"
     },
     {
       "url": "https://onceuponagalaxy.wiki.gg/images/c/c0/Character_Chaos_Card_Gold.png?format=original",

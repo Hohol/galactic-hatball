@@ -4,14 +4,18 @@
   "rarity": "uncommon",
   "images": [
     {
-      "url": "https://onceuponagalaxy.wiki.gg/images/f/f9/Character_Captain_Ahab_Card_Bronze.png?1a8064&format=original",
       "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/f/f9/Character_Captain_Ahab_Card_Bronze.png?1a8064&format=original",
       "original": "original/captain-ahab_art_0.png",
       "converted": "converted/captain-ahab_art_0.webp"
     },
     {
-      "url": "https://onceuponagalaxy.wiki.gg/images/a/a7/Character_Captain_Ahab_Card_Gold.png?format=original",
       "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/7/7f/Character_Captain_Ahab_Card_Silver.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/a/a7/Character_Captain_Ahab_Card_Gold.png?format=original",
       "original": "original/captain-ahab_unknown_1.png",
       "converted": "converted/captain-ahab_unknown_1.webp"
     }
@@ -28,7 +32,7 @@
     {
       "type": "Quest",
       "description": "I hunt the last remaining character.",
-      "gold_description": "+2/+2"
+      "gold_description": null
     }
   ],
   "attack": 6,

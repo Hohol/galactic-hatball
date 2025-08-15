@@ -4,10 +4,18 @@
   "rarity": "epic",
   "images": [
     {
+      "url": "https://onceuponagalaxy.wiki.gg/images/a/a4/Character_Genie_of_the_Lamp.png?c11dcf&format=original",
+      "type": "art"
+    },
+    {
       "url": "https://onceuponagalaxy.wiki.gg/images/7/76/Character_Genie_of_the_Lamp_Card_Bronze.png?format=original",
       "type": "unknown",
       "original": "original/genie-of-the-lamp_unknown_0.png",
       "converted": "converted/genie-of-the-lamp_unknown_0.webp"
+    },
+    {
+      "url": "https://onceuponagalaxy.wiki.gg/images/0/00/Character_Genie_of_the_Lamp_Card_Silver.png?format=original",
+      "type": "unknown"
     },
     {
       "url": "https://onceuponagalaxy.wiki.gg/images/9/98/Character_Genie_of_the_Lamp_Card_Gold.png?format=original",

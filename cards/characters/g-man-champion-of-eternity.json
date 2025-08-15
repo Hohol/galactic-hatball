@@ -4,10 +4,18 @@
   "rarity": "epic",
   "images": [
     {
+      "url": "https://onceuponagalaxy.wiki.gg/images/f/f4/Character_G-Man%2C_Champion_of_Eternity.png?ce8732&format=original",
+      "type": "art"
+    },
+    {
       "url": "https://onceuponagalaxy.wiki.gg/images/2/23/Character_G-Man%2C_Champion_of_Eternity_Card_Bronze.png?format=original",
       "type": "unknown",
       "original": "original/g-man,-champion-of-eternity_unknown_0.png",
       "converted": "converted/g-man,-champion-of-eternity_unknown_0.webp"
+    },
+    {
+      "url": "https://onceuponagalaxy.wiki.gg/images/3/3c/Character_G-Man%2C_Champion_of_Eternity_Card_Silver.png?format=original",
+      "type": "unknown"
     },
     {
       "url": "https://onceuponagalaxy.wiki.gg/images/3/39/Character_G-Man%2C_Champion_of_Eternity_Card_Gold.png?format=original",

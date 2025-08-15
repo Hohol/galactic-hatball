@@ -4,14 +4,22 @@
   "rarity": "common",
   "images": [
     {
-      "url": "https://onceuponagalaxy.wiki.gg/images/6/6d/Character_Baby_Dragon_Card_Bronze.png?format=original",
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/c/ce/Character_Baby_Dragon.png?bc9c9d&format=original"
+    },
+    {
       "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/6/6d/Character_Baby_Dragon_Card_Bronze.png?format=original",
       "original": "original/baby-dragon_unknown_0.png",
       "converted": "converted/baby-dragon_unknown_0.webp"
     },
     {
-      "url": "https://onceuponagalaxy.wiki.gg/images/7/7d/Character_Baby_Dragon_Card_Gold.png?format=original",
       "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/a/a6/Character_Baby_Dragon_Card_Silver.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/7/7d/Character_Baby_Dragon_Card_Gold.png?format=original",
       "original": "original/baby-dragon_unknown_1.png",
       "converted": "converted/baby-dragon_unknown_1.webp"
     }

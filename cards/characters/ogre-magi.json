@@ -4,10 +4,18 @@
   "rarity": "epic",
   "images": [
     {
+      "url": "https://onceuponagalaxy.wiki.gg/images/1/1d/Character_Ogre_Magi.png?424dd6&format=original",
+      "type": "art"
+    },
+    {
       "url": "https://onceuponagalaxy.wiki.gg/images/3/3a/Character_Ogre_Magi_Card_Bronze.png?format=original",
       "type": "unknown",
       "original": "original/ogre-magi_unknown_0.png",
       "converted": "converted/ogre-magi_unknown_0.webp"
+    },
+    {
+      "url": "https://onceuponagalaxy.wiki.gg/images/e/ed/Character_Ogre_Magi_Card_Silver.png?format=original",
+      "type": "unknown"
     },
     {
       "url": "https://onceuponagalaxy.wiki.gg/images/8/88/Character_Ogre_Magi_Card_Gold.png?format=original",

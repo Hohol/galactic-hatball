@@ -4,10 +4,18 @@
   "rarity": "legendary",
   "images": [
     {
+      "url": "https://onceuponagalaxy.wiki.gg/images/9/92/Character_Nessie.png?b229e1&format=original",
+      "type": "art"
+    },
+    {
       "url": "https://onceuponagalaxy.wiki.gg/images/e/e5/Character_Nessie_Card_Bronze.png?format=original",
       "type": "unknown",
       "original": "original/nessie_unknown_0.png",
       "converted": "converted/nessie_unknown_0.webp"
+    },
+    {
+      "url": "https://onceuponagalaxy.wiki.gg/images/e/e5/Character_Nessie_Card_Silver.png?format=original",
+      "type": "unknown"
     },
     {
       "url": "https://onceuponagalaxy.wiki.gg/images/7/7c/Character_Nessie_Card_Gold.png?format=original",

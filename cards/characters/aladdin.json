@@ -4,14 +4,22 @@
   "rarity": "common",
   "images": [
     {
-      "url": "https://onceuponagalaxy.wiki.gg/images/0/09/Character_Aladdin_Card_Bronze.png?format=original",
+      "type": "art",
+      "url": "https://onceuponagalaxy.wiki.gg/images/2/26/Character_Aladdin.png?30372b&format=original"
+    },
+    {
       "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/0/09/Character_Aladdin_Card_Bronze.png?format=original",
       "original": "original/aladdin_unknown_0.png",
       "converted": "converted/aladdin_unknown_0.webp"
     },
     {
-      "url": "https://onceuponagalaxy.wiki.gg/images/6/64/Character_Aladdin_Card_Gold.png?format=original",
       "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/f/f7/Character_Aladdin_Card_Silver.png?format=original"
+    },
+    {
+      "type": "unknown",
+      "url": "https://onceuponagalaxy.wiki.gg/images/6/64/Character_Aladdin_Card_Gold.png?format=original",
       "original": "original/aladdin_unknown_1.png",
       "converted": "converted/aladdin_unknown_1.webp"
     }

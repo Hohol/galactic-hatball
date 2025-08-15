@@ -4,10 +4,18 @@
   "rarity": "epic",
   "images": [
     {
+      "url": "https://onceuponagalaxy.wiki.gg/images/8/8e/Character_Ten_Million_Fireflies.png?ea0e0e&format=original",
+      "type": "art"
+    },
+    {
       "url": "https://onceuponagalaxy.wiki.gg/images/b/ba/Character_Ten_Million_Fireflies_Card_Bronze.png?format=original",
       "type": "unknown",
       "original": "original/ten-million-fireflies_unknown_0.png",
       "converted": "converted/ten-million-fireflies_unknown_0.webp"
+    },
+    {
+      "url": "https://onceuponagalaxy.wiki.gg/images/3/3e/Character_Ten_Million_Fireflies_Card_Silver.png?format=original",
+      "type": "unknown"
     },
     {
       "url": "https://onceuponagalaxy.wiki.gg/images/d/de/Character_Ten_Million_Fireflies_Card_Gold.png?format=original",

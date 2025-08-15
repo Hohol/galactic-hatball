@@ -4,10 +4,18 @@
   "rarity": "secret rare",
   "images": [
     {
+      "url": "https://onceuponagalaxy.wiki.gg/images/4/40/Character_Spirit_of_Vengeance.png?d10b5e&format=original",
+      "type": "art"
+    },
+    {
       "url": "https://onceuponagalaxy.wiki.gg/images/7/71/Character_Spirit_of_Vengeance_Card_Bronze.png?format=original",
       "type": "unknown",
       "original": "original/spirit-of-vengeance_unknown_0.png",
       "converted": "converted/spirit-of-vengeance_unknown_0.webp"
+    },
+    {
+      "url": "https://onceuponagalaxy.wiki.gg/images/8/84/Character_Spirit_of_Vengeance_Card_Silver.png?format=original",
+      "type": "unknown"
     },
     {
       "url": "https://onceuponagalaxy.wiki.gg/images/c/c1/Character_Spirit_of_Vengeance_Card_Gold.png?format=original",
