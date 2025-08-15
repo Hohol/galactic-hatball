@@ -186,6 +186,10 @@
             justify-content: center;
         }
 
+        .version-toggle-container.hidden {
+            visibility: hidden;
+        }
+
         .version-btn {
             padding: 8px 16px;
             border: 2px solid;
@@ -1320,8 +1324,8 @@
                                              ` : ''}
                                              -->
                                         </div>
-                                        ${card.type === 'characters' && card.abilities && card.abilities.some(ability => ability.gold_description) ? `
-                                            <div class="version-toggle-container">
+                                        ${card.type === 'characters' ? `
+                                            <div class="version-toggle-container ${card.abilities && card.abilities.some(ability => ability.gold_description) ? '' : 'hidden'}">
                                                 <button class="version-btn bronze-btn active" onclick="setCardVersion('${card.name.toLowerCase().replace(/[^a-z0-9]/g, '-')}', 'bronze')">
                                                     Bronze
                                                 </button>
