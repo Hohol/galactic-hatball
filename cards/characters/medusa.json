@@ -5,17 +5,17 @@
   "images": [
     {
       "url": "https://onceuponagalaxy.wiki.gg/images/6/6b/Character_Medusa_Card_Bronze.png?cb065b&format=original",
-      "type": "art",
+      "type": "bronze",
       "original": "original/medusa_art_0.png",
       "converted": "converted/medusa_art_0.webp"
     },
     {
       "url": "https://onceuponagalaxy.wiki.gg/images/2/20/Character_Medusa_Card_Silver.png?format=original",
-      "type": "unknown"
+      "type": "silver"
     },
     {
       "url": "https://onceuponagalaxy.wiki.gg/images/7/71/Character_Medusa_Card_Gold.png?format=original",
-      "type": "unknown",
+      "type": "gold",
       "original": "original/medusa_unknown_1.png",
       "converted": "converted/medusa_unknown_1.webp"
     }

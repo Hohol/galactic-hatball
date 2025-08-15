@@ -9,17 +9,17 @@
     },
     {
       "url": "https://onceuponagalaxy.wiki.gg/images/4/48/Character_The_Fates_Card_Bronze.png?format=original",
-      "type": "unknown",
+      "type": "bronze",
       "original": "original/the-fates_unknown_0.png",
       "converted": "converted/the-fates_unknown_0.webp"
     },
     {
       "url": "https://onceuponagalaxy.wiki.gg/images/8/8d/Character_The_Fates_Card_Silver.png?format=original",
-      "type": "unknown"
+      "type": "silver"
     },
     {
       "url": "https://onceuponagalaxy.wiki.gg/images/4/48/Character_The_Fates_Card_Gold.png?format=original",
-      "type": "unknown",
+      "type": "gold",
       "original": "original/the-fates_unknown_1.png",
       "converted": "converted/the-fates_unknown_1.webp"
     }

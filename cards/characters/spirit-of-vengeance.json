@@ -9,17 +9,17 @@
     },
     {
       "url": "https://onceuponagalaxy.wiki.gg/images/7/71/Character_Spirit_of_Vengeance_Card_Bronze.png?format=original",
-      "type": "unknown",
+      "type": "bronze",
       "original": "original/spirit-of-vengeance_unknown_0.png",
       "converted": "converted/spirit-of-vengeance_unknown_0.webp"
     },
     {
       "url": "https://onceuponagalaxy.wiki.gg/images/8/84/Character_Spirit_of_Vengeance_Card_Silver.png?format=original",
-      "type": "unknown"
+      "type": "silver"
     },
     {
       "url": "https://onceuponagalaxy.wiki.gg/images/c/c1/Character_Spirit_of_Vengeance_Card_Gold.png?format=original",
-      "type": "unknown",
+      "type": "gold",
       "original": "original/spirit-of-vengeance_unknown_1.png",
       "converted": "converted/spirit-of-vengeance_unknown_1.webp"
     }

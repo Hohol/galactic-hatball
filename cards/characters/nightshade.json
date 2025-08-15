@@ -5,17 +5,17 @@
   "images": [
     {
       "url": "https://onceuponagalaxy.wiki.gg/images/e/e2/Character_Nightshade_Card_Bronze.png?2e0b1f&format=original",
-      "type": "art",
+      "type": "bronze",
       "original": "original/nightshade_art_0.png",
       "converted": "converted/nightshade_art_0.webp"
     },
     {
       "url": "https://onceuponagalaxy.wiki.gg/images/d/d2/Character_Nightshade_Card_Silver.png?format=original",
-      "type": "unknown"
+      "type": "silver"
     },
     {
       "url": "https://onceuponagalaxy.wiki.gg/images/6/6e/Character_Nightshade_Card_Gold.png?format=original",
-      "type": "unknown",
+      "type": "gold",
       "original": "original/nightshade_unknown_1.png",
       "converted": "converted/nightshade_unknown_1.webp"
     }

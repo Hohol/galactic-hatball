@@ -9,17 +9,17 @@
     },
     {
       "url": "https://onceuponagalaxy.wiki.gg/images/7/7c/Character_Forgotten_Present_Card_Bronze.png?format=original",
-      "type": "unknown",
+      "type": "bronze",
       "original": "original/forgotten-present_unknown_0.png",
       "converted": "converted/forgotten-present_unknown_0.webp"
     },
     {
       "url": "https://onceuponagalaxy.wiki.gg/images/7/70/Character_Forgotten_Present_Card_Silver.png?format=original",
-      "type": "unknown"
+      "type": "silver"
     },
     {
       "url": "https://onceuponagalaxy.wiki.gg/images/8/80/Character_Forgotten_Present_Card_Gold.png?format=original",
-      "type": "unknown",
+      "type": "gold",
       "original": "original/forgotten-present_unknown_1.png",
       "converted": "converted/forgotten-present_unknown_1.webp"
     }

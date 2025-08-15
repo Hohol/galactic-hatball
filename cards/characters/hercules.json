@@ -9,17 +9,17 @@
     },
     {
       "url": "https://onceuponagalaxy.wiki.gg/images/d/d2/Character_Hercules_Card_Bronze.png?format=original",
-      "type": "unknown",
+      "type": "bronze",
       "original": "original/hercules_unknown_0.png",
       "converted": "converted/hercules_unknown_0.webp"
     },
     {
       "url": "https://onceuponagalaxy.wiki.gg/images/a/ac/Character_Hercules_Card_Silver.png?format=original",
-      "type": "unknown"
+      "type": "silver"
     },
     {
       "url": "https://onceuponagalaxy.wiki.gg/images/e/ee/Character_Hercules_Card_Gold.png?format=original",
-      "type": "unknown",
+      "type": "gold",
       "original": "original/hercules_unknown_1.png",
       "converted": "converted/hercules_unknown_1.webp"
     }

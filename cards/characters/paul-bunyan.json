@@ -9,17 +9,17 @@
     },
     {
       "url": "https://onceuponagalaxy.wiki.gg/images/d/dc/Character_Paul_Bunyan_Card_Bronze.png?format=original",
-      "type": "unknown",
+      "type": "bronze",
       "original": "original/paul-bunyan_unknown_0.png",
       "converted": "converted/paul-bunyan_unknown_0.webp"
     },
     {
       "url": "https://onceuponagalaxy.wiki.gg/images/c/c5/Character_Paul_Bunyan_Card_Silver.png?format=original",
-      "type": "unknown"
+      "type": "silver"
     },
     {
       "url": "https://onceuponagalaxy.wiki.gg/images/2/25/Character_Paul_Bunyan_Card_Gold.png?format=original",
-      "type": "unknown",
+      "type": "gold",
       "original": "original/paul-bunyan_unknown_1.png",
       "converted": "converted/paul-bunyan_unknown_1.webp"
     }

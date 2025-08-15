@@ -9,17 +9,17 @@
     },
     {
       "url": "https://onceuponagalaxy.wiki.gg/images/c/cc/Character_Two-Headed_Wizard_Card_Bronze.png?format=original",
-      "type": "unknown",
+      "type": "bronze",
       "original": "original/two-headed-wizard_unknown_0.png",
       "converted": "converted/two-headed-wizard_unknown_0.webp"
     },
     {
       "url": "https://onceuponagalaxy.wiki.gg/images/e/e1/Character_Two-Headed_Wizard_Card_Silver.png?format=original",
-      "type": "unknown"
+      "type": "silver"
     },
     {
       "url": "https://onceuponagalaxy.wiki.gg/images/c/ca/Character_Two-Headed_Wizard_Card_Gold.png?format=original",
-      "type": "unknown",
+      "type": "gold",
       "original": "original/two-headed-wizard_unknown_1.png",
       "converted": "converted/two-headed-wizard_unknown_1.webp"
     }

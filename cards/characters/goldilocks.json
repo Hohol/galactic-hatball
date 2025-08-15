@@ -5,19 +5,19 @@
   "images": [
     {
       "url": "https://onceuponagalaxy.wiki.gg/images/0/06/Character_Goldilocks_Card_Bronze.png?617cba&format=original",
-      "type": "art",
+      "type": "bronze",
       "original": "original/goldilocks_art_0.png",
       "converted": "converted/goldilocks_art_0.webp"
     },
     {
       "url": "https://onceuponagalaxy.wiki.gg/images/e/e5/Character_Goldilocks_Card_Silver.png?format=original",
-      "type": "unknown",
+      "type": "silver",
       "original": "original/goldilocks_unknown_1.png",
       "converted": "converted/goldilocks_unknown_1.webp"
     },
     {
       "url": "https://onceuponagalaxy.wiki.gg/images/4/40/Character_Goldilocks_Card_Gold.png?format=original",
-      "type": "unknown",
+      "type": "gold",
       "original": "original/goldilocks_unknown_2.png",
       "converted": "converted/goldilocks_unknown_2.webp"
     }

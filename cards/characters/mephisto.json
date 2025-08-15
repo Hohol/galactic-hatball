@@ -5,17 +5,17 @@
   "images": [
     {
       "url": "https://onceuponagalaxy.wiki.gg/images/1/1d/Character_Mephisto_Card_Bronze.png?f40b56&format=original",
-      "type": "art",
+      "type": "bronze",
       "original": "original/mephisto_art_0.png",
       "converted": "converted/mephisto_art_0.webp"
     },
     {
       "url": "https://onceuponagalaxy.wiki.gg/images/b/bd/Character_Mephisto_Card_Silver.png?format=original",
-      "type": "unknown"
+      "type": "silver"
     },
     {
       "url": "https://onceuponagalaxy.wiki.gg/images/c/c3/Character_Mephisto_Card_Gold.png?format=original",
-      "type": "unknown",
+      "type": "gold",
       "original": "original/mephisto_unknown_1.png",
       "converted": "converted/mephisto_unknown_1.webp"
     }

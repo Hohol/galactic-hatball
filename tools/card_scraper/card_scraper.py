@@ -393,9 +393,23 @@ class CardScraper:
                         else:
                             original_url += '?format=original'
                     
+                    # Determine image type based on URL pattern for character cards
+                    img_type = 'unknown'
+                    if 'Character_' in original_url:
+                        if 'Bronze.png' in original_url:
+                            img_type = 'bronze'
+                        elif 'Silver.png' in original_url:
+                            img_type = 'silver'
+                        elif 'Gold.png' in original_url:
+                            img_type = 'gold'
+                        else:
+                            img_type = 'art'  # Fallback for character art images
+                    else:
+                        img_type = 'art'  # For non-character cards
+                    
                     images.append({
                         'url': original_url,
-                        'type': 'art'
+                        'type': img_type
                     })
                 else:
                     # Already an original image, add format=original if needed
@@ -404,9 +418,23 @@ class CardScraper:
                     else:
                         url += '?format=original'
                     
+                    # Determine image type based on URL pattern for character cards
+                    img_type = 'unknown'
+                    if 'Character_' in url:
+                        if 'Bronze.png' in url:
+                            img_type = 'bronze'
+                        elif 'Silver.png' in url:
+                            img_type = 'silver'
+                        elif 'Gold.png' in url:
+                            img_type = 'gold'
+                        else:
+                            img_type = 'art'  # Fallback for character art images
+                    else:
+                        img_type = 'art'  # For non-character cards
+                    
                     images.append({
                         'url': url,
-                        'type': 'art'
+                        'type': img_type
                     })
         
         # Method 2: Look for images in druid-infobox (most specific)
@@ -460,8 +488,21 @@ class CardScraper:
                             else:
                                 original_url += '?format=original'
                         
-                        # Determine image type based on tab key
-                        img_type = 'art' if tab_key == 'Art' else 'card' if tab_key == 'Card' else 'unknown'
+                        # Determine image type based on URL pattern for character cards
+                        img_type = 'unknown'
+                        if 'Character_' in original_url:
+                            if 'Bronze.png' in original_url:
+                                img_type = 'bronze'
+                            elif 'Silver.png' in original_url:
+                                img_type = 'silver'
+                            elif 'Gold.png' in original_url:
+                                img_type = 'gold'
+                            else:
+                                # Fallback to tab key if URL pattern doesn't match
+                                img_type = 'art' if tab_key == 'Art' else 'card' if tab_key == 'Card' else 'unknown'
+                        else:
+                            # For non-character cards, use tab key
+                            img_type = 'art' if tab_key == 'Art' else 'card' if tab_key == 'Card' else 'unknown'
                         
                         # Only add if it's a different image (not a duplicate)
                         is_duplicate = False

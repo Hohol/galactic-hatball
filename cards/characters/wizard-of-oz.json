@@ -9,17 +9,17 @@
     },
     {
       "url": "https://onceuponagalaxy.wiki.gg/images/5/56/Character_Wizard_of_Oz_Card_Bronze.png?format=original",
-      "type": "unknown",
+      "type": "bronze",
       "original": "original/wizard-of-oz_unknown_0.png",
       "converted": "converted/wizard-of-oz_unknown_0.webp"
     },
     {
       "url": "https://onceuponagalaxy.wiki.gg/images/8/8c/Character_Wizard_of_Oz_Card_Silver.png?format=original",
-      "type": "unknown"
+      "type": "silver"
     },
     {
       "url": "https://onceuponagalaxy.wiki.gg/images/1/11/Character_Wizard_of_Oz_Card_Gold.png?format=original",
-      "type": "unknown",
+      "type": "gold",
       "original": "original/wizard-of-oz_unknown_1.png",
       "converted": "converted/wizard-of-oz_unknown_1.webp"
     }

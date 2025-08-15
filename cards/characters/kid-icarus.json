@@ -9,17 +9,17 @@
     },
     {
       "url": "https://onceuponagalaxy.wiki.gg/images/c/cc/Character_Kid_Icarus_Card_Bronze.png?format=original",
-      "type": "unknown",
+      "type": "bronze",
       "original": "original/kid-icarus_unknown_0.png",
       "converted": "converted/kid-icarus_unknown_0.webp"
     },
     {
       "url": "https://onceuponagalaxy.wiki.gg/images/c/cd/Character_Kid_Icarus_Card_Silver.png?format=original",
-      "type": "unknown"
+      "type": "silver"
     },
     {
       "url": "https://onceuponagalaxy.wiki.gg/images/1/17/Character_Kid_Icarus_Card_Gold.png?format=original",
-      "type": "unknown",
+      "type": "gold",
       "original": "original/kid-icarus_unknown_1.png",
       "converted": "converted/kid-icarus_unknown_1.webp"
     }

@@ -9,17 +9,17 @@
     },
     {
       "url": "https://onceuponagalaxy.wiki.gg/images/2/23/Character_G-Man%2C_Champion_of_Eternity_Card_Bronze.png?format=original",
-      "type": "unknown",
+      "type": "bronze",
       "original": "original/g-man,-champion-of-eternity_unknown_0.png",
       "converted": "converted/g-man,-champion-of-eternity_unknown_0.webp"
     },
     {
       "url": "https://onceuponagalaxy.wiki.gg/images/3/3c/Character_G-Man%2C_Champion_of_Eternity_Card_Silver.png?format=original",
-      "type": "unknown"
+      "type": "silver"
     },
     {
       "url": "https://onceuponagalaxy.wiki.gg/images/3/39/Character_G-Man%2C_Champion_of_Eternity_Card_Gold.png?format=original",
-      "type": "unknown",
+      "type": "gold",
       "original": "original/g-man,-champion-of-eternity_unknown_1.png",
       "converted": "converted/g-man,-champion-of-eternity_unknown_1.webp"
     }
