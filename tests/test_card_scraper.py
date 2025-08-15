@@ -10,8 +10,8 @@ from bs4 import BeautifulSoup
 import sys
 import os
 
-# Add the scraper directory to the path
-sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'scraper'))
+# Add the card_scraper directory to the path
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'tools', 'card_scraper'))
 from card_scraper import CardScraper
 
 
