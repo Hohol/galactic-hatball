@@ -328,6 +328,10 @@
 
         .card-body {
             color: #ffffff;
+        }
+
+        /* Only character cards need bottom padding for traits */
+        .card[data-card-type="characters"] .card-body {
             padding-bottom: 50px;
         }
 
@@ -1283,7 +1287,7 @@
                         </div>
                         <div class="type-cards-grid">
                             ${typeCards.map(card => `
-                                <div class="card${card.deck_type ? ` ${card.deck_type.toLowerCase()}` : ''}" data-card-id="${card.name.toLowerCase().replace(/[^a-z0-9]/g, '-')}" data-version="bronze">
+                                <div class="card${card.deck_type ? ` ${card.deck_type.toLowerCase()}` : ''}" data-card-id="${card.name.toLowerCase().replace(/[^a-z0-9]/g, '-')}" data-card-type="${card.type}" data-version="bronze">
                                     <div class="card-header">
                                         <h3 class="card-name">
                                             ${card.rarity ? `<img src="${rarityIcons[card.rarity.toLowerCase()]}" alt="${card.rarity}" class="rarity-icon">` : ''}${card.name}
