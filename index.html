@@ -117,14 +117,13 @@
         }
 
         .search-box {
-            display: flex;
-            gap: 15px;
+            position: relative;
             margin-bottom: 20px;
         }
 
         .search-input {
-            flex: 1;
-            padding: 15px 20px;
+            width: 100%;
+            padding: 15px 60px 15px 20px;
             border: none;
             border-radius: 25px;
             background: rgba(255, 255, 255, 0.1);
@@ -141,6 +140,33 @@
             outline: none;
             border-color: #ffd700;
             box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+        }
+
+        .search-clear-btn {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            color: rgba(255, 255, 255, 0.7);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1.2rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+        }
+
+        .search-clear-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border-color: rgba(255, 255, 255, 0.5);
         }
 
         .search-button {
@@ -808,7 +834,7 @@
         <div class="search-section">
             <div class="search-box">
                 <input type="text" class="search-input" id="searchInput" placeholder="Search cards..." autocomplete="off">
-
+                <button type="button" class="search-clear-btn" id="searchClearBtn" title="Clear search" style="display: none;">✕</button>
             </div>
             <div class="filter-box">
                 <div class="type-radio" id="type-filter">
@@ -1459,6 +1485,12 @@
         document.getElementById('searchInput').addEventListener('input', function() {
             const searchTerm = this.value;
             
+            // Show/hide clear button based on input content
+            const clearBtn = document.getElementById('searchClearBtn');
+            if (clearBtn) {
+                clearBtn.style.display = searchTerm.length > 0 ? 'flex' : 'none';
+            }
+            
             // Clear previous timeout to avoid excessive searches
             clearTimeout(searchTimeout);
             
@@ -1466,6 +1498,15 @@
             searchTimeout = setTimeout(() => {
                 searchCards();
             }, 300); // 300ms delay for better user experience
+        });
+
+        // Clear search button handler
+        document.getElementById('searchClearBtn').addEventListener('click', function() {
+            const searchInput = document.getElementById('searchInput');
+            searchInput.value = '';
+            searchInput.focus();
+            this.style.display = 'none';
+            searchCards(); // Trigger search with empty term
         });
         
         // Add event listeners for type filters
