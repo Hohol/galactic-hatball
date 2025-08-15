@@ -956,9 +956,8 @@
             // Update the image
             const imageContainer = card.querySelector('.card-images');
             if (imageContainer && cardData.images && cardData.images.length > 0) {
-                // For now, just use the first image since our local image structure handles prioritization
-                // TODO: Implement proper Bronze/Gold switching logic
-                const imageToShow = cardData.images[0];
+                // Select the best image based on current version state
+                const imageToShow = getBestImageForCharacter(cardData, version);
                 
                 if (imageToShow) {
                     const img = imageContainer.querySelector('img');
@@ -998,6 +997,25 @@
             if (image.converted) return `images/${image.converted}`;
             if (image.original) return `images/${image.original}`;
             return image.url;
+        }
+
+        // Select the best image type for a character card based on current version state
+        function getBestImageForCharacter(cardData, version) {
+            if (!cardData.images || cardData.images.length === 0) return null;
+            
+            // For characters, prioritize based on version state
+            if (version === 'golden') {
+                // Look for gold image first
+                const goldImage = cardData.images.find(img => img.type === 'gold');
+                if (goldImage) return goldImage;
+            } else {
+                // Look for bronze image first
+                const bronzeImage = cardData.images.find(img => img.type === 'bronze');
+                if (bronzeImage) return bronzeImage;
+            }
+            
+            // If preferred type not found, fall back to first available image
+            return cardData.images[0];
         }
 
         // Equalize header heights in each row to align images
@@ -1271,11 +1289,13 @@
                                         <div class="card-images">
                                             ${(() => {
                                                 // Priority: Local converted images > local original images > remote URLs
-                                                // For characters, prefer the first available image (Bronze/Gold logic handled by version toggle)
-                                                const firstImage = card.images[0];
+                                                // For characters, use proper Bronze/Gold image selection
+                                                const imageToShow = card.type === 'characters' ? 
+                                                    getBestImageForCharacter(card, 'bronze') : // Default to bronze for initial display
+                                                    card.images[0];
                                                 
-                                                if (firstImage) {
-                                                    const bestSource = getBestImageSource(firstImage);
+                                                if (imageToShow) {
+                                                    const bestSource = getBestImageSource(imageToShow);
                                                     return `
                                                         <div class="card-image active">
                                                             <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'/%3E" 
@@ -1315,10 +1335,8 @@
                                         ${card.type === 'characters' && card.abilities ? `
                                             <div class="card-abilities">
                                                 ${card.abilities.map(ability => {
-                                                    // Use golden description if available and card version is golden
-                                                    const cardVersion = 'bronze'; // Will be updated when we implement the toggle function
-                                                    const descriptionToShow = cardVersion === 'golden' && ability.gold_description ? 
-                                                        ability.gold_description : ability.description;
+                                                    // Use bronze description for initial display (default version)
+                                                    const descriptionToShow = ability.description;
                                                     
                                                     if (ability.type && descriptionToShow) {
                                                         return `<div class="ability-line"><strong>${ability.type}:</strong> ${formatAbilityText(descriptionToShow)}</div>`;
