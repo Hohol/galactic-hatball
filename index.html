@@ -1364,9 +1364,17 @@
                                             ${(() => {
                                                 // Priority: Local converted images > local original images > remote URLs
                                                 // For characters, use proper Bronze/Gold image selection
-                                                const imageToShow = card.type === 'characters' ? 
-                                                    getBestImageForCharacter(card, 'bronze') : // Default to bronze for initial display
-                                                    card.images[0];
+                                                // For spells and treasures, prioritize "card" type images
+                                                let imageToShow;
+                                                if (card.type === 'characters') {
+                                                    imageToShow = getBestImageForCharacter(card, 'bronze'); // Default to bronze for initial display
+                                                } else if (card.type === 'spells' || card.type === 'treasures') {
+                                                    // Prioritize "card" type images for spells and treasures
+                                                    const cardImage = card.images.find(img => img.type === 'card');
+                                                    imageToShow = cardImage || card.images[0]; // Fall back to first image if no "card" type
+                                                } else {
+                                                    imageToShow = card.images[0]; // Default fallback
+                                                }
                                                 
                                                 if (imageToShow) {
                                                     const bestSource = getBestImageSource(imageToShow);
