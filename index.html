@@ -1518,6 +1518,16 @@
                 // Select this button
                 this.classList.add('selected');
                 selectedType = this.dataset.type;
+                
+                // Clear trait filter when selecting Treasures or Spells
+                if (selectedType === 'treasures' || selectedType === 'spells') {
+                    selectedTraits.clear();
+                    // Remove selected state from all trait checkboxes
+                    document.querySelectorAll('#trait-checkboxes .trait-checkbox').forEach(traitDiv => {
+                        traitDiv.classList.remove('selected');
+                    });
+                }
+                
                 searchCards();
             });
         });
