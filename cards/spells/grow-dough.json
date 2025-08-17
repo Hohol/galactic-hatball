@@ -1,7 +1,7 @@
 {
   "name": "Grow Dough",
-  "description": "Give a character +4/+4.",
   "type": "spells",
+  "description": "Give a character +4/+4.",
   "rarity": "rare",
   "images": [
     {

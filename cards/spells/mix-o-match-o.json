@@ -1,7 +1,7 @@
 {
   "name": "Mix-O Match-O",
-  "description": "Choose a character. At the start of the fight, its stats grow to match the enemy across from it.",
   "type": "spells",
+  "description": "Choose a character. At the start of the fight, its stats grow to match the enemy across from it.",
   "rarity": "legendary",
   "images": [
     {

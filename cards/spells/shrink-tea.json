@@ -1,9 +1,13 @@
 {
   "name": "Shrink Tea",
-  "description": "Shrink an enemy to 1 Health.",
   "type": "spells",
+  "description": "Shrink an enemy to 1 Health.",
   "rarity": "rare",
   "images": [
+    {
+      "url": "https://onceuponagalaxy.wiki.gg/images/3/3a/Spell_Shrink_Tea.png?fba5d0&format=original",
+      "type": "art"
+    },
     {
       "url": "https://onceuponagalaxy.wiki.gg/images/a/a3/Spell_Shrink_Tea_Card.png?format=original",
       "type": "card",

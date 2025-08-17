@@ -1,0 +1,14 @@
+{
+  "name": "You Meet in a Tavern",
+  "type": "spells",
+  "description": "Get a random character of your shop's rarity.",
+  "rarity": "uncommon",
+  "images": [
+    {
+      "url": "https://onceuponagalaxy.wiki.gg/images/f/fa/Spell_You_Meet_in_a_Tavern_Card.png?4adb9c&format=original",
+      "type": "art",
+      "original": "original/you-meet-in-a-tavern_art_0.png",
+      "converted": "converted/you-meet-in-a-tavern_art_0.webp"
+    }
+  ]
+}

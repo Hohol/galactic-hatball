@@ -1,7 +1,7 @@
 {
   "name": "Double, Double, Toil and Trouble",
-  "description": "Give a slot +1/+1, the double its buff.",
   "type": "spells",
+  "description": "Give a slot +1/+1, the double its buff.",
   "rarity": "legendary",
   "images": [
     {

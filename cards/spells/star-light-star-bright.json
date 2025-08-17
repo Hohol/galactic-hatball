@@ -1,7 +1,7 @@
 {
   "name": "Star Light, Star Bright",
-  "description": "Give your characters +1/+1. Give your Silver characters and additional +4/+4.",
   "type": "spells",
+  "description": "Give your characters +1/+1. Give your Silver characters and additional +4/+4.",
   "rarity": "epic",
   "images": [
     {

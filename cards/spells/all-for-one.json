@@ -1,7 +1,7 @@
 {
   "name": "All for One",
-  "description": "Give your characters +1/+1. If you win this fight, give them an additional +1/+1.",
   "type": "spells",
+  "description": "Give your characters +1/+1. If you win this fight, give them an additional +1/+1.",
   "rarity": "rare",
   "images": [
     {

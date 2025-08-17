@@ -1,7 +1,7 @@
 {
   "name": "Over the Rainbow",
-  "description": "Double the Attack and Health of the next character you recruit.",
   "type": "spells",
+  "description": "Double the Attack and Health of the next character you recruit.",
   "rarity": "epic",
   "images": [
     {

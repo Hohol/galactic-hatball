@@ -1,7 +1,7 @@
 {
   "name": "Giant Growth",
-  "description": "Give a character +10/+10.",
   "type": "spells",
+  "description": "Give a character +10/+10.",
   "rarity": "epic",
   "images": [
     {

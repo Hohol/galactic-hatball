@@ -1,7 +1,7 @@
 {
   "name": "Pumpkin Spice Latte",
-  "description": "Heal a cracked Heart. See a new shop.",
   "type": "spells",
+  "description": "Heal a cracked Heart. See a new shop.",
   "rarity": "uncommon",
   "images": [
     {

@@ -1,0 +1,14 @@
+{
+  "name": "Sword of Shadow and Light",
+  "type": "Treasures",
+  "description": "Give your Heroes and Villains \"Hunt -- Give your characters +5/+5.\"",
+  "rarity": "legendary",
+  "images": [
+    {
+      "url": "https://onceuponagalaxy.wiki.gg/images/2/2c/Treasure_Sword_of_Shadow_and_Light_Card.png?format=original",
+      "type": "card",
+      "original": "original/sword-of-shadow-and-light_card_0.png",
+      "converted": "converted/sword-of-shadow-and-light_card_0.webp"
+    }
+  ]
+}

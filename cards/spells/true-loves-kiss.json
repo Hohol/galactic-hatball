@@ -1,0 +1,14 @@
+{
+  "name": "True Love's Kiss",
+  "type": "spells",
+  "description": "Transform a character into a random character one rarity higher.",
+  "rarity": "rare",
+  "images": [
+    {
+      "url": "https://onceuponagalaxy.wiki.gg/images/4/42/Spell_True_Love%27s_Kiss_Card.png?1bd498&format=original",
+      "type": "art",
+      "original": "original/true-loves-kiss_art_0.png",
+      "converted": "converted/true-loves-kiss_art_0.webp"
+    }
+  ]
+}

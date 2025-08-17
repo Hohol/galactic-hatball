@@ -1,7 +1,7 @@
 {
   "name": "Fires of Ares",
-  "description": "Give a slot +6 Attack.",
   "type": "spells",
+  "description": "Give a slot +6 Attack.",
   "rarity": "epic",
   "images": [
     {

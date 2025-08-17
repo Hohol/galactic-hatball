@@ -1,7 +1,7 @@
 {
   "name": "Eureka!",
-  "description": "Give a character +7/+7. If it was a Mage, get a new shop.",
   "type": "spells",
+  "description": "Give a character +7/+7. If it was a Mage, get a new shop.",
   "rarity": "legendary",
   "images": [
     {

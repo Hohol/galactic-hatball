@@ -1,7 +1,7 @@
 {
   "name": "Greed",
-  "description": "Give a character Treasure Hoard.",
   "type": "spells",
+  "description": "Give a character Treasure Hoard.",
   "rarity": "rare",
   "images": [
     {

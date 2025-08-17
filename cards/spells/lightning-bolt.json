@@ -1,7 +1,7 @@
 {
   "name": "Lightning Bolt",
-  "description": "Deal 20 damage to an enemy.",
   "type": "spells",
+  "description": "Deal 20 damage to an enemy.",
   "rarity": "rare",
   "images": [
     {

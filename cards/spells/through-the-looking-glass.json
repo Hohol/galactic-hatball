@@ -1,7 +1,7 @@
 {
   "name": "Through the Looking Glass",
-  "description": "Transform a character into a random Bronze character of your shop's rarity.",
   "type": "spells",
+  "description": "Transform a character into a random Bronze character of your shop's rarity.",
   "rarity": "epic",
   "images": [
     {

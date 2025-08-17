@@ -1,7 +1,7 @@
 {
   "name": "Spoonful of Sugar",
-  "description": "Give a character +4 Heallth.",
   "type": "spells",
+  "description": "Give a character +4 Heallth.",
   "rarity": "uncommon",
   "images": [
     {

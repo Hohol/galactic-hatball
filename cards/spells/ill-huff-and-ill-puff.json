@@ -1,7 +1,7 @@
 {
   "name": "I'll Huff and I'll Puff",
-  "description": "Deal 15 damage to an enemy. If this KOs it, give your characters +4/+4.",
   "type": "spells",
+  "description": "Deal 15 damage to an enemy. If this KOs it, give your characters +4/+4.",
   "rarity": "epic",
   "images": [
     {

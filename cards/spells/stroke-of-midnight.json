@@ -1,7 +1,7 @@
 {
   "name": "Stroke of Midnight",
-  "description": "Transform an enemy character into a random Common character.",
   "type": "spells",
+  "description": "Transform an enemy character into a random Common character.",
   "rarity": "legendary",
   "images": [
     {

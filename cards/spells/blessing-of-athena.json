@@ -1,7 +1,7 @@
 {
   "name": "Blessing of Athena",
-  "description": "Give a slot +6 Health.",
   "type": "spells",
+  "description": "Give a slot +6 Health.",
   "rarity": "epic",
   "images": [
     {

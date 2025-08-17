@@ -1,7 +1,7 @@
 {
   "name": "Happily Ever After",
-  "description": "Give a character +4/+4. If you win the net fight, give it an additional +4/+4.",
   "type": "spells",
+  "description": "Give a character +4/+4. If you win the net fight, give it an additional +4/+4.",
   "rarity": "epic",
   "images": [
     {

@@ -1,7 +1,7 @@
 {
   "name": "Silvery Moon",
-  "description": "Turn a Bronze character Silver and give it +1/+1.",
   "type": "spells",
+  "description": "Turn a Bronze character Silver and give it +1/+1.",
   "rarity": "uncommon",
   "images": [
     {

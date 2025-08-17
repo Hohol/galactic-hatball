@@ -1,7 +1,7 @@
 {
   "name": "All Hands on Deck",
-  "description": "Give all of your characters +2 Attack.",
   "type": "spells",
+  "description": "Give all of your characters +2 Attack.",
   "rarity": "rare",
   "images": [
     {

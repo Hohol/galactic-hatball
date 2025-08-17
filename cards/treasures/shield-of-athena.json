@@ -1,0 +1,14 @@
+{
+  "name": "Shield of Athena",
+  "type": "Treasures",
+  "description": "When one of your characters is KO'd, give it +8 Attack. Give your characters that survivie a fight +8 Health.",
+  "rarity": "epic",
+  "images": [
+    {
+      "url": "https://onceuponagalaxy.wiki.gg/images/1/1d/Treasure_Shield_of_Athena_Card.png?fb7129&format=original",
+      "type": "art",
+      "original": "original/shield-of-athena_art_0.png",
+      "converted": "converted/shield-of-athena_art_0.webp"
+    }
+  ]
+}

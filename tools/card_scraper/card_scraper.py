@@ -34,7 +34,7 @@ class CardScraper:
             print(f"Error fetching {url}: {e}")
             return None
     
-    def scrape_category(self, category_name, limit=10):
+    def scrape_category(self, category_name, limit=10, dry_run=False):
         """Scrape any category page to get card data"""
         category_url = f"https://onceuponagalaxy.wiki.gg/wiki/Category:{category_name}"
         print(f"Scraping {category_name} category: {category_url}")
@@ -95,6 +95,14 @@ class CardScraper:
                 seen_urls.add(link['url'])
         
         print(f"After deduplication: {len(unique_links)} unique {category_name} links")
+        
+        # If dry run, just show the list and return
+        if dry_run:
+            print(f"\n=== DRY RUN: {category_name} Cards Found ===")
+            for i, link in enumerate(unique_links, 1):
+                print(f"{i:3d}. {link['name']}")
+            print(f"=== Total: {len(unique_links)} {category_name} cards ===\n")
+            return []
         
         # Scrape each card page
         cards = []
@@ -609,25 +617,26 @@ class CardScraper:
             if card and card.get('name'):
                 self.save_card_with_image_preservation(card, category_name, is_batch=True)
     
-    def run(self, category_name, limit=10):
+    def run(self, category_name, limit=10, dry_run=False):
         """Main method to run the scraper for a single category"""
         print(f"Starting Working Once upon a Galaxy wiki scraper for {category_name}...")
         
         # Scrape the specified category
-        cards = self.scrape_category(category_name, limit)
+        cards = self.scrape_category(category_name, limit, dry_run)
         
-        print(f"\nScraped {len(cards)} cards")
-        
-        # Save cards to JSON files
-        self.save_cards_to_json(cards, category_name)
-        
-        print("Scraping completed!")
+        if not dry_run:
+            print(f"\nScraped {len(cards)} cards")
+            # Save cards to JSON files
+            self.save_cards_to_json(cards, category_name)
+            print("Scraping completed!")
+        else:
+            print("Dry run completed - no cards were scraped or saved")
     
     def save_single_card_to_json(self, card, category_name):
         """Save a single card to JSON file immediately"""
         self.save_card_with_image_preservation(card, category_name, is_batch=False)
     
-    def run_all_categories(self):
+    def run_all_categories(self, dry_run=False):
         """Main method to run the scraper for all available categories"""
         print("Starting Working Once upon a Galaxy wiki scraper for all categories...")
         
@@ -641,11 +650,13 @@ class CardScraper:
                 print(f"{'='*50}")
                 
                 # Try to scrape this category (some might not exist yet)
-                cards = self.scrape_category(category, limit=None)  # Unlimited
+                cards = self.scrape_category(category, limit=None, dry_run=dry_run)  # Unlimited
                 
-                if cards:
+                if not dry_run and cards:
                     print(f"\nScraped {len(cards)} cards from {category}")
                     self.save_cards_to_json(cards, category)
+                elif dry_run:
+                    print(f"Dry run completed for {category}")
                 else:
                     print(f"No cards found for category: {category}")
                     
@@ -653,7 +664,10 @@ class CardScraper:
                 print(f"Error processing category {category}: {e}")
                 continue
         
-        print("\nAll categories processing completed!")
+        if dry_run:
+            print("\nAll categories dry run completed!")
+        else:
+            print("\nAll categories processing completed!")
     
     def scrape_specific_cards(self, card_names, category_name):
         """Scrape specific cards by name from a category"""
@@ -895,6 +909,8 @@ if __name__ == "__main__":
                        help='Limit number of cards per category (default: unlimited)')
     parser.add_argument('--all', action='store_true',
                        help='Scrape all available categories with unlimited cards')
+    parser.add_argument('--dry-run', action='store_true',
+                       help='Show list of cards without scraping them (use with --all or --categories)')
     parser.add_argument('--cards', '-n', nargs='+',
                        help='Specific card names to scrape (requires --categories)')
     
@@ -904,8 +920,12 @@ if __name__ == "__main__":
     
     if args.all:
         # Scrape all available categories with unlimited cards
-        print("Scraping all available categories with unlimited cards...")
-        scraper.run_all_categories()
+        if args.dry_run:
+            print("DRY RUN: Showing all available categories with unlimited cards...")
+            scraper.run_all_categories(dry_run=True)
+        else:
+            print("Scraping all available categories with unlimited cards...")
+            scraper.run_all_categories()
     elif args.categories:
         if args.cards:
             # Scrape specific cards from specified categories
@@ -922,8 +942,16 @@ if __name__ == "__main__":
             # Scrape specified categories with specified limit
             for category in args.categories:
                 print(f"\n{'='*50}")
-                scraper.run(category, args.limit)
+                if args.dry_run:
+                    print(f"DRY RUN: Showing cards from {category}...")
+                    scraper.run(category, args.limit, dry_run=True)
+                else:
+                    scraper.run(category, args.limit)
     else:
         # Default: scrape Characters with 10 cards limit
-        print("No categories specified. Using default: Characters with 10 card limit")
-        scraper.run("Characters", 10)
+        if args.dry_run:
+            print("DRY RUN: Showing Characters with 10 card limit...")
+            scraper.run("Characters", 10, dry_run=True)
+        else:
+            print("No categories specified. Using default: Characters with 10 card limit")
+            scraper.run("Characters", 10)

@@ -1,7 +1,7 @@
 {
   "name": "Down Came the Rain",
-  "description": "Give all three front row slots +1/+1.",
   "type": "spells",
+  "description": "Give all three front row slots +1/+1.",
   "rarity": "rare",
   "images": [
     {

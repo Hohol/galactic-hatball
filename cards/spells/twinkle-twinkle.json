@@ -1,0 +1,14 @@
+{
+  "name": "Twinkle Twinkle",
+  "type": "spells",
+  "description": "The next character you recruit has +4/+4.",
+  "rarity": "uncommon",
+  "images": [
+    {
+      "url": "https://onceuponagalaxy.wiki.gg/images/e/e3/Spell_Twinkle_Twinkle_Card.png?e055ac&format=original",
+      "type": "art",
+      "original": "original/twinkle-twinkle_art_0.png",
+      "converted": "converted/twinkle-twinkle_art_0.webp"
+    }
+  ]
+}

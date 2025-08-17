@@ -1,9 +1,13 @@
 {
   "name": "Pick a Peck of Peppers",
-  "description": "Give a character +3/+3. Your next shop is all characters that share a type with it.",
   "type": "spells",
+  "description": "Give a character +3/+3. Your next shop is all characters that share a type with it.",
   "rarity": "rare",
   "images": [
+    {
+      "url": "https://onceuponagalaxy.wiki.gg/images/1/13/Spell_Pick_a_Peck_of_Peppers.png?510baa&format=original",
+      "type": "art"
+    },
     {
       "url": "https://onceuponagalaxy.wiki.gg/images/1/19/Spell_Pick_a_Peck_of_Peppers_Card.png?format=original",
       "type": "card",

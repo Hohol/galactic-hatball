@@ -1,7 +1,7 @@
 {
   "name": "Abra Kadabra",
-  "description": "Get a bonus shop of all spells.",
   "type": "spells",
+  "description": "Get a bonus shop of all spells.",
   "rarity": "epic",
   "images": [
     {

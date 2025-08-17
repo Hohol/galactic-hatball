@@ -1,0 +1,14 @@
+{
+  "name": "What Big Teeth You Have",
+  "type": "spells",
+  "description": "Give a character +4 Attack.",
+  "rarity": "uncommon",
+  "images": [
+    {
+      "url": "https://onceuponagalaxy.wiki.gg/images/d/da/Spell_What_Big_Teeth_You_Have_Card.png?b8b5d0&format=original",
+      "type": "art",
+      "original": "original/what-big-teeth-you-have_art_0.png",
+      "converted": "converted/what-big-teeth-you-have_art_0.webp"
+    }
+  ]
+}
