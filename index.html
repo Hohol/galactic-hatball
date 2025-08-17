@@ -1104,7 +1104,55 @@
             });
         }
 
-        // Populate trait filter checkboxes
+        // Analyze which traits are actually used in card descriptions
+        function analyzeTraitsUsage() {
+            console.time('Trait analysis');
+            
+            const usedTraits = new Set();
+            usedTraits.add('ALL'); // Special trait that should always be shown
+            
+            allCards.forEach(card => {
+                // Check abilities descriptions for characters
+                if (card.abilities && Array.isArray(card.abilities)) {
+                    card.abilities.forEach(ability => {
+                        if (ability.description) {
+                            const description = ability.description.toLowerCase();
+                            // Check if any trait is mentioned in the description
+                            card.traits?.forEach(trait => {
+                                if (trait !== 'ALL' && description.includes(trait.toLowerCase())) {
+                                    usedTraits.add(trait);
+                                }
+                            });
+                        }
+                        if (ability.gold_description) {
+                            const goldDescription = ability.gold_description.toLowerCase();
+                            card.traits?.forEach(trait => {
+                                if (trait !== 'ALL' && goldDescription.includes(trait.toLowerCase())) {
+                                    usedTraits.add(trait);
+                                }
+                            });
+                        }
+                    });
+                }
+                
+                // Check treasure/spell descriptions
+                if (card.description) {
+                    const description = card.description.toLowerCase();
+                    card.traits?.forEach(trait => {
+                        if (trait !== 'ALL' && description.includes(trait.toLowerCase())) {
+                            usedTraits.add(trait);
+                        }
+                    });
+                }
+            });
+            
+            console.timeEnd('Trait analysis');
+            console.log(`Found ${usedTraits.size} used traits out of ${allCards.reduce((total, card) => total + (card.traits?.length || 0), 0)} total trait instances`);
+            
+            return Array.from(usedTraits);
+        }
+        
+        // Populate trait filter checkboxes with only used traits
         function populateTraitFilter(traits) {
             const traitFilter = document.getElementById('trait-filter');
             const traitCheckboxes = document.getElementById('trait-checkboxes');
@@ -1201,9 +1249,9 @@
                 displayCards(allCards);
                 updateResultsCount(allCards.length);
 
-                // Extract and populate traits
-                const allTraits = extractAllTraits(allCards);
-                populateTraitFilter(allTraits);
+                // Extract and populate only used traits
+                const usedTraits = analyzeTraitsUsage();
+                populateTraitFilter(usedTraits);
 
                 // Extract and populate rarities
                 const allRarities = extractAllRarities(allCards);
