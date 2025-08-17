@@ -1104,46 +1104,41 @@
             });
         }
 
-        // Analyze which traits are actually used in card descriptions
-        function analyzeTraitsUsage() {
+
+        
+        // Extract traits that are actually used in card descriptions
+        function extractUsedTraits() {
             console.time('Trait analysis');
             
             const usedTraits = new Set();
             usedTraits.add('ALL'); // Special trait that should always be shown
             
+            // Pure helper function to find traits mentioned in text
+            const findTraitsInText = (text, cardTraits) => {
+                if (!text || !cardTraits) return new Set();
+                const lowerText = text.toLowerCase();
+                const foundTraits = new Set();
+                cardTraits.forEach(trait => {
+                    if (trait !== 'ALL' && lowerText.includes(trait.toLowerCase())) {
+                        foundTraits.add(trait);
+                    }
+                });
+                return foundTraits;
+            };
+            
             allCards.forEach(card => {
                 // Check abilities descriptions for characters
                 if (card.abilities && Array.isArray(card.abilities)) {
                     card.abilities.forEach(ability => {
-                        if (ability.description) {
-                            const description = ability.description.toLowerCase();
-                            // Check if any trait is mentioned in the description
-                            card.traits?.forEach(trait => {
-                                if (trait !== 'ALL' && description.includes(trait.toLowerCase())) {
-                                    usedTraits.add(trait);
-                                }
-                            });
-                        }
-                        if (ability.gold_description) {
-                            const goldDescription = ability.gold_description.toLowerCase();
-                            card.traits?.forEach(trait => {
-                                if (trait !== 'ALL' && goldDescription.includes(trait.toLowerCase())) {
-                                    usedTraits.add(trait);
-                                }
-                            });
-                        }
+                        const descriptionTraits = findTraitsInText(ability.description, card.traits);
+                        const goldTraits = findTraitsInText(ability.gold_description, card.traits);
+                        [...descriptionTraits, ...goldTraits].forEach(trait => usedTraits.add(trait));
                     });
                 }
                 
                 // Check treasure/spell descriptions
-                if (card.description) {
-                    const description = card.description.toLowerCase();
-                    card.traits?.forEach(trait => {
-                        if (trait !== 'ALL' && description.includes(trait.toLowerCase())) {
-                            usedTraits.add(trait);
-                        }
-                    });
-                }
+                const descriptionTraits = findTraitsInText(card.description, card.traits);
+                [...descriptionTraits].forEach(trait => usedTraits.add(trait));
             });
             
             console.timeEnd('Trait analysis');
@@ -1250,7 +1245,7 @@
                 updateResultsCount(allCards.length);
 
                 // Extract and populate only used traits
-                const usedTraits = analyzeTraitsUsage();
+                const usedTraits = extractUsedTraits();
                 populateTraitFilter(usedTraits);
 
                 // Extract and populate rarities
