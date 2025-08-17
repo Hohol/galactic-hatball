@@ -1235,23 +1235,20 @@
         // Load cards from a specific directory
         async function loadCardsFromDirectory(directory) {
             try {
-                // Get the manifest file to find all card files
-                const manifestResponse = await fetch('cards-manifest.txt');
-                if (!manifestResponse.ok) {
+                // Get the cards index to find all card files
+                const indexResponse = await fetch('cards-index.json');
+                if (!indexResponse.ok) {
                     return;
                 }
                 
-                const manifestText = await manifestResponse.text();
-                const allFiles = manifestText.trim().split('\n');
+                const indexData = await indexResponse.json();
+                const allFiles = indexData[directory] || [];
                 
-                // Filter files for this directory
-                const cardFiles = allFiles.filter(file => file.startsWith(`cards/${directory}/`));
-                
-                if (cardFiles.length === 0) {
+                if (allFiles.length === 0) {
                     return;
                 }
                 
-                const cardPromises = cardFiles.map(file => fetch(file).then(response => response.json()));
+                const cardPromises = allFiles.map(file => fetch(file).then(response => response.json()));
                 const directoryCards = await Promise.all(cardPromises);
                 
                 directoryCards.forEach(card => {
