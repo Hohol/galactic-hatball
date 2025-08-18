@@ -833,7 +833,7 @@
 
         <div class="search-section">
             <div class="search-box">
-                <input type="text" class="search-input" id="searchInput" placeholder="Search cards..." autocomplete="off" autofocus>
+                <input type="text" class="search-input" id="searchInput" placeholder="Search cards... (use a:ability_type to search abilities)" autocomplete="off" autofocus>
                 <button type="button" class="search-clear-btn" id="searchClearBtn" title="Clear search" style="display: none;">✕</button>
             </div>
             <div class="filter-box">
@@ -1491,22 +1491,38 @@
             // Then filter by search term if provided
             if (searchTerm.trim()) {
                 const searchLower = searchTerm.toLowerCase();
-                filteredCards = filteredCards.filter(card => {
-                    // Search in name
-                    if (card.name.toLowerCase().includes(searchLower)) return true;
-                    
-                    // Search in description (for treasures/spells)
-                    if (card.description && card.description.toLowerCase().includes(searchLower)) return true;
-                    
-                    // Search in abilities (for characters)
-                    if (card.abilities && card.abilities.some(ability => {
-                        if (ability.type && ability.type.toLowerCase().includes(searchLower)) return true;
-                        if (ability.description && ability.description.toLowerCase().includes(searchLower)) return true;
+                
+                // Check if search is for ability types only (a:pattern)
+                if (searchTerm.startsWith('a:')) {
+                    const abilityType = searchTerm.substring(2).trim().toLowerCase();
+                    if (abilityType) {
+                        filteredCards = filteredCards.filter(card => {
+                            // Only search in ability types for characters
+                            if (card.abilities && card.abilities.some(ability => {
+                                return ability.type && ability.type.toLowerCase().includes(abilityType);
+                            })) return true;
+                            return false;
+                        });
+                    }
+                } else {
+                    // Regular search in all fields
+                    filteredCards = filteredCards.filter(card => {
+                        // Search in name
+                        if (card.name.toLowerCase().includes(searchLower)) return true;
+                        
+                        // Search in description (for treasures/spells)
+                        if (card.description && card.description.toLowerCase().includes(searchLower)) return true;
+                        
+                        // Search in abilities (for characters)
+                        if (card.abilities && card.abilities.some(ability => {
+                            if (ability.type && ability.type.toLowerCase().includes(searchLower)) return true;
+                            if (ability.description && ability.description.toLowerCase().includes(searchLower)) return true;
+                            return false;
+                        })) return true;
+                        
                         return false;
-                    })) return true;
-                    
-                    return false;
-                });
+                    });
+                }
             }
             
             // Apply trait filter if any traits are selected
