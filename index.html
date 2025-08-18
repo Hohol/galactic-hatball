@@ -77,7 +77,7 @@
             flex-wrap: wrap;
         }
         
-        .trait-checkboxes, .rarity-checkboxes {
+        .trait-checkboxes, .rarity-checkboxes, .ability-type-checkboxes {
             display: flex;
             justify-content: center;
             gap: 15px;
@@ -823,6 +823,42 @@
             vertical-align: middle;
             margin-right: 8px;
         }
+        
+        .ability-type-checkboxes {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 8px;
+        }
+        
+        .ability-type-checkbox {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 16px;
+            background: rgba(255, 165, 0, 0.1);
+            border: 1px solid rgba(255, 165, 0, 0.3);
+            border-radius: 20px;
+            color: #ffa500;
+            font-size: clamp(0.8rem, 1vw, 1rem);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            user-select: none;
+        }
+        
+        .ability-type-checkbox:hover {
+            background: rgba(255, 165, 0, 0.2);
+            border-color: rgba(255, 165, 0, 0.5);
+            transform: translateY(-1px);
+        }
+        
+        .ability-type-checkbox.selected {
+            background: rgba(255, 165, 0, 0.8);
+            border-color: #ffa500;
+            color: #ffffff;
+            font-weight: 700;
+            box-shadow: 0 2px 8px rgba(255, 165, 0, 0.4);
+        }
     </style>
 </head>
 <body>
@@ -833,7 +869,7 @@
 
         <div class="search-section">
             <div class="search-box">
-                <input type="text" class="search-input" id="searchInput" placeholder="Search cards... (use a:ability_type to search abilities)" autocomplete="off" autofocus>
+                <input type="text" class="search-input" id="searchInput" placeholder="Search cards..." autocomplete="off" autofocus>
                 <button type="button" class="search-clear-btn" id="searchClearBtn" title="Clear search" style="display: none;">✕</button>
             </div>
             <div class="filter-box">
@@ -848,6 +884,12 @@
             <div class="filter-box" id="trait-filter" style="display: none;">
                 <div class="trait-checkboxes" id="trait-checkboxes">
                     <!-- Traits will be populated dynamically -->
+                </div>
+            </div>
+            
+            <div class="filter-box" id="ability-type-filter" style="display: none;">
+                <div class="ability-type-checkboxes" id="ability-type-checkboxes">
+                    <!-- Ability types will be populated dynamically -->
                 </div>
             </div>
             
@@ -878,6 +920,7 @@
         let selectedType = 'all';
         let selectedTraits = new Set();
         let selectedRarities = new Set();
+        let selectedAbilityTypes = new Set();
 
         
         // Define rarity order (more common first)
@@ -931,6 +974,31 @@
         // Extract all unique rarities from cards
         function extractAllRarities(cards) {
             return Object.keys(rarityOrder);
+        }
+        
+        // Extract all unique ability types from cards
+        function extractAllAbilityTypes(cards) {
+            const abilityTypes = new Set();
+            cards.forEach(card => {
+                if (card.abilities && Array.isArray(card.abilities)) {
+                    card.abilities.forEach(ability => {
+                        if (ability.type) {
+                            // Skip "Cursed" ability type as it's not useful for filtering
+                            if (ability.type === 'Cursed') {
+                                return;
+                            }
+                            
+                            // Consolidate "Treasure Hoard N" abilities into a single "Treasure Hoard" type
+                            if (ability.type.match(/^Treasure Hoard \d+$/)) {
+                                abilityTypes.add('Treasure Hoard');
+                            } else {
+                                abilityTypes.add(ability.type);
+                            }
+                        }
+                    });
+                }
+            });
+            return Array.from(abilityTypes).sort();
         }
         
         // Capitalize rarity text (e.g., "secret rare" -> "Secret Rare")
@@ -1106,7 +1174,7 @@
 
 
         
-        // Extract traits that are actually used in card descriptions
+                // Extract traits that are actually used in card descriptions
         function extractUsedTraits() {
             console.time('Trait analysis');
             
@@ -1125,7 +1193,7 @@
                 });
                 return foundTraits;
             };
-            
+
             allCards.forEach(card => {
                 // Check abilities descriptions for characters
                 if (card.abilities && Array.isArray(card.abilities)) {
@@ -1135,16 +1203,16 @@
                         [...descriptionTraits, ...goldTraits].forEach(trait => usedTraits.add(trait));
                     });
                 }
-                
+
                 // Check treasure/spell descriptions
                 const descriptionTraits = findTraitsInText(card.description, card.traits);
                 [...descriptionTraits].forEach(trait => usedTraits.add(trait));
             });
-            
+
             console.timeEnd('Trait analysis');
             console.log(`Found ${usedTraits.size} used traits out of ${allCards.reduce((total, card) => total + (card.traits?.length || 0), 0)} total trait instances`);
-            
-            return Array.from(usedTraits);
+
+            return Array.from(usedTraits).sort();
         }
         
         // Populate trait filter checkboxes with only used traits
@@ -1225,6 +1293,53 @@
             });
         }
         
+        // Populate ability type filter checkboxes
+        function populateAbilityTypeFilter(abilityTypes) {
+            const abilityTypeFilter = document.getElementById('ability-type-filter');
+            const abilityTypeCheckboxes = document.getElementById('ability-type-checkboxes');
+            
+            if (abilityTypes.length === 0) {
+                abilityTypeFilter.style.display = 'none';
+                return;
+            }
+            
+            abilityTypeFilter.style.display = 'block';
+            abilityTypeCheckboxes.innerHTML = '';
+            
+            abilityTypes.forEach(abilityType => {
+                const abilityTypeDiv = document.createElement('div');
+                abilityTypeDiv.className = 'ability-type-checkbox';
+                abilityTypeDiv.dataset.abilityType = abilityType;
+                
+                const span = document.createElement('span');
+                span.textContent = abilityType;
+                
+                abilityTypeDiv.appendChild(span);
+                
+                // Make entire ability type element clickable
+                abilityTypeDiv.addEventListener('click', function() {
+                    if (selectedAbilityTypes.has(abilityType)) {
+                        // If clicking the same ability type, deselect it
+                        selectedAbilityTypes.delete(abilityType);
+                        this.classList.remove('selected');
+                    } else {
+                        // If selecting a new ability type, clear previous selection and select this one
+                        selectedAbilityTypes.clear();
+                        // Remove selected state from all other ability type checkboxes
+                        document.querySelectorAll('#ability-type-checkboxes .ability-type-checkbox').forEach(div => {
+                            div.classList.remove('selected');
+                        });
+                        // Select this ability type
+                        selectedAbilityTypes.add(abilityType);
+                        this.classList.add('selected');
+                    }
+                    searchCards();
+                });
+                
+                abilityTypeCheckboxes.appendChild(abilityTypeDiv);
+            });
+        }
+        
         // Load all cards from JSON files
         async function loadCards() {
             try {
@@ -1247,6 +1362,10 @@
                 // Extract and populate only used traits
                 const usedTraits = extractUsedTraits();
                 populateTraitFilter(usedTraits);
+                
+                // Extract and populate ability types
+                const allAbilityTypes = extractAllAbilityTypes(allCards);
+                populateAbilityTypeFilter(allAbilityTypes);
 
                 // Extract and populate rarities
                 const allRarities = extractAllRarities(allCards);
@@ -1491,38 +1610,22 @@
             // Then filter by search term if provided
             if (searchTerm.trim()) {
                 const searchLower = searchTerm.toLowerCase();
-                
-                // Check if search is for ability types only (a:pattern)
-                if (searchTerm.startsWith('a:')) {
-                    const abilityType = searchTerm.substring(2).trim().toLowerCase();
-                    if (abilityType) {
-                        filteredCards = filteredCards.filter(card => {
-                            // Only search in ability types for characters
-                            if (card.abilities && card.abilities.some(ability => {
-                                return ability.type && ability.type.toLowerCase().includes(abilityType);
-                            })) return true;
-                            return false;
-                        });
-                    }
-                } else {
-                    // Regular search in all fields
-                    filteredCards = filteredCards.filter(card => {
-                        // Search in name
-                        if (card.name.toLowerCase().includes(searchLower)) return true;
-                        
-                        // Search in description (for treasures/spells)
-                        if (card.description && card.description.toLowerCase().includes(searchLower)) return true;
-                        
-                        // Search in abilities (for characters)
-                        if (card.abilities && card.abilities.some(ability => {
-                            if (ability.type && ability.type.toLowerCase().includes(searchLower)) return true;
-                            if (ability.description && ability.description.toLowerCase().includes(searchLower)) return true;
-                            return false;
-                        })) return true;
-                        
+                filteredCards = filteredCards.filter(card => {
+                    // Search in name
+                    if (card.name.toLowerCase().includes(searchLower)) return true;
+                    
+                    // Search in description (for treasures/spells)
+                    if (card.description && card.description.toLowerCase().includes(searchLower)) return true;
+                    
+                    // Search in abilities (for characters)
+                    if (card.abilities && card.abilities.some(ability => {
+                        if (ability.type && ability.type.toLowerCase().includes(searchLower)) return true;
+                        if (ability.description && ability.description.toLowerCase().includes(searchLower)) return true;
                         return false;
-                    });
-                }
+                    })) return true;
+                    
+                    return false;
+                });
             }
             
             // Apply trait filter if any traits are selected
@@ -1537,6 +1640,28 @@
                     
                     // For other cards, check if they have ALL selected traits
                     return Array.from(selectedTraits).every(trait => cardTraits.includes(trait));
+                });
+            }
+            
+            // Apply ability type filter if any ability types are selected
+            if (selectedAbilityTypes.size > 0) {
+                filteredCards = filteredCards.filter(card => {
+                    if (!card.abilities || !Array.isArray(card.abilities)) {
+                        return false; // Cards without abilities don't match
+                    }
+                    
+                    // Check if the card has ANY of the selected ability types
+                    return card.abilities.some(ability => {
+                        if (!ability.type) return false;
+                        
+                        // Special handling for "Treasure Hoard" - match any "Treasure Hoard N"
+                        if (selectedAbilityTypes.has('Treasure Hoard') && ability.type.match(/^Treasure Hoard \d+$/)) {
+                            return true;
+                        }
+                        
+                        // Regular ability type matching
+                        return selectedAbilityTypes.has(ability.type);
+                    });
                 });
             }
             
@@ -1589,6 +1714,15 @@
                     // Remove selected state from all trait checkboxes
                     document.querySelectorAll('#trait-checkboxes .trait-checkbox').forEach(traitDiv => {
                         traitDiv.classList.remove('selected');
+                    });
+                }
+                
+                // Clear ability type filter when selecting Treasures or Spells (they don't have abilities)
+                if (selectedType === 'treasures' || selectedType === 'spells') {
+                    selectedAbilityTypes.clear();
+                    // Remove selected state from all ability type checkboxes
+                    document.querySelectorAll('#ability-type-checkboxes .ability-type-checkbox').forEach(abilityTypeDiv => {
+                        abilityTypeDiv.classList.remove('selected');
                     });
                 }
                 
