@@ -1646,22 +1646,36 @@
             // Apply ability type filter if any ability types are selected
             if (selectedAbilityTypes.size > 0) {
                 filteredCards = filteredCards.filter(card => {
-                    if (!card.abilities || !Array.isArray(card.abilities)) {
-                        return false; // Cards without abilities don't match
+                    // For characters, check abilities
+                    if (card.type === 'characters' && card.abilities && Array.isArray(card.abilities)) {
+                        return card.abilities.some(ability => {
+                            if (!ability.type) return false;
+                            
+                            // Special handling for "Treasure Hoard" - match any "Treasure Hoard N"
+                            if (selectedAbilityTypes.has('Treasure Hoard') && ability.type.match(/^Treasure Hoard \d+$/)) {
+                                return true;
+                            }
+                            
+                            // Regular ability type matching
+                            return selectedAbilityTypes.has(ability.type);
+                        });
                     }
                     
-                    // Check if the card has ANY of the selected ability types
-                    return card.abilities.some(ability => {
-                        if (!ability.type) return false;
-                        
-                        // Special handling for "Treasure Hoard" - match any "Treasure Hoard N"
-                        if (selectedAbilityTypes.has('Treasure Hoard') && ability.type.match(/^Treasure Hoard \d+$/)) {
-                            return true;
-                        }
-                        
-                        // Regular ability type matching
-                        return selectedAbilityTypes.has(ability.type);
-                    });
+                    // For spells and treasures, search in descriptions
+                    if ((card.type === 'spells' || card.type === 'treasures') && card.description) {
+                        const description = card.description.toLowerCase();
+                        return Array.from(selectedAbilityTypes).some(abilityType => {
+                            // Special handling for "Treasure Hoard" - search for "treasure hoard" in description
+                            if (abilityType === 'Treasure Hoard') {
+                                return description.includes('treasure hoard');
+                            }
+                            
+                            // Search for ability type in description (case-insensitive)
+                            return description.includes(abilityType.toLowerCase());
+                        });
+                    }
+                    
+                    return false; // Cards without abilities or descriptions don't match
                 });
             }
             
@@ -1717,14 +1731,7 @@
                     });
                 }
                 
-                // Clear ability type filter when selecting Treasures or Spells (they don't have abilities)
-                if (selectedType === 'treasures' || selectedType === 'spells') {
-                    selectedAbilityTypes.clear();
-                    // Remove selected state from all ability type checkboxes
-                    document.querySelectorAll('#ability-type-checkboxes .ability-type-checkbox').forEach(abilityTypeDiv => {
-                        abilityTypeDiv.classList.remove('selected');
-                    });
-                }
+                // Note: No longer clearing ability type filter for Treasures/Spells since they can now be filtered by ability types
                 
                 searchCards();
             });
