@@ -728,6 +728,31 @@
             }
         }
 
+        .clear-all-filters-btn {
+            background: linear-gradient(135deg, #ff6b6b, #ff8e8e);
+            border: 2px solid rgba(255, 107, 107, 0.3);
+            border-radius: 20px;
+            color: white;
+            font-size: clamp(0.8rem, 1vw, 1rem);
+            font-weight: 600;
+            padding: 8px 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+            z-index: 10;
+        }
+
+        .clear-all-filters-btn:hover {
+            background: linear-gradient(135deg, #ff5252, #ff7979);
+            border-color: rgba(255, 107, 107, 0.6);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(255, 107, 107, 0.3);
+        }
+
+        .clear-all-filters-btn:active {
+            transform: translateY(0);
+        }
+
         .trait-checkboxes {
             display: flex;
             flex-wrap: wrap;
@@ -894,8 +919,11 @@
             </div>
             
             <div class="filter-box" id="rarity-filter" style="display: none;">
-                <div class="rarity-checkboxes" id="rarity-checkboxes">
-                    <!-- Rarities will be populated dynamically -->
+                <div style="position: relative; width: 100%;">
+                    <div class="rarity-checkboxes" id="rarity-checkboxes">
+                        <!-- Rarities will be populated dynamically -->
+                    </div>
+                    <button type="button" class="clear-all-filters-btn" id="clearAllFiltersBtn" style="position: absolute; right: 0; top: 50%; transform: translateY(-50%);">Clear</button>
                 </div>
             </div>
         </div>
@@ -1710,6 +1738,40 @@
             searchInput.focus();
             this.style.display = 'none';
             searchCards(); // Trigger search with empty term
+        });
+
+        // Clear all filters button handler
+        document.getElementById('clearAllFiltersBtn').addEventListener('click', function() {
+            // Clear search input
+            const searchInput = document.getElementById('searchInput');
+            searchInput.value = '';
+            document.getElementById('searchClearBtn').style.display = 'none';
+            
+            // Reset type filter to "All"
+            document.querySelectorAll('.type-radio-btn').forEach(btn => btn.classList.remove('selected'));
+            document.querySelector('.type-radio-btn[data-type="all"]').classList.add('selected');
+            selectedType = 'all';
+            
+            // Clear all trait selections
+            selectedTraits.clear();
+            document.querySelectorAll('#trait-checkboxes .trait-checkbox').forEach(traitDiv => {
+                traitDiv.classList.remove('selected');
+            });
+            
+            // Clear all rarity selections
+            selectedRarities.clear();
+            document.querySelectorAll('#rarity-checkboxes .rarity-checkbox').forEach(rarityDiv => {
+                rarityDiv.classList.remove('selected');
+            });
+            
+            // Clear all ability type selections
+            selectedAbilityTypes.clear();
+            document.querySelectorAll('#ability-type-checkboxes .ability-type-checkbox').forEach(abilityDiv => {
+                abilityDiv.classList.remove('selected');
+            });
+            
+            // Trigger search to update results
+            searchCards();
         });
         
         // Add event listeners for type filters
