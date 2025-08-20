@@ -988,6 +988,11 @@
             });
         }
         
+        // Helper function to escape special regex characters
+        function escapeRegex(string) {
+            return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+        }
+        
         // Extract all unique traits from cards
         function extractAllTraits(cards) {
             const traits = new Set();
@@ -1659,15 +1664,50 @@
             // Apply trait filter if any traits are selected
             if (selectedTraits.size > 0) {
                 filteredCards = filteredCards.filter(card => {
-                    const cardTraits = card.traits || [];
-                    
-                    // Characters with "ALL" trait match any trait filter
-                    if (card.type === 'characters' && cardTraits.includes('ALL')) {
-                        return true;
+                    // For characters, check actual traits
+                    if (card.type === 'characters') {
+                        const cardTraits = card.traits || [];
+                        
+                        // Characters with "ALL" trait match any trait filter
+                        if (cardTraits.includes('ALL')) {
+                            return true;
+                        }
+                        
+                        // Check if they have ALL selected traits
+                        return Array.from(selectedTraits).every(trait => cardTraits.includes(trait));
                     }
                     
-                    // For other cards, check if they have ALL selected traits
-                    return Array.from(selectedTraits).every(trait => cardTraits.includes(trait));
+                    // For spells and treasures, search in descriptions
+                    if ((card.type === 'spells' || card.type === 'treasures') && card.description) {
+                        const description = card.description.toLowerCase();
+                        return Array.from(selectedTraits).some(trait => {
+                            // Search for trait and its plural form as whole words (case-insensitive)
+                            const escapedTrait = escapeRegex(trait.toLowerCase());
+                            
+                            // Create patterns for singular and plural forms
+                            let patterns = [escapedTrait]; // Always include the exact trait
+                            
+                            // Add plural pattern if trait doesn't already end with 's'
+                            if (!trait.toLowerCase().endsWith('s')) {
+                                // Handle irregular plurals
+                                const traitLower = trait.toLowerCase();
+                                if (traitLower === 'hero') {
+                                    patterns.push(escapeRegex('heroes'));
+                                } else {
+                                    // Use regular plural (add 's')
+                                    patterns.push(escapedTrait + 's');
+                                }
+                            }
+                            
+                            // Test all patterns
+                            return patterns.some(pattern => {
+                                const regex = new RegExp('\\b' + pattern + '\\b');
+                                return regex.test(description);
+                            });
+                        });
+                    }
+                    
+                    return false; // Cards without traits or descriptions don't match
                 });
             }
             
@@ -1784,16 +1824,7 @@
                 this.classList.add('selected');
                 selectedType = this.dataset.type;
                 
-                // Clear trait filter when selecting Treasures or Spells
-                if (selectedType === 'treasures' || selectedType === 'spells') {
-                    selectedTraits.clear();
-                    // Remove selected state from all trait checkboxes
-                    document.querySelectorAll('#trait-checkboxes .trait-checkbox').forEach(traitDiv => {
-                        traitDiv.classList.remove('selected');
-                    });
-                }
-                
-                // Note: No longer clearing ability type filter for Treasures/Spells since they can now be filtered by ability types
+                // Note: No longer clearing trait or ability type filters for Treasures/Spells since they can now be filtered by both
                 
                 searchCards();
             });
