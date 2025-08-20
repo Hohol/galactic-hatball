@@ -24,6 +24,9 @@ venv.bak/
 *.swp
 *.swo
 
+# Debug files
+tools/card_scraper/debug/
+
 # OS
 .DS_Store
 Thumbs.db
