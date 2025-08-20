@@ -164,7 +164,7 @@ class CardScraper:
         
         card_data = {
             "name": card_name,
-            "type": card_type_name  # Use the category name as the card type
+            "type": card_type_name.lower()  # Use the category name as the card type (lowercase for consistency)
         }
         
         # Add optional fields if found

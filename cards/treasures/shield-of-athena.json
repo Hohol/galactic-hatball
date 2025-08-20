@@ -1,6 +1,6 @@
 {
   "name": "Shield of Athena",
-  "type": "Treasures",
+  "type": "treasures",
   "description": "When one of your characters is KO'd, give it +8 Attack. Give your characters that survivie a fight +8 Health.",
   "rarity": "epic",
   "images": [
