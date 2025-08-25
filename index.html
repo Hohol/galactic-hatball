@@ -19,6 +19,7 @@
             color: #ffffff;
             min-height: 100vh;
             padding: 20px;
+            scroll-behavior: smooth;
         }
 
         .container {
@@ -884,9 +885,56 @@
             font-weight: 700;
             box-shadow: 0 2px 8px rgba(255, 165, 0, 0.4);
         }
+
+        /* Back to Top Button */
+        .back-to-top-btn {
+            position: fixed;
+            top: 30px;
+            right: 30px;
+            background: rgba(255, 255, 255, 0.15);
+            color: rgba(255, 255, 255, 0.8);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            font-size: 24px;
+            font-weight: bold;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(10px);
+        }
+
+        .back-to-top-btn:hover {
+            background: rgba(255, 255, 255, 0.25);
+            color: rgba(255, 255, 255, 1);
+            border-color: rgba(255, 255, 255, 0.4);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .back-to-top-btn.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top-btn:active {
+            transform: translateY(-1px);
+        }
     </style>
 </head>
 <body>
+    <!-- Back to Top Button -->
+    <button id="backToTopBtn" class="back-to-top-btn" title="Back to Top">
+        ↑
+    </button>
+
     <div class="container">
         <div class="header">
             <h1>Once upon a Galaxy</h1>
@@ -1898,6 +1946,41 @@
             });
             
             lazyImages.forEach(img => imageObserver.observe(img));
+        }
+
+        // Back to Top Button
+        const backToTopBtn = document.getElementById('backToTopBtn');
+        if (backToTopBtn) {
+            let scrollTimeout;
+            
+            window.addEventListener('scroll', () => {
+                // Clear previous timeout
+                clearTimeout(scrollTimeout);
+                
+                // Show button after scrolling down 300px
+                if (window.pageYOffset > 300) {
+                    backToTopBtn.classList.add('visible');
+                } else {
+                    backToTopBtn.classList.remove('visible');
+                }
+                
+                // Hide button after scrolling stops for 2 seconds
+                scrollTimeout = setTimeout(() => {
+                    if (window.pageYOffset > 300) {
+                        backToTopBtn.classList.add('visible');
+                    } else {
+                        backToTopBtn.classList.remove('visible');
+                    }
+                }, 2000);
+            });
+
+            backToTopBtn.addEventListener('click', () => {
+                // Smooth scroll to top
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
         }
     </script>
 </body>
